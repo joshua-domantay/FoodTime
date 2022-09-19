@@ -40,4 +40,28 @@
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="458dp" />
 
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/google"
+
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/twitter"
+
+        tools:layout_editor_absoluteX="324dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/fb"
+
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="646dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
