@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3A288E"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <TextView
@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="91dp"
+        android:layout_height="50dp"
         android:background="@color/white"
         android:backgroundTint="@color/design_default_color_background"
         android:backgroundTintMode="add"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:background="#FAF8F8"
         android:text="Sign Up"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="449dp" />
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="458dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
