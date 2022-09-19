@@ -4,15 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3A288E"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:background="#00936060"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/design_default_color_background"
+        android:backgroundTintMode="add"
+        android:text="Login"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="391dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FAF8F8"
+        android:text="Sign Up"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="449dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
