@@ -19,11 +19,8 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void setHaveAccountLogInButton() {
         Button btn = findViewById(R.id.haveAccountLogInButton);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(SignUpActivity.this, LogInActivity.class));
-            }
+        btn.setOnClickListener(item -> {
+            startActivity(new Intent(this, LogInActivity.class));
         });
     }
 }

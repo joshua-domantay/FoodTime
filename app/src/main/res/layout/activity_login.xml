@@ -29,17 +29,20 @@
         android:layout_centerInParent="true" >
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/emailLogIn"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
             android:background="@color/white"
             android:fontFamily="cursive"
-            android:hint="@string/username"
-            android:paddingHorizontal="60dp"
+            android:hint="@string/email"
+            android:textAlignment="center"
             android:textSize="30sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck"
+            android:paddingHorizontal="60dp" />
 
         <EditText
+            android:id="@+id/passwordLogIn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
@@ -54,7 +57,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/bahianita"
             android:text="@string/forgot_password"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
