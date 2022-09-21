@@ -10,14 +10,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:background="#00936060"
+        android:fontFamily="cursive"
         android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="96sp"
         tools:text="@string/app_name" />
 
     <LinearLayout
@@ -29,35 +31,43 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingHorizontal="60dp"
             android:layout_marginBottom="50dp"
             android:background="@color/white"
+            android:fontFamily="cursive"
+            android:hint="@string/username"
+            android:paddingHorizontal="60dp"
             android:textSize="30sp"
-            android:hint="@string/username" />
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAlignment="center"
             android:background="@color/white"
+            android:fontFamily="cursive"
+            android:hint="@string/password"
+            android:textAlignment="center"
             android:textSize="30sp"
-            android:hint="@string/password" />
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bahianita"
             android:text="@string/forgot_password"
-            android:textSize="12sp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="60dp"
-        android:text="@string/sign_up" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="103dp"
+        android:fontFamily="@font/bahianita"
+        android:scrollbarStyle="insideInset"
+        android:text="@string/sign_up"
+        android:textSize="24sp" />
 
     <ImageView
         android:layout_width="48dp"
