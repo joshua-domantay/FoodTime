@@ -58,17 +58,30 @@
 
     </LinearLayout>
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="103dp"
-        android:fontFamily="@font/bahianita"
-        android:scrollbarStyle="insideInset"
-        android:text="@string/sign_up"
-        android:textSize="24sp" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp" >
 
+        <Button
+            android:id="@+id/logInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/log_in" />
+
+        <Button
+            android:id="@+id/newUserSignUpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_user_sign_up" />
+
+    </LinearLayout>
+
+    <!--
     <ImageView
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -92,5 +105,6 @@
 
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="646dp" />
+    -->
 
 </RelativeLayout>
