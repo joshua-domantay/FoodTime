@@ -64,7 +64,7 @@ public class LogInActivity extends AppCompatActivity {
     private void setNewUserSignUpButton() {
         Button btn = findViewById(R.id.newUserSignUpButton);
         btn.setOnClickListener(item -> {
-            startActivity(new Intent(this, mainActivity.class));
+            startActivity(new Intent(this, SignUpActivity.class));
         });
     }
 

@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-public class mainActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
 
@@ -67,7 +67,7 @@ public class mainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(mainActivity.this,LogInActivity.class);
+                Intent intent = new Intent(SignUpActivity.this,LogInActivity.class);
                 startActivity(intent);
 
 
