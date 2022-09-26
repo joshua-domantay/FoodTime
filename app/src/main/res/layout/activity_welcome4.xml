@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity4">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="Add allergies screen placeholder" />
+
     <Button
         android:id="@+id/welcomeFinish"
         android:layout_width="wrap_content"

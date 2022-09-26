@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity3">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="Add preferences screen placeholder" />
+
     <Button
         android:id="@+id/welcomeNext3"
         android:layout_width="wrap_content"
