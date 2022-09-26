@@ -25,69 +25,46 @@ public class SignUpActivity extends AppCompatActivity {
     SQLiteOpenHelper openHelper;
     SQLiteDatabase db;
 
-    Button _reg;
     Button _alreadyAcc;
-    EditText fname, lname, email, password;
+    EditText fName, lName, email, password;
 
-
-
-    protected void onCreate(Bundle saveInstanceState){
-        super.onCreate(saveInstanceState);
-
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
         openHelper = new DBlogin(this);
-        _reg = (Button)findViewById(R.id.signUpButton);
-        fname = (EditText) findViewById(R.id.firstNameSignUp);
-        lname = (EditText) findViewById(R.id.lastNameSignUp);
+        fName = (EditText) findViewById(R.id.firstNameSignUp);
+        lName = (EditText) findViewById(R.id.lastNameSignUp);
         email = (EditText) findViewById(R.id.emailSignUp);
         password = (EditText) findViewById(R.id.passwordSignUp);
         _alreadyAcc = (Button) findViewById(R.id.haveAccountLogInButton);
-        _reg.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View view) {
-                db= openHelper.getWritableDatabase();
-                String Fname = fname.getText().toString();
-                String Lname =lname.getText().toString();
-                String Email = email.getText().toString();
-                String Password = password.getText().toString();
-                insertString(Fname,Lname,Email,Password);
-                Toast.makeText(getApplicationContext(),"register successfully", Toast.LENGTH_LONG).show();
-                
-
-
-
-
-            }
-            });
-
-        _alreadyAcc.setOnClickListener(new View.OnClickListener(){
-
-
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(SignUpActivity.this,LogInActivity.class);
-                startActivity(intent);
-
-
-            }
-        });
-
-
-
-
+        setSignUpButton();
+        setHaveAccButton();
     }
 
-    public void insertString(String fname, String lname, String email, String password){
+    private void setSignUpButton() {
+        Button btn = findViewById(R.id.signUpButton);
+        btn.setOnClickListener(item -> {
+            db= openHelper.getWritableDatabase();
+            insertString();
+            Toast.makeText(getApplicationContext(),"register successfully", Toast.LENGTH_LONG).show();
+        });
+    }
 
+    private void setHaveAccButton() {
+        Button btn = findViewById(R.id.haveAccountLogInButton);
+        btn.setOnClickListener(item -> {
+            startActivity(new Intent(this, LogInActivity.class));
+        });
+    }
+
+    private void insertString() {
         ContentValues contentValues= new ContentValues(); // to write values in the database
-        contentValues.put(DBlogin.COLUMN_USER_FNAME, fname );
-        contentValues.put(DBlogin.COLUMN_USER_EMAIL, lname );
-        contentValues.put(DBlogin.COLUMN_USER_EMAIL, email );
-        contentValues.put(DBlogin.COLUMN_USER_PASSWORD, password);
+        contentValues.put(DBlogin.COLUMN_USER_FNAME, fName.getText().toString());
+        contentValues.put(DBlogin.COLUMN_USER_EMAIL, lName.getText().toString());
+        contentValues.put(DBlogin.COLUMN_USER_EMAIL, email.getText().toString());
+        contentValues.put(DBlogin.COLUMN_USER_PASSWORD, password.getText().toString());
         long id = db.insert(TABLE_USER,null,contentValues);
-
-
     }
 }

@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.QuickContactBadge;
 import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity {
@@ -26,7 +25,7 @@ public class LogInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_log_in);
         setNewUserSignUpButton();
 
         openhelper = new DBlogin(this);
@@ -56,9 +55,6 @@ public class LogInActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 
     private void setNewUserSignUpButton() {
@@ -67,8 +63,6 @@ public class LogInActivity extends AppCompatActivity {
             startActivity(new Intent(this, SignUpActivity.class));
         });
     }
-
-
 }
 
 
