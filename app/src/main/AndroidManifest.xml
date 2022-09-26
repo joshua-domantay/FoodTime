@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodTime">
         <activity
+            android:name=".WelcomeActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity1"
+            android:exported="false" />
+        <activity
             android:name=".LogInActivity"
             android:exported="true">
             <intent-filter>

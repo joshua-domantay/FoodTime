@@ -48,7 +48,9 @@ public class SignUpActivity extends AppCompatActivity {
         btn.setOnClickListener(item -> {
             db= openHelper.getWritableDatabase();
             insertString();
-            Toast.makeText(getApplicationContext(),"register successfully", Toast.LENGTH_LONG).show();
+            // Toast.makeText(getApplicationContext(),"register successfully", Toast.LENGTH_LONG).show();
+
+            startActivity(new Intent(this, WelcomeActivity1.class));
         });
     }
 

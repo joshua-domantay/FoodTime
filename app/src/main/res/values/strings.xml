@@ -9,4 +9,12 @@
     <string name="firstName">First Name</string>
     <string name="lastName">Last Name</string>
     <string name="have_account_log_in">Have an account? Log In</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome">Welcome</string>
+    <string name="to">To</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="get_your_food">Get your food</string>
+    <string name="on_time">on time</string>
 </resources>
