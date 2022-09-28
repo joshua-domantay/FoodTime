@@ -20,7 +20,7 @@ public class WelcomeActivity4 extends AppCompatActivity {
     private void setNextButton() {
         Button btn = findViewById(R.id.welcomeFinish);
         btn.setOnClickListener(item -> {
-            startActivity(new Intent(this, WelcomeActivity4.class));
+            startActivity(new Intent(this, HomeActivity.class));
         });
     }
 }

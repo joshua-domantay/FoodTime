@@ -33,25 +33,24 @@ public class LogInActivity extends AppCompatActivity {
         _btnlogin = (Button) findViewById(R.id.logInButton);
         _txtEmail = (EditText) findViewById(R.id.emailLogIn);
         _txtpass = (EditText) findViewById(R.id.passwordLogIn);
-        _btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                String email = _txtEmail.getText().toString();
-                String pass = _txtpass.getText().toString();
-                cursor = db.rawQuery("SELECT * FROM "+ DBlogin.TABLE_USER+ " WHERE "+ DBlogin.COLUMN_USER_EMAIL+ "=? AND "+ DBlogin.COLUMN_USER_PASSWORD+"=?",new String[]{email,pass});
+        setLogInButton();
+    }
 
+    private void setLogInButton() {
+        _btnlogin.setOnClickListener(item -> {
+            String email = _txtEmail.getText().toString();
+            String pass = _txtpass.getText().toString();
+            cursor = db.rawQuery("SELECT * FROM "+ DBlogin.TABLE_USER+ " WHERE "+ DBlogin.COLUMN_USER_EMAIL+ "=? AND "+ DBlogin.COLUMN_USER_PASSWORD+"=?",new String[]{email,pass});
 
-                if(cursor != null){
-                    cursor.moveToNext();
-                    if(cursor.getCount() >0){
-                        Toast.makeText(getApplicationContext(),"login successfully",Toast.LENGTH_LONG).show();
-
-                    }
-                    else {
-                        Toast.makeText(getApplicationContext(),"Error", Toast.LENGTH_LONG).show();
-                    }
-
+            if(cursor != null){
+                cursor.moveToNext();
+                if(cursor.getCount() >0){
+                    // Toast.makeText(getApplicationContext(),"login successfully",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(this, HomeActivity.class));
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Error", Toast.LENGTH_LONG).show();
                 }
             }
         });
