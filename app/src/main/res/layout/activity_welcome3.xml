@@ -12,6 +12,102 @@
         android:textSize="40sp"
         android:text="Add preferences screen placeholder" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/option1Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 1" />
+
+            <Button
+                android:id="@+id/option2Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 2" />
+
+            <Button
+                android:id="@+id/option3Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/option4Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 4" />
+
+            <Button
+                android:id="@+id/option5Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/option6Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 6" />
+
+            <Button
+                android:id="@+id/option7Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 7" />
+
+            <Button
+                android:id="@+id/option8Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="12sp"
+                android:text="Option 8" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/welcomeNext3"
         android:layout_width="wrap_content"
