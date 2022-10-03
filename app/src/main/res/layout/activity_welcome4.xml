@@ -24,29 +24,32 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option1Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 1" />
+                android:textOff="Option 1"
+                android:textOn="Option 1" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option2Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 2" />
+                android:textOff="Option 2"
+                android:textOn="Option 2" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option3Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 3" />
+                android:textOff="Option 3"
+                android:textOn="Option 3" />
 
         </LinearLayout>
 
@@ -56,21 +59,23 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option4Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 4" />
+                android:textOff="Option 4"
+                android:textOn="Option 4" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option5Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 5" />
+                android:textOff="Option 5"
+                android:textOn="Option 5" />
 
         </LinearLayout>
 
@@ -80,29 +85,32 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option6Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 6" />
+                android:textOff="Option 6"
+                android:textOn="Option 6" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option7Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 7" />
+                android:textOff="Option 7"
+                android:textOn="Option 7" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option8Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 8" />
+                android:textOff="Option 8"
+                android:textOn="Option 8" />
 
         </LinearLayout>
 
@@ -112,21 +120,23 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option9Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 9" />
+                android:textOff="Option 9"
+                android:textOn="Option 9" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option10Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 10" />
+                android:textOff="Option 10"
+                android:textOn="Option 10" />
 
         </LinearLayout>
 
@@ -136,29 +146,32 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option11Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 11" />
+                android:textOff="Option 11"
+                android:textOn="Option 11" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option12Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 12" />
+                android:textOff="Option 12"
+                android:textOn="Option 12" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option13Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 13" />
+                android:textOff="Option 13"
+                android:textOn="Option 13" />
 
         </LinearLayout>
 

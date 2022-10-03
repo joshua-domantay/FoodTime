@@ -24,29 +24,32 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option1Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 1" />
+                android:textOff="Option 1"
+                android:textOn="Option 1" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option2Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 2" />
+                android:textOff="Option 2"
+                android:textOn="Option 2" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option3Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 3" />
+                android:textOff="Option 3"
+                android:textOn="Option 3" />
 
         </LinearLayout>
 
@@ -56,21 +59,23 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option4Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 4" />
+                android:textOff="Option 4"
+                android:textOn="Option 4" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option5Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 5" />
+                android:textOff="Option 5"
+                android:textOn="Option 5" />
 
         </LinearLayout>
 
@@ -80,29 +85,32 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal" >
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option6Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 6" />
+                android:textOff="Option 6"
+                android:textOn="Option 6" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option7Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 7" />
+                android:textOff="Option 7"
+                android:textOn="Option 7" />
 
-            <Button
+            <ToggleButton
                 android:id="@+id/option8Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textSize="12sp"
-                android:text="Option 8" />
+                android:textOff="Option 8"
+                android:textOn="Option 8" />
 
         </LinearLayout>
 
@@ -117,6 +125,6 @@
         android:layout_marginBottom="15dp"
         android:layout_marginRight="15dp"
         android:textSize="25sp"
-        android:text="@string/next" />
+        android:text="@string/skip" />
 
 </RelativeLayout>
