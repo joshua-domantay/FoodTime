@@ -14,48 +14,50 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
         android:background="#00936060"
-        android:fontFamily="cursive"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
-        android:textSize="96sp"
+        android:textSize="70sp"
         tools:text="@string/app_name" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true" >
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="50dp"
+        android:orientation="vertical" >
 
         <EditText
             android:id="@+id/emailLogIn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            android:paddingHorizontal="20dp"
             android:background="@color/white"
-            android:fontFamily="cursive"
             android:hint="@string/email"
             android:textAlignment="center"
             android:textSize="30sp"
-            tools:ignore="TouchTargetSizeCheck"
-            android:paddingHorizontal="60dp" />
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/passwordLogIn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
             android:background="@color/white"
-            android:fontFamily="cursive"
             android:hint="@string/password"
             android:textAlignment="center"
             android:textSize="30sp"
+            android:inputType="textPassword"
+            android:maxLines="1"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/bahianita"
             android:text="@string/forgot_password"
             android:textSize="20sp" />
 
