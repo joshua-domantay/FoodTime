@@ -1,72 +1,146 @@
 package com.marvinjoshayush.foodtime;
 
-import static com.marvinjoshayush.foodtime.DBlogin.*;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.core.widget.NestedScrollView;
 
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.DatabaseErrorHandler;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class SignUpActivity extends AppCompatActivity {
-    SQLiteOpenHelper openHelper;
-    SQLiteDatabase db;
+public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button _alreadyAcc;
-    EditText fName, lName, email, password;
+    private TextView login ,signup;
+    private EditText FirstName, LastName,Email, Password;
 
-    protected void onCreate(Bundle savedInstanceState){
+
+    private FirebaseAuth mAuth;
+
+
+    protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_sign_up);
 
-        openHelper = new DBlogin(this);
-        fName = (EditText) findViewById(R.id.firstNameSignUp);
-        lName = (EditText) findViewById(R.id.lastNameSignUp);
-        email = (EditText) findViewById(R.id.emailSignUp);
-        password = (EditText) findViewById(R.id.passwordSignUp);
-        _alreadyAcc = (Button) findViewById(R.id.haveAccountLogInButton);
+        mAuth= FirebaseAuth.getInstance();
 
-        setSignUpButton();
-        setHaveAccButton();
+        login = (TextView) findViewById(R.id.haveAccountLogInButton);
+        login.setOnClickListener(this);
+
+        signup = (Button) findViewById(R.id.signUpButton);
+        signup.setOnClickListener(this);
+
+        FirstName = (EditText)  findViewById(R.id.firstNameSignUp);
+        LastName = (EditText)  findViewById(R.id.lastNameSignUp);
+        Email = (EditText)  findViewById(R.id.emailSignUp);
+        Password = (EditText)  findViewById(R.id.passwordSignUp);
+
+
+
+
     }
 
-    private void setSignUpButton() {
-        Button btn = findViewById(R.id.signUpButton);
-        btn.setOnClickListener(item -> {
-            db= openHelper.getWritableDatabase();
-            insertString();
-            // Toast.makeText(getApplicationContext(),"register successfully", Toast.LENGTH_LONG).show();
+    @Override
+    public void onClick(View v) {
 
-            startActivity(new Intent(this, WelcomeActivity1.class));
-        });
+        switch (v.getId()){
+            case R.id.haveAccountLogInButton:
+                startActivity(new Intent(this,LogInActivity.class));
+                break;
+
+            case R.id.signUpButton:
+                signup();
+                break;
+        }
+
     }
 
-    private void setHaveAccButton() {
-        Button btn = findViewById(R.id.haveAccountLogInButton);
-        btn.setOnClickListener(item -> {
-            startActivity(new Intent(this, LogInActivity.class));
-        });
-    }
+    private void signup(){
 
-    private void insertString() {
-        ContentValues contentValues= new ContentValues(); // to write values in the database
-        contentValues.put(DBlogin.COLUMN_USER_FNAME, fName.getText().toString());
-        contentValues.put(DBlogin.COLUMN_USER_EMAIL, lName.getText().toString());
-        contentValues.put(DBlogin.COLUMN_USER_EMAIL, email.getText().toString());
-        contentValues.put(DBlogin.COLUMN_USER_PASSWORD, password.getText().toString());
-        long id = db.insert(TABLE_USER,null,contentValues);
+        String Firstname = FirstName.getText().toString().trim();
+        String Lastname = LastName.getText().toString().trim();
+        String email = Email.getText().toString().trim();
+        String password = Password.getText().toString().trim();
+
+        if(Firstname.isEmpty()){
+            FirstName.setError("Firstname is Required!");
+            FirstName.requestFocus();
+            return;
+
+        }
+
+        if(Lastname.isEmpty()){
+            LastName.setError("Lastname is Required!");
+            LastName.requestFocus();
+            return;
+        }
+        if(email.isEmpty()){
+            Email.setError("Email is Required!");
+            Email.requestFocus();
+            return;
+
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            Email.setError("Provide valid Email!");
+            Email.requestFocus();
+            return;
+        }
+
+        if(password.isEmpty()){
+            Password.setError("Password is Required!");
+            Password.requestFocus();
+            return;
+        }
+
+        if(password.length() < 6){
+            Password.setError("Password should be more then 6 character!");
+            Password.requestFocus();
+            return;
+
+        }
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if(task.isSuccessful()){
+                            User user = new User(Firstname,Lastname,email);
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(SignUpActivity.this,"User has been registered Sucessfully!",Toast.LENGTH_LONG).show();
+                                                startActivity(new Intent(SignUpActivity.this, WelcomeActivity1.class));
+                                            }
+
+                                            else {
+                                                Toast.makeText(SignUpActivity.this,"Failed to register Sucessfully! Try-Again!!",Toast.LENGTH_LONG).show();
+                                            }
+
+                                        }
+                                    });
+                        }
+                        else{
+                            Toast.makeText(SignUpActivity.this,"Failed to register Sucessfully!!",Toast.LENGTH_LONG).show();
+
+                        }
+                    }
+                });
+
     }
 }
