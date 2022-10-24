@@ -19,7 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class WelcomeActivity1 extends AppCompatActivity implements View.OnClickListener {
+public class WelcomeActivity1 extends AppCompatActivity {
 
     // "@+id/welcomeName
     // @+id/welcomeNext1
@@ -40,7 +40,6 @@ public class WelcomeActivity1 extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_welcome1);
 
         fullname = (TextView) findViewById(R.id.welcomeName);
-        fullname.setOnClickListener(this);
 
         User myName = new User();
 
@@ -74,25 +73,15 @@ public class WelcomeActivity1 extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        setNextButton();
     }
 
 
-    @Override
-    public void onClick(View view) {
-
-        switch (view.getId()){
-            case R.id.welcomeNext1:
-                startActivity(new Intent(this,WelcomeActivity2.class));
-                break;
-
-        }
-
-
-
-
-
-
-
+    private void setNextButton() {
+        Button btn = findViewById(R.id.welcomeNext1);
+        btn.setOnClickListener(item -> {
+            startActivity(new Intent(this, WelcomeActivity2.class));
+        });
     }
 
 
