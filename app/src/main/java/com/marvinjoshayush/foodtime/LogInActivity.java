@@ -1,5 +1,6 @@
 package com.marvinjoshayush.foodtime;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,62 +8,99 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class LogInActivity extends AppCompatActivity {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-    SQLiteDatabase db;
-    SQLiteOpenHelper openhelper;
-    Button _btnlogin;
-    EditText _txtEmail, _txtpass;
-    Cursor cursor;
+public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private TextView register;
+    private EditText Email, Password;
+    private Button logIn;
+    private FirebaseAuth mAuth;
 
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_log_in);
-        setNewUserSignUpButton();
 
-        openhelper = new DBlogin(this);
-        db = openhelper.getReadableDatabase();
-        _btnlogin = (Button) findViewById(R.id.logInButton);
-        _txtEmail = (EditText) findViewById(R.id.emailLogIn);
-        _txtpass = (EditText) findViewById(R.id.passwordLogIn);
 
-        setLogInButton();
+        register = (TextView) findViewById(R.id.newUserSignUpButton);
+        register.setOnClickListener(this);
+
+        logIn = (Button) findViewById(R.id.logInButton);
+        logIn.setOnClickListener(this);
+
+        Email = (EditText) findViewById(R.id.emailLogIn);
+        Password = (EditText) findViewById(R.id.passwordLogIn);
+        mAuth = FirebaseAuth.getInstance();
+
     }
 
-    private void setLogInButton() {
-        _btnlogin.setOnClickListener(item -> {
-            String email = _txtEmail.getText().toString();
-            String pass = _txtpass.getText().toString();
-            cursor = db.rawQuery("SELECT * FROM "+ DBlogin.TABLE_USER+ " WHERE "+ DBlogin.COLUMN_USER_EMAIL+ "=? AND "+ DBlogin.COLUMN_USER_PASSWORD+"=?",new String[]{email,pass});
+    public void onClick(View v) {
+        switch (v.getId()) {
 
-            if(cursor != null){
-                cursor.moveToNext();
-                if(cursor.getCount() >0){
-                    // Toast.makeText(getApplicationContext(),"login successfully",Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(this, HomeActivity.class));
-                }
-                else {
-                    Toast.makeText(getApplicationContext(),"Error", Toast.LENGTH_LONG).show();
+            case R.id.newUserSignUpButton:
+                startActivity(new Intent(this, SignUpActivity.class));
+                break;
+
+            case R.id.logInButton:
+                userLogin();
+                break;
+
+        }
+    }
+
+    private void userLogin() {
+
+        String email = Email.getText().toString().trim();
+        String password = Password.getText().toString().trim();
+        if (email.isEmpty()) {
+            Email.setError("Email is Required!");
+            Email.requestFocus();
+            return;
+
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Email.setError("Provide valid Email!");
+            Email.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()) {
+            Password.setError("Password is Required!");
+            Password.requestFocus();
+            return;
+        }
+
+        if (password.length() < 6) {
+            Password.setError("Password should be more then 6 character!");
+            Password.requestFocus();
+            return;
+        }
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                if (task.isSuccessful()) {
+                    startActivity(new Intent(LogInActivity.this, HomeActivity.class));
+                } else {
+                    Toast.makeText(LogInActivity.this, "Failed to login Sucessfully! Try-Again!!", Toast.LENGTH_LONG).show();
+
                 }
             }
-        });
-    }
 
-    private void setNewUserSignUpButton() {
-        Button btn = findViewById(R.id.newUserSignUpButton);
-        btn.setOnClickListener(item -> {
-            startActivity(new Intent(this, SignUpActivity.class));
+
         });
     }
 }
-
-
-

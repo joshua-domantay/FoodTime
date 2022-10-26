@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "595340777187",
+    "project_id": "foodtime-75375",
+    "storage_bucket": "foodtime-75375.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595340777187:android:4ae860ae897c2873ef97d6",
+        "android_client_info": {
+          "package_name": "com.marvinjoshayush.foodtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595340777187-j7l0ieka1ngnepo2ea24md2gfh0sari4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU42haaZe-tVihbuJlWijfrrhzCoEyPN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595340777187-j7l0ieka1ngnepo2ea24md2gfh0sari4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
