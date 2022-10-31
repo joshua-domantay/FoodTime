@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="25dp"
+        android:orientation="horizontal"
+        android:background="@color/teal_200" >
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/fb" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/placeholder1"
+                android:textSize="20sp"
+                android:textAlignment="viewStart" />
+
+            <TextView
+                android:id="@+id/profileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder2"
+                android:textSize="18sp"
+                android:textAlignment="viewStart" />
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="PROFILE FRAGMENT"
-        android:textSize="30sp" />
+        android:text="@string/account_settings"
+        android:textSize="27sp"
+        android:textAlignment="viewStart" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/profileChangeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_name"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/profileChangeAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_address"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/profileChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_password"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/profileForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+</LinearLayout>
