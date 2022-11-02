@@ -4,8 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 // Add preferences screen
 public class WelcomeActivity3 extends AppCompatActivity {
@@ -13,6 +20,15 @@ public class WelcomeActivity3 extends AppCompatActivity {
     private Button nextButton;
     private ToggleButton[] prefButtons;
     private int btnSelectedCount;
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private String userID;
+    private TextView click1;
+    private TextView click2;
+    private TextView click3;
+    private TextView click4;
+    private TextView click5;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +37,11 @@ public class WelcomeActivity3 extends AppCompatActivity {
 
         nextButton = findViewById(R.id.welcomeNext3);
         btnSelectedCount = 0;
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
+
 
         setNextButton();
         setPreferencesButtons();
@@ -34,21 +55,20 @@ public class WelcomeActivity3 extends AppCompatActivity {
     }
 
     private void setPreferencesButtons() {
-        prefButtons = new ToggleButton[] {findViewById(R.id.option1Pref), findViewById(R.id.option2Pref),
-                                          findViewById(R.id.option3Pref), findViewById(R.id.option4Pref),
-                                          findViewById(R.id.option5Pref), findViewById(R.id.option6Pref),
-                                          findViewById(R.id.option7Pref), findViewById(R.id.option8Pref),};
+        prefButtons = new ToggleButton[]{findViewById(R.id.option1Pref), findViewById(R.id.option2Pref),
+                findViewById(R.id.option3Pref), findViewById(R.id.option4Pref),
+                findViewById(R.id.option5Pref),};
 
-        for(ToggleButton btn : prefButtons) {
+        for (ToggleButton btn : prefButtons) {
             btn.setOnClickListener(item -> {
-                if(btn.isChecked()) {
+                if (btn.isChecked()) {
                     btnSelectedCount++;
                 } else {
                     btnSelectedCount--;
                 }
 
                 // Change Next Button text
-                if(btnSelectedCount > 0) {
+                if (btnSelectedCount > 0) {
                     nextButton.setText(R.string.next);
                 } else {
                     nextButton.setText(R.string.skip);
@@ -56,4 +76,5 @@ public class WelcomeActivity3 extends AppCompatActivity {
             });
         }
     }
+
 }
