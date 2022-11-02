@@ -18,4 +18,16 @@
     <string name="finish">Finish</string>
     <string name="get_your_food">Get your food</string>
     <string name="on_time">on time</string>
+    <string name="button">Button</string>
+    <string name="button3">Button</string>
+    <string name="textview3">TextView</string>
+    <string name="delivery">Delivery</string>
+    <string name="pick_up">pick up</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="panda_express">Panda Express</string>
+    <string name="arbor">Arbor</string>
+    <string name="subway">Subway</string>
+    <string name="fruedian">Fruedian</string>
+    <string name="panda">Panda</string>
+    <string name="autocompletetextview">AutoCompleteTextView</string>
 </resources>
