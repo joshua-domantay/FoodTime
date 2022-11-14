@@ -17,10 +17,11 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_centerInParent="true"
+        android:layout_centerInParent="true"
         android:orientation="vertical">
+
         <ToggleButton
-            android:id="@+id/toggleButton4"
+            android:id="@+id/Ovo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -29,7 +30,7 @@
             android:textSize="30sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton7"
+            android:id="@+id/Lacto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -38,7 +39,7 @@
             android:textSize="30sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton8"
+            android:id="@+id/Vegan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -47,7 +48,7 @@
             android:textSize="30sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton9"
+            android:id="@+id/pasca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,19 +57,32 @@
             android:textSize="30sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/felxi"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textOff="Flexitarians"
             android:textOn="Flexitarians"
             android:textSize="30sp" />
 
+        <ToggleButton
+            android:id="@+id/others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="Others"
+            android:textOn="Others"
+            android:textSize="30sp" />
+
         <LinearLayout
+            android:id= "@+id/LinearLayout1"
             android:layout_width="wrap_content"
+             android:visibility="invisible"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
+
+
 
             <ToggleButton
                 android:id="@+id/option1Pref"
@@ -97,23 +111,6 @@
                 android:textOn="Eggs"
                 android:textSize="12sp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="377dp"
-            android:layout_height="64dp"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <ToggleButton
-                android:id="@+id/option4Pref"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:textOff="Dairy-Product"
-                android:textOn="Dairy-Product"
-                android:textSize="12sp" />
-
             <ToggleButton
                 android:id="@+id/option5Pref"
                 android:layout_width="wrap_content"
@@ -123,13 +120,32 @@
                 android:textOn="Grains"
                 android:textSize="12sp" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id= "@+id/LinearLayout2"
+            android:layout_width="wrap_content"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
             <ToggleButton
-                android:id="@+id/toggleButton3"
+                android:id="@+id/option6Pref"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ToggleButton"
                 android:textOff="Meat Ingredients"
                 android:textOn="Meat Ingredients"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/option4Pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textOff="Dairy-Product"
+                android:textOn="Dairy-Product"
                 android:textSize="12sp" />/>
 
 
@@ -147,6 +163,8 @@
         android:layout_marginRight="15dp"
         android:textSize="25sp"
         android:text="@string/skip" />
+
+
 
 
 </RelativeLayout>
