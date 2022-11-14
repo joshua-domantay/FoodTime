@@ -45,11 +45,10 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
    private ToggleButton six;
    private static User mychoices = new User();
 
+    DatabaseReference myRef;
+    FirebaseAuth mAuth;
+    FirebaseUser u;
 
-
-
- DatabaseReference reference;
-  FirebaseUser user;
    String userID;
 
 
@@ -89,11 +88,6 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
         six.setOnClickListener(this);
 
 
-        reference = FirebaseDatabase.getInstance().getReference();
-
-        user = FirebaseAuth.getInstance().getCurrentUser();
-        userID = user.getUid();
-
         setNextButton();
 
         setPreferencesButtons();
@@ -111,7 +105,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
                 if(one.isChecked()) {
 
-                    one.setChecked(true);
+                     one.setChecked(true);
                     two.setChecked(false);
                     three.setChecked(false);
                     four.setChecked(false);
@@ -121,8 +115,12 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                    nextButton.setOnClickListener(new View.OnClickListener() {
                        @Override
                        public void onClick(View view) {
+                           mAuth = FirebaseAuth.getInstance(); //added this
+                           u = mAuth.getCurrentUser();
+                           userID = u.getUid();
+                           myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
+                           myRef.child("Choices").setValue(ovo);
 
-                           addDataToFirebase(ovo);
 
                        }
                    });
@@ -300,31 +298,31 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
     }
 
-    public void addDataToFirebase(String ovo){
-
-        mychoices.setChoices(ovo);
-
-        reference.child(userID).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                // inside the method of on Data change we are setting
-                // our object class to our database reference.
-                // data base reference will sends data to firebase.
-                reference.setValue(mychoices);
-
-                // after adding this data we are showing toast message.
-                Toast.makeText(WelcomeActivity3.this, " added", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                // if the data is not added or it is cancelled then
-                // we are displaying a failure toast message.
-                Toast.makeText(WelcomeActivity3.this, "Fail to add data " + error, Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
+//    public void addDataToFirebase(String ovo){
+//
+//        mychoices.setChoices(ovo);
+//
+//        reference.child("Users").child(userID).addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                // inside the method of on Data change we are setting
+//                // our object class to our database reference.
+//                // data base reference will sends data to firebase.
+//                reference.setValue(mychoices);
+//
+//                // after adding this data we are showing toast message.
+//                Toast.makeText(WelcomeActivity3.this, " added", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                // if the data is not added or it is cancelled then
+//                // we are displaying a failure toast message.
+//                Toast.makeText(WelcomeActivity3.this, "Fail to add data " + error, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    }
 
 
     }
