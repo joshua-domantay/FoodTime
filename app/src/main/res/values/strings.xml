@@ -30,4 +30,12 @@
     <string name="fruedian">Fruedian</string>
     <string name="panda">Panda</string>
     <string name="autocompletetextview">AutoCompleteTextView</string>
+    <string name="scrollbutton">Button</string>
+    <string name="button45">Button</string>
+    <string name="pandaaa">pandaaa</string>
+    <string name="sub" />
+    <string name="burger" />
+    <string name="mcdonalds" />
+    <string name="burgerking" />
+    <string name="Burgerking" />
 </resources>
