@@ -60,7 +60,6 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
         nextButton = findViewById(R.id.welcomeNext3);
         btnSelectedCount = 0;
-        listSelectCount = 0;
 
         //added here
         list1 = findViewById(R.id.LinearLayout1);
@@ -104,14 +103,16 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                 String ovo = one.getText().toString();
 
                 if(one.isChecked()) {
-
-                     one.setChecked(true);
+                    list1.setVisibility(v.GONE);
+                    list2.setVisibility(v.GONE);
+                    one.setChecked(true);
                     two.setChecked(false);
                     three.setChecked(false);
                     four.setChecked(false);
                     five.setChecked(false);
                     six.setChecked(false);
                     nextButton.setText(R.string.next);
+
                    nextButton.setOnClickListener(new View.OnClickListener() {
                        @Override
                        public void onClick(View view) {
@@ -120,15 +121,16 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                            userID = u.getUid();
                            myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
                            myRef.child("Choices").setValue(ovo);
+                           startActivity(new Intent(view.getContext(), WelcomeActivity4.class));
+
 
 
                        }
                    });
+
                 }
 
-                if(!six.isChecked()){
-                    list1.setVisibility(v.GONE);
-                    list2.setVisibility(v.GONE);
+                if(!one.isChecked()){
                     six.setChecked(false);
                     nextButton.setText(R.string.skip);
                 }
@@ -136,22 +138,20 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.Lacto:
                 if(two.isChecked()) {
+                    list1.setVisibility(v.GONE);
+                    list2.setVisibility(v.GONE);
                     one.setChecked(false);
                     two.setChecked(true);
                     three.setChecked(false);
                     four.setChecked(false);
                     five.setChecked(false);
                     six.setChecked(false);
-
-
-
+                    nextButton.setText(R.string.next);
 
 
                 }
 
-                if(!six.isChecked()){
-                    list1.setVisibility(v.GONE);
-                    list2.setVisibility(v.GONE);
+                if(!two.isChecked()){
                     six.setChecked(false);
                     nextButton.setText(R.string.skip);
                 }
@@ -159,20 +159,21 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.Vegan:
                 if(three.isChecked()) {
+                    list1.setVisibility(v.GONE);
+                    list2.setVisibility(v.GONE);
                     one.setChecked(false);
                     two.setChecked(false);
                     three.setChecked(true);
                     four.setChecked(false);
                     five.setChecked(false);
                     six.setChecked(false);
+                    nextButton.setText(R.string.next);
 
 
 
                 }
 
-                if(!six.isChecked()){
-                    list1.setVisibility(v.GONE);
-                    list2.setVisibility(v.GONE);
+                if(!three.isChecked()){
                     six.setChecked(false);
                     nextButton.setText(R.string.skip);
                 }
@@ -181,12 +182,15 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.pasca:
                 if(four.isChecked()) {
+                    list1.setVisibility(v.GONE);
+                    list2.setVisibility(v.GONE);
                     one.setChecked(false);
                     two.setChecked(false);
                     three.setChecked(false);
                     four.setChecked(true);
                     five.setChecked(false);
                     six.setChecked(false);
+                    nextButton.setText(R.string.next);
 
 
 
@@ -194,9 +198,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
                 }
 
-                if(!six.isChecked()){
-                    list1.setVisibility(v.GONE);
-                    list2.setVisibility(v.GONE);
+                if(!four.isChecked()){
                     six.setChecked(false);
                     nextButton.setText(R.string.skip);
                 }
@@ -207,20 +209,21 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
             case R.id.felxi:
                 if(five.isChecked()) {
+                    list1.setVisibility(v.GONE);
+                    list2.setVisibility(v.GONE);
                     one.setChecked(false);
                     two.setChecked(false);
                     three.setChecked(false);
                     four.setChecked(false);
                     five.setChecked(true);
                     six.setChecked(false);
+                    nextButton.setText(R.string.next);
 
 
 
 
                 }
-                if(!six.isChecked()){
-                    list1.setVisibility(v.GONE);
-                    list2.setVisibility(v.GONE);
+                if(!five.isChecked()){
                     six.setChecked(false);
                     nextButton.setText(R.string.skip);
                 }
@@ -297,32 +300,6 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
             }
 
     }
-
-//    public void addDataToFirebase(String ovo){
-//
-//        mychoices.setChoices(ovo);
-//
-//        reference.child("Users").child(userID).addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//                // inside the method of on Data change we are setting
-//                // our object class to our database reference.
-//                // data base reference will sends data to firebase.
-//                reference.setValue(mychoices);
-//
-//                // after adding this data we are showing toast message.
-//                Toast.makeText(WelcomeActivity3.this, " added", Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                // if the data is not added or it is cancelled then
-//                // we are displaying a failure toast message.
-//                Toast.makeText(WelcomeActivity3.this, "Fail to add data " + error, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
 
 
     }

@@ -90,8 +90,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textOff="Option 6"
-                android:textOn="Option 6"
+                android:textOff="Milk"
+                android:textOn="Milk"
                 android:textSize="12sp" />
 
             <ToggleButton
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:textOff="Wheat"
-                android:textOn="Option 8"
+                android:textOn="Wheat"
                 android:textSize="12sp" />
 
         </LinearLayout>
