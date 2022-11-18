@@ -48,7 +48,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/account_settings"
+        android:text="@string/profile_settings"
         android:textSize="27sp"
         android:textAlignment="viewStart" />
 
@@ -71,6 +71,31 @@
         android:textColor="@color/black" />
 
     <Button
+        android:id="@+id/profileViewPreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_preferences"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/profileViewAllergies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_allergies"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/account_settings"
+        android:textSize="27sp"
+        android:textAlignment="viewStart" />
+
+    <Button
         android:id="@+id/profileChangePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -84,6 +109,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/forgot_password"
+        android:textSize="18sp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/profileLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"
         android:textSize="18sp"
         android:textAlignment="viewStart"
         android:textColor="@color/black" />

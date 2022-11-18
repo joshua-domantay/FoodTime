@@ -22,8 +22,12 @@
     <string name="on_time">on time</string>
 
     <!-- Profile Screen -->
-    <string name="account_settings">Account Settings</string>
+    <string name="profile_settings">Profile Settings</string>
     <string name="change_name">Change Name</string>
     <string name="change_address">Change Address</string>
+    <string name="view_preferences">View Preferences</string>
+    <string name="view_allergies">View Allergies</string>
+    <string name="account_settings">Account Settings</string>
     <string name="change_password">Change Password</string>
+    <string name="log_out">Log out</string>
 </resources>
