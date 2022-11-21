@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class WelcomeActivity4 extends AppCompatActivity {
 
     private Button nextButton;
-    private ToggleButton[] prefButtons;
+    private ToggleButton[] allergyButtons;
     private int btnSelectedCount;
 
     DatabaseReference myRef;
@@ -36,57 +36,62 @@ public class WelcomeActivity4 extends AppCompatActivity {
         btnSelectedCount = 0;
 
         setNextButton();
+        setAllergiesButtons();
+    }
 
-        setPreferencesButtons();
+    // This will return empty string if no allergies are pressed
+    private String getAllergiesString() {
+        String val = "";
+        if(btnSelectedCount > 0) {
+            for (ToggleButton btn : allergyButtons) {
+                if (btn.isChecked()) {
+                    val += (btn.getText() + "-");       // Allergies separated by '-'
+                }
+            }
 
+            val = val.substring(0, (val.length() - 1));     // Remove last '-'
+        }
+        return val;
+    }
 
+    private void addAllergiesToServer() {
+        String myAll = getAllergiesString();
+
+        /* SECOND: Remove the comment for this block (remove lines 60 and 66) then work on your code (mAuth = .... to myRef.child)
+        mAuth = FirebaseAuth.getInstance(); //added this
+        u = mAuth.getCurrentUser();
+        userID = u.getUid();
+        myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
+        myRef.child("Allergies").setValue(myAll + " ");
+        */
+
+        // FIRST: Run the app to check that the allergies work. Then remove this lines (68-70)
+        Button btn = findViewById(R.id.welcomeFinish);
+        btn.setText(myAll);
     }
 
     private void setNextButton() {
         Button btn = findViewById(R.id.welcomeFinish);
         btn.setOnClickListener(item -> {
+            addAllergiesToServer();
             startActivity(new Intent(this, HomeActivity.class));
         });
     }
 
-    private void setPreferencesButtons() {
-
-        prefButtons = new ToggleButton[]{findViewById(R.id.option1Allergy), findViewById(R.id.option2Allergy),
-                findViewById(R.id.option3Allergy), findViewById(R.id.option5Allergy),
+    private void setAllergiesButtons() {
+        allergyButtons = new ToggleButton[]{findViewById(R.id.option1Allergy), findViewById(R.id.option2Allergy),
+                findViewById(R.id.option3Allergy), findViewById(R.id.option4Allergy), findViewById(R.id.option5Allergy),
                 findViewById(R.id.option6Allergy), findViewById(R.id.option7Allergy), findViewById(R.id.option8Allergy),
                 findViewById(R.id.option9Allergy), findViewById(R.id.option10Allergy)};
 
-
-        String myAll = "";
-        for (ToggleButton btn : prefButtons) {
-            if (btn.isChecked()) {
-                btnSelectedCount++;
-                }
-            else {
+        for(ToggleButton btn : allergyButtons) {
+            btn.setOnClickListener(item -> {
+                if(btn.isChecked()) {
+                    btnSelectedCount++;
+                } else {
                     btnSelectedCount--;
                 }
-                if (btnSelectedCount > 0) {
-
-                    nextButton.setText(R.string.finish);
-                }
-                else {
-                    nextButton.setText(R.string.skip);
-                }
-            myAll += btn.getText().toString();
+            });
         }
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth = FirebaseAuth.getInstance(); //added this
-                u = mAuth.getCurrentUser();
-                userID = u.getUid();
-                myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
-                myRef.child("Allergies").setValue(myAll + " ");
-
-
-            }
-        });
-
     }
 }
