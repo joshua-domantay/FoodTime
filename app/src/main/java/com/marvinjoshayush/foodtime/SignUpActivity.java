@@ -106,6 +106,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
 
         }
+
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
