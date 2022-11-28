@@ -31,6 +31,7 @@ import java.util.Map;
 // Add preferences screen
 public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickListener {
 
+    private String preferencesStr;
     private Button nextButton;
     private ToggleButton[] prefButtons;
     private int btnSelectedCount;
@@ -58,6 +59,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome3);
 
+        preferencesStr = "";
         nextButton = findViewById(R.id.welcomeNext3);
         btnSelectedCount = 0;
 
@@ -71,7 +73,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
 
 //added here
-
+        /*
         one = (ToggleButton) findViewById(R.id.Ovo);
         two =(ToggleButton) findViewById(R.id.Lacto);
         three = (ToggleButton)findViewById(R.id.Vegan);
@@ -85,18 +87,101 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
         four.setOnClickListener(this);
         five.setOnClickListener(this);
         six.setOnClickListener(this);
+        */
 
+        prefButtons = new ToggleButton[] {(ToggleButton) findViewById(R.id.Ovo), two =(ToggleButton) findViewById(R.id.Lacto),
+                three = (ToggleButton)findViewById(R.id.Vegan), four = (ToggleButton)findViewById(R.id.pasca),
+                five = (ToggleButton) findViewById(R.id.felxi), six = (ToggleButton) findViewById(R.id.others)};
+        for (ToggleButton x : prefButtons) {
+            x.setOnClickListener(this);
+        }
 
         setNextButton();
 
-        setPreferencesButtons();
+        // setPreferencesButtons();
 
+    }
+
+    private void preferenceSpecificClick(View v, int index) {
+        /*
+        if(one.isChecked()) {
+            list1.setVisibility(v.GONE);
+            list2.setVisibility(v.GONE);
+            one.setChecked(true);
+            two.setChecked(false);
+            three.setChecked(false);
+            four.setChecked(false);
+            five.setChecked(false);
+            six.setChecked(false);
+            // nextButton.setText(R.string.next);
+        }
+        if(!one.isChecked()){
+            six.setChecked(false);
+            // nextButton.setText(R.string.skip);
+        }
+        */
+
+        if(prefButtons[index].isChecked()) {
+            if(index != (prefButtons.length - 1)) {
+                preferencesStr = prefButtons[index].getText().toString().toLowerCase();
+            } else {
+                preferencesStr = "";
+            }
+            list1.setVisibility(v.GONE);
+            list2.setVisibility(v.GONE);
+            prefButtons[index].setChecked(true);
+            for(int i = 0; i < prefButtons.length; i++) {
+                if(index != i) {
+                    prefButtons[i].setChecked(false);
+                }
+            }
+        }
+
+        int count = 0;
+        for(int i = 0; i < prefButtons.length; i++) {
+            if(prefButtons[i].isChecked()) {
+                count++;
+            }
+        }
+        if(count == 0) {
+            preferencesStr = "";
+            nextButton.setText(R.string.skip);
+        } else {
+            nextButton.setText(R.string.next);
+        }
     }
 
 // added here
     public void onClick(View v) {
-
         int id = v.getId();
+        switch(id) {
+            case R.id.Ovo:
+                preferenceSpecificClick(v, 0);
+                break;
+            case R.id.Lacto:
+                preferenceSpecificClick(v, 1);
+                break;
+            case R.id.Vegan:
+                preferenceSpecificClick(v, 2);
+                break;
+            case R.id.pasca:
+                preferenceSpecificClick(v, 3);
+                break;
+            case R.id.felxi:
+                preferenceSpecificClick(v, 4);
+                break;
+            default:
+                preferenceSpecificClick(v, (prefButtons.length - 1));
+                if(prefButtons[prefButtons.length - 1].isChecked()) {
+                    list1.setVisibility(v.VISIBLE);
+                    list2.setVisibility(v.VISIBLE);
+                } else {
+                    list1.setVisibility(v.GONE);
+                    list2.setVisibility(v.GONE);
+                }
+        }
+
+        /*
         switch (id){
             case R.id.Ovo:
 
@@ -112,7 +197,8 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                     five.setChecked(false);
                     six.setChecked(false);
                     nextButton.setText(R.string.next);
-
+                    */
+                    /*
                    nextButton.setOnClickListener(new View.OnClickListener() {
                        @Override
                        public void onClick(View view) {
@@ -127,7 +213,8 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
 
                        }
                    });
-
+                   */
+/*
                 }
 
                 if(!one.isChecked()){
@@ -259,16 +346,27 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
             default:
                 //do ur code;
         }
+        */
+    }
+
+    private void addPreferenceToFirebase() {
+        mAuth = FirebaseAuth.getInstance(); //added this
+        u = mAuth.getCurrentUser();
+        userID = u.getUid();
+        myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
+        myRef.child("Choices").setValue(preferencesStr);
     }
 
 
     private void setNextButton() {
         Button btn = findViewById(R.id.welcomeNext3);
         btn.setOnClickListener(item -> {
+            addPreferenceToFirebase();
             startActivity(new Intent(this, WelcomeActivity4.class));
         });
     }
 
+    /*
     private void setPreferencesButtons() {
 
             prefButtons = new ToggleButton[]{findViewById(R.id.option1Pref), findViewById(R.id.option2Pref),
@@ -300,6 +398,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
             }
 
     }
+    */
 
 
     }
