@@ -9,8 +9,10 @@
     <string name="firstName">First Name</string>
     <string name="lastName">Last Name</string>
     <string name="have_account_log_in">Have an account? Log In</string>
+    <string name="placeholder1">Placeholder1</string>
+    <string name="placeholder2">Placeholder2</string>
 
-    <!-- Welcome Screen -->
+    <!--  Welcome Screen -->
     <string name="welcome">Welcome</string>
     <string name="to">To</string>
     <string name="next">Next</string>
@@ -18,6 +20,7 @@
     <string name="finish">Finish</string>
     <string name="get_your_food">Get your food</string>
     <string name="on_time">on time</string>
+    
     <string name="button">Button</string>
     <string name="button3">Button</string>
     <string name="textview3">TextView</string>
@@ -38,4 +41,14 @@
     <string name="mcdonalds" />
     <string name="burgerking" />
     <string name="Burgerking" />
+
+    <!-- Profile Screen -->
+    <string name="profile_settings">Profile Settings</string>
+    <string name="change_name">Change Name</string>
+    <string name="change_address">Change Address</string>
+    <string name="view_preferences">View Preferences</string>
+    <string name="view_allergies">View Allergies</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="change_password">Change Password</string>
+    <string name="log_out">Log out</string>
 </resources>
