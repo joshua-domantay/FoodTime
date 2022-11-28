@@ -57,17 +57,15 @@ public class WelcomeActivity4 extends AppCompatActivity {
     private void addAllergiesToServer() {
         String myAll = getAllergiesString();
 
-        /* SECOND: Remove the comment for this block (remove lines 60 and 66) then work on your code (mAuth = .... to myRef.child)
+
         mAuth = FirebaseAuth.getInstance(); //added this
         u = mAuth.getCurrentUser();
         userID = u.getUid();
         myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
-        myRef.child("Allergies").setValue(myAll + " ");
-        */
+        myRef.child("Allergies").setValue(myAll);
 
-        // FIRST: Run the app to check that the allergies work. Then remove this lines (68-70)
         Button btn = findViewById(R.id.welcomeFinish);
-        btn.setText(myAll);
+        btn.setText(R.string.finish);
     }
 
     private void setNextButton() {
