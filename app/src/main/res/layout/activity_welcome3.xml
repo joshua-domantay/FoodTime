@@ -11,13 +11,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add preferences screen placeholder"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:background="@drawable/gradient1"/>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="#F2C94C"
         android:orientation="vertical">
 
         <ToggleButton
@@ -25,6 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
             android:textOff="ovo-Vegetarian"
             android:textOn="ovo-Vegetarian"
             android:textSize="30sp" />
@@ -34,6 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
             android:textOff="Lacto-Vegetarian"
             android:textOn="Lacto-Vegetarian"
             android:textSize="30sp" />
@@ -43,6 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
             android:textOff="Vegan"
             android:textOn="Vegan"
             android:textSize="30sp" />
@@ -52,6 +60,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:
+            android:background="#000000"
+            android:textColor="#FFFFFF"
             android:textOff="Pascatarian"
             android:textOn="Pascatarian"
             android:textSize="30sp" />
@@ -61,6 +72,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
             android:textOff="Flexitarians"
             android:textOn="Flexitarians"
             android:textSize="30sp" />
@@ -70,18 +83,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
             android:textOff="Others"
             android:textOn="Others"
             android:textSize="30sp" />
 
         <LinearLayout
-            android:id= "@+id/LinearLayout1"
+            android:id="@+id/LinearLayout1"
             android:layout_width="wrap_content"
-             android:visibility="invisible"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-
+            android:orientation="horizontal"
+            android:visibility="invisible">
 
 
             <ToggleButton
@@ -123,12 +137,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id= "@+id/LinearLayout2"
+            android:id="@+id/LinearLayout2"
             android:layout_width="wrap_content"
-            android:visibility="invisible"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="invisible">
 
             <ToggleButton
                 android:id="@+id/option6Pref"
