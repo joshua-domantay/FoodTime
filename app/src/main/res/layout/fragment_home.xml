@@ -79,8 +79,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
-                android:layout_marginTop="-60dp"
+                android:layout_marginTop="-60dp" />
+                <!--
                 android:src="@drawable/panda_express_gluten_free_menu" />
+                -->
 
             <EditText
                 android:id="@+id/paanndaa"
@@ -119,8 +121,10 @@
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="168dp"
-                android:contentDescription="TODO"
+                android:contentDescription="TODO" />
+                <!--
                 android:src="@drawable/subway_logo_2002" />
+                -->
 
             <EditText
                 android:id="@+id/arbor"
@@ -141,8 +145,10 @@
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="match_parent"
-                android:layout_height="333dp"
+                android:layout_height="333dp" />
+                <!--
                 android:src="@drawable/arborgrill_008_jpg" />
+                -->
 
             <EditText
                 android:id="@+id/fruedian"
@@ -163,8 +169,10 @@
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content" />
+                <!--
                 android:src="@drawable/freud_logo" />
+                -->
 
             <EditText
                 android:id="@+id/mcdonalds"
