@@ -13,6 +13,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Locale;
+
 // Add allergies screen
 public class WelcomeActivity4 extends AppCompatActivity {
     private Button nextButton;
@@ -42,7 +44,7 @@ public class WelcomeActivity4 extends AppCompatActivity {
         if(btnSelectedCount > 0) {
             for (ToggleButton btn : allergyButtons) {
                 if (btn.isChecked()) {
-                    val += (btn.getText() + "&");       // Allergies separated by '&'
+                    val += (btn.getText().toString().toLowerCase() + "&");      // Allergies separated by '&'
                 }
             }
             val = val.substring(0, (val.length() - 1));     // Remove last '&'

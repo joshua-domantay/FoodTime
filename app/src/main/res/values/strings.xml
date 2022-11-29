@@ -45,26 +45,12 @@
     <string name="sesame">Sesame</string>
 
     <!-- Home Fragment -->
-    <string name="button">Button</string>
-    <string name="button3">Button</string>
-    <string name="textview3">TextView</string>
+    <string name="sort_suggestions_by">Sort suggestions by:</string>
     <string name="delivery">Delivery</string>
-    <string name="pick_up">pick up</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="fast_food">Fast Food</string>
+    <string name="restaurant">Restaurant</string>
     <string name="suggestions">Suggestions</string>
-    <string name="panda_express">Panda Express</string>
-    <string name="arbor">Arbor</string>
-    <string name="subway">Subway</string>
-    <string name="fruedian">Fruedian</string>
-    <string name="panda">Panda</string>
-    <string name="autocompletetextview">AutoCompleteTextView</string>
-    <string name="scrollbutton">Button</string>
-    <string name="button45">Button</string>
-    <string name="pandaaa">pandaaa</string>
-    <string name="sub" />
-    <string name="burger" />
-    <string name="mcdonalds" />
-    <string name="burgerking" />
-    <string name="Burgerking" />
 
     <!-- Profile Fragment -->
     <string name="profile_settings">Profile Settings</string>
