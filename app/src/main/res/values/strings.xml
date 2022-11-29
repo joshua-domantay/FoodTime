@@ -20,7 +20,31 @@
     <string name="finish">Finish</string>
     <string name="get_your_food">Get your food</string>
     <string name="on_time">on time</string>
-    
+    <string name="ovo_vegetarian">Ovo-Vegetarian</string>
+    <string name="lacto_vegetarian">Lacto-Vegetarian</string>
+    <string name="vegan">Vegan</string>
+    <string name="pascatarian">Pascatarian</string>
+    <string name="flexitarian">Flexitarian</string>
+    <string name="others">Others</string>
+    <string name="meat">Meat</string>
+    <string name="poultry">Poultry</string>
+    <string name="seafood">Seafood</string>
+    <string name="eggs">Eggs</string>
+    <string name="grains">Grains</string>
+    <string name="meat_ingredients">Meat Ingredients</string>
+    <string name="dairy_products">Dairy Products</string>
+    <string name="onion">Onion</string>
+    <string name="garlic">Garlic</string>
+    <string name="peanuts">Peanuts</string>
+    <string name="tree_nuts">Tree Nuts</string>
+    <string name="fish">Fish</string>
+    <string name="milk">Milk</string>
+    <string name="shellfish">Shellfish</string>
+    <string name="wheat">Wheat</string>
+    <string name="soy">Soy</string>
+    <string name="sesame">Sesame</string>
+
+    <!-- Home Fragment -->
     <string name="button">Button</string>
     <string name="button3">Button</string>
     <string name="textview3">TextView</string>
@@ -42,7 +66,7 @@
     <string name="burgerking" />
     <string name="Burgerking" />
 
-    <!-- Profile Screen -->
+    <!-- Profile Fragment -->
     <string name="profile_settings">Profile Settings</string>
     <string name="change_name">Change Name</string>
     <string name="change_address">Change Address</string>

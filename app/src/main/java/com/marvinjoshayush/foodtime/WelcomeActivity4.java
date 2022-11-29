@@ -15,7 +15,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 // Add allergies screen
 public class WelcomeActivity4 extends AppCompatActivity {
-
     private Button nextButton;
     private ToggleButton[] allergyButtons;
     private int btnSelectedCount;
@@ -23,9 +22,7 @@ public class WelcomeActivity4 extends AppCompatActivity {
     DatabaseReference myRef;
     FirebaseAuth mAuth;
     FirebaseUser u;
-
     String userID;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,18 +42,16 @@ public class WelcomeActivity4 extends AppCompatActivity {
         if(btnSelectedCount > 0) {
             for (ToggleButton btn : allergyButtons) {
                 if (btn.isChecked()) {
-                    val += (btn.getText() + "-");       // Allergies separated by '-'
+                    val += (btn.getText() + "&");       // Allergies separated by '&'
                 }
             }
-
-            val = val.substring(0, (val.length() - 1));     // Remove last '-'
+            val = val.substring(0, (val.length() - 1));     // Remove last '&'
         }
         return val;
     }
 
     private void addAllergiesToServer() {
         String myAll = getAllergiesString();
-
 
         mAuth = FirebaseAuth.getInstance(); //added this
         u = mAuth.getCurrentUser();

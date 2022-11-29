@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,161 +10,189 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         android:text="Add preferences screen placeholder"
         android:textSize="40sp" />
 
 
     <LinearLayout
+        android:id="@+id/preferencesMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
         <ToggleButton
-            android:id="@+id/Ovo"
+            android:id="@+id/ovoVegetarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="ovo-Vegetarian"
-            android:textOn="ovo-Vegetarian"
-            android:textSize="30sp" />
+            android:textOff="@string/ovo_vegetarian"
+            android:textOn="@string/ovo_vegetarian"
+            android:textSize="27sp" />
 
         <ToggleButton
-            android:id="@+id/Lacto"
+            android:id="@+id/lactoVegetarian"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textOff="Lacto-Vegetarian"
-            android:textOn="Lacto-Vegetarian"
-            android:textSize="30sp" />
+            android:textOff="@string/lacto_vegetarian"
+            android:textOn="@string/lacto_vegetarian"
+            android:textSize="27sp" />
 
         <ToggleButton
-            android:id="@+id/Vegan"
+            android:id="@+id/vegan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="Vegan"
-            android:textOn="Vegan"
-            android:textSize="30sp" />
+            android:textOff="@string/vegan"
+            android:textOn="@string/vegan"
+            android:textSize="27sp" />
 
         <ToggleButton
-            android:id="@+id/pasca"
+            android:id="@+id/pascatarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="Pascatarian"
-            android:textOn="Pascatarian"
-            android:textSize="30sp" />
+            android:textOff="@string/pascatarian"
+            android:textOn="@string/pascatarian"
+            android:textSize="27sp" />
 
         <ToggleButton
-            android:id="@+id/felxi"
+            android:id="@+id/flexitarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="Flexitarians"
-            android:textOn="Flexitarians"
-            android:textSize="30sp" />
+            android:textOff="@string/flexitarian"
+            android:textOn="@string/flexitarian"
+            android:textSize="27sp" />
 
         <ToggleButton
             android:id="@+id/others"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textOff="Others"
-            android:textOn="Others"
-            android:textSize="30sp" />
+            android:textOff="@string/others"
+            android:textOn="@string/others"
+            android:textSize="27sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/othersLayout"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preferencesMain"
+        android:layout_marginHorizontal="40dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id= "@+id/LinearLayout1"
-            android:layout_width="wrap_content"
-             android:visibility="invisible"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-
-
+            android:orientation="horizontal"
+            android:weightSum="2" >
 
             <ToggleButton
-                android:id="@+id/option1Pref"
+                android:id="@+id/otherPref1"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textOff="Meat"
-                android:textOn="Meat"
-                android:textSize="12sp" />
+                android:textOff="@string/eggs"
+                android:textOn="@string/eggs"
+                android:textSize="14sp" />
 
             <ToggleButton
-                android:id="@+id/option2Pref"
+                android:id="@+id/otherPref2"
+                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textOff="Seafood"
-                android:textOn="Seafood"
-                android:textSize="12sp" />
-
-            <ToggleButton
-                android:id="@+id/option3Pref"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:textOff="Eggs"
-                android:textOn="Eggs"
-                android:textSize="12sp" />
-
-            <ToggleButton
-                android:id="@+id/option5Pref"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:textOff="Grains"
-                android:textOn="Grains"
-                android:textSize="12sp" />
-
+                android:textOff="@string/grains"
+                android:textOn="@string/grains"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:id= "@+id/LinearLayout2"
             android:layout_width="wrap_content"
-            android:visibility="invisible"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal" >
 
             <ToggleButton
-                android:id="@+id/option6Pref"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ToggleButton"
-                android:textOff="Meat Ingredients"
-                android:textOn="Meat Ingredients"
-                android:textSize="12sp" />
-
-            <ToggleButton
-                android:id="@+id/option4Pref"
+                android:id="@+id/otherPref3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textOff="Dairy-Product"
-                android:textOn="Dairy-Product"
-                android:textSize="12sp" />/>
+                android:textOff="@string/meat"
+                android:textOn="@string/meat"
+                android:textSize="14sp" />
 
+            <ToggleButton
+                android:id="@+id/otherPref4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textOff="@string/poultry"
+                android:textOn="@string/poultry"
+                android:textSize="14sp" />
 
+            <ToggleButton
+                android:id="@+id/otherPref5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textOff="@string/seafood"
+                android:textOn="@string/seafood"
+                android:textSize="14sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ToggleButton
+                android:id="@+id/otherPref6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textOff="@string/meat_ingredients"
+                android:textOn="@string/meat_ingredients"
+                android:textSize="12sp" />
+
+            <ToggleButton
+                android:id="@+id/otherPref7"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:textOff="@string/dairy_products"
+                android:textOn="@string/dairy_products"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <Button
         android:id="@+id/welcomeNext3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         android:textSize="25sp"
         android:text="@string/skip" />
-
-
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
