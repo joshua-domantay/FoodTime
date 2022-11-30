@@ -50,6 +50,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
+        startActivity(new Intent(SignUpActivity.this, WelcomeActivity2.class));
 
         switch (v.getId()){
             case R.id.haveAccountLogInButton:

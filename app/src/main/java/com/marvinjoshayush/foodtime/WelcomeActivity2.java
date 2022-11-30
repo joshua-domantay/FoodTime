@@ -18,7 +18,7 @@ public class WelcomeActivity2 extends AppCompatActivity {
     private void setNextButton() {
         Button btn = findViewById(R.id.welcomeNext2);
         btn.setOnClickListener(item -> {
-            startActivity(new Intent(this, WelcomeActivity3.class));
+            startActivity(new Intent(this, WelcomeActivity1.class));
         });
     }
 }

@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity4">
+    tools:context=".WelcomeActivity4"
+    android:background="@drawable/welcome">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="40sp"
-        android:text="Add allergies screen placeholder" />
+        android:textAlignment="center"
+        android:text="Add Allergies "
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/purple_700"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
         android:orientation="vertical">
 
         <LinearLayout
@@ -29,27 +35,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:textColor="@color/black"
                 android:textOff="Onion"
                 android:textOn="Onion"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/option2Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:textColor="@color/black"
                 android:textOff="Garlic"
                 android:textOn="Garlic"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/option3Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:textColor="@color/black"
                 android:textOff="Peanuts"
                 android:textOn="Peanuts"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -64,18 +85,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:background="@drawable/border"
+                android:textColor="@color/black"
                 android:textOff="Tree nuts"
                 android:textOn="Tree nuts"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/option5Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:textColor="@color/black"
                 android:textOff="Fish"
                 android:textOn="Fish"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -90,27 +119,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:background="@drawable/border"
+                android:textColor="@color/black"
                 android:textOff="Milk"
                 android:textOn="Milk"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/option7Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:textColor="@color/black"
                 android:textOff="Shellfish"
                 android:textOn="Shellfish"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/option8Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:textColor="@color/black"
                 android:textOff="Wheat"
                 android:textOn="Wheat"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -125,21 +169,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:textColor="@color/black"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
                 android:textOff="Soy"
                 android:textOn="Soy"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <ToggleButton
                 android:id="@+id/option10Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:background="@drawable/border"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:theme="@android:style/ThemeOverlay.Material.Dark"
+                android:textColor="@color/black"
                 android:textOff="Sesame"
                 android:textOn="Sesame"
-                android:textSize="12sp" />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
-
 
 
     </LinearLayout>
@@ -153,6 +206,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginRight="15dp"
         android:textSize="25sp"
-        android:text="@string/finish" />
+        android:text="@string/finish"
+        android:background="@drawable/gradient1"/>
 
 </RelativeLayout>

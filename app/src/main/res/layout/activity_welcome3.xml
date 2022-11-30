@@ -4,22 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity3">
+    tools:context=".WelcomeActivity3"
+    android:background="@drawable/welcome">
+
+
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add preferences screen placeholder"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:text="Add preferences "
+        android:textStyle="bold"
         android:textSize="40sp"
-        android:background="@drawable/gradient1"/>
+        android:background="@color/purple_700"
+        />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="#F2C94C"
         android:orientation="vertical">
 
         <ToggleButton
@@ -27,67 +33,82 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
+            android:background="@drawable/border"
+            android:textColor="@color/black"
             android:textOff="ovo-Vegetarian"
             android:textOn="ovo-Vegetarian"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <ToggleButton
             android:id="@+id/Lacto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
+            android:background="@drawable/border"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:textColor="@color/black"
             android:textOff="Lacto-Vegetarian"
             android:textOn="Lacto-Vegetarian"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <ToggleButton
             android:id="@+id/Vegan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
+            android:background="@drawable/border"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:textColor="@color/black"
             android:textOff="Vegan"
             android:textOn="Vegan"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <ToggleButton
             android:id="@+id/pasca"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:
-            android:background="#000000"
-            android:textColor="#FFFFFF"
+            android:background="@drawable/border"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:textColor="@color/black"
             android:textOff="Pascatarian"
             android:textOn="Pascatarian"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <ToggleButton
             android:id="@+id/felxi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
+            android:background="@drawable/border"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:textColor="@color/black"
             android:textOff="Flexitarians"
             android:textOn="Flexitarians"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <ToggleButton
             android:id="@+id/others"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#000000"
-            android:textColor="#FFFFFF"
+            android:background="@drawable/border"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:textColor="@color/black"
             android:textOff="Others"
             android:textOn="Others"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/LinearLayout1"
@@ -176,7 +197,8 @@
         android:layout_marginBottom="15dp"
         android:layout_marginRight="15dp"
         android:textSize="25sp"
-        android:text="@string/skip" />
+        android:text="@string/skip"
+        android:background="@drawable/gradient1"/>
 
 
 

@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -119,6 +122,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
         }
     }
 
+
 // added here
     public void onClick(View v) {
         int id = v.getId();
@@ -158,6 +162,12 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
         myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
         myRef.child("Choices").setValue(preferencesStr);
     }
+
+
+
+
+
+
 
 
     private void setNextButton() {
