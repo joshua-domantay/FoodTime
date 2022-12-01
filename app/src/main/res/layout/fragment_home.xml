@@ -92,6 +92,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <!-- Default Layout. Implemented in HomeFragment.java
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,6 +148,7 @@
                     android:textSize="18sp"
                     android:textAlignment="center" />
             </LinearLayout>
+            -->
         </LinearLayout>
     </ScrollView>
 

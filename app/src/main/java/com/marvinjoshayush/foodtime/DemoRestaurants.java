@@ -19,6 +19,6 @@ public class DemoRestaurants {
     public String[] menu = new String[] {"Salad\nWater\nEgg", "Fruits\nMilk", "Salad\nFruits", "Shrimps\nFish",
             "Fruits\nMilk\nEggs", "Tomato\nCorn", "Watermelon\nBanana\nApple", "Burger\nSteak", "Chicken\nSoda"};
 
-    public String[][] contains = new String[][] {{"Eggs"}, {"Dairy Products"}, {}, {"Seafood"}, {"Dairy Products", "Eggs"},
-            {}, {}, {}, {}};
+    public String[][] contains = new String[][] {{"Eggs"}, {"Dairy Products", "Milk"}, {}, {"Seafood"},
+            {"Dairy Products", "Milk", "Eggs"}, {}, {}, {"Meat"}, {"Poultry"}};
 }

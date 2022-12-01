@@ -3,9 +3,11 @@ package com.marvinjoshayush.foodtime;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,25 +16,101 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Locale;
+
+/* Future plan
+    Add Restaurants to FireBase
+    Make a Restaurant class
+    Make Restaurant List
+    Get all* restaurants from FireBase      -> This will only work in a specific area instead of anywhere in the world
+    Only add restaurants to list if preferred by user according to preference and allergies
+ */
 public class HomeFragment extends Fragment {
+    private FirebaseUser user;
+    private DatabaseReference dbReference;
+    private String userID;
+    private String dietPreference;
+    private String[] dietAllergies;
+
     private HomeActivity home;
     private View view;
     private LinearLayout scrollView;
 
-    public HomeFragment(HomeActivity home) { this.home = home; }
+    public HomeFragment(HomeActivity home, FirebaseUser user, DatabaseReference dbReference, String userID) {
+        this.home = home;
+        this.user = user;
+        this.dbReference = dbReference;
+        this.userID = userID;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         scrollView = view.findViewById(R.id.homeSVLinear);
 
-        setSortButtons();
+        dietAllergies = new String[]{};
 
-        getRestaurants();
-        setRestaurants();
+        setSortButtons();
+        getChoices();
+        // getRestaurants();
+        // setRestaurants();
 
         return view;
+    }
+
+    // Future use
+    private void setSortButtons() {
+        Button btn = view.findViewById(R.id.homeSortDelivery);
+        btn.setOnClickListener(item -> {
+
+        });
+
+        btn = view.findViewById(R.id.homeSortPickUp);
+        btn.setOnClickListener(item -> {
+
+        });
+
+        /*
+        btn = view.findViewById(R.id.homeSortFastFood);
+        btn.setOnClickListener(item -> {
+
+        });
+
+        btn = view.findViewById(R.id.homeSortRestaurant);
+        btn.setOnClickListener(item -> {
+
+        });
+         */
+    }
+
+    private void getChoices() {
+        // Testing
+        dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String theChoice = snapshot.child("Choices").getValue(String.class);
+                String theAllergies = snapshot.child("Allergies").getValue(String.class);
+
+                dietPreference = theChoice;
+                if(dietPreference == null) { dietPreference = ""; }
+                dietAllergies = theAllergies.split("&");
+                getRestaurants();
+                setRestaurants();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
     }
 
     // Future use
@@ -42,12 +120,74 @@ public class HomeFragment extends Fragment {
     private void setRestaurants() {
         DemoRestaurants rest = new DemoRestaurants();
 
+        String s = "";
+        if(dietPreference != null) {
+            s = dietPreference;
+        }
+        Log.d("HomeFragment", s);
+
+        String[] toAvoid = new String[1];
+        if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.ovo_vegetarian))) {
+            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Dairy Products", "Grains"};
+        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.lacto_vegetarian))) {
+            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Eggs", "Grains"};
+        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.vegan))) {
+            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Dairy Products", "Eggs", "Grains"};
+        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.pascatarian))) {
+            toAvoid = new String[]{"Meat", "Poultry", "Meat Ingredients", "Grains"};
+        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.flexitarian))) {
+            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Grains"};
+        } else {
+            toAvoid = new String[]{};
+        }
+
+        int max = 0;
+        int[] index = new int[9];
+
+        if(toAvoid.length > 0) {
+            for (int i = 0; i < rest.restaurants.length; i++) {
+                boolean yN = true;
+                for (String x : toAvoid) {
+                    for (String y : rest.contains[i]) {
+                        if (x.equalsIgnoreCase(y)) {
+                            yN = false;
+                            break;
+                        }
+                    }
+                    if (!yN) {
+                        break;
+                    }
+                }
+                for (String x : dietAllergies) {
+                    for (String y : rest.contains[i]) {
+                        if (x.equalsIgnoreCase(y)) {
+                            yN = false;
+                            break;
+                        }
+                    }
+                    if (!yN) {
+                        break;
+                    }
+                }
+                if (yN) {
+                    index[max] = i;
+                    max++;
+                }
+            }
+        } else {
+            for(int i = 0; i < 9; i++) {
+                max++;
+                index[i] = i;
+            }
+        }
+
         // setRestaurantsH(rest.banners[0], rest.restaurants[0], rest.distances[0], rest.services[0], rest.services[0]);
-        for(int i = 0; i < rest.restaurants.length; i++) {
-            setRestaurantsH(rest.banners[i], rest.restaurants[i], rest.distances[i], rest.services[i], rest.menu[i]);
+        for(int i = 0; i < max; i++) {
+            setRestaurantsH(rest.banners[index[i]], rest.restaurants[index[i]], rest.distances[index[i]], rest.services[index[i]], rest.menu[index[i]]);
         }
     }
 
+    // Future: Just one Restaurant class parameter
     // Add in ScrollView -> LinearLayout
     private void setRestaurantsH(int restBanner, String restName, float restDist, String restService, String restShortMenu) {
         LinearLayout.LayoutParams matchWrap = new LinearLayout.LayoutParams(
@@ -139,31 +279,6 @@ public class HomeFragment extends Fragment {
                 getResources().getDisplayMetrics()
         );
         return pix;
-    }
-
-    // Future use
-    private void setSortButtons() {
-        Button btn = view.findViewById(R.id.homeSortDelivery);
-        btn.setOnClickListener(item -> {
-
-        });
-
-        btn = view.findViewById(R.id.homeSortPickUp);
-        btn.setOnClickListener(item -> {
-
-        });
-
-        /*
-        btn = view.findViewById(R.id.homeSortFastFood);
-        btn.setOnClickListener(item -> {
-
-        });
-
-        btn = view.findViewById(R.id.homeSortRestaurant);
-        btn.setOnClickListener(item -> {
-
-        });
-         */
     }
 }
 
