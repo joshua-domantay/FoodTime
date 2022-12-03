@@ -1,11 +1,11 @@
 package com.marvinjoshayush.foodtime;
 
 public class DemoRestaurants {
-    public int[] banners = new int[] {R.drawable.panda_express_gluten_free_menu, R.drawable.panda_express_gluten_free_menu,
-            R.drawable.panda_express_gluten_free_menu, R.drawable.panda_express_gluten_free_menu,
-            R.drawable.panda_express_gluten_free_menu, R.drawable.panda_express_gluten_free_menu,
-            R.drawable.panda_express_gluten_free_menu, R.drawable.panda_express_gluten_free_menu,
-            R.drawable.panda_express_gluten_free_menu};
+    public int[] banners = new int[] {R.drawable.demo_salad_eggs, R.drawable.demo_milk_fruit,
+            R.drawable.demo_fruit_salad, R.drawable.demo_seafoodie,
+            R.drawable.demo_egg_cakes, R.drawable.demo_the_farm,
+            R.drawable.demo_frutas, R.drawable.demo_tasty,
+            R.drawable.demo_chicky};
 
     public String[] restaurants = new String[] {"Salad & Eggs", "Milk+Fruit", "FruitSalad",
             "Seafoodie", "EggCakes", "TheFarm", "Frutas", "Tasty", "Chicky"};
