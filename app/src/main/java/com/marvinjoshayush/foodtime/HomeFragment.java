@@ -38,6 +38,7 @@ import java.util.Locale;
 public class HomeFragment extends Fragment {
     private FirebaseUser user;
     private DatabaseReference dbReference;
+    private RestaurantManager restaurantManager;
     private String userID;
     private String dietPreference;
     private String[] dietAllergies;
@@ -51,6 +52,9 @@ public class HomeFragment extends Fragment {
         this.user = user;
         this.dbReference = dbReference;
         this.userID = userID;
+
+        restaurantManager = new RestaurantManager();
+        dietAllergies = new String[]{};
     }
 
     @Override
@@ -58,7 +62,6 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         scrollView = view.findViewById(R.id.homeSVLinear);
 
-        dietAllergies = new String[]{};
 
         setSortButtons();
         getChoices();
@@ -104,7 +107,7 @@ public class HomeFragment extends Fragment {
                 dietPreference = theChoice;
                 if(dietPreference == null) { dietPreference = ""; }
                 dietAllergies = theAllergies.split("&");
-                getRestaurants();
+                // getRestaurants();
                 setRestaurants();
             }
 
@@ -116,8 +119,13 @@ public class HomeFragment extends Fragment {
     // Future use
     private void getRestaurants() { }
 
-    // Change in the future (Just for demo)
     private void setRestaurants() {
+        for(int i = 0; i < restaurantManager.getRestaurants().size(); i++) {
+            Restaurant rest = restaurantManager.getRestaurants().get(i);
+            setRestaurantsH(rest.getBanner(), rest.getName(), 0f, "Demo only");
+        }
+
+        /*
         DemoRestaurants rest = new DemoRestaurants();
 
         String s = "";
@@ -185,11 +193,12 @@ public class HomeFragment extends Fragment {
         for(int i = 0; i < max; i++) {
             setRestaurantsH(rest.banners[index[i]], rest.restaurants[index[i]], rest.distances[index[i]], rest.services[index[i]], rest.menu[index[i]]);
         }
+        */
     }
 
     // Future: Just one Restaurant class parameter
     // Add in ScrollView -> LinearLayout
-    private void setRestaurantsH(int restBanner, String restName, float restDist, String restService, String restShortMenu) {
+    private void setRestaurantsH(int restBanner, String restName, float restDist, String restService) {
         LinearLayout.LayoutParams matchWrap = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
@@ -252,6 +261,7 @@ public class HomeFragment extends Fragment {
         tvService.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
         linearChild.addView(tvService);     // Add to linearChild
 
+        /*
         // TextView (name)
         TextView tvMenu = new TextView(getContext());
         tvMenu.setLayoutParams(matchWrap);
@@ -260,12 +270,13 @@ public class HomeFragment extends Fragment {
         tvMenu.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
         tvMenu.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         tvMenu.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        */
 
         // Add everything to linearParent
         linearParent.addView(img);
         linearParent.addView(tvName);
         linearParent.addView(linearChild);
-        linearParent.addView(tvMenu);
+        // linearParent.addView(tvMenu);
 
         // Add to the LinearLayout from ScrollView
         scrollView.addView(linearParent);
