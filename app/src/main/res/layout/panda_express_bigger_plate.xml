@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!--Panda Express bigger plate Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="25dp"/>
+
+        <!--Panda Express Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_icon"></ImageButton>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>
+
+        <!--Step 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Step 1"></TextView>
+
+        <!--Step 1 continued -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            android:textStyle="bold"
+            android:text="Choose a Side, or Get Half and Half"></TextView>
+
+
+        <!--Chow Mein -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/chow_mein_panda_express"></ImageButton>
+
+
+        <!--Fried Rice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/fried_rice_panda"></ImageButton>
+
+        <!--White Steamed Rice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/white_steamed_rice_panda_express"></ImageButton>
+
+        <!--Super Greens -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/super_greens_panda"></ImageButton>
+
+        <!--Brown Steamed Rice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/brown_steamed_rice_panda"></ImageButton>
+
+
+        <!--Step 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Step 2"></TextView>
+
+        <!--Step 2 continued -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            android:textStyle="bold"
+            android:text="Choose Three Entrées"></TextView>
+
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="25dp"/>
+
+        <!--Sizzling Shrimp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/sizzling_shrimp_panda"></ImageButton>
+
+        <!--The Original Orange chicken -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/the_original_orange_chicken_panda"></ImageButton>
+
+        <!--Black Pepper Angus Steak -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/black_pepper_angus_steak_panda"></ImageButton>
+
+        <!--Honey Walnut Shrimp -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/honey_walnut_shrimp_panda"></ImageButton>
+
+        <!--Grilled teriyaki Chicken -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/grilled_teriyaki_chicken"></ImageButton>
+
+        <!--Broccoli Beef -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/broccoli_beef_panda"></ImageButton>
+
+        <!--Kung Pao Chicken -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/kung_pao_chicken_panda"></ImageButton>
+
+        <!--Honey Sesame Chicken Breast -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/honey_sesame_chicken_panda"></ImageButton>
+
+        <!--Beijing Beef -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/beijing_beef_panda"></ImageButton>
+
+        <!--Mushroom Chicken -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mushroom_chicken_panda"></ImageButton>
+
+        <!--String Bean Chicken Breast -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/string_bean_chicken_panda"></ImageButton>
+
+        <!--Black Pepper Chicken -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/black_pepper_chicken_panda"></ImageButton>
+
+        <!--Super Greens  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/super_greens_panda"></ImageButton>
+
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></Space>
+
+        <!-- Cancel (left0) or submit (right) buttons  -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Back To Menu"
+                android:textSize="9pt" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
