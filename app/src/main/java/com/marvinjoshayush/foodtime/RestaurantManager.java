@@ -19,10 +19,14 @@ import java.util.ArrayList;
 
 public class RestaurantManager {
     private static ArrayList<Restaurant> restaurants;
+    private HomeActivity home;
 
-    public RestaurantManager() {
-        restaurants = new ArrayList<>();
-        initializeRestaurants();
+    public RestaurantManager(HomeActivity home) {
+        if(restaurants == null) {
+            restaurants = new ArrayList<>();
+            initializeRestaurants();
+        }
+        this.home = home;
         /*
         Log.d("HOLL", restaurants.get(0).getMenuSections().get(0).getMenu().get(0).getName());
         for(String x : restaurants.get(0).getMenuSections().get(0).getMenu().get(0).getIngredients()) {
@@ -48,6 +52,7 @@ public class RestaurantManager {
                     getMenuSectionsFromFirebase(newRestaurant, pAllRestaurantsRef.child(mRestaurant.getKey()));
                     restaurants.add(newRestaurant);
                 }
+                home.setRestaurants();
             }
 
             @Override
