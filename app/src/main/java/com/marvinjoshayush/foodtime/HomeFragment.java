@@ -213,6 +213,20 @@ public class HomeFragment extends Fragment {
                     break;
                 case "Subway":
                     Log.d("TEST", "subwaywaywyay");
+                    Log.d("TEST", home.getRestaurantManager().getRestaurants().size() + " " );
+                    String all = "";
+                    for(Restaurant i : home.getRestaurantManager().getRestaurants()) {
+                        Log.d("TEST", i.getName());
+                        for(MenuSection j : i.getMenuSections()) {
+                            Log.d("TEST", j.getName());
+                            for(MenuItem k : j.getMenu()) {
+                                Log.d("TEST", k.getName());
+                                for(String x : k.getIngredients()) {
+                                    Log.d("TAST", k.getName() + " > " + x);
+                                }
+                            }
+                        }
+                    }
                     break;
                 default:
                     Log.d("TEST", "HEISL");

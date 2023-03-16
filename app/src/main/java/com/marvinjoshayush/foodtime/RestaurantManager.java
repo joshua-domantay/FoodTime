@@ -88,8 +88,7 @@ public class RestaurantManager {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot mMenuItem : snapshot.getChildren()) {
                     String menuItemStr = mMenuItem.getKey();
-                    ArrayList<String> ingredients = getIngredientsFromFirebase(pRestaurantRef.child(mMenuItem.getKey()));
-                    restaurantObj.addMenu(pSectionNum, menuItemStr, ingredients);
+                    getIngredientsFromFirebase(pRestaurantRef.child(mMenuItem.getKey()), restaurantObj, pSectionNum, menuItemStr);
                 }
             }
 
@@ -98,20 +97,20 @@ public class RestaurantManager {
         });
     }
 
-    private ArrayList<String> getIngredientsFromFirebase(DatabaseReference pMenuItemRef) {
-        ArrayList<String> ingredients = new ArrayList<>();
+    private void getIngredientsFromFirebase(DatabaseReference pMenuItemRef, Restaurant restaurantObj, int pSectionNum, String menuItemStr) {
         pMenuItemRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                ArrayList<String> ingredients = new ArrayList<>();
                 for(DataSnapshot child : snapshot.getChildren()) {
                     ingredients.add(child.getValue().toString());
                 }
+                restaurantObj.addMenu(pSectionNum, menuItemStr, ingredients);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) { }
         });
-        return ingredients;
     }
 
     private void restaurantToFirebaseH(DatabaseReference toAdd, String section, String menuItem, String[] ingredients) {

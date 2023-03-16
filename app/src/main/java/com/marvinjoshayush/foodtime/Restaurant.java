@@ -35,6 +35,7 @@ class MenuSection {
     public void addMenu(String menuName, ArrayList<String> ingredients) {
         MenuItem newMenu = new MenuItem(menuName);
         newMenu.addIngredients(ingredients);
+        menu.add(newMenu);
     }
 
     public String getName() { return name; }
