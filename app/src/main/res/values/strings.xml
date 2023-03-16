@@ -62,4 +62,5 @@
     <string name="change_password">Change Password</string>
     <string name="log_out">Log out</string>
     <string name="select_a_restaurant">Select a restaurant</string>
+    <string name="title_activity_panda_express">PandaExpress</string>
 </resources>
