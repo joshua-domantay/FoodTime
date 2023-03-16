@@ -201,6 +201,23 @@ public class HomeFragment extends Fragment {
 
         // Add to the LinearLayout from ScrollView
         scrollView.addView(linearParent);
+
+        setRestaurantsOnClick(linearParent, restName);
+    }
+
+    private void setRestaurantsOnClick(LinearLayout restLayout, String restName) {
+        restLayout.setOnClickListener(item -> {
+            switch(restName) {
+                case "Panda Express":
+                    home.setFragment(new PandaExpressFragment(home));
+                    break;
+                case "Subway":
+                    Log.d("TEST", "subwaywaywyay");
+                    break;
+                default:
+                    Log.d("TEST", "HEISL");
+            }
+        });
     }
 
     // For setRestaurantsH()

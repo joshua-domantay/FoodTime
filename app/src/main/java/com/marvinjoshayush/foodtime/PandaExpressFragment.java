@@ -9,10 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class PandaExpressFragment extends Fragment {
+    private HomeActivity home;
     private View view;
 
-    public PandaExpressFragment() {
-        // Required empty public constructor
+    public PandaExpressFragment(HomeActivity home) {
+        this.home = home;
     }
 
     @Override

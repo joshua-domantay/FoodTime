@@ -29,63 +29,72 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/plate_panda"/>
+                app:srcCompat="@drawable/plate_panda"
+                android:background="@null"/>
 
             <!-- Bowl -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/bowl_panda"/>
+                app:srcCompat="@drawable/bowl_panda"
+                android:background="@null"/>
 
             <!-- Plate -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/plate2_panda"/>
+                app:srcCompat="@drawable/plate2_panda"
+                android:background="@null"/>
 
             <!-- Bigger Plate -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/bigger_plate"/>
+                app:srcCompat="@drawable/bigger_plate"
+                android:background="@null"/>
 
             <!-- Family meal -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/family_meal"/>
+                app:srcCompat="@drawable/family_meal"
+                android:background="@null"/>
 
             <!-- Cub meal -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/cub_meal"/>
+                app:srcCompat="@drawable/cub_meal"
+                android:background="@null"/>
 
             <!-- A La Carte meal -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/a_la_carte"/>
+                app:srcCompat="@drawable/a_la_carte"
+                android:background="@null"/>
 
             <!-- Appetizers -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/appetizers_and_more"/>
+                app:srcCompat="@drawable/appetizers_and_more"
+                android:background="@null"/>
 
             <!-- Drinks -->
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/drinks_panda"/>
+                app:srcCompat="@drawable/drinks_panda"
+                android:background="@null"/>
 
             <!-- Cancel (left0) or submit (right) buttons  -->
             <LinearLayout
