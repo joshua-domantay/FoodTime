@@ -26,7 +26,6 @@
 
 
         <ImageButton
-            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_gravity="center"
@@ -49,7 +48,6 @@
 
         <!--Subway Button -->
         <ImageButton
-            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -67,7 +65,6 @@
         <!--Bowl -->
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -81,7 +78,6 @@
 
         <!--Bigger Plate -->
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -95,7 +91,6 @@
             android:orientation="horizontal" />
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -109,7 +104,6 @@
             android:orientation="horizontal" />
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -124,7 +118,6 @@
             android:orientation="horizontal" />
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -138,7 +131,6 @@
             android:orientation="horizontal" />
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -152,7 +144,6 @@
             android:orientation="horizontal" />
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -167,7 +158,6 @@
             android:orientation="horizontal" />
 
         <ImageButton
-            android:id="@id/imageView"
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
