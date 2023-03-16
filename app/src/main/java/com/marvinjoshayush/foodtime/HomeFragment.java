@@ -54,7 +54,6 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         scrollView = view.findViewById(R.id.homeSVLinear);
 
-
         setSortButtons();
         getChoices();
         setRestaurants();
@@ -201,6 +200,23 @@ public class HomeFragment extends Fragment {
 
         // Add to the LinearLayout from ScrollView
         scrollView.addView(linearParent);
+
+        setRestaurantsOnClick(linearParent, restName);
+    }
+
+    private void setRestaurantsOnClick(LinearLayout restaurantLayout, String restName) {
+        restaurantLayout.setOnClickListener(item -> {
+            switch(restName) {
+                case "Panda Express":
+                    Log.d("TEST", "panda");
+                    break;
+                case "Subway":
+                    Log.d("TEST", "sub");
+                    break;
+                default:
+                    Log.d("TEST", "NOPE");
+            }
+        });
     }
 
     // For setRestaurantsH()

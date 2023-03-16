@@ -27,17 +27,11 @@ public class RestaurantManager {
             initializeRestaurants();
         }
         this.home = home;
-        /*
-        Log.d("HOLL", restaurants.get(0).getMenuSections().get(0).getMenu().get(0).getName());
-        for(String x : restaurants.get(0).getMenuSections().get(0).getMenu().get(0).getIngredients()) {
-            Log.d("HOLL", x);
-        }
-         */
     }
 
     private void initializeRestaurants() {
         // restaurants.add(getPandaExpress());
-        restaurantToFirebase();
+        // restaurantToFirebase();
 
         DatabaseReference restaurantsFirebase = FirebaseDatabase.getInstance().getReference("Restaurants");
         getRestaurantsFromFirebase(restaurantsFirebase);
