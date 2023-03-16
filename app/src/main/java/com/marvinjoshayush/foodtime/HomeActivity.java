@@ -18,9 +18,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class HomeActivity extends AppCompatActivity {
-
     private FirebaseUser user;
     private DatabaseReference dbReference;
+    private RestaurantManager restaurantManager;
     private String userID;
 
     private static HomeFragments CURRENT_FRAGMENT;
@@ -33,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
 
         getCurrentUserInfo();
         setBottomNavBar();
+        restaurantManager = new RestaurantManager();
 
         // Default to HOME fragment
         setFragmentOnMenu(HomeFragments.HOME);
@@ -96,4 +97,6 @@ public class HomeActivity extends AppCompatActivity {
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.homeFragmentContainer, _frag).commit();
     }
+
+    public RestaurantManager getRestaurantManager() { return restaurantManager; }
 }

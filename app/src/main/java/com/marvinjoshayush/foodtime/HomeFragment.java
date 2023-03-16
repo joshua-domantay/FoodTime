@@ -38,7 +38,6 @@ import java.util.Locale;
 public class HomeFragment extends Fragment {
     private FirebaseUser user;
     private DatabaseReference dbReference;
-    private RestaurantManager restaurantManager;
     private String userID;
     private String dietPreference;
     private String[] dietAllergies;
@@ -53,7 +52,6 @@ public class HomeFragment extends Fragment {
         this.dbReference = dbReference;
         this.userID = userID;
 
-        restaurantManager = new RestaurantManager();
         dietAllergies = new String[]{};
     }
 
@@ -120,8 +118,8 @@ public class HomeFragment extends Fragment {
     private void getRestaurants() { }
 
     private void setRestaurants() {
-        for(int i = 0; i < restaurantManager.getRestaurants().size(); i++) {
-            Restaurant rest = restaurantManager.getRestaurants().get(i);
+        for(int i = 0; i < home.getRestaurantManager().getRestaurants().size(); i++) {
+            Restaurant rest = home.getRestaurantManager().getRestaurants().get(i);
             setRestaurantsH(rest.getBanner(), rest.getName(), 0f, "Demo only");
         }
 

@@ -18,6 +18,9 @@ class MenuItem {
             this.ingredients.add(x.toLowerCase());
         }
     }
+
+    public String getName() { return name; }
+    public ArrayList<String> getIngredients() { return ingredients; }
 }
 
 class MenuSection {
@@ -35,6 +38,7 @@ class MenuSection {
     }
 
     public String getName() { return name; }
+    public ArrayList<MenuItem> getMenu() { return menu; }
 }
 
 public class Restaurant {
