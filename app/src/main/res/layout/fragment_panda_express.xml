@@ -26,6 +26,7 @@
 
             <!-- Plate Bundle -->
             <ImageButton
+                android:id="@+id/pandaExpress_plateBundle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -34,6 +35,7 @@
 
             <!-- Bowl -->
             <ImageButton
+                android:id="@+id/pandaExpress_bowl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -42,6 +44,7 @@
 
             <!-- Plate -->
             <ImageButton
+                android:id="@+id/pandaExpress_plate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -50,6 +53,7 @@
 
             <!-- Bigger Plate -->
             <ImageButton
+                android:id="@+id/pandaExpress_biggerPlate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -58,6 +62,7 @@
 
             <!-- Family meal -->
             <ImageButton
+                android:id="@+id/pandaExpress_familyMeal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -66,6 +71,7 @@
 
             <!-- Cub meal -->
             <ImageButton
+                android:id="@+id/pandaExpress_cubMeal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -74,6 +80,7 @@
 
             <!-- A La Carte meal -->
             <ImageButton
+                android:id="@+id/pandaExpress_aLaCarte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -82,6 +89,7 @@
 
             <!-- Appetizers -->
             <ImageButton
+                android:id="@+id/pandaExpress_appetizers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -90,6 +98,7 @@
 
             <!-- Drinks -->
             <ImageButton
+                android:id="@+id/pandaExpress_drinks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
