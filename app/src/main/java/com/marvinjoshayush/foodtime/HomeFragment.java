@@ -123,14 +123,14 @@ public class HomeFragment extends Fragment {
         // LinearLayout parent
         LinearLayout linearParent = new LinearLayout(getContext());
         linearParent.setLayoutParams(ViewMaker.MATCH_WRAP);
-        linearParent.setPadding(0, 0, 0, dpToPix(30));
+        linearParent.setPadding(0, 0, 0, ViewMaker.dpToPix(getResources(), 30));
         linearParent.setOrientation(LinearLayout.VERTICAL);
 
         // ImageView (banner)
         ImageView img = new ImageView(getContext());
         img.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                dpToPix(150)
+                ViewMaker.dpToPix(getResources(), 150)
         ));
         img.setImageResource(restBanner);
         img.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -138,13 +138,6 @@ public class HomeFragment extends Fragment {
 
         // TextView (name)
         TextView tvName = ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, restName, R.color.black, 24);
-        /*
-        TextView tvName = new TextView(getContext());
-        tvName.setLayoutParams(matchWrap);
-        tvName.setText(restName);
-        tvName.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
-        tvName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
-         */
 
         // LinearLayout (distance and services)
         LinearLayout linearChild = new LinearLayout(getContext());
@@ -154,46 +147,20 @@ public class HomeFragment extends Fragment {
 
         // TextView (distance)
         LinearLayout.LayoutParams tvDistParams = new LinearLayout.LayoutParams(
-                dpToPix(0),
+                ViewMaker.dpToPix(getResources(), 0),
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 2f
         );
         TextView tvDist = ViewMaker.createBasicTextView(getContext(), tvDistParams, (Float.toString(restDist) + " mi"),  R.color.black, 20);
-        /*
-        TextView tvDist = new TextView(getContext());
-        LinearLayout.LayoutParams tvDistParams = new LinearLayout.LayoutParams(
-                dpToPix(0),
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                2f
-        );
-        tvDist.setLayoutParams(tvDistParams);
-        tvDist.setText(Float.toString(restDist) + " mi");
-        tvDist.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
-        tvDist.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        tvDist.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
-         */
         linearChild.addView(tvDist);        // Add to linearChild
 
         // TextView (services)
         LinearLayout.LayoutParams tvServiceParams = new LinearLayout.LayoutParams(
-                dpToPix(0),
+                ViewMaker.dpToPix(getResources(), 0),
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 5f
         );
         TextView tvService = ViewMaker.createBasicTextView(getContext(), tvServiceParams, restService, R.color.black, 20, TextView.TEXT_ALIGNMENT_TEXT_END);
-        /*
-        TextView tvService = new TextView(getContext());
-        LinearLayout.LayoutParams tvServiceParams = new LinearLayout.LayoutParams(
-                dpToPix(0),
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                5f
-        );
-        tvService.setLayoutParams(tvServiceParams);
-        tvService.setText(restService);
-        tvService.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
-        tvService.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        tvService.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
-         */
         linearChild.addView(tvService);     // Add to linearChild
 
         /*
@@ -246,16 +213,6 @@ public class HomeFragment extends Fragment {
                     Log.d("TEST", "HEISL");
             }
         });
-    }
-
-    // For setRestaurantsH()
-    private int dpToPix(int dp) {
-        int pix = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                dp,
-                getResources().getDisplayMetrics()
-        );
-        return pix;
     }
 }
 

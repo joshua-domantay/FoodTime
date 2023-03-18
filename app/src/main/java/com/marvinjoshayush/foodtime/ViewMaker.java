@@ -1,6 +1,7 @@
 package com.marvinjoshayush.foodtime;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.widget.LinearLayout;
@@ -40,7 +41,8 @@ public class ViewMaker {
     // With specified margins
     public static TextView createBasicTextView(Context context, LinearLayout.LayoutParams params, String text, int color, int size,
                                                int alignment, int typeface, int mLeft, int mTop, int mRight, int mBottom) {
-        params.setMargins(mLeft, mTop, mRight, mBottom);
+        params.setMargins(dpToPix(context.getResources(), mLeft), dpToPix(context.getResources(), mTop),
+                dpToPix(context.getResources(), mRight), dpToPix(context.getResources(), mBottom));
         return createBasicTextView(context, params, text, color, size, alignment, typeface);
     }
 
@@ -52,5 +54,14 @@ public class ViewMaker {
     // Without alignment
     public static TextView createBasicTextView(Context context, LinearLayout.LayoutParams params, String text, int color, int size) {
         return createBasicTextView(context, params, text, color, size, TextView.TEXT_ALIGNMENT_VIEW_START, Typeface.NORMAL);
+    }
+
+    public static int dpToPix(Resources resource, int dp) {
+        int pix = (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dp,
+                resource.getDisplayMetrics()
+        );
+        return pix;
     }
 }

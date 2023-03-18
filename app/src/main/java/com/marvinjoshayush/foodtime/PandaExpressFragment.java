@@ -1,5 +1,6 @@
 package com.marvinjoshayush.foodtime;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -49,7 +51,7 @@ public class PandaExpressFragment extends Fragment {
         for(int btn : btns) {
             view.findViewById(btn).setOnClickListener(item -> {
                 ArrayList<View> layout = createLayoutForSubMenuFragment(btn);
-                Fragment frag = new PandaExpressSubMenuFragment(home);      // , layout);
+                Fragment frag = new PandaExpressSubMenuFragment(home, layout);
                 home.setFragment(frag);
             });
         }
@@ -99,31 +101,37 @@ public class PandaExpressFragment extends Fragment {
     private ArrayList<View> createLayoutPlateBundle() {
         // Side, Entree, Appetizer, Drink
         ArrayList<View> contents = new ArrayList<>();
-
+        contents.addAll(createLayoutPlate());
+        contents.addAll(createLayoutAppetizers());
+        contents.addAll(createLayoutDrinks());
         return contents;
     }
 
     private ArrayList<View> createLayoutBowl() {
         // Side, 1 Entree
         ArrayList<View> contents = new ArrayList<>();
+        contents.addAll(createLayoutMain("Choose a Side, or Get Half and Half", "Choose an Entree"));
         return contents;
     }
 
     private ArrayList<View> createLayoutPlate() {
         // Side, 2 Entree
         ArrayList<View> contents = new ArrayList<>();
+        contents.addAll(createLayoutMain("Choose a Side, or Get Half and Half", "Choose two Entrees"));
         return contents;
     }
 
     private ArrayList<View> createLayoutBiggerPlate() {
         // Side, 3 Entree
         ArrayList<View> contents = new ArrayList<>();
+        contents.addAll(createLayoutMain("Choose a Side, or Get Half and Half", "Choose three Entrees"));
         return contents;
     }
 
     private ArrayList<View> createLayoutFamilyMeal() {
         // 2 Side, 3 Entree
         ArrayList<View> contents = new ArrayList<>();
+        contents.addAll(createLayoutMain("Choose two Sides", "Choose three Entrees"));
         return contents;
     }
 
@@ -145,6 +153,30 @@ public class PandaExpressFragment extends Fragment {
 
     private ArrayList<View> createLayoutDrinks() {
         ArrayList<View> contents = new ArrayList<>();
+        return contents;
+    }
+
+    // Bowl, Plate, BiggerPlate
+    private ArrayList<View> createLayoutMain(String firstSub, String secondSub) {
+        ArrayList<View> contents = new ArrayList<>();
+
+        // Title
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 1", R.color.black,
+                30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
+        // Subtitle
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
+                R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
+        // Sides
+        //contents.addAll(createLayoutSides());
+        // Title
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
+                30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
+        // Subtitle
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
+                R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
+        // Entrees
+        //contents.addAll(createLayoutEntrees());
+
         return contents;
     }
 
