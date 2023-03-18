@@ -4,29 +4,50 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.util.TypedValue;
-import android.widget.LinearLayout;
+import android.widget.ImageButton;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
 public class ViewMaker {
-    public final static LinearLayout.LayoutParams MATCH_MATCH = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.MATCH_PARENT
+    public final static LayoutParams MATCH_MATCH = new LayoutParams(
+            LayoutParams.MATCH_PARENT,
+            LayoutParams.MATCH_PARENT
     );
 
-    public final static LinearLayout.LayoutParams MATCH_WRAP = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
+    public final static LayoutParams MATCH_WRAP = new LayoutParams(
+            LayoutParams.MATCH_PARENT,
+            LayoutParams.WRAP_CONTENT
     );
 
-    public final static LinearLayout.LayoutParams WRAP_WRAP = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
+    public final static LayoutParams WRAP_WRAP = new LayoutParams(
+            LayoutParams.WRAP_CONTENT,
+            LayoutParams.WRAP_CONTENT
     );
 
+    /** ImageButton **/
+    // Without background / background is null
+    public static ImageButton createBasicImageButton(Context context, LayoutParams params, String imgStr, int gravity, boolean nullBackground) {
+        ImageButton val = new ImageButton(context);
+        params.gravity = gravity;
+        val.setLayoutParams(params);
+        int img = context.getResources().getIdentifier(imgStr, "drawable", context.getPackageName());
+        val.setImageResource(img);
+        if(nullBackground) { val.setBackground(null); }
+        return val;
+    }
+
+    // With background
+    public static ImageButton createBasicImageButton(Context context, LayoutParams params, String imgStr, int gravity, int background) {
+        ImageButton val = createBasicImageButton(context, params, imgStr, gravity, false);
+        val.setBackgroundColor(background);
+        return val;
+    }
+
+    /** TEXTVIEW **/
     // Without specified margins or already in params
-    public static TextView createBasicTextView(Context context, LinearLayout.LayoutParams params, String text,
+    public static TextView createBasicTextView(Context context, LayoutParams params, String text,
                                                int color, int size, int alignment, int typeface) {
         TextView val = new TextView(context);
         val.setLayoutParams(params);
@@ -39,7 +60,7 @@ public class ViewMaker {
     }
 
     // With specified margins
-    public static TextView createBasicTextView(Context context, LinearLayout.LayoutParams params, String text, int color, int size,
+    public static TextView createBasicTextView(Context context, LayoutParams params, String text, int color, int size,
                                                int alignment, int typeface, int mLeft, int mTop, int mRight, int mBottom) {
         params.setMargins(dpToPix(context.getResources(), mLeft), dpToPix(context.getResources(), mTop),
                 dpToPix(context.getResources(), mRight), dpToPix(context.getResources(), mBottom));
@@ -47,12 +68,12 @@ public class ViewMaker {
     }
 
     // With alignment
-    public static TextView createBasicTextView(Context context, LinearLayout.LayoutParams params, String text, int color, int size, int alignment) {
+    public static TextView createBasicTextView(Context context, LayoutParams params, String text, int color, int size, int alignment) {
         return createBasicTextView(context, params, text, color, size, alignment, Typeface.NORMAL);
     }
 
     // Without alignment
-    public static TextView createBasicTextView(Context context, LinearLayout.LayoutParams params, String text, int color, int size) {
+    public static TextView createBasicTextView(Context context, LayoutParams params, String text, int color, int size) {
         return createBasicTextView(context, params, text, color, size, TextView.TEXT_ALIGNMENT_VIEW_START, Typeface.NORMAL);
     }
 

@@ -22,7 +22,7 @@
                 android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:layout_marginVertical="25dp"
-                android:background="@drawable/panda_icon"/>
+                android:background="@drawable/panda_express_icon"/>
 
             <!-- Plate Bundle -->
             <ImageButton
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/plate_panda"
+                app:srcCompat="@drawable/panda_express_plate"
                 android:background="@null"/>
 
             <!-- Bowl -->
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/bowl_panda"
+                app:srcCompat="@drawable/panda_express_bowl"
                 android:background="@null"/>
 
             <!-- Plate -->
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/plate2_panda"
+                app:srcCompat="@drawable/panda_express_plate2"
                 android:background="@null"/>
 
             <!-- Bigger Plate -->
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/bigger_plate"
+                app:srcCompat="@drawable/panda_express_bigger_plate"
                 android:background="@null"/>
 
             <!-- Family meal -->
@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/cub_meal"
+                app:srcCompat="@drawable/panda_express_cub_meal"
                 android:background="@null"/>
 
             <!-- A La Carte meal -->
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/a_la_carte"
+                app:srcCompat="@drawable/panda_express_a_la_carte"
                 android:background="@null"/>
 
             <!-- Appetizers -->
@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/appetizers_and_more"
+                app:srcCompat="@drawable/panda_express_appetizers_and_more"
                 android:background="@null"/>
 
             <!-- Drinks -->
@@ -102,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/drinks_panda"
+                app:srcCompat="@drawable/panda_express_drinks"
                 android:background="@null"/>
 
             <!-- Cancel (left0) or submit (right) buttons  -->

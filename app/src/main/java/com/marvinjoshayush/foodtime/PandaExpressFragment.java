@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -143,12 +143,13 @@ public class PandaExpressFragment extends Fragment {
     private ArrayList<View> createLayoutALaCarte() {
         // Side + Entree
         ArrayList<View> contents = new ArrayList<>();
+        contents.addAll(createLayoutFromFirebase("entrees"));
+        contents.addAll(createLayoutFromFirebase("sides"));
         return contents;
     }
 
     private ArrayList<View> createLayoutAppetizers() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("appetizers");
     }
 
     private ArrayList<View> createLayoutDrinks() {
@@ -167,7 +168,7 @@ public class PandaExpressFragment extends Fragment {
         contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Sides
-        //contents.addAll(createLayoutSides());
+        contents.addAll(createLayoutFromFirebase("sides"));
         // Title
         contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
@@ -175,18 +176,26 @@ public class PandaExpressFragment extends Fragment {
         contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Entrees
-        //contents.addAll(createLayoutEntrees());
+        contents.addAll(createLayoutFromFirebase("entrees"));
 
         return contents;
     }
 
-    private ArrayList<View> createLayoutSides() {
+    private ArrayList<View> createLayoutFromFirebase(String sectionName) {
         ArrayList<View> contents = new ArrayList<>();
-        return contents;
-    }
-
-    private ArrayList<View> createLayoutEntrees() {
-        ArrayList<View> contents = new ArrayList<>();
+        for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
+            if(rest.getNameForFile().equalsIgnoreCase("panda_express")) {
+                for(MenuSection section : rest.getMenuSections()) {
+                    if(section.getName().equalsIgnoreCase(sectionName)) {
+                        for (MenuItem item : section.getMenu()) {
+                            String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
+                            contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                        }
+                    }
+                }
+                break;
+            }
+        }
         return contents;
     }
 }

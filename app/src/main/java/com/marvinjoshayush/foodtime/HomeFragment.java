@@ -197,11 +197,11 @@ public class HomeFragment extends Fragment {
                     Log.d("TEST", home.getRestaurantManager().getRestaurants().size() + " " );
                     String all = "";
                     for(Restaurant i : home.getRestaurantManager().getRestaurants()) {
-                        Log.d("TEST", i.getName());
+                        Log.d("TEST", i.getName() + " > " + i.getNameForFile());
                         for(MenuSection j : i.getMenuSections()) {
                             Log.d("TEST", j.getName());
                             for(MenuItem k : j.getMenu()) {
-                                Log.d("TEST", k.getName());
+                                Log.d("TEST", k.getName() + " > " + k.getNameForFile());
                                 for(String x : k.getIngredients()) {
                                     Log.d("TAST", k.getName() + " > " + x);
                                 }

@@ -23,7 +23,7 @@
                 android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:layout_marginVertical="25dp"
-                android:background="@drawable/panda_icon"/>
+                android:background="@drawable/panda_express_icon"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

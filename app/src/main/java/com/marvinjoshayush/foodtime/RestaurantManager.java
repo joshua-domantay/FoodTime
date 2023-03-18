@@ -31,7 +31,7 @@ public class RestaurantManager {
 
     private void initializeRestaurants() {
         // restaurants.add(getPandaExpress());
-        restaurantToFirebase();
+        // restaurantToFirebase();
 
         DatabaseReference restaurantsFirebase = FirebaseDatabase.getInstance().getReference("Restaurants");
         getRestaurantsFromFirebase(restaurantsFirebase);
@@ -177,7 +177,7 @@ public class RestaurantManager {
         ingredients = new String[]{"broccoli", "water", "beef", "soybean oil", "garlic", "phosphoric acid", "corn starch", "potato starch",
                 "modified food starch", "soy sauce", "salt", "rice", "caramel color", "sesame oil", "sea salt", "brown sugar", "sodium phosphate",
                 "natural flavor", "yeast extract", "spices", "sugar", "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Brocolli Beef", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Broccoli Beef", ingredients);
 
         ingredients = new String[]{"angus steak", "baby broccoli", "mushrooms", "onions", "bell pepper", "water", "soybean oil", "tomato paste",
                 "miso paste", "soy sauce powder", "modified corn starch", "black pepper powder", "dehydrated garlic", "chili pepper powder",
