@@ -98,51 +98,63 @@ public class PandaExpressFragment extends Fragment {
 
     private ArrayList<View> createLayoutPlateBundle() {
         // Side, Entree, Appetizer, Drink
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+
+        return contents;
     }
 
     private ArrayList<View> createLayoutBowl() {
         // Side, 1 Entree
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutPlate() {
         // Side, 2 Entree
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutBiggerPlate() {
         // Side, 3 Entree
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutFamilyMeal() {
         // 2 Side, 3 Entree
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutCubMeal() {
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutALaCarte() {
         // Side + Entree
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutAppetizers() {
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutDrinks() {
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutSides() {
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 
     private ArrayList<View> createLayoutEntrees() {
-        return null;
+        ArrayList<View> contents = new ArrayList<>();
+        return contents;
     }
 }

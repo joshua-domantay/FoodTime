@@ -120,14 +120,9 @@ public class HomeFragment extends Fragment {
     // Future: Just one Restaurant class parameter
     // Add in ScrollView -> LinearLayout
     private void setRestaurantsLayout(int restBanner, String restName, float restDist, String restService) {
-        LinearLayout.LayoutParams matchWrap = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-
         // LinearLayout parent
         LinearLayout linearParent = new LinearLayout(getContext());
-        linearParent.setLayoutParams(matchWrap);
+        linearParent.setLayoutParams(ViewMaker.MATCH_WRAP);
         linearParent.setPadding(0, 0, 0, dpToPix(30));
         linearParent.setOrientation(LinearLayout.VERTICAL);
 
@@ -142,19 +137,29 @@ public class HomeFragment extends Fragment {
         // img.setAdjustViewBounds(true);
 
         // TextView (name)
+        TextView tvName = ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, restName, R.color.black, 24);
+        /*
         TextView tvName = new TextView(getContext());
         tvName.setLayoutParams(matchWrap);
         tvName.setText(restName);
         tvName.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
         tvName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+         */
 
         // LinearLayout (distance and services)
         LinearLayout linearChild = new LinearLayout(getContext());
-        linearChild.setLayoutParams(matchWrap);
+        linearChild.setLayoutParams(ViewMaker.MATCH_WRAP);
         linearChild.setOrientation(LinearLayout.HORIZONTAL);
         linearChild.setWeightSum(7f);
 
         // TextView (distance)
+        LinearLayout.LayoutParams tvDistParams = new LinearLayout.LayoutParams(
+                dpToPix(0),
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                2f
+        );
+        TextView tvDist = ViewMaker.createBasicTextView(getContext(), tvDistParams, (Float.toString(restDist) + " mi"),  R.color.black, 20);
+        /*
         TextView tvDist = new TextView(getContext());
         LinearLayout.LayoutParams tvDistParams = new LinearLayout.LayoutParams(
                 dpToPix(0),
@@ -166,9 +171,17 @@ public class HomeFragment extends Fragment {
         tvDist.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
         tvDist.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         tvDist.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+         */
         linearChild.addView(tvDist);        // Add to linearChild
 
         // TextView (services)
+        LinearLayout.LayoutParams tvServiceParams = new LinearLayout.LayoutParams(
+                dpToPix(0),
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                5f
+        );
+        TextView tvService = ViewMaker.createBasicTextView(getContext(), tvServiceParams, restService, R.color.black, 20, TextView.TEXT_ALIGNMENT_TEXT_END);
+        /*
         TextView tvService = new TextView(getContext());
         LinearLayout.LayoutParams tvServiceParams = new LinearLayout.LayoutParams(
                 dpToPix(0),
@@ -180,6 +193,7 @@ public class HomeFragment extends Fragment {
         tvService.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
         tvService.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
         tvService.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+         */
         linearChild.addView(tvService);     // Add to linearChild
 
         /*
