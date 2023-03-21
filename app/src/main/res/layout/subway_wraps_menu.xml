@@ -14,7 +14,6 @@
 
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -38,7 +37,7 @@
             android:orientation="horizontal" />
 
 
-        <!--#1 The Philly-->
+
         <ImageButton
 
             android:layout_width="match_parent"
@@ -47,7 +46,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/big_hot_pastrami_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_big_hot_pastrami_wrap"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,54 +54,7 @@
             android:orientation="horizontal" />
 
 
-        <!--#2 The Outlaw-->
 
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/black_forest_ham_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--#3 The Monster-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/buffalo_chicken_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--#4 Supreme Meats-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/blt_subway"></ImageButton>
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-
-        <!--#5 Bella Mozza -->
         <ImageButton
 
             android:layout_width="match_parent"
@@ -111,7 +63,177 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/chicken_and_bacon_ranch"></ImageButton>
+            app:srcCompat="@drawable/subway_black_forest_ham_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_buffalo_chicken_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_blt_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_chicken_and_bacon_ranch_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_cold_cut_combo_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_grilled_chicken_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_italian_bmt_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_meatball_marinara_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_and_ham_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_roast_beef_wraps"></ImageButton>
 
 
         <LinearLayout
@@ -119,14 +241,34 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#6 The Boss-->
+
+
         <ImageButton
 
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/cold_cut_combo"></ImageButton>
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_rotisserie_chicken_wraps"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_spicy_italian_wraps"></ImageButton>
 
 
         <LinearLayout
@@ -134,42 +276,17 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#8 The Great Garlic-->
+
+
         <ImageButton
 
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/grilled_chicken_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--#9 The Champ-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/italian_bmt_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Meatball Marinara -->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/meatball_marinara_subway"></ImageButton>
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_steak_and_cheese_wraps"></ImageButton>
 
 
         <LinearLayout
@@ -177,29 +294,17 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--oven roasted turkey-->
+
+
         <ImageButton
 
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/oven_roasted_turkey_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Oven Roasted Turkey and ham-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/oven_roasted_turkey_and_ham_subway"></ImageButton>
-
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_sweet_onion_chicken_teriyaki_wraps"></ImageButton>
 
 
         <LinearLayout
@@ -207,28 +312,17 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--Roast Beef-->
+
+
         <ImageButton
 
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/roast_beef_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Rotisserie Style Chicken-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/rotisserie_style_chicken_subway"></ImageButton>
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_tuna_wraps"></ImageButton>
 
 
         <LinearLayout
@@ -236,94 +330,34 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--Spicy Italian-->
+
+
         <ImageButton
 
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/spicy_italian_subway"></ImageButton>
-
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_veggie_delite_wraps"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--Steak and Cheese-->
+
+
         <ImageButton
 
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/steak_and_cheese_subway"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Sweet Onioin chicken-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/sweet_onion_chicken_teriyaki_subway"></ImageButton>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Tuna-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/subway_tuna"></ImageButton
-           >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Veggie Delite-->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/veggie_delite_subway"></ImageButton
-            >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-        <!--Veggie Patty->
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/subway_veggie_patty"></ImageButton
-            >
-
-
-
-
-
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_veggie_patty_wraps"></ImageButton>
 
 
         <Space
@@ -346,13 +380,8 @@
                 android:hint="Back"
                 android:textSize="9pt" />
 
-
-
-
         </LinearLayout>
 
 
     </LinearLayout>
 </ScrollView>
-
-
