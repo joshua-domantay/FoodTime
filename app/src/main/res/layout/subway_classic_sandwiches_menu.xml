@@ -310,7 +310,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--Veggie Patty->
+        <!--Veggie Patty-->
         <ImageButton
 
             android:layout_width="match_parent"
