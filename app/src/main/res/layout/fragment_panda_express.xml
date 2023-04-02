@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".PandaExpressFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Panda Express Icon -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="25dp"
+                android:background="@drawable/panda_express_icon"/>
+
+            <!-- Plate Bundle -->
+            <ImageButton
+                android:id="@+id/pandaExpress_plateBundle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_plate"
+                android:background="@null"/>
+
+            <!-- Bowl -->
+            <ImageButton
+                android:id="@+id/pandaExpress_bowl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_bowl"
+                android:background="@null"/>
+
+            <!-- Plate -->
+            <ImageButton
+                android:id="@+id/pandaExpress_plate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_plate2"
+                android:background="@null"/>
+
+            <!-- Bigger Plate -->
+            <ImageButton
+                android:id="@+id/pandaExpress_biggerPlate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_bigger_plate"
+                android:background="@null"/>
+
+            <!-- Family meal -->
+            <ImageButton
+                android:id="@+id/pandaExpress_familyMeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/family_meal"
+                android:background="@null"/>
+
+            <!-- Cub meal -->
+            <ImageButton
+                android:id="@+id/pandaExpress_cubMeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_cub_meal"
+                android:background="@null"/>
+
+            <!-- A La Carte meal -->
+            <ImageButton
+                android:id="@+id/pandaExpress_aLaCarte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_a_la_carte"
+                android:background="@null"/>
+
+            <!-- Appetizers -->
+            <ImageButton
+                android:id="@+id/pandaExpress_appetizers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_appetizers_and_more"
+                android:background="@null"/>
+
+            <!-- Drinks -->
+            <ImageButton
+                android:id="@+id/pandaExpress_drinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/panda_express_drinks"
+                android:background="@null"/>
+
+            <!-- Cancel (left0) or submit (right) buttons  -->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="Back"
+                    android:textSize="9pt" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

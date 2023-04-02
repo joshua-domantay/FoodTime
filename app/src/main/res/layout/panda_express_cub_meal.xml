@@ -30,7 +30,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_icon"></ImageButton>
+            app:srcCompat="@drawable/panda_express_icon"></ImageButton>
 
         <Space
             android:layout_width="1dp"
@@ -56,7 +56,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/orange_chicken_cub_meal_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_orange_chicken_cub_meal"></ImageButton>
 
 
         <!--Grilled Terikyaki Chicken Cub Meal -->
@@ -72,7 +72,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/grilled_teriyaki_chicken_cub_meal"></ImageButton>
+            app:srcCompat="@drawable/panda_express_grilled_teriyaki_cub_meal"></ImageButton>
 
 
         <!--Broccoli Beef Cub Meal -->
@@ -88,7 +88,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/broccoli_beef_cub_meal"></ImageButton>
+            app:srcCompat="@drawable/panda_express_broccoli_beef_cub_meal"></ImageButton>
 
 
         <Space

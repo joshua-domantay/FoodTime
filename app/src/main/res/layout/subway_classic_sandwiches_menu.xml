@@ -23,7 +23,6 @@
 
         <!--Subway Logo-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_gravity="center"
@@ -40,7 +39,6 @@
 
         <!--#1 The Philly-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -58,7 +56,6 @@
         <!--#2 The Outlaw-->
 
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -72,7 +69,6 @@
 
         <!--#3 The Monster-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -86,7 +82,6 @@
 
         <!--#4 Supreme Meats-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -104,7 +99,6 @@
 
         <!--#5 Bella Mozza -->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -121,7 +115,6 @@
 
         <!--#6 The Boss-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -136,7 +129,6 @@
 
         <!--#8 The Great Garlic-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -150,7 +142,6 @@
 
         <!--#9 The Champ-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -164,7 +155,6 @@
 
         <!--Meatball Marinara -->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -179,7 +169,6 @@
 
         <!--oven roasted turkey-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -193,7 +182,6 @@
 
         <!--Oven Roasted Turkey and ham-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"
@@ -209,7 +197,6 @@
 
         <!--Roast Beef-->
         <ImageButton
-
             android:layout_width="match_parent"
             android:layout_height="373dp"
             android:layout_gravity="center"

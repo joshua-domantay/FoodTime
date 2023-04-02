@@ -30,7 +30,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_icon"></ImageButton>
+            app:srcCompat="@drawable/panda_express_icon"></ImageButton>
 
         <Space
             android:layout_width="1dp"
@@ -88,7 +88,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/chow_mein_panda_express"></ImageButton>
+            app:srcCompat="@drawable/panda_express_chow_mein"></ImageButton>
 
         <!--Fried Rice -->
         <LinearLayout
@@ -103,7 +103,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/fried_rice_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_fried_rice"></ImageButton>
 
         <!--White Steamed Rice -->
         <LinearLayout
@@ -118,7 +118,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/white_steamed_rice_panda_express"></ImageButton>
+            app:srcCompat="@drawable/panda_express_steamed_rice"></ImageButton>
 
         <!--Super Greens -->
         <LinearLayout
@@ -133,7 +133,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/super_greens_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_super_greens"></ImageButton>
 
         <!--Brown Steamed Rice -->
         <LinearLayout
@@ -148,7 +148,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/brown_steamed_rice_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_steamed_brown_rice"></ImageButton>
 
         <!--Step 2 -->
         <LinearLayout
@@ -207,7 +207,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/sizzling_shrimp_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sizzling_shrimp"></ImageButton>
 
         <!--The Original Orange chicken -->
         <LinearLayout
@@ -222,7 +222,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/the_original_orange_chicken_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_original_orange_chicken"></ImageButton>
 
         <!--Black Pepper Angus Steak -->
         <LinearLayout
@@ -230,6 +230,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
+        <!--Honey Walnut Shrimp -->
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="373dp"
@@ -237,9 +238,8 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/black_pepper_angus_steak_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_black_pepper_angus_beef"></ImageButton>
 
-        <!--Honey Walnut Shrimp -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -252,7 +252,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/honey_walnut_shrimp_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_honey_walnut_shrimp"></ImageButton>
 
         <!--Grilled teriyaki Chicken -->
         <LinearLayout
@@ -267,7 +267,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/grilled_teriyaki_chicken"></ImageButton>
+            app:srcCompat="@drawable/panda_express_grilled_chicken"></ImageButton>
 
         <!--Broccoli Beef -->
         <LinearLayout
@@ -282,7 +282,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/broccoli_beef_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_broccoli_beef"></ImageButton>
 
         <!--Kung Pao Chicken -->
         <LinearLayout
@@ -297,7 +297,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/kung_pao_chicken_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_kung_pao_chicken"></ImageButton>
 
         <!--Honey Sesame Chicken Breast -->
         <LinearLayout
@@ -312,7 +312,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/honey_sesame_chicken_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_honey_sesame_chicken_breast"></ImageButton>
 
         <!--Beijing Beef -->
         <LinearLayout
@@ -327,7 +327,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/beijing_beef_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_beijing_beef"></ImageButton>
 
         <!--Mushroom Chicken -->
         <LinearLayout
@@ -342,7 +342,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mushroom_chicken_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_mushroom_chicken"></ImageButton>
 
         <!--String Bean Chicken Breast -->
         <LinearLayout
@@ -357,7 +357,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/string_bean_chicken_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_string_bean_chicken_breast"></ImageButton>
 
         <!--Black Pepper Chicken -->
         <LinearLayout
@@ -372,7 +372,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/black_pepper_chicken_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_black_pepper_chicken"></ImageButton>
 
         <!--Super Greens  -->
         <LinearLayout
@@ -387,7 +387,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/super_greens_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_super_greens"></ImageButton>
 
         <!--Step 3 -->
         <LinearLayout
@@ -445,7 +445,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/chicken_egg_roll_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_chicken_eggroll"></ImageButton>
 
         <!--Veggie Spring Rolls  -->
         <LinearLayout
@@ -460,7 +460,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/veggie_spring_roll_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_vegetable_spring_roll"></ImageButton>
 
         <!--Cream Cheese Rangoon-->
         <LinearLayout
@@ -475,7 +475,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/cream_cheese_rangoon_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_cream_cheese_rangoon"></ImageButton>
 
 
         <!--Step 4 -->
@@ -535,7 +535,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/medium_fountain_drink_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_medium_fountain_drink"></ImageButton>
 
         <!--Coca Cola-->
         <LinearLayout
@@ -550,7 +550,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/coca_cola_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_coca_cola"></ImageButton>
 
         <!--Diet Coke -->
         <LinearLayout
@@ -565,7 +565,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/diet_coke_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_diet_coke"></ImageButton>
 
         <!--Barq's Root Beer -->
         <LinearLayout
@@ -580,7 +580,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/barqs_root_beer_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_barqs_root_beer"></ImageButton>
 
         <!--Fanta Orange-->
         <LinearLayout
@@ -595,7 +595,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/fanta_orange_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_fanta_orange"></ImageButton>
 
         <!--Minute Maid Lemonade -->
         <LinearLayout
@@ -610,7 +610,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/minute_maid_lemonade_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_minute_maid_lemonade"></ImageButton>
 
         <!--Sprite-->
         <LinearLayout
@@ -625,7 +625,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/sprite_cup_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sprite"></ImageButton>
 
         <!--Coca Cola Cherry-->
         <LinearLayout
@@ -640,7 +640,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/coca_cola_cherry_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_coca_cola_cherry"></ImageButton>
 
         <!--Fanta Strawberry -->
         <LinearLayout
@@ -655,7 +655,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/fanta_strawberry_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_fanta_strawberry"></ImageButton>
 
         <!--Black Tea -->
         <LinearLayout
@@ -670,7 +670,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/black_tea_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_black_tea"></ImageButton>
 
         <!--Passion Mango Black Tea-->
         <LinearLayout
@@ -685,7 +685,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/passion_mango_black_tea_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_passion_mango_black_tea"></ImageButton>
 
         <!--Dasani water-->
         <LinearLayout
@@ -700,7 +700,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/dasani_16_oz_bottle_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_dasani"></ImageButton>
 
         <!--Powerade Berry Blast-->
         <LinearLayout
@@ -715,7 +715,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/powerade_berry_blast_20_oz_bottle_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_powerade_berry_blast"></ImageButton>
 
 
         <!--Minute Maid Apple Juice-->
@@ -731,7 +731,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/minute_maid_apple_juice_12_oz_bottle_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_minute_maid_apple_juice"></ImageButton>
 
         <!--Coke Mexico bottle-->
         <LinearLayout
@@ -746,7 +746,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/coke_2_mexico_12_oz_bottle_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_coke_2_mexico_12_oz_bottle"></ImageButton>
 
 
         <!--Sprite-->
@@ -762,7 +762,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/sprite_20oz_bottle_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sprite_bottle"></ImageButton>
 
         <!--Smart Water-->
         <LinearLayout
@@ -777,7 +777,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/smart_water_700_ml_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_smart_water"></ImageButton>
 
         <!--Sanzo Lychee-->
         <LinearLayout
@@ -792,7 +792,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/sanzo_lychee_sparkling_water_12_oz_can_panda"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sanzo_lychee_sparkling_water"></ImageButton>
 
 
         <Space
