@@ -1,0 +1,304 @@
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!--Panda Express A La Carte Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="25dp"/>
+
+        <!--Panda Express Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_icon"></ImageView>
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>
+
+        <!--Coca Cola-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_coca_cola"></ImageButton>
+
+        <!--Diet Coke -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_diet_coke"></ImageButton>
+
+        <!--Barq's Root Beer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_barqs_root_beer"></ImageButton>
+
+        <!--Fanta Orange-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_fanta_orange"></ImageButton>
+
+        <!--Minute Maid Lemonade -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_minute_maid_lemonade"></ImageButton>
+
+        <!--Sprite-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_sprite"></ImageButton>
+
+        <!--Coca Cola Cherry-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_coca_cola_cherry"></ImageButton>
+
+        <!--Fanta Strawberry -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_fanta_strawberry"></ImageButton>
+
+        <!--Black Tea -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_black_tea"></ImageButton>
+
+        <!--Passion Mango Black Tea-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_passion_mango_black_tea"></ImageButton>
+
+        <!--Dasani Water -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_dasani"></ImageButton>
+
+        <!--Powerade Berry Blast-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_powerade_berry_blast"></ImageButton>
+
+
+        <!--Minute Maid Apple Juice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_minute_maid_apple_juice"></ImageButton>
+
+
+        <!--Sprite bottle-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_sprite_bottle"></ImageButton>
+
+
+        <!--Smart Water -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_smart_water"></ImageButton>
+
+        <!--White Steamed Rice -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/panda_express_sanzo_lychee_sparkling_water"></ImageButton>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></Space>
+
+        <!-- Cancel (left0) or submit (right) buttons  -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Back To Menu"
+                android:textSize="9pt" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

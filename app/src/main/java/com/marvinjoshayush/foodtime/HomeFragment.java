@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
@@ -36,9 +37,6 @@ import java.util.Locale;
     Only add restaurants to list if preferred by user according to preference and allergies
  */
 public class HomeFragment extends Fragment {
-    private FirebaseUser user;
-    private DatabaseReference dbReference;
-    private String userID;
     private String dietPreference;
     private String[] dietAllergies;
 
@@ -46,11 +44,9 @@ public class HomeFragment extends Fragment {
     private View view;
     private LinearLayout scrollView;
 
-    public HomeFragment(HomeActivity home, FirebaseUser user, DatabaseReference dbReference, String userID) {
+    public HomeFragment(HomeActivity home) {
         this.home = home;
-        this.user = user;
-        this.dbReference = dbReference;
-        this.userID = userID;
+        // dietAllergies = new String[]{};
     }
 
     @Override
@@ -58,12 +54,10 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         scrollView = view.findViewById(R.id.homeSVLinear);
 
-        dietAllergies = new String[]{};
 
         setSortButtons();
         getChoices();
-        // getRestaurants();
-        // setRestaurants();
+        setRestaurants();
 
         return view;
     }
@@ -94,6 +88,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getChoices() {
+        /*
         // Testing
         dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -104,154 +99,71 @@ public class HomeFragment extends Fragment {
                 dietPreference = theChoice;
                 if(dietPreference == null) { dietPreference = ""; }
                 dietAllergies = theAllergies.split("&");
-                getRestaurants();
-                setRestaurants();
+                // setRestaurants();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) { }
         });
+         */
     }
 
-    // Future use
-    private void getRestaurants() { }
-
-    // Change in the future (Just for demo)
-    private void setRestaurants() {
-        DemoRestaurants rest = new DemoRestaurants();
-
-        String s = "";
-        if(dietPreference != null) {
-            s = dietPreference;
-        }
-        Log.d("HomeFragment", s);
-
-        String[] toAvoid = new String[1];
-        if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.ovo_vegetarian))) {
-            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Dairy Products", "Grains"};
-        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.lacto_vegetarian))) {
-            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Eggs", "Grains"};
-        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.vegan))) {
-            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Dairy Products", "Eggs", "Grains"};
-        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.pascatarian))) {
-            toAvoid = new String[]{"Meat", "Poultry", "Meat Ingredients", "Grains"};
-        } else if(dietPreference.equalsIgnoreCase(getContext().getResources().getString(R.string.flexitarian))) {
-            toAvoid = new String[]{"Meat", "Poultry", "Seafood", "Meat Ingredients", "Grains"};
-        } else {
-            toAvoid = new String[]{};
-        }
-
-        int max = 0;
-        int[] index = new int[9];
-
-        if(toAvoid.length > 0) {
-            for (int i = 0; i < rest.restaurants.length; i++) {
-                boolean yN = true;
-                for (String x : toAvoid) {
-                    for (String y : rest.contains[i]) {
-                        if (x.equalsIgnoreCase(y)) {
-                            yN = false;
-                            break;
-                        }
-                    }
-                    if (!yN) {
-                        break;
-                    }
-                }
-                for (String x : dietAllergies) {
-                    for (String y : rest.contains[i]) {
-                        if (x.equalsIgnoreCase(y)) {
-                            yN = false;
-                            break;
-                        }
-                    }
-                    if (!yN) {
-                        break;
-                    }
-                }
-                if (yN) {
-                    index[max] = i;
-                    max++;
-                }
+    public void setRestaurants() {
+        if(home.getRestaurantManager().getRestaurants().size() > 0) {
+            for (int i = 0; i < home.getRestaurantManager().getRestaurants().size(); i++) {
+                Restaurant rest = home.getRestaurantManager().getRestaurants().get(i);
+                setRestaurantsLayout(rest.getBanner(), rest.getName(), 0f, "Demo only");
             }
-        } else {
-            for(int i = 0; i < 9; i++) {
-                max++;
-                index[i] = i;
-            }
-        }
-
-        // setRestaurantsH(rest.banners[0], rest.restaurants[0], rest.distances[0], rest.services[0], rest.services[0]);
-        for(int i = 0; i < max; i++) {
-            setRestaurantsH(rest.banners[index[i]], rest.restaurants[index[i]], rest.distances[index[i]], rest.services[index[i]], rest.menu[index[i]]);
         }
     }
 
     // Future: Just one Restaurant class parameter
     // Add in ScrollView -> LinearLayout
-    private void setRestaurantsH(int restBanner, String restName, float restDist, String restService, String restShortMenu) {
-        LinearLayout.LayoutParams matchWrap = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-
+    private void setRestaurantsLayout(int restBanner, String restName, float restDist, String restService) {
         // LinearLayout parent
         LinearLayout linearParent = new LinearLayout(getContext());
-        linearParent.setLayoutParams(matchWrap);
-        linearParent.setPadding(0, 0, 0, dpToPix(30));
+        linearParent.setLayoutParams(ViewMaker.MATCH_WRAP);
+        linearParent.setPadding(0, 0, 0, ViewMaker.dpToPix(getResources(), 30));
         linearParent.setOrientation(LinearLayout.VERTICAL);
 
         // ImageView (banner)
         ImageView img = new ImageView(getContext());
         img.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
-                dpToPix(150)
+                ViewMaker.dpToPix(getResources(), 150)
         ));
         img.setImageResource(restBanner);
         img.setScaleType(ImageView.ScaleType.CENTER_CROP);
         // img.setAdjustViewBounds(true);
 
         // TextView (name)
-        TextView tvName = new TextView(getContext());
-        tvName.setLayoutParams(matchWrap);
-        tvName.setText(restName);
-        tvName.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
-        tvName.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
+        TextView tvName = ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, restName, R.color.black, 24);
 
         // LinearLayout (distance and services)
         LinearLayout linearChild = new LinearLayout(getContext());
-        linearChild.setLayoutParams(matchWrap);
+        linearChild.setLayoutParams(ViewMaker.MATCH_WRAP);
         linearChild.setOrientation(LinearLayout.HORIZONTAL);
         linearChild.setWeightSum(7f);
 
         // TextView (distance)
-        TextView tvDist = new TextView(getContext());
         LinearLayout.LayoutParams tvDistParams = new LinearLayout.LayoutParams(
-                dpToPix(0),
+                ViewMaker.dpToPix(getResources(), 0),
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 2f
         );
-        tvDist.setLayoutParams(tvDistParams);
-        tvDist.setText(Float.toString(restDist) + " mi");
-        tvDist.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
-        tvDist.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        tvDist.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+        TextView tvDist = ViewMaker.createBasicTextView(getContext(), tvDistParams, (Float.toString(restDist) + " mi"),  R.color.black, 20);
         linearChild.addView(tvDist);        // Add to linearChild
 
         // TextView (services)
-        TextView tvService = new TextView(getContext());
         LinearLayout.LayoutParams tvServiceParams = new LinearLayout.LayoutParams(
-                dpToPix(0),
+                ViewMaker.dpToPix(getResources(), 0),
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 5f
         );
-        tvService.setLayoutParams(tvServiceParams);
-        tvService.setText(restService);
-        tvService.setTextColor(ContextCompat.getColor(getContext(), R.color.black));
-        tvService.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
-        tvService.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
+        TextView tvService = ViewMaker.createBasicTextView(getContext(), tvServiceParams, restService, R.color.black, 20, TextView.TEXT_ALIGNMENT_TEXT_END);
         linearChild.addView(tvService);     // Add to linearChild
 
+        /*
         // TextView (name)
         TextView tvMenu = new TextView(getContext());
         tvMenu.setLayoutParams(matchWrap);
@@ -260,25 +172,47 @@ public class HomeFragment extends Fragment {
         tvMenu.setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC));
         tvMenu.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         tvMenu.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        */
 
         // Add everything to linearParent
         linearParent.addView(img);
         linearParent.addView(tvName);
         linearParent.addView(linearChild);
-        linearParent.addView(tvMenu);
+        // linearParent.addView(tvMenu);
 
         // Add to the LinearLayout from ScrollView
         scrollView.addView(linearParent);
+
+        setRestaurantsOnClick(linearParent, restName);
     }
 
-    // For setRestaurantsH()
-    private int dpToPix(int dp) {
-        int pix = (int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                dp,
-                getResources().getDisplayMetrics()
-        );
-        return pix;
+    private void setRestaurantsOnClick(LinearLayout restLayout, String restName) {
+        restLayout.setOnClickListener(item -> {
+            switch(restName) {
+                case "Panda Express":
+                    home.setFragment(new PandaExpressFragment(home));
+                    break;
+                case "Subway":
+                    Log.d("TEST", "subwaywaywyay");
+                    Log.d("TEST", home.getRestaurantManager().getRestaurants().size() + " " );
+                    String all = "";
+                    for(Restaurant i : home.getRestaurantManager().getRestaurants()) {
+                        Log.d("TEST", i.getName() + " > " + i.getNameForFile());
+                        for(MenuSection j : i.getMenuSections()) {
+                            Log.d("TEST", j.getName());
+                            for(MenuItem k : j.getMenu()) {
+                                Log.d("TEST", k.getName() + " > " + k.getNameForFile());
+                                for(String x : k.getIngredients()) {
+                                    Log.d("TAST", k.getName() + " > " + x);
+                                }
+                            }
+                        }
+                    }
+                    break;
+                default:
+                    Log.d("TEST", "HEISL");
+            }
+        });
     }
 }
 
