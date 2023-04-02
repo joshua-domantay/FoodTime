@@ -123,7 +123,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_sprite_cup"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sprite"></ImageButton>
 
         <!--Coca Cola Cherry-->
         <LinearLayout
@@ -198,7 +198,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_dasani_16_oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_dasani"></ImageButton>
 
         <!--Powerade Berry Blast-->
         <LinearLayout
@@ -213,7 +213,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_powerade_berry_blast_20_oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_powerade_berry_blast"></ImageButton>
 
 
         <!--Minute Maid Apple Juice -->
@@ -229,7 +229,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_minute_maid_apple_juice_12_oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_minute_maid_apple_juice"></ImageButton>
 
 
         <!--Sprite bottle-->
@@ -245,7 +245,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_sprite_20oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sprite_bottle"></ImageButton>
 
 
         <!--Smart Water -->
@@ -261,7 +261,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_smart_water_700_ml"></ImageButton>
+            app:srcCompat="@drawable/panda_express_smart_water"></ImageButton>
 
         <!--White Steamed Rice -->
         <LinearLayout
@@ -276,7 +276,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_sanzo_lychee_sparkling_water_12_oz_can"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sanzo_lychee_sparkling_water"></ImageButton>
 
 
         <Space

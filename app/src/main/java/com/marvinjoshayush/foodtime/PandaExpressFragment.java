@@ -102,7 +102,24 @@ public class PandaExpressFragment extends Fragment {
         // Side, Entree, Appetizer, Drink
         ArrayList<View> contents = new ArrayList<>();
         contents.addAll(createLayoutPlate());
+
+        // Appetizers
+        // Title
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 3", R.color.black,
+                30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
+        // Subtitle
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Choose an Appetizer",
+                R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         contents.addAll(createLayoutAppetizers());
+
+        // Drinks
+        // Title
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 4", R.color.black,
+                30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
+        // Subtitle
+        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP,
+                "Select flavor for included Medium Drink, or get a bottled drink",
+                R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         contents.addAll(createLayoutDrinks());
         return contents;
     }
@@ -152,8 +169,7 @@ public class PandaExpressFragment extends Fragment {
     }
 
     private ArrayList<View> createLayoutDrinks() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("drinks");
     }
 
     // Bowl, Plate, BiggerPlate

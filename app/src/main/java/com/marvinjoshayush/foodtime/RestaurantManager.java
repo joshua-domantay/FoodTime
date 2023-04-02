@@ -291,6 +291,78 @@ public class RestaurantManager {
                 "yeast extract", "spices", "sesame"
         };
         restaurantToFirebaseH(restRef, "Cub Meals", "Broccoli Beef Cub Meal", ingredients);
+
+        // DRINKS (Could be used for other restaurants)
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors", "caffeine"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "caramel color", "aspartame", "phosphoric acid", "potassium benzoate", "natural flavors", "citric acid", "caffeine"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Diet Coke", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "caramel color", "sodium benzoate", "citric acid", "caffeine", "artificial and natural flavors", "acacia"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Barqs Root Beer", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "citric acid", "natural flavors", "sodium benzoate", "modified food starch", "glycerol ester of rosin", "yellow 6", "red 40"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Fanta Orange", ingredients);
+
+        ingredients = new String[]{
+                "pure filtered water", "lemon juice from concentrate", "high fructose corn syrup", "lemon pulp", "natural flavors", "pectin", "sucralose", "acesulfame potassium"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Minute Maid Lemonade", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "citric acid", "tartaric acid", "acidity regulator", "sodium citrates", "aspartame", "acesulfame-k", "sucralose", "natural lemon", "lime flavourings"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Sprite", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors", "caffeine", "sodium"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola Cherry", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "natural flavors", "citric acid", "sodium benzoate", "red 40"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Fanta Strawberry", ingredients);
+
+        ingredients = new String[]{
+                "purified water", "magnesium sulfate", "potassium chloride", "salt", "sodium", "minerals"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Dasani", ingredients);
+
+        ingredients = new String[]{
+                "water", "high fructose corn syrup", "citric acid", "electrolytes", "salt", "sodium citrate", "magnesium", "calcium chlorides", "mono-potassium phosphate",
+                "vitamins b12", "vitamin c", "cyanocobalamin", "ascorbic acid", "natural flavors", "modified food starch", "calcium disodium edta", "medium chain triglycerides", "sucrose acetate isobutrate", "blue 1"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Powerade Berry Blast", ingredients);
+
+        ingredients = new String[]{
+                "pure filtered water", "concentrated apple juice", "vitamin c", "ascorbic acid"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Minute Maid Apple Juice", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "citric acid", "tartaric acid", "acidity regulator", "sodium citrates", "aspartame", "acesulfame-k", "sucralose", "natural lemon", "lime flavourings"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Sprite Bottle", ingredients);
+
+        ingredients = new String[]{
+                "spring water", "electrolytes", "calcium chloride", "magnesium chloride", "potassium bicarbonate"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Smart Water", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "lychee puree", "citric acid"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Sanzo Lychee Sparkling Water", ingredients);
     }
 
     private void getSubway(DatabaseReference restRef) {

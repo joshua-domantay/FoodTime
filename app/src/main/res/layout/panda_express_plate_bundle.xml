@@ -230,6 +230,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
+        <!--Honey Walnut Shrimp -->
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="373dp"
@@ -239,7 +240,6 @@
             android:cropToPadding="false"
             app:srcCompat="@drawable/panda_express_black_pepper_angus_beef"></ImageButton>
 
-        <!--Honey Walnut Shrimp -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -625,7 +625,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_sprite_cup"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sprite"></ImageButton>
 
         <!--Coca Cola Cherry-->
         <LinearLayout
@@ -700,7 +700,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_dasani_16_oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_dasani"></ImageButton>
 
         <!--Powerade Berry Blast-->
         <LinearLayout
@@ -715,7 +715,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_powerade_berry_blast_20_oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_powerade_berry_blast"></ImageButton>
 
 
         <!--Minute Maid Apple Juice-->
@@ -731,7 +731,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_minute_maid_apple_juice_12_oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_minute_maid_apple_juice"></ImageButton>
 
         <!--Coke Mexico bottle-->
         <LinearLayout
@@ -762,7 +762,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_sprite_20oz_bottle"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sprite_bottle"></ImageButton>
 
         <!--Smart Water-->
         <LinearLayout
@@ -777,7 +777,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_smart_water_700_ml"></ImageButton>
+            app:srcCompat="@drawable/panda_express_smart_water"></ImageButton>
 
         <!--Sanzo Lychee-->
         <LinearLayout
@@ -792,7 +792,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_sanzo_lychee_sparkling_water_12_oz_can"></ImageButton>
+            app:srcCompat="@drawable/panda_express_sanzo_lychee_sparkling_water"></ImageButton>
 
 
         <Space
