@@ -70,7 +70,7 @@ public class PandaExpressFragment extends Fragment {
             case R.id.pandaExpress_familyMeal:
                 return createLayoutFamilyMeal();
             case R.id.pandaExpress_cubMeal:
-                return createLayoutCubMeal();
+                return createLayoutCubMeals();
             case R.id.pandaExpress_aLaCarte:
                 return createLayoutALaCarte();
             case R.id.pandaExpress_appetizers:
@@ -135,9 +135,8 @@ public class PandaExpressFragment extends Fragment {
         return contents;
     }
 
-    private ArrayList<View> createLayoutCubMeal() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+    private ArrayList<View> createLayoutCubMeals() {
+        return createLayoutFromFirebase("cub meals");
     }
 
     private ArrayList<View> createLayoutALaCarte() {

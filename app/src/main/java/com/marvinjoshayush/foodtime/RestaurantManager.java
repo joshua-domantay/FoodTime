@@ -265,6 +265,32 @@ public class RestaurantManager {
                 "disodium inosinate", "disodium guanylate", "soybean oil", "sodium polyphosphate", "sodium carbonate", "monoglycerides", "diglycerides",
                 "polysorbitan esters of stearates", "lecithin", "citric acid", "soy", "wheat", "sesame"};
         restaurantToFirebaseH(restRef, "Appetizers", "Vegetable Spring Roll", ingredients);
+
+        ingredients = new String[]{
+                "white rice", "cabbage", "broccoli", "kale", "water", "soybean oil", "garlic", "phosphoric acid", "natural flavor", "cornstarch", "potato starch",
+                "modified food starch", "salt", "maltodextrin", "disodium inosinate", "disodium guanylate", "dehydrated soy sauce powder", "sugar", "onion powder",
+                "celery extract", "soy", "wheat", "dark meat chicken", "distilled vinegar", "corn starch", "orange extract", "caramel color", "rice", "sesame oil",
+                "wheat flour", "eggs", "spices", "leavening", "soy sauce", "milk", "sesame"
+        };
+        restaurantToFirebaseH(restRef, "Cub Meals", "Orange Chicken Cub Meal", ingredients);
+
+        ingredients = new String[]{
+                "cabbage", "enriched wheat flour", "water", "onion", "soybean oil", "celery", "rice", "wheat", "caramel color", "sesame oil", "wheat gluten",
+                "canola oil", "cottonseed oil", "dextrose", "sugar", "malted barley flour", "monoglycerides", "datem", "l-cysteine hydrochloride", "ascorbic acid",
+                "enzyme", "modified cornstarch", "xanthan gum", "potassium carbonate", "salt", "sodium carbonate", "yellow 5", "yellow 6", "potassium bicarbonate",
+                "soy sauce", "spices", "soy", "sesame", "broccoli", "kale", "garlic", "phosphoric acid", "natural flavor", "cornstarch", "potato starch",
+                "modified food starch", "maltodextrin", "disodium inosinate", "disodium guanylate", "dehydrated soy sauce powder", "onion powder", "celery extract",
+                "chicken thighs", "ginger puree", "black pepper", "roasted sesame seed oil"
+        };
+        restaurantToFirebaseH(restRef, "Cub Meals", "Grilled Teriyaki Cub Meal", ingredients);
+
+        ingredients = new String[]{
+                "white rice", "cabbage", "broccoli", "kale", "water", "soybean oil", "garlic", "phosphoric acid", "natural flavor", "cornstarch", "potato starch",
+                "modified food starch", "salt", "maltodextrin", "disodium inosinate", "disodium guanylate", "dehydrated soy sauce powder", "sugar", "onion powder",
+                "celery extract", "soy", "wheat", "beef", "corn starch", "soy sauce", "rice", "caramel color", "sesame oil", "sea salt", "brown sugar", "sodium phosphate",
+                "yeast extract", "spices", "sesame"
+        };
+        restaurantToFirebaseH(restRef, "Cub Meals", "Broccoli Beef Cub Meal", ingredients);
     }
 
     private void getSubway(DatabaseReference restRef) {

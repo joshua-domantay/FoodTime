@@ -72,7 +72,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/panda_express_grilled_teriyaki_chicken_cub_meal"></ImageButton>
+            app:srcCompat="@drawable/panda_express_grilled_teriyaki_cub_meal"></ImageButton>
 
 
         <!--Broccoli Beef Cub Meal -->
