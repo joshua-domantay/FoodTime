@@ -97,7 +97,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_sweets_and_treets"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sweets_and_treats"></ImageButton>
 
 
         <LinearLayout

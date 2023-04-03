@@ -2,9 +2,6 @@ package com.marvinjoshayush.foodtime;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import java.util.ArrayList;
 
-public class PandaExpressFragment extends Fragment {
+public class McDonaldsFragment extends Fragment {
     private HomeActivity home;
     private View view;
 
@@ -28,13 +27,13 @@ public class PandaExpressFragment extends Fragment {
             LinearLayout.LayoutParams.WRAP_CONTENT
     );
 
-    public PandaExpressFragment(HomeActivity home) {
+    public McDonaldsFragment(HomeActivity home) {
         this.home = home;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_panda_express, container, false);
+        view = inflater.inflate(R.layout.fragment_mcdonalds, container, false);
 
         setOnClickListeners();
 
@@ -43,11 +42,12 @@ public class PandaExpressFragment extends Fragment {
 
     private void setOnClickListeners() {
         int[] btns = new int[]{
-                R.id.pandaExpress_plateBundle,  R.id.pandaExpress_bowl,         R.id.pandaExpress_plate,
-                R.id.pandaExpress_biggerPlate,  R.id.pandaExpress_familyMeal,   R.id.pandaExpress_cubMeal,
-                R.id.pandaExpress_aLaCarte,     R.id.pandaExpress_appetizers,   R.id.pandaExpress_drinks
+                R.id.mcDonalds_featured,        R.id.mcDonalds_dollarMenu,      R.id.mcDonalds_burgers,         R.id.mcDonalds_breakfast,
+                R.id.mcDonalds_bakery,          R.id.mcDonalds_coffees,         R.id.mcDonalds_mcNuggets,       R.id.mcDonalds_chickenFish,
+                R.id.mcDonalds_friesAndSides,   R.id.mcDonalds_happyMeal,       R.id.mcDonalds_sweetsTreats,    R.id.mcDonalds_beverages
         };
 
+        /*
         for(int btn : btns) {
             view.findViewById(btn).setOnClickListener(item -> {
                 ArrayList<View> layout = createLayoutForSubMenuFragment(btn);
@@ -55,6 +55,7 @@ public class PandaExpressFragment extends Fragment {
                 home.setFragment(frag);
             });
         }
+        */
     }
 
     private ArrayList<View> createLayoutForSubMenuFragment(int id) {
