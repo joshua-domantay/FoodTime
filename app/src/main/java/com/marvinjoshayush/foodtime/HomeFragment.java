@@ -54,7 +54,6 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         scrollView = view.findViewById(R.id.homeSVLinear);
 
-
         setSortButtons();
         getChoices();
         setRestaurants();
@@ -189,25 +188,13 @@ public class HomeFragment extends Fragment {
     private void setRestaurantsOnClick(LinearLayout restLayout, String restName) {
         restLayout.setOnClickListener(item -> {
             switch(restName) {
+                case "McDonalds":
+                    home.setFragment(new McDonaldsFragment(home));
+                    break;
                 case "Panda Express":
                     home.setFragment(new PandaExpressFragment(home));
                     break;
                 case "Subway":
-                    Log.d("TEST", "subwaywaywyay");
-                    Log.d("TEST", home.getRestaurantManager().getRestaurants().size() + " " );
-                    String all = "";
-                    for(Restaurant i : home.getRestaurantManager().getRestaurants()) {
-                        Log.d("TEST", i.getName() + " > " + i.getNameForFile());
-                        for(MenuSection j : i.getMenuSections()) {
-                            Log.d("TEST", j.getName());
-                            for(MenuItem k : j.getMenu()) {
-                                Log.d("TEST", k.getName() + " > " + k.getNameForFile());
-                                for(String x : k.getIngredients()) {
-                                    Log.d("TAST", k.getName() + " > " + x);
-                                }
-                            }
-                        }
-                    }
                     break;
                 default:
                     Log.d("TEST", "HEISL");

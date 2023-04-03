@@ -78,7 +78,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_chicken_mcnuggets_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_chicken_mcnuggets"></ImageButton>
 
 
 
@@ -98,7 +98,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_world_famous_fries_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_french_fries"></ImageButton>
 
 
         <LinearLayout
@@ -116,7 +116,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_quarter_pounder_with_cheese_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_quarter_pounder_with_cheese"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -133,7 +133,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_iced_coffee_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_iced_coffee_regular"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,7 +147,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_egg_mcmuffin_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_egg_mcmuffin"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -161,7 +161,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_burrito_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_burrito"></ImageButton>
 
 
 

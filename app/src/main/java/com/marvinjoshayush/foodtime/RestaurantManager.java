@@ -56,6 +56,8 @@ public class RestaurantManager {
 
     private int getRestaurantBanner(String pRestaurant) {
         switch(pRestaurant) {
+            case "McDonalds":
+                return R.drawable.mcdonalds;
             case "Panda Express":
                 return R.drawable.panda_express;
             case "Subway":
