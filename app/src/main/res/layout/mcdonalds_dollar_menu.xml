@@ -44,7 +44,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_sausage_biscuit_dollar_menu"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_biscuit_size"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_mcmuffin_dollar_tree"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_mcmuffin"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,7 +93,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_hash_browns_dollar_tree"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_hash_browns"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,7 +126,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_mcchicken_dollar_menu"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_mcchicken"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -176,7 +176,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_coca_cola_beverages"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_coca_cola_classic"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -192,7 +192,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sprite_beverages"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sprite"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -241,7 +241,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_diet_coke_beverages"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_diet_coke"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -257,7 +257,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_hi_c_orange_lavaburst_beverages"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_hi_c_orange_lavaburst"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -273,7 +273,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_unsweetened_iced_tea_beverages"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_unsweetened_iced_tea"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -289,7 +289,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sweet_tea_beverages"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sweet_tea"></ImageButton>
 
 
 

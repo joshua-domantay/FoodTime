@@ -27,6 +27,7 @@ class MenuItem {
         setNameForFileH(nameForFile, ",");
         setNameForFileH(nameForFile, "-");
         setNameForFileH(nameForFile, ":");
+        setNameForFileH(nameForFile, "'");
         setNameForFileH(nameForFile, "_");
     }
 

@@ -13,13 +13,15 @@ import java.util.ArrayList;
 
 public class SubMenuFragment extends Fragment {
     private HomeActivity home;
+    private Fragment returnFragment;
     private View view;
     private ImageView logo;
     private ArrayList<View> viewsToAdd;
     private LinearLayout parentLayout;
 
-    public SubMenuFragment(HomeActivity home, ImageView logo, ArrayList<View> viewsToAdd) {
+    public SubMenuFragment(HomeActivity home, ImageView logo, Fragment returnFragment, ArrayList<View> viewsToAdd) {
         this.home = home;
+        this.returnFragment = returnFragment;
         this.logo = logo;
         this.viewsToAdd = viewsToAdd;
     }
@@ -29,13 +31,22 @@ public class SubMenuFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_sub_menu, container, false);
         parentLayout = view.findViewById(R.id.subMenuFragment_subMenu);
         addViewsToAdd();
+
+        setButtons();
+
         return view;
     }
 
     private void addViewsToAdd() {
-        parentLayout.addView(logo);
+        ((LinearLayout) view.findViewById(R.id.subMenuFragment_logoParent)).addView(logo);
         for(View v : viewsToAdd) {
             parentLayout.addView(v);
         }
+    }
+
+    private void setButtons() {
+        view.findViewById(R.id.subMenu_returnToMenu).setOnClickListener(item -> {
+            home.setFragment(returnFragment);
+        });
     }
 }

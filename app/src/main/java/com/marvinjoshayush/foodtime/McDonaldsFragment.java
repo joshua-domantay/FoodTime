@@ -56,7 +56,7 @@ public class McDonaldsFragment extends Fragment {
                 ArrayList<View> layout = createLayoutForSubMenuFragment(btn);
                 ImageView logo = ViewMaker.createBasicImageView(getContext(), ViewMaker.WRAP_WRAP, "mcdonalds_menu_logo", Gravity.CENTER,
                         0, 10, 0, 10);
-                Fragment frag = new SubMenuFragment(home, logo, layout);
+                Fragment frag = new SubMenuFragment(home, logo, new McDonaldsFragment(home), layout);
                 home.setFragment(frag);
             });
         }
@@ -92,6 +92,7 @@ public class McDonaldsFragment extends Fragment {
     }
 
     private ArrayList<View> createLayoutFeatured() {
+        /*
         ArrayList<View> contents = new ArrayList<>();
         ArrayList<String> toAdd = new ArrayList<>(Arrays.asList("big_mac", "chicken_mcnuggets", "french_fries",
                 "quarter_pounder_with_cheese", "iced_coffee_regular", "egg_mcmuffin", "sausage_burrito"));
@@ -109,21 +110,35 @@ public class McDonaldsFragment extends Fragment {
             }
         }
         return contents;
+        */
+        ArrayList<String> toAdd = new ArrayList<>(Arrays.asList(
+                "big_mac", "chicken_mcnuggets", "french_fries", "quarter_pounder_with_cheese",
+                "iced_coffee_regular", "egg_mcmuffin", "sausage_burrito"
+        ));
+        return getSpecifiedMenu(toAdd);
     }
 
     private ArrayList<View> createLayoutDollarMenu() {
-        ArrayList<View> contents = new ArrayList<>();
+        ArrayList<String> toAdd = new ArrayList<>(Arrays.asList(
+                "sausage_biscuit_size", "sausage_mcmuffin", "sausage_burrito", "hash_browns",
+                "mcdouble", "mcchicken", "chicken_nuggets", "french_fries"
+        ));
+        ArrayList<View> contents = getSpecifiedMenu(toAdd);
+
+        toAdd = new ArrayList<>(Arrays.asList(
+                "coca_cola_classic", "sprite", "hi_c_orange_lavaburst", "diet_coke",
+                "sweet_tea", "unsweetened_iced_tea"
+        ));
+        contents.addAll(getSpecifiedMenu(toAdd));
         return contents;
     }
 
     private ArrayList<View> createLayoutBurgers() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("burgers");
     }
 
     private ArrayList<View> createLayoutBreakfast() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("breakfast");
     }
 
     private ArrayList<View> createLayoutBakery() {
@@ -132,23 +147,19 @@ public class McDonaldsFragment extends Fragment {
     }
 
     private ArrayList<View> createLayoutCoffees() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("coffees");
     }
 
     private ArrayList<View> createLayoutMcNuggets() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("mcnuggets and meals");
     }
 
     private ArrayList<View> createLayoutChickenFish() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("chicken & fish sandwiches");
     }
 
     private ArrayList<View> createLayoutFriesAndSides() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("fries & sides");
     }
 
     private ArrayList<View> createLayoutHappyMeal() {
@@ -157,13 +168,11 @@ public class McDonaldsFragment extends Fragment {
     }
 
     private ArrayList<View> createLayoutsweetsTreats() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("sweets & treats");
     }
 
     private ArrayList<View> createLayoutBeverages() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("beverages");
     }
 
     private ArrayList<View> createLayoutFromFirebase(String sectionName) {
@@ -179,6 +188,24 @@ public class McDonaldsFragment extends Fragment {
                     }
                 }
                 break;
+            }
+        }
+        return contents;
+    }
+
+    private ArrayList<View> getSpecifiedMenu(ArrayList<String> toAdd) {
+        ArrayList<View> contents = new ArrayList<>();
+        for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
+            if (rest.getNameForFile().equalsIgnoreCase("mcdonalds")) {
+                for(MenuSection section : rest.getMenuSections()) {
+                    for (MenuItem item : section.getMenu()) {
+                        if(toAdd.contains(item.getNameForFile().toLowerCase()) || toAdd.contains(item.getName().toLowerCase())) {
+                            String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
+                            contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                            toAdd.remove(item.getNameForFile().toLowerCase());
+                        }
+                    }
+                }
             }
         }
         return contents;
