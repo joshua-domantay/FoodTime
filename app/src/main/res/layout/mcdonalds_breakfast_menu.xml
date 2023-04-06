@@ -47,7 +47,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_bacon_egg_and_cheese_biscuit"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_bacon_egg_cheese_biscuit_size"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_egg_mcmuffin_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_egg_mcmuffin"></ImageButton>
 
 
         <LinearLayout
@@ -78,7 +78,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_mcmuffin_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_mcmuffin"></ImageButton>
 
 
 
@@ -98,7 +98,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_sausage_mcmuffin_with_cheese_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_mcmuffin_with_egg"></ImageButton>
 
 
         <LinearLayout
@@ -133,7 +133,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_sausage_biscuit_with_egg_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_biscuit_with_egg_size"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,7 +147,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_bacon_egg_and_cheese_mcgriddles_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_bacon_egg_cheese_mcgriddles"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -161,7 +161,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_mcgriddles_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_mcgriddles"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -175,7 +175,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_egg_and_cheese_mcgriddles_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_egg_cheese_mcgriddles"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -189,7 +189,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_big_breakfast_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_big_breakfast_size"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -203,7 +203,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_big_breakfast_with_hotcakes"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_big_breakfast_with_hotcakes_size"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -217,7 +217,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_hotcakes_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_hotcakes"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -231,7 +231,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_hot_cake_and_sausage_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_hotcakes_and_sausage"></ImageButton>
 
 
         <LinearLayout
@@ -246,7 +246,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_burrito_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_burrito"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -260,7 +260,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_hashbrown_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_hash_brown"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -274,7 +274,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_fruit_and_maple_oatmeal_breakfast"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_fruit_maple_oatmeal"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"

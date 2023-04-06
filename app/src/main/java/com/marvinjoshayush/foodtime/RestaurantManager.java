@@ -2670,6 +2670,78 @@ public class RestaurantManager {
                 "cellulose powder", "xanthan gum", "fruit", "vegetable juice", "natural botanical flavors", "artificial flavors", "pectin", "citric acid", "milk", "yogurt"
         };
         restaurantToFirebaseH(restRef, "Beverages", "Wild Berry Fruit Blend", ingredients);
+
+        ingredients = new String[]{
+                "potatoes", "vegetable oil", "canola oil", "hydrogenated soybean oil", "natural beef flavor", "wheat", "milk", "citric acid", "salt",
+                "corn flour", "dehydrated potato", "dextrose", "sodium acid pyrophosphate", "black pepper", "corn oil", "soybean oil", "tbhq", "dimethylpolysiloxane"
+        };
+        restaurantToFirebaseH(restRef, "Breakfast", "Hash Brown", ingredients);
+
+        ingredients = new String[] { "apple" };
+        restaurantToFirebaseH(restRef, "Fries & Sides", "Apple Slices", ingredients);
+
+        ingredients = new String[] {
+                "water", "sugar", "dijon mustard", "distilled vinegar", "mustard seed", "salt", "white wine", "spices", "soybean oil", "honey",
+                "corn syrup solids", "food starch", "egg yolks", "xanthan gum", "titanium dioxide", "sodium benzoate", "propylene glycol alginate",
+                "turmeric", "yellow 5", "yellow 6"
+        };
+        restaurantToFirebaseH(restRef, "Fries & Sides", "Tangy Honey Mustard Sauce", ingredients);
+
+        ingredients = new String[] { "honey" };
+        restaurantToFirebaseH(restRef, "Fries & Sides", "Honey", ingredients);
+
+        ingredients = new String[] {
+                "distilled vinegar", "water", "mustard seed", "salt", "turmeric", "paprika", "spice extractive"
+        };
+        restaurantToFirebaseH(restRef, "Fries & Sides", "Mustard Packet", ingredients);
+
+        ingredients = new String[] {
+                "soybean oil", "water", "egg yolks", "distilled vinegar", "salt", "sugar",
+                "mustard flour", "lemon juice concentrate", "calcium disodium edta"
+        };
+        restaurantToFirebaseH(restRef, "Fries & Sides", "Mayonnaise Packet", ingredients);
+
+        ingredients = new String[] {
+                "filtered water", "organic apple juice", "natural flavor", "vitamin c", "organic natural flavor", "citric acid"
+        };
+        restaurantToFirebaseH(restRef, "Beverages", "Honest Kids Appley Ever After Organic Juice Drink", ingredients);
+
+        ingredients = new String[] {
+                "water", "cane sugar", "lemon juice from concentrate", "lemon pulp", "natural flavor"
+        };
+        restaurantToFirebaseH(restRef, "Beverages", "Lemonade", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "citric acid", "natural flavors", "sodium benzoate", "modified food starch", "glycerol ester of rosin", "yellow 6", "red 40"
+        };
+        restaurantToFirebaseH(restRef, "Beverages", "Fanta Orange", ingredients);
+
+        ingredients = new String[]{
+                "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin",
+                "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "enzymes", "water", "high fructose corn syrup", "sugar", "yeast", "soybean oil",
+                "partially hydrogenated soybean oil", "calcium sulfate", "ammonium sulfate", "ammonium chloride", "calcium carbonate", "dough conditioners",
+                "sodium stearoyl lactylate", "datem", "ascorbic acid", "azodicarbonamide", "monoglycerides", "diglycerides", "ethoxylated monoglycerides",
+                "monocalcium phosphate", "guar gum", "calcium peroxide", "soy flour", "calcium propionate", "sodium propionate", "soy lecithin", "sesame seed",
+                "wheat", "soy", "milk", "milkfat", "cheese culture", "sodium citrate", "citric acid", "sorbic acid", "sodium phosphate", "artificial color",
+                "lactic acid", "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika",
+                "spice extractive", "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions",
+                "pork bellies", "natural smoke flavor", "sodium erythorbate", "sodium nitrite"
+        };
+        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Bacon", ingredients);
+
+        ingredients = new String[]{
+                "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
+                "thiamin mononitrate", "riboflavin", "folic acid", "enzymes", "water", "high fructose corn syrup", "sugar", "yeast", "soybean oil",
+                "partially hydrogenated soybean oil", "calcium sulfate", "ammonium sulfate", "ammonium chloride", "calcium carbonate", "dough conditioners",
+                "sodium stearoyl lactylate", "datem", "ascorbic acid", "azodicarbonamide", "monoglycerides", "diglycerides", "ethoxylated monoglycerides",
+                "monocalcium phosphate", "guar gum", "calcium peroxide", "soy flour", "calcium propionate", "sodium propionate", "soy lecithin", "sesame seed", "wheat",
+                "soy", "milk", "milkfat", "cheese culture", "sodium citrate", "citric acid", "sorbic acid", "sodium phosphate", "artificial color", "lactic acid",
+                "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika", "spice extractive",
+                "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions", "tomato",
+                "water", "egg yolks", "distilled vinegar", "mustard flour", "lemon juice concentrate", "calcium disodium edta", "lettuce"
+
+        };
+        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Deluxe", ingredients);
     }
 
     public ArrayList<Restaurant> getRestaurants() { return restaurants; }

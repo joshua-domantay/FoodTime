@@ -63,7 +63,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_big_mac_featured_favorites"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_big_mac"></ImageButton>
 
 
         <LinearLayout
@@ -116,7 +116,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_quarter_pounder_with_cheese"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_quarter_pounder_with_cheese0"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,7 +147,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_egg_mcmuffin"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_egg_mcmuffin_0"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -161,7 +161,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sausage_burrito"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sausage_burrito_0"></ImageButton>
 
 
 

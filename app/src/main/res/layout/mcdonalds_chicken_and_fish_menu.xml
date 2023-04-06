@@ -144,7 +144,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_filet_o_fish_chicken_and_fish_sandwiches"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_filet_o_fish"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"

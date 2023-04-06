@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_cappucinno_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_cappucinno"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +76,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_caramel_cappuccino_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_caramel_cappuccino"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -174,7 +174,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_iced_mocha_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_iced_mocha"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -206,7 +206,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_iced_caramel_coffee_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_iced_coffee_caramel"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -239,7 +239,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_latte_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_latte"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -255,7 +255,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_iced_latte_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_iced_latte_with_sugar_free_vanilla_syrup"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -271,7 +271,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_caramel_latte_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_caramel_latte"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -287,7 +287,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_iced_caramel_latte_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_iced_nonfat_caramel_latte"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -336,7 +336,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_caramel_frappe_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_frappe_caramel"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -352,7 +352,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_mocha_frappe_mccafe_coffees"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_frappe_mocha"></ImageButton>
 
 
         <Space

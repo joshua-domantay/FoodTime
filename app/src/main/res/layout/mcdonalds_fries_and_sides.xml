@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_apple_slices_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_apple_slices"></ImageButton>
 
 
         <LinearLayout
@@ -75,7 +75,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_tangy_barbeque_sauce_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_barbeque_sauce"></ImageButton>
 
 
 
@@ -95,7 +95,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_spicy_buffalo_sauce_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_spicy_buffalo_sauce"></ImageButton>
 
 
         <LinearLayout
@@ -113,7 +113,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_creamy_ranch_sauce_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_creamy_ranch_sauce"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -130,7 +130,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_honey_mustard_sauce_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_tangy_honey_mustard_sauce"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -144,7 +144,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_honey_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_honey"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -158,7 +158,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_sweet_n_sour_sauce_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_sweet_n_sour_sauce"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -172,7 +172,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_ketchup_packet_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_ketchup_packet"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -186,7 +186,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_mustard_packet_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_mustard_packet"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -200,7 +200,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_mayonnaise_packet_fries_and_sides"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_mayonnaise_packet"></ImageButton>
 
         <Space
             android:layout_width="match_parent"

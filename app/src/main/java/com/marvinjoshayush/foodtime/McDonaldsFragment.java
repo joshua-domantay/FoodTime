@@ -177,13 +177,17 @@ public class McDonaldsFragment extends Fragment {
 
     private ArrayList<View> createLayoutFromFirebase(String sectionName) {
         ArrayList<View> contents = new ArrayList<>();
+        ArrayList<String> added = new ArrayList<>();
         for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
             if(rest.getNameForFile().equalsIgnoreCase("mcdonalds")) {
                 for(MenuSection section : rest.getMenuSections()) {
                     if(section.getName().equalsIgnoreCase(sectionName)) {
                         for (MenuItem item : section.getMenu()) {
-                            String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                            contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                            if(!added.contains(item.getNameForFile())) {
+                                String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
+                                contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                                added.add(item.getNameForFile());
+                            }
                         }
                     }
                 }
