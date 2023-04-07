@@ -44,7 +44,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/mcdonalds_hamburger_happy_meal"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_happy_meal_hamburger"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_4_piece_mcnugget_happy_meal"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_happy_meal_4pc_chicken_mcnuggets"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +76,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_6_piece_chicken_mcnugget_happy_meal"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_happy_meal_6pc_chicken_mcnuggets"></ImageButton>
 
 
 

@@ -2739,9 +2739,42 @@ public class RestaurantManager {
                 "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika", "spice extractive",
                 "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions", "tomato",
                 "water", "egg yolks", "distilled vinegar", "mustard flour", "lemon juice concentrate", "calcium disodium edta", "lettuce"
-
         };
         restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Deluxe", ingredients);
+
+        ingredients = new String[]{
+                "beef", "grill seasoning", "salt", "black pepper", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
+                "thiamin mononitrate", "riboflavin", "folic acid", "enzymes", "water", "high fructose corn syrup", "sugar", "yeast", "soybean oil",
+                "partially hydrogenated soybean oil", "calcium sulfate", "calcium carbonate", "wheat gluten", "ammonium sulfate", "ammonium chloride",
+                "dough conditioners", "sodium stearoyl lactylate", "datem", "ascorbic acid", "azodicarbonamide", "monoglycerides", "diglycerides",
+                "ethoxylated monoglycerides", "monocalcium phosphate", "guar gum", "calcium peroxide", "soy flour", "calcium propionate", "sodium propionate",
+                "soy lecithin", "wheat", "soy", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika",
+                "spice extractive", "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "onions", "potatoes",
+                "vegetable oil", "canola oil", "hydrogenated soybean oil", "natural beef flavor", "milk", "citric acid", "dextrose", "sodium acid", "pyrophosphate",
+                "corn oil", "tbhq", "dimethylpolysiloxane", "hydrolyzed wheat", "hydrolyzed milk", "artificial flavor", "mixed tocopherols", "whipping propellant",
+                "nitrous oxide", "low fat milk", "palmitate", "apple"
+        };
+        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: Hamburger", ingredients);
+
+        ingredients = new String[]{
+                "white boneless chicken", "water", "food starch-modified", "salt", "seasoning", "autolyzed yeast extract", "wheat starch", "natural botanical flavor",
+                "safflower oil", "dextrose", "citric acid", "sodium phosphates", "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate",
+                "riboflavin", "folic acid", "yellow corn flour", "leavening", "baking soda", "sodium acid", "pyrophosphate", "sodium aluminum phosphate",
+                "monocalcium phosphate", "calcium lactate", "spices", "corn starch", "wheat", "vegetable oil", "canola oil", "corn oil", "soybean oil",
+                "hydrogenated soybean oil", "tbhq", "dimethylpolysiloxane", "potatoes", "natural beef flavor", "milk", "hydrolyzed wheat", "hydrolyzed milk",
+                "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "low fat milk", "palmitate", "apple"
+        };
+        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: 4pc Chicken McNuggets", ingredients);
+
+        ingredients = new String[]{
+                "white boneless chicken", "water", "food starch-modified", "salt", "seasoning", "autolyzed yeast extract", "wheat starch", "natural botanical flavor",
+                "safflower oil", "dextrose", "citric acid", "sodium phosphates", "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate",
+                "riboflavin", "folic acid", "yellow corn flour", "leavening", "baking soda", "sodium acid", "pyrophosphate", "sodium aluminum phosphate",
+                "monocalcium phosphate", "calcium lactate", "spices", "corn starch", "wheat", "vegetable oil", "canola oil", "corn oil", "soybean oil",
+                "hydrogenated soybean oil", "tbhq", "dimethylpolysiloxane", "potatoes", "natural beef flavor", "milk", "hydrolyzed wheat", "hydrolyzed milk",
+                "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "low fat milk", "palmitate", "apple"
+        };
+        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: 6pc Chicken McNuggets", ingredients);
     }
 
     public ArrayList<Restaurant> getRestaurants() { return restaurants; }

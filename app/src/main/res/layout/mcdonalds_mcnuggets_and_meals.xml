@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_10_piece_chicken_mcnuggets_mcnuggets_and_meals"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_chicken_mcnuggets_10pc"></ImageButton>
 
 
 

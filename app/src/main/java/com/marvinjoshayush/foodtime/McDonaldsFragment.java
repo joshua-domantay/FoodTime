@@ -163,8 +163,7 @@ public class McDonaldsFragment extends Fragment {
     }
 
     private ArrayList<View> createLayoutHappyMeal() {
-        ArrayList<View> contents = new ArrayList<>();
-        return contents;
+        return createLayoutFromFirebase("happy meal");
     }
 
     private ArrayList<View> createLayoutsweetsTreats() {
@@ -185,7 +184,8 @@ public class McDonaldsFragment extends Fragment {
                         for (MenuItem item : section.getMenu()) {
                             if(!added.contains(item.getNameForFile())) {
                                 String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                                contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                                View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                                if(x != null) { contents.add(x); }
                                 added.add(item.getNameForFile());
                             }
                         }
@@ -205,7 +205,8 @@ public class McDonaldsFragment extends Fragment {
                     for (MenuItem item : section.getMenu()) {
                         if(toAdd.contains(item.getNameForFile().toLowerCase()) || toAdd.contains(item.getName().toLowerCase())) {
                             String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                            contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                            View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                            if(x != null) { contents.add(x); }
                             toAdd.remove(item.getNameForFile().toLowerCase());
                         }
                     }

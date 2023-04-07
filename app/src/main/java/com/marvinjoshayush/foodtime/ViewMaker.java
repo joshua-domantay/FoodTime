@@ -33,6 +33,7 @@ public class ViewMaker {
         params.gravity = gravity;
         val.setLayoutParams(params);
         int img = context.getResources().getIdentifier(imgStr, "drawable", context.getPackageName());
+        if(img == 0) { return null; }
         val.setImageResource(img);
         return val;
     }
@@ -48,6 +49,7 @@ public class ViewMaker {
     // Without background / background is null
     public static ImageView createBasicImageView(Context context, LayoutParams params, String imgStr, int gravity, boolean nullBackground) {
         ImageView val = createBasicImageView(context, params, imgStr, gravity);
+        if(val == null) { return null; }
         if(nullBackground) { val.setBackground(null); }
         return val;
     }
@@ -55,6 +57,7 @@ public class ViewMaker {
     // With background
     public static ImageView createBasicImageView(Context context, LayoutParams params, String imgStr, int gravity, int background) {
         ImageView val = createBasicImageView(context, params, imgStr, gravity, false);
+        if(val == null) { return null; }
         val.setBackgroundColor(background);
         return val;
     }
@@ -65,6 +68,7 @@ public class ViewMaker {
         params.gravity = gravity;
         val.setLayoutParams(params);
         int img = context.getResources().getIdentifier(imgStr, "drawable", context.getPackageName());
+        if(img == 0) { return null; }
         val.setImageResource(img);
         return val;
     }
@@ -80,6 +84,7 @@ public class ViewMaker {
     // Without background / background is null
     public static ImageButton createBasicImageButton(Context context, LayoutParams params, String imgStr, int gravity, boolean nullBackground) {
         ImageButton val = createBasicImageButton(context, params, imgStr, gravity);
+        if(val == null) { return null; }
         if(nullBackground) { val.setBackground(null); }
         return val;
     }
@@ -87,6 +92,7 @@ public class ViewMaker {
     // With background
     public static ImageButton createBasicImageButton(Context context, LayoutParams params, String imgStr, int gravity, int background) {
         ImageButton val = createBasicImageButton(context, params, imgStr, gravity, false);
+        if(val == null) { return null; }
         val.setBackgroundColor(background);
         return val;
     }
