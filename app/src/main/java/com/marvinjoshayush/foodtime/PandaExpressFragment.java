@@ -80,24 +80,6 @@ public class PandaExpressFragment extends Fragment {
         }
     }
 
-    /*
-        <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="Step 1"></TextView>
-
-        // LinearLayout parent
-        LinearLayout linearParent = new LinearLayout(getContext());
-        linearParent.setLayoutParams(matchWrap);
-        linearParent.setPadding(0, 0, 0, dpToPix(30));
-        linearParent.setOrientation(LinearLayout.VERTICAL);
-        */
-
     private ArrayList<View> createLayoutPlateBundle() {
         // Side, Entree, Appetizer, Drink
         ArrayList<View> contents = new ArrayList<>();

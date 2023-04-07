@@ -27,6 +27,9 @@ public class PandaExpressSubMenuFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_panda_express_sub_menu, container, false);
         parentLayout = view.findViewById(R.id.pandaExpress_subMenu);
         addViewsToAdd();
+
+        setButtons();
+
         return view;
     }
 
@@ -34,5 +37,11 @@ public class PandaExpressSubMenuFragment extends Fragment {
         for(View v : viewsToAdd) {
             parentLayout.addView(v);
         }
+    }
+
+    private void setButtons() {
+        view.findViewById(R.id.pandaExpress_returnToMenu).setOnClickListener(item -> {
+            home.setFragment(new PandaExpressFragment(home));
+        });
     }
 }

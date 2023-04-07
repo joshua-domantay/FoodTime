@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#10 All-American Club -->
+        <!--Meatball Marinara -->
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="373dp"
@@ -167,7 +167,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--oven roasted turkey-->
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="373dp"
@@ -180,7 +180,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--Oven Roasted Turkey and ham-->
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="373dp"
@@ -195,7 +195,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--Roast Beef-->
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="373dp"
@@ -208,7 +208,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--Rotisserie Style Chicken-->
         <ImageButton
 
             android:layout_width="match_parent"
@@ -223,7 +223,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--Spicy Italian-->
         <ImageButton
 
             android:layout_width="match_parent"
@@ -238,7 +238,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--Steak and Cheese-->
         <ImageButton
 
             android:layout_width="match_parent"
@@ -252,7 +252,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal" />
 
-        <!--#11 Subway Club-->
+        <!--Sweet Onioin chicken-->
         <ImageButton
 
             android:layout_width="match_parent"
@@ -260,6 +260,52 @@
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
             app:srcCompat="@drawable/sweet_onion_chicken_teriyaki_subway"></ImageButton>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Tuna-->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/subway_tuna"></ImageButton
+           >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Veggie Delite-->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/veggie_delite_subway"></ImageButton
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Veggie Patty-->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/subway_veggie_patty"></ImageButton
+            >
 
 
 
