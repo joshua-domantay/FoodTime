@@ -8,11 +8,13 @@ class MenuItem {
     private String name;
     private String nameForFile;
     private ArrayList<String> ingredients;
+    private float price;
 
     public MenuItem(String name) {
         this.name = name;
         setNameForFile(name);
         ingredients = new ArrayList<>();
+        price = 1;      // TODO: Split name by '>' where name = '{name} > {price}'
     }
 
     public void addIngredients(ArrayList<String> ingredients) {
@@ -48,6 +50,7 @@ class MenuItem {
     public String getName() { return name; }
     public String getNameForFile() { return nameForFile; }
     public ArrayList<String> getIngredients() { return ingredients; }
+    public float getPrice() { return price; }
 }
 
 class MenuSection {
