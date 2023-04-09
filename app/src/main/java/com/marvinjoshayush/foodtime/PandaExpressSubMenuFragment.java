@@ -29,7 +29,7 @@ public class PandaExpressSubMenuFragment extends Fragment {
     }
 
     public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd,
-                                       HashMap<String, ImageButtonInfo> buttonInfo, int[] maxSelectionForEachSection, float price) {
+                                       HashMap<String, ImageButtonInfo> buttonInfo, int[] maxSelectionForSections, float price) {
         this.home = home;
         this.viewsToAdd = viewsToAdd;
         this.maxSelectionForSections = maxSelectionForSections;
@@ -37,7 +37,7 @@ public class PandaExpressSubMenuFragment extends Fragment {
         this.imageButtonForSections = new ArrayList<>();
         this.price = price;
 
-        for(int i = 0; i < maxSelectionForEachSection.length; i++) { imageButtonForSections.add(new ArrayList<>()); }
+        for(int i = 0; i < maxSelectionForSections.length; i++) { imageButtonForSections.add(new ArrayList<>()); }
     }
 
     @Override
