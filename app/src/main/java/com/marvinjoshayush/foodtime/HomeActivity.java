@@ -50,11 +50,14 @@ public class HomeActivity extends AppCompatActivity {
                 _frag = new HomeFragment(this);
                 break;
             case SEARCH:
-                _frag = new SearchFragment(this);
+                _frag = new SearchBoxActivity(this);
                 break;
             default:        // PROFILE
                 _frag = new ProfileFragment(this);
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.homeFragmentContainer, _frag).commit();
+    }
+
+    public void setContentView() {
     }
 }

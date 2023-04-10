@@ -45,6 +45,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         Password = (EditText) findViewById(R.id.passwordLogIn);
         mAuth = FirebaseAuth.getInstance();
 
+
     }
 
     public void onClick(View v) {
@@ -102,5 +103,6 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
 
         });
+
     }
 }

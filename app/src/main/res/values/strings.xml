@@ -20,7 +20,7 @@
     <string name="finish">Finish</string>
     <string name="get_your_food">Get your food</string>
     <string name="on_time">on time</string>
-    
+
     <string name="button">Button</string>
     <string name="button3">Button</string>
     <string name="textview3">TextView</string>
@@ -51,4 +51,20 @@
     <string name="account_settings">Account Settings</string>
     <string name="change_password">Change Password</string>
     <string name="log_out">Log out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_allergies">AllergiesActivity</string>
+    <string name="forgot_password_title" />
+    <string name="email_hint" />
+    <string name="reset_password" />
+    <string name="reset" />
 </resources>

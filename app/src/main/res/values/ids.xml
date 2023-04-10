@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="my_button" type="id" />
+    <item name="search_view" type="id" />
+    <item name="action_search" type="id" />
+    <item name="radioGroup" type="id" />
+    <item name="saveButton" type="id" />
+</resources>
