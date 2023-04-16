@@ -1,6 +1,7 @@
 package com.marvinjoshayush.foodtime;
 
 import android.graphics.Typeface;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,13 +18,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-class ViewsAndHashMap {
+class ViewsAndImageButtonInfos {
     public ArrayList<View> views;
-    public HashMap<String, ImageButtonInfo> hMap;
+    public ArrayList<ImageButtonInfo> imageButtonInfos;
 
-    public ViewsAndHashMap() {
+    public ViewsAndImageButtonInfos() {
         views = new ArrayList<>();
-        hMap = new HashMap<>();
+        imageButtonInfos = new ArrayList<>();
     }
 }
 
@@ -55,22 +56,6 @@ public class PandaExpressFragment extends Fragment {
     }
 
     private void setOnClickListeners() {
-        /*
-        int[] btns = new int[]{
-                R.id.pandaExpress_plateBundle,  R.id.pandaExpress_bowl,         R.id.pandaExpress_plate,
-                R.id.pandaExpress_biggerPlate,  R.id.pandaExpress_familyMeal,   R.id.pandaExpress_cubMeal,
-                R.id.pandaExpress_aLaCarte,     R.id.pandaExpress_appetizers,   R.id.pandaExpress_drinks
-        };
-
-        for(int btn : btns) {
-            view.findViewById(btn).setOnClickListener(item -> {
-                ArrayList<View> layout = createLayoutForSubMenuFragment(btn);
-                Fragment frag = new PandaExpressSubMenuFragment(home, layout);
-                home.setFragment(frag);
-            });
-        }
-         */
-
         HashMap<Integer, Float> map = new HashMap<>();
         map.put(R.id.pandaExpress_plateBundle, 0f);
         map.put(R.id.pandaExpress_bowl, 0f);
@@ -85,68 +70,29 @@ public class PandaExpressFragment extends Fragment {
         for(Map.Entry<Integer, Float> entry : map.entrySet()) {
             view.findViewById(entry.getKey()).setOnClickListener(item -> {
                 Fragment frag;
-                ViewsAndHashMap layout = createLayoutForSubMenuFragment(entry.getKey());
+                ViewsAndImageButtonInfos layout = createLayoutForSubMenuFragment(entry.getKey());
                 int[] maxSelections = getMaxSelections(entry.getKey());
                 if(maxSelections != null) {
-                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.hMap, maxSelections, entry.getValue());
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, maxSelections, entry.getValue());
                 } else {
                     frag = new PandaExpressSubMenuFragment(home, layout.views);
                 }
                 home.setFragment(frag);
             });
         }
-
-        /*
-        view.findViewById(R.id.pandaExpress_plateBundle).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_bowl).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_plate).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_biggerPlate).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_familyMeal).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_cubMeal).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_aLaCarte).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_appetizers).setOnClickListener(item -> {
-
-        });
-
-        view.findViewById(R.id.pandaExpress_drinks).setOnClickListener(item -> {
-
-        });
-        */
     }
 
     private int[] getMaxSelections(int id) {
         switch(id) {
             case R.id.pandaExpress_plateBundle:
-                return null;
+                return new int[]{2, 2, 1, 1};
             case R.id.pandaExpress_bowl:
-                return null;
+                return new int[]{2, 1};
             case R.id.pandaExpress_plate:
-                return null;
+                return new int[]{2, 2};
             case R.id.pandaExpress_biggerPlate:
-                return null;
             case R.id.pandaExpress_familyMeal:
-                return null;
+                return new int[]{2, 3};
             case R.id.pandaExpress_cubMeal:
                 return null;
             case R.id.pandaExpress_aLaCarte:
@@ -158,7 +104,7 @@ public class PandaExpressFragment extends Fragment {
         }
     }
 
-    private ViewsAndHashMap createLayoutForSubMenuFragment(int id) {
+    private ViewsAndImageButtonInfos createLayoutForSubMenuFragment(int id) {
         switch(id) {
             case R.id.pandaExpress_plateBundle:
                 return createLayoutPlateBundle();
@@ -181,126 +127,124 @@ public class PandaExpressFragment extends Fragment {
         }
     }
 
-    private ViewsAndHashMap createLayoutPlateBundle() {
+    private ViewsAndImageButtonInfos createLayoutPlateBundle() {
         // Side, Entree, Appetizer, Drink
-        ViewsAndHashMap vAndH = new ViewsAndHashMap();
-        ViewsAndHashMap n = createLayoutPlate();
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
-        }
+        ViewsAndImageButtonInfos vAndI = new ViewsAndImageButtonInfos();
+        ViewsAndImageButtonInfos n = createLayoutPlate();
+        vAndI.views.addAll(n.views);
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         // Appetizers
         // Title
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 3", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 3", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Choose an Appetizer",
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Choose an Appetizer",
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         n = createLayoutAppetizers();
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 2;
         }
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         // Drinks
         // Title
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 4", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 4", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP,
                 "Select flavor for included Medium Drink, or get a bottled drink",
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         n = createLayoutDrinks();
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 3;
         }
-        return vAndH;
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
+        return vAndI;
     }
 
-    private ViewsAndHashMap createLayoutBowl() {
+    private ViewsAndImageButtonInfos createLayoutBowl() {
         // Side, 1 Entree
         return createLayoutMain("Choose a Side, or Get Half and Half", "Choose an Entree");
     }
 
-    private ViewsAndHashMap createLayoutPlate() {
+    private ViewsAndImageButtonInfos createLayoutPlate() {
         // Side, 2 Entree
         return createLayoutMain("Choose a Side, or Get Half and Half", "Choose two Entrees");
     }
 
-    private ViewsAndHashMap createLayoutBiggerPlate() {
+    private ViewsAndImageButtonInfos createLayoutBiggerPlate() {
         // Side, 3 Entree
         return createLayoutMain("Choose a Side, or Get Half and Half", "Choose three Entrees");
     }
 
-    private ViewsAndHashMap createLayoutFamilyMeal() {
+    private ViewsAndImageButtonInfos createLayoutFamilyMeal() {
         // 2 Side, 3 Entree
         return createLayoutMain("Choose two Sides", "Choose three Entrees");
     }
 
-    private ViewsAndHashMap createLayoutCubMeals() {
+    private ViewsAndImageButtonInfos createLayoutCubMeals() {
         return createLayoutFromFirebase("cub meals");
     }
 
-    private ViewsAndHashMap createLayoutALaCarte() {
+    private ViewsAndImageButtonInfos createLayoutALaCarte() {
         // Side + Entree
-        ViewsAndHashMap vAndH = new ViewsAndHashMap();
-        ViewsAndHashMap n = createLayoutFromFirebase("entrees");
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
-        }
+        ViewsAndImageButtonInfos vAndI = new ViewsAndImageButtonInfos();
+        ViewsAndImageButtonInfos n = createLayoutFromFirebase("entrees");
+        vAndI.views.addAll(n.views);
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
         n = createLayoutFromFirebase("sides");
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 1;
         }
-        return vAndH;
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
+        return vAndI;
     }
 
-    private ViewsAndHashMap createLayoutAppetizers() {
+    private ViewsAndImageButtonInfos createLayoutAppetizers() {
         return createLayoutFromFirebase("appetizers");
     }
 
-    private ViewsAndHashMap createLayoutDrinks() {
+    private ViewsAndImageButtonInfos createLayoutDrinks() {
         return createLayoutFromFirebase("drinks");
     }
 
     // Bowl, Plate, BiggerPlate
-    private ViewsAndHashMap createLayoutMain(String firstSub, String secondSub) { return createLayoutMain(firstSub, secondSub, new ViewsAndHashMap()); }
-    private ViewsAndHashMap createLayoutMain(String firstSub, String secondSub, ViewsAndHashMap vAndH) {
+    private ViewsAndImageButtonInfos createLayoutMain(String firstSub, String secondSub) { return createLayoutMain(firstSub, secondSub, new ViewsAndImageButtonInfos()); }
+    private ViewsAndImageButtonInfos createLayoutMain(String firstSub, String secondSub, ViewsAndImageButtonInfos vAndI) {
         // Title
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 1", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 1", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Sides
-        ViewsAndHashMap n = createLayoutFromFirebase("sides");
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
-        }
+        ViewsAndImageButtonInfos n = createLayoutFromFirebase("sides");
+        vAndI.views.addAll(n.views);
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         // Title
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndH.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Entrees
         n = createLayoutFromFirebase("entrees");
-        vAndH.views.addAll(n.views);
-        for(Map.Entry<String, ImageButtonInfo> entry : n.hMap.entrySet()) {
-            vAndH.hMap.put(entry.getKey(), entry.getValue());
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 1;
         }
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
-        return vAndH;
+        return vAndI;
     }
 
-    private ViewsAndHashMap createLayoutFromFirebase(String sectionName) {
-        ViewsAndHashMap contents = new ViewsAndHashMap();
+    private ViewsAndImageButtonInfos createLayoutFromFirebase(String sectionName) {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
         for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
             if(rest.getNameForFile().equalsIgnoreCase("panda_express")) {
                 for(MenuSection section : rest.getMenuSections()) {
@@ -310,7 +254,7 @@ public class PandaExpressFragment extends Fragment {
                             View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
                             if(x != null) {
                                 contents.views.add(x);
-                                contents.hMap.put(item.getNameForFile(), new ImageButtonInfo(item.getName(), item.getNameForFile(), item.getPrice()));
+                                contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
                             }
                         }
                     }
