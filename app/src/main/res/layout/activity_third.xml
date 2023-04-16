@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/myRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@+id/radioButton1">
+
+        <ToggleButton
+            android:id="@+id/mile_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mile Radius" />
+
+        <ToggleButton
+            android:id="@+id/Fast_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fast Food" />
+
+        <ToggleButton
+            android:id="@+id/Restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurants" />
+        <ToggleButton
+            android:id="@+id/Delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delivery Option" />
+        <ToggleButton
+            android:id="@+id/Show_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Reservation Times" />
+        <ToggleButton
+            android:id="@+id/Condiments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condiments on the side" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:onClick="onBackPressed"/>
+        <Button
+            android:id="@+id/Save2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:onClick="onBackPressed"/>
+
+    </RadioGroup>
+
+</LinearLayout>
