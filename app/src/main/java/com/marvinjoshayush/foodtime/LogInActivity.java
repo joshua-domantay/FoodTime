@@ -21,19 +21,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener {
-
     private TextView register;
     private EditText Email, Password;
     private Button logIn;
     private FirebaseAuth mAuth;
 
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_log_in);
-
 
         register = (TextView) findViewById(R.id.newUserSignUpButton);
         register.setOnClickListener(this);
@@ -44,21 +39,16 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         Email = (EditText) findViewById(R.id.emailLogIn);
         Password = (EditText) findViewById(R.id.passwordLogIn);
         mAuth = FirebaseAuth.getInstance();
-
-
     }
 
     public void onClick(View v) {
         switch (v.getId()) {
-
             case R.id.newUserSignUpButton:
                 startActivity(new Intent(this, SignUpActivity.class));
                 break;
-
             case R.id.logInButton:
                 userLogin();
                 break;
-
         }
     }
 
@@ -77,13 +67,11 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             Email.requestFocus();
             return;
         }
-
         if (password.isEmpty()) {
             Password.setError("Password is Required!");
             Password.requestFocus();
             return;
         }
-
         if (password.length() < 6) {
             Password.setError("Password should be more then 6 character!");
             Password.requestFocus();
@@ -92,16 +80,12 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
                 if (task.isSuccessful()) {
                     startActivity(new Intent(LogInActivity.this, HomeActivity.class));
                 } else {
-                    Toast.makeText(LogInActivity.this, "Failed to login Sucessfully! Try-Again!!", Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(LogInActivity.this, "Unable to log in. Try again.", Toast.LENGTH_LONG).show();
                 }
             }
-
-
         });
 
     }

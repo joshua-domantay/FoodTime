@@ -114,5 +114,14 @@ public class ProfileFragment extends Fragment {
         buttons = new Button[]{view.findViewById(R.id.profileChangeName), view.findViewById(R.id.profileChangeAddress),
                 view.findViewById(R.id.profileChangePassword), view.findViewById(R.id.profileForgotPassword)
         };
+
+        /*
+        buttons = new Button[] {view.findViewById(R.id.profileChangeName), view.findViewById(R.id.profileChangeAddress),
+                                view.findViewById(R.id.profileChangePassword), view.findViewById(R.id.profileForgotPassword)};
+
+        for(Button btn : buttons) {
+            btn.getBackground().setAlpha(0);    // Remove background (transparent background)
+        }
+        */
     }
 }

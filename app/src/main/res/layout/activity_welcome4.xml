@@ -7,174 +7,137 @@
     tools:context=".WelcomeActivity4">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:textSize="40sp"
-        android:text="Add allergies screen placeholder" />
+        android:text="Specify any allergies you have"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerInParent="true" >
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <ToggleButton
                 android:id="@+id/option1Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 1"
-                android:textOn="Option 1" />
+                android:textOff="@string/onion"
+                android:textOn="@string/onion"
+                android:textSize="20sp" />
 
             <ToggleButton
                 android:id="@+id/option2Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 2"
-                android:textOn="Option 2" />
+                android:textOff="@string/garlic"
+                android:textOn="@string/garlic"
+                android:textSize="20sp" />
 
             <ToggleButton
                 android:id="@+id/option3Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 3"
-                android:textOn="Option 3" />
-
+                android:textOff="@string/peanuts"
+                android:textOn="@string/peanuts"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <ToggleButton
                 android:id="@+id/option4Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 4"
-                android:textOn="Option 4" />
+                android:textOff="@string/tree_nuts"
+                android:textOn="@string/tree_nuts"
+                android:textSize="20sp" />
 
             <ToggleButton
                 android:id="@+id/option5Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 5"
-                android:textOn="Option 5" />
-
+                android:textOff="@string/fish"
+                android:textOn="@string/fish"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <ToggleButton
                 android:id="@+id/option6Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 6"
-                android:textOn="Option 6" />
+                android:textOff="@string/milk"
+                android:textOn="@string/milk"
+                android:textSize="20sp" />
 
             <ToggleButton
                 android:id="@+id/option7Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 7"
-                android:textOn="Option 7" />
+                android:textOff="@string/shellfish"
+                android:textOn="@string/shellfish"
+                android:textSize="20sp" />
 
             <ToggleButton
                 android:id="@+id/option8Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 8"
-                android:textOn="Option 8" />
-
+                android:textOff="@string/wheat"
+                android:textOn="@string/wheat"
+                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
 
             <ToggleButton
                 android:id="@+id/option9Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 9"
-                android:textOn="Option 9" />
+                android:textOff="@string/soy"
+                android:textOn="@string/soy"
+                android:textSize="20sp" />
 
             <ToggleButton
                 android:id="@+id/option10Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 10"
-                android:textOn="Option 10" />
-
+                android:textOff="@string/sesame"
+                android:textOn="@string/sesame"
+                android:textSize="20sp" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal" >
-
-            <ToggleButton
-                android:id="@+id/option11Allergy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 11"
-                android:textOn="Option 11" />
-
-            <ToggleButton
-                android:id="@+id/option12Allergy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 12"
-                android:textOn="Option 12" />
-
-            <ToggleButton
-                android:id="@+id/option13Allergy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:textSize="12sp"
-                android:textOff="Option 13"
-                android:textOn="Option 13" />
-
-        </LinearLayout>
-
     </LinearLayout>
 
     <Button
@@ -187,5 +150,4 @@
         android:layout_marginRight="15dp"
         android:textSize="25sp"
         android:text="@string/finish" />
-
 </RelativeLayout>

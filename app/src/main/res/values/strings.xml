@@ -11,6 +11,9 @@
     <string name="have_account_log_in">Have an account? Log In</string>
     <string name="placeholder1">Placeholder1</string>
     <string name="placeholder2">Placeholder2</string>
+    <string name="button">Button</string>
+    <string name="button3">Button</string>
+    <string name="textview3">TextView</string>
 
     <!--  Welcome Screen -->
     <string name="welcome">Welcome</string>
@@ -20,29 +23,39 @@
     <string name="finish">Finish</string>
     <string name="get_your_food">Get your food</string>
     <string name="on_time">on time</string>
+    <string name="ovo_vegetarian">Ovo-Vegetarian</string>
+    <string name="lacto_vegetarian">Lacto-Vegetarian</string>
+    <string name="vegan">Vegan</string>
+    <string name="pascatarian">Pascatarian</string>
+    <string name="flexitarian">Flexitarian</string>
+    <string name="others">Others</string>
+    <string name="meat">Meat</string>
+    <string name="poultry">Poultry</string>
+    <string name="seafood">Seafood</string>
+    <string name="eggs">Eggs</string>
+    <string name="grains">Grains</string>
+    <string name="meat_ingredients">Meat Ingredients</string>
+    <string name="dairy_products">Dairy Products</string>
+    <string name="onion">Onion</string>
+    <string name="garlic">Garlic</string>
+    <string name="peanuts">Peanuts</string>
+    <string name="tree_nuts">Tree Nuts</string>
+    <string name="fish">Fish</string>
+    <string name="milk">Milk</string>
+    <string name="shellfish">Shellfish</string>
+    <string name="wheat">Wheat</string>
+    <string name="soy">Soy</string>
+    <string name="sesame">Sesame</string>
 
-    <string name="button">Button</string>
-    <string name="button3">Button</string>
-    <string name="textview3">TextView</string>
+    <!-- Home Fragment -->
+    <string name="sort_suggestions_by">Sort suggestions by:</string>
     <string name="delivery">Delivery</string>
-    <string name="pick_up">pick up</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="fast_food">Fast Food</string>
+    <string name="restaurant">Restaurant</string>
     <string name="suggestions">Suggestions</string>
-    <string name="panda_express">Panda Express</string>
-    <string name="arbor">Arbor</string>
-    <string name="subway">Subway</string>
-    <string name="fruedian">Fruedian</string>
-    <string name="panda">Panda</string>
-    <string name="autocompletetextview">AutoCompleteTextView</string>
-    <string name="scrollbutton">Button</string>
-    <string name="button45">Button</string>
-    <string name="pandaaa">pandaaa</string>
-    <string name="sub" />
-    <string name="burger" />
-    <string name="mcdonalds" />
-    <string name="burgerking" />
-    <string name="Burgerking" />
 
-    <!-- Profile Screen -->
+    <!-- Profile Fragment -->
     <string name="profile_settings">Profile Settings</string>
     <string name="change_name">Change Name</string>
     <string name="change_address">Change Address</string>
@@ -51,6 +64,7 @@
     <string name="account_settings">Account Settings</string>
     <string name="change_password">Change Password</string>
     <string name="log_out">Log out</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
@@ -67,4 +81,10 @@
     <string name="email_hint" />
     <string name="reset_password" />
     <string name="reset" />
+
+    <string name="select_a_restaurant">Select a restaurant</string>
+
+    <string name="just_return">Return</string>
+    <string name="add_to_cart">Add to cart</string>
+
 </resources>
