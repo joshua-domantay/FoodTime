@@ -20,18 +20,27 @@ public class PandaExpressSubMenuFragment extends Fragment {
     private ArrayList<View> viewsToAdd;
     private ArrayList<ArrayList<ImageButtonInfo>> imageButtonInfoSections;
     private int[] maxSelectionForSections;
+    private String itemName;
+    private String imageStr;
     private LinearLayout parentLayout;
     private float price;
 
-    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd) {
+    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos) {
         this.home = home;
         this.viewsToAdd = viewsToAdd;
+        this.imageButtonInfoSections = new ArrayList<>();
+        imageButtonInfoSections.add(new ArrayList<>());
+        for(ImageButtonInfo ibf : imageButtonInfos) {
+            imageButtonInfoSections.get(0).add(ibf);
+        }
     }
 
-    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd,
-                                       ArrayList<ImageButtonInfo> imageButtonInfos, int[] maxSelectionForSections, float price) {
+    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos,
+                                       int[] maxSelectionForSections, String itemName, String imageStr, float price) {
         this.home = home;
         this.viewsToAdd = viewsToAdd;
+        this.itemName = itemName;
+        this.imageStr = imageStr;
         this.imageButtonInfoSections = new ArrayList<>();
         this.maxSelectionForSections = maxSelectionForSections;
         this.price = price;
@@ -81,15 +90,31 @@ public class PandaExpressSubMenuFragment extends Fragment {
                 }
             }
         } else {
-            for(View x : viewsToAdd) {
-                if(x instanceof ImageButton) {
-                    x.setOnClickListener(item -> {
-                        // Add to cart
+            for(ArrayList<ImageButtonInfo> section : imageButtonInfoSections) {
+                for (ImageButtonInfo button : section) {
+                    button.getButton().setOnClickListener(item -> {
+                        LinearLayout foodItem = ViewMaker.createFoodItemView(getContext(), ("panda_express_" + button.getNameForFile()),
+                                "Panda Express", button.getName(), new ArrayList<>(), price);
+                        home.setFragment(new AddToCartFragment(home, foodItem, new PandaExpressFragment(home)));
                     });
                 }
             }
         }
 
         // Add to cart button
+        view.findViewById(R.id.pandaExpress_addToCart).setOnClickListener(item -> {
+            if(maxSelectionForSections != null) {
+                ArrayList<String> description = new ArrayList<>();
+                for(ArrayList<ImageButtonInfo> section : imageButtonInfoSections) {
+                    for (ImageButtonInfo button : section) {
+                        if(button.selected) {
+                            description.add(button.getName());
+                        }
+                    }
+                }
+                LinearLayout foodItem = ViewMaker.createFoodItemView(getContext(), imageStr, "Panda Express", itemName, description, price);
+                home.setFragment(new AddToCartFragment(home, foodItem, new PandaExpressFragment(home)));
+            }
+        });
     }
 }

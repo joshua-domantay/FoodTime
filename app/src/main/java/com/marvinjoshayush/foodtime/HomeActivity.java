@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class HomeActivity extends AppCompatActivity {
     private static HomeFragments CURRENT_HOME_FRAGMENT;
     private static Fragment CURRENT_FRAGMENT;
@@ -26,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private RestaurantManager restaurantManager;
     private String userID;
     private BottomNavigationView bottomNavBar;
+    public ArrayList<LinearLayout> cartItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class HomeActivity extends AppCompatActivity {
         }
         getCurrentUserInfo();
         setBottomNavBar();
+        cartItems = new ArrayList<>();
 
         // Default to HOME fragment
         setFragmentFromNavBar(HomeFragments.HOME);

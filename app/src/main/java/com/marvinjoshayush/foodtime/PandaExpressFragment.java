@@ -73,12 +73,48 @@ public class PandaExpressFragment extends Fragment {
                 ViewsAndImageButtonInfos layout = createLayoutForSubMenuFragment(entry.getKey());
                 int[] maxSelections = getMaxSelections(entry.getKey());
                 if(maxSelections != null) {
-                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, maxSelections, entry.getValue());
+                    String itemName = getItemName(entry.getKey());
+                    String imageStr = getImageStr(entry.getKey());
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, maxSelections, itemName, imageStr, entry.getValue());
                 } else {
-                    frag = new PandaExpressSubMenuFragment(home, layout.views);
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos);
                 }
                 home.setFragment(frag);
             });
+        }
+    }
+
+    private String getItemName(int id) {
+        switch(id) {
+            case R.id.pandaExpress_plateBundle:
+                return "Plate Bundle";
+            case R.id.pandaExpress_bowl:
+                return "Bowl";
+            case R.id.pandaExpress_plate:
+                return "Plate";
+            case R.id.pandaExpress_biggerPlate:
+                return "Bigger Plate";
+            case R.id.pandaExpress_familyMeal:
+                return "Family Meal";
+            default:    // R.id.pandaExpress_drinks
+                return "";
+        }
+    }
+
+    private String getImageStr(int id) {
+        switch(id) {
+            case R.id.pandaExpress_plateBundle:
+                return "panda_express_plate";
+            case R.id.pandaExpress_bowl:
+                return "panda_express_bowl";
+            case R.id.pandaExpress_plate:
+                return "panda_express_plate2";
+            case R.id.pandaExpress_biggerPlate:
+                return "panda_express_bigger_plate";
+            case R.id.pandaExpress_familyMeal:
+                return "family_meal";
+            default:    // R.id.pandaExpress_drinks
+                return "";
         }
     }
 
