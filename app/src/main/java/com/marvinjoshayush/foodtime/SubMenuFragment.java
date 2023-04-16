@@ -1,5 +1,6 @@
 package com.marvinjoshayush.foodtime;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,13 +18,15 @@ public class SubMenuFragment extends Fragment {
     private View view;
     private ImageView logo;
     private ArrayList<View> viewsToAdd;
+    private ArrayList<ImageButtonInfo> imageButtonInfos;
     private LinearLayout parentLayout;
 
-    public SubMenuFragment(HomeActivity home, ImageView logo, Fragment returnFragment, ArrayList<View> viewsToAdd) {
+    public SubMenuFragment(HomeActivity home, ImageView logo, Fragment returnFragment, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos) {
         this.home = home;
-        this.returnFragment = returnFragment;
         this.logo = logo;
+        this.returnFragment = returnFragment;
         this.viewsToAdd = viewsToAdd;
+        this.imageButtonInfos = imageButtonInfos;
     }
 
     @Override
@@ -39,8 +42,14 @@ public class SubMenuFragment extends Fragment {
 
     private void addViewsToAdd() {
         ((LinearLayout) view.findViewById(R.id.subMenuFragment_logoParent)).addView(logo);
-        for(View v : viewsToAdd) {
-            parentLayout.addView(v);
+        if(viewsToAdd == null) {
+            for(ImageButtonInfo ibf : imageButtonInfos) {
+                parentLayout.addView(ibf.getButton());
+            }
+        } else {
+            for (View v : viewsToAdd) {
+                parentLayout.addView(v);
+            }
         }
     }
 
@@ -48,5 +57,13 @@ public class SubMenuFragment extends Fragment {
         view.findViewById(R.id.subMenu_returnToMenu).setOnClickListener(item -> {
             home.setFragment(returnFragment);
         });
+
+        for(ImageButtonInfo ibf : imageButtonInfos) {
+            ibf.getButton().setOnClickListener(item -> {
+                LinearLayout foodItem = ViewMaker.createFoodItemView(getContext(), ("mcdonalds_" + ibf.getNameForFile()),
+                        "McDonalds", ibf.getName(), new ArrayList<>(), ibf.getPrice());
+                home.setFragment(new AddToCartFragment(home, foodItem, new McDonaldsFragment(home)));
+            });
+        }
     }
 }

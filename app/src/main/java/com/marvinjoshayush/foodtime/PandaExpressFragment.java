@@ -18,16 +18,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-class ViewsAndImageButtonInfos {
-    public ArrayList<View> views;
-    public ArrayList<ImageButtonInfo> imageButtonInfos;
-
-    public ViewsAndImageButtonInfos() {
-        views = new ArrayList<>();
-        imageButtonInfos = new ArrayList<>();
-    }
-}
-
 public class PandaExpressFragment extends Fragment {
     private HomeActivity home;
     private View view;
