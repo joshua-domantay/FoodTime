@@ -29,13 +29,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
 
-/* Future plan
-    Add Restaurants to FireBase
-    Make a Restaurant class
-    Make Restaurant List
-    Get all* restaurants from FireBase      -> This will only work in a specific area instead of anywhere in the world
-    Only add restaurants to list if preferred by user according to preference and allergies
- */
 public class HomeFragment extends Fragment {
     private String dietPreference;
     private String[] dietAllergies;
@@ -195,6 +188,7 @@ public class HomeFragment extends Fragment {
                     home.setFragment(new PandaExpressFragment(home));
                     break;
                 case "Subway":
+                    home.setFragment(new SubwayFragment(home));
                     break;
                 default:
                     Log.d("TEST", "HEISL");
