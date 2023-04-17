@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,16 +54,16 @@ public class McDonaldsFragment extends Fragment {
 
         for(int btn : btns) {
             view.findViewById(btn).setOnClickListener(item -> {
-                ArrayList<View> layout = createLayoutForSubMenuFragment(btn);
+                ViewsAndImageButtonInfos layout = createLayoutForSubMenuFragment(btn);
                 ImageView logo = ViewMaker.createBasicImageView(getContext(), ViewMaker.WRAP_WRAP, "mcdonalds_menu_logo", Gravity.CENTER,
                         0, 10, 0, 10);
-                Fragment frag = new SubMenuFragment(home, logo, new McDonaldsFragment(home), layout);
+                Fragment frag = new SubMenuFragment(home, logo, new McDonaldsFragment(home), layout.views, layout.imageButtonInfos);
                 home.setFragment(frag);
             });
         }
     }
 
-    private ArrayList<View> createLayoutForSubMenuFragment(int id) {
+    private ViewsAndImageButtonInfos createLayoutForSubMenuFragment(int id) {
         switch(id) {
             case R.id.mcDonalds_featured:
                 return createLayoutFeatured();
@@ -91,26 +92,7 @@ public class McDonaldsFragment extends Fragment {
         }
     }
 
-    private ArrayList<View> createLayoutFeatured() {
-        /*
-        ArrayList<View> contents = new ArrayList<>();
-        ArrayList<String> toAdd = new ArrayList<>(Arrays.asList("big_mac", "chicken_mcnuggets", "french_fries",
-                "quarter_pounder_with_cheese", "iced_coffee_regular", "egg_mcmuffin", "sausage_burrito"));
-        for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
-            if (rest.getNameForFile().equalsIgnoreCase("mcdonalds")) {
-                for(MenuSection section : rest.getMenuSections()) {
-                    for (MenuItem item : section.getMenu()) {
-                        if(toAdd.contains(item.getNameForFile().toLowerCase())) {
-                            String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                            contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
-                            toAdd.remove(item.getNameForFile().toLowerCase());
-                        }
-                    }
-                }
-            }
-        }
-        return contents;
-        */
+    private ViewsAndImageButtonInfos createLayoutFeatured() {
         ArrayList<String> toAdd = new ArrayList<>(Arrays.asList(
                 "big_mac", "chicken_mcnuggets", "french_fries", "quarter_pounder_with_cheese",
                 "iced_coffee_regular", "egg_mcmuffin", "sausage_burrito"
@@ -118,64 +100,66 @@ public class McDonaldsFragment extends Fragment {
         return getSpecifiedMenu(toAdd);
     }
 
-    private ArrayList<View> createLayoutDollarMenu() {
+    private ViewsAndImageButtonInfos createLayoutDollarMenu() {
         ArrayList<String> toAdd = new ArrayList<>(Arrays.asList(
                 "sausage_biscuit_size", "sausage_mcmuffin", "sausage_burrito", "hash_browns",
                 "mcdouble", "mcchicken", "chicken_nuggets", "french_fries"
         ));
-        ArrayList<View> contents = getSpecifiedMenu(toAdd);
+        ViewsAndImageButtonInfos contents = getSpecifiedMenu(toAdd);
 
         toAdd = new ArrayList<>(Arrays.asList(
                 "coca_cola_classic", "sprite", "hi_c_orange_lavaburst", "diet_coke",
                 "sweet_tea", "unsweetened_iced_tea"
         ));
-        contents.addAll(getSpecifiedMenu(toAdd));
+        ViewsAndImageButtonInfos n = getSpecifiedMenu(toAdd);
+        contents.views.addAll(n.views);
+        contents.imageButtonInfos.addAll(n.imageButtonInfos);
         return contents;
     }
 
-    private ArrayList<View> createLayoutBurgers() {
+    private ViewsAndImageButtonInfos createLayoutBurgers() {
         return createLayoutFromFirebase("burgers");
     }
 
-    private ArrayList<View> createLayoutBreakfast() {
+    private ViewsAndImageButtonInfos createLayoutBreakfast() {
         return createLayoutFromFirebase("breakfast");
     }
 
-    private ArrayList<View> createLayoutBakery() {
-        ArrayList<View> contents = new ArrayList<>();
+    private ViewsAndImageButtonInfos createLayoutBakery() {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
         return contents;
     }
 
-    private ArrayList<View> createLayoutCoffees() {
+    private ViewsAndImageButtonInfos createLayoutCoffees() {
         return createLayoutFromFirebase("coffees");
     }
 
-    private ArrayList<View> createLayoutMcNuggets() {
+    private ViewsAndImageButtonInfos createLayoutMcNuggets() {
         return createLayoutFromFirebase("mcnuggets and meals");
     }
 
-    private ArrayList<View> createLayoutChickenFish() {
+    private ViewsAndImageButtonInfos createLayoutChickenFish() {
         return createLayoutFromFirebase("chicken & fish sandwiches");
     }
 
-    private ArrayList<View> createLayoutFriesAndSides() {
+    private ViewsAndImageButtonInfos createLayoutFriesAndSides() {
         return createLayoutFromFirebase("fries & sides");
     }
 
-    private ArrayList<View> createLayoutHappyMeal() {
+    private ViewsAndImageButtonInfos createLayoutHappyMeal() {
         return createLayoutFromFirebase("happy meal");
     }
 
-    private ArrayList<View> createLayoutsweetsTreats() {
+    private ViewsAndImageButtonInfos createLayoutsweetsTreats() {
         return createLayoutFromFirebase("sweets & treats");
     }
 
-    private ArrayList<View> createLayoutBeverages() {
+    private ViewsAndImageButtonInfos createLayoutBeverages() {
         return createLayoutFromFirebase("beverages");
     }
 
-    private ArrayList<View> createLayoutFromFirebase(String sectionName) {
-        ArrayList<View> contents = new ArrayList<>();
+    private ViewsAndImageButtonInfos createLayoutFromFirebase(String sectionName) {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
         ArrayList<String> added = new ArrayList<>();
         for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
             if(rest.getNameForFile().equalsIgnoreCase("mcdonalds")) {
@@ -185,7 +169,10 @@ public class McDonaldsFragment extends Fragment {
                             if(!added.contains(item.getNameForFile())) {
                                 String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
                                 View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
-                                if(x != null) { contents.add(x); }
+                                if(x != null) {
+                                    contents.views.add(x);
+                                    contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                                }
                                 added.add(item.getNameForFile());
                             }
                         }
@@ -197,8 +184,8 @@ public class McDonaldsFragment extends Fragment {
         return contents;
     }
 
-    private ArrayList<View> getSpecifiedMenu(ArrayList<String> toAdd) {
-        ArrayList<View> contents = new ArrayList<>();
+    private ViewsAndImageButtonInfos getSpecifiedMenu(ArrayList<String> toAdd) {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
         for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
             if (rest.getNameForFile().equalsIgnoreCase("mcdonalds")) {
                 for(MenuSection section : rest.getMenuSections()) {
@@ -206,7 +193,10 @@ public class McDonaldsFragment extends Fragment {
                         if(toAdd.contains(item.getNameForFile().toLowerCase()) || toAdd.contains(item.getName().toLowerCase())) {
                             String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
                             View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
-                            if(x != null) { contents.add(x); }
+                            if(x != null) {
+                                contents.views.add(x);
+                                contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                            }
                             toAdd.remove(item.getNameForFile().toLowerCase());
                         }
                     }

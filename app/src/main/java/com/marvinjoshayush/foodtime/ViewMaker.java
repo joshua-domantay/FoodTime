@@ -2,14 +2,20 @@ package com.marvinjoshayush.foodtime;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
+
+import java.util.ArrayList;
 
 public class ViewMaker {
     public final static LayoutParams MATCH_MATCH = new LayoutParams(
@@ -127,6 +133,50 @@ public class ViewMaker {
     // Without alignment
     public static TextView createBasicTextView(Context context, LayoutParams params, String text, int color, int size) {
         return createBasicTextView(context, params, text, color, size, TextView.TEXT_ALIGNMENT_VIEW_START, Typeface.NORMAL);
+    }
+
+    /** FOOD ITEM **/
+    public static LinearLayout createFoodItemView(Context context, String imageStr, String restaurant,
+                                                  String menuItem, ArrayList<String> description, float price) {
+        LinearLayout parent = new LinearLayout(context);
+        parent.setLayoutParams(MATCH_WRAP);
+        parent.setWeightSum(3f);
+
+        LayoutParams imgParams = new LayoutParams(
+                dpToPix(context.getResources(), 1),
+                LayoutParams.WRAP_CONTENT,
+                1
+        );
+        ImageView img = createBasicImageView(context, imgParams, imageStr, Gravity.CENTER_HORIZONTAL);
+        img.setAdjustViewBounds(true);
+        parent.addView(img);
+
+        LinearLayout secondLL = new LinearLayout(context);
+        LayoutParams secondLLParams = new LayoutParams(
+                dpToPix(context.getResources(), 1),
+                LayoutParams.WRAP_CONTENT,
+                2
+        );
+        secondLLParams.gravity = Gravity.CENTER_VERTICAL;
+        secondLL.setLayoutParams(secondLLParams);
+        secondLL.setOrientation(LinearLayout.VERTICAL);
+
+        TextView rest = createBasicTextView(context, MATCH_WRAP, restaurant, R.color.black, 22);
+        rest.setTypeface(null, Typeface.BOLD);
+        secondLL.addView(rest);
+
+        TextView menu = createBasicTextView(context, MATCH_WRAP, menuItem, R.color.black, 18);
+        menu.setTypeface(null, Typeface.BOLD);
+        secondLL.addView(menu);
+
+        for(String desc : description) {
+            TextView x = createBasicTextView(context, MATCH_WRAP, desc, R.color.black, 18);
+            secondLL.addView(x);
+        }
+
+        parent.addView(secondLL);
+
+        return parent;
     }
 
     public static int dpToPix(Resources resource, int dp) {

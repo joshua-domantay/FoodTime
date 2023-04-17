@@ -1,6 +1,7 @@
 package com.marvinjoshayush.foodtime;
 
 import android.graphics.Typeface;
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,10 +10,13 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PandaExpressFragment extends Fragment {
     private HomeActivity home;
@@ -42,22 +46,91 @@ public class PandaExpressFragment extends Fragment {
     }
 
     private void setOnClickListeners() {
-        int[] btns = new int[]{
-                R.id.pandaExpress_plateBundle,  R.id.pandaExpress_bowl,         R.id.pandaExpress_plate,
-                R.id.pandaExpress_biggerPlate,  R.id.pandaExpress_familyMeal,   R.id.pandaExpress_cubMeal,
-                R.id.pandaExpress_aLaCarte,     R.id.pandaExpress_appetizers,   R.id.pandaExpress_drinks
-        };
+        HashMap<Integer, Float> map = new HashMap<>();
+        map.put(R.id.pandaExpress_plateBundle, 0f);
+        map.put(R.id.pandaExpress_bowl, 0f);
+        map.put(R.id.pandaExpress_plate, 0f);
+        map.put(R.id.pandaExpress_biggerPlate, 0f);
+        map.put(R.id.pandaExpress_familyMeal, 0f);
+        map.put(R.id.pandaExpress_cubMeal, 0f);
+        map.put(R.id.pandaExpress_aLaCarte, 0f);
+        map.put(R.id.pandaExpress_appetizers, 0f);
+        map.put(R.id.pandaExpress_drinks, 0f);
 
-        for(int btn : btns) {
-            view.findViewById(btn).setOnClickListener(item -> {
-                ArrayList<View> layout = createLayoutForSubMenuFragment(btn);
-                Fragment frag = new PandaExpressSubMenuFragment(home, layout);
+        for(Map.Entry<Integer, Float> entry : map.entrySet()) {
+            view.findViewById(entry.getKey()).setOnClickListener(item -> {
+                Fragment frag;
+                ViewsAndImageButtonInfos layout = createLayoutForSubMenuFragment(entry.getKey());
+                int[] maxSelections = getMaxSelections(entry.getKey());
+                if(maxSelections != null) {
+                    String itemName = getItemName(entry.getKey());
+                    String imageStr = getImageStr(entry.getKey());
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, maxSelections, itemName, imageStr, entry.getValue());
+                } else {
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos);
+                }
                 home.setFragment(frag);
             });
         }
     }
 
-    private ArrayList<View> createLayoutForSubMenuFragment(int id) {
+    private String getItemName(int id) {
+        switch(id) {
+            case R.id.pandaExpress_plateBundle:
+                return "Plate Bundle";
+            case R.id.pandaExpress_bowl:
+                return "Bowl";
+            case R.id.pandaExpress_plate:
+                return "Plate";
+            case R.id.pandaExpress_biggerPlate:
+                return "Bigger Plate";
+            case R.id.pandaExpress_familyMeal:
+                return "Family Meal";
+            default:    // R.id.pandaExpress_drinks
+                return "";
+        }
+    }
+
+    private String getImageStr(int id) {
+        switch(id) {
+            case R.id.pandaExpress_plateBundle:
+                return "panda_express_plate";
+            case R.id.pandaExpress_bowl:
+                return "panda_express_bowl";
+            case R.id.pandaExpress_plate:
+                return "panda_express_plate2";
+            case R.id.pandaExpress_biggerPlate:
+                return "panda_express_bigger_plate";
+            case R.id.pandaExpress_familyMeal:
+                return "family_meal";
+            default:    // R.id.pandaExpress_drinks
+                return "";
+        }
+    }
+
+    private int[] getMaxSelections(int id) {
+        switch(id) {
+            case R.id.pandaExpress_plateBundle:
+                return new int[]{2, 2, 1, 1};
+            case R.id.pandaExpress_bowl:
+                return new int[]{2, 1};
+            case R.id.pandaExpress_plate:
+                return new int[]{2, 2};
+            case R.id.pandaExpress_biggerPlate:
+            case R.id.pandaExpress_familyMeal:
+                return new int[]{2, 3};
+            case R.id.pandaExpress_cubMeal:
+                return null;
+            case R.id.pandaExpress_aLaCarte:
+                return null;
+            case R.id.pandaExpress_appetizers:
+                return null;
+            default:    // R.id.pandaExpress_drinks
+                return null;
+        }
+    }
+
+    private ViewsAndImageButtonInfos createLayoutForSubMenuFragment(int id) {
         switch(id) {
             case R.id.pandaExpress_plateBundle:
                 return createLayoutPlateBundle();
@@ -80,113 +153,135 @@ public class PandaExpressFragment extends Fragment {
         }
     }
 
-    private ArrayList<View> createLayoutPlateBundle() {
+    private ViewsAndImageButtonInfos createLayoutPlateBundle() {
         // Side, Entree, Appetizer, Drink
-        ArrayList<View> contents = new ArrayList<>();
-        contents.addAll(createLayoutPlate());
+        ViewsAndImageButtonInfos vAndI = new ViewsAndImageButtonInfos();
+        ViewsAndImageButtonInfos n = createLayoutPlate();
+        vAndI.views.addAll(n.views);
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         // Appetizers
         // Title
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 3", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 3", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Choose an Appetizer",
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Choose an Appetizer",
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
-        contents.addAll(createLayoutAppetizers());
+        n = createLayoutAppetizers();
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 2;
+        }
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         // Drinks
         // Title
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 4", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 4", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP,
                 "Select flavor for included Medium Drink, or get a bottled drink",
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
-        contents.addAll(createLayoutDrinks());
-        return contents;
+        n = createLayoutDrinks();
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 3;
+        }
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
+        return vAndI;
     }
 
-    private ArrayList<View> createLayoutBowl() {
+    private ViewsAndImageButtonInfos createLayoutBowl() {
         // Side, 1 Entree
-        ArrayList<View> contents = new ArrayList<>();
-        contents.addAll(createLayoutMain("Choose a Side, or Get Half and Half", "Choose an Entree"));
-        return contents;
+        return createLayoutMain("Choose a Side, or Get Half and Half", "Choose an Entree");
     }
 
-    private ArrayList<View> createLayoutPlate() {
+    private ViewsAndImageButtonInfos createLayoutPlate() {
         // Side, 2 Entree
-        ArrayList<View> contents = new ArrayList<>();
-        contents.addAll(createLayoutMain("Choose a Side, or Get Half and Half", "Choose two Entrees"));
-        return contents;
+        return createLayoutMain("Choose a Side, or Get Half and Half", "Choose two Entrees");
     }
 
-    private ArrayList<View> createLayoutBiggerPlate() {
+    private ViewsAndImageButtonInfos createLayoutBiggerPlate() {
         // Side, 3 Entree
-        ArrayList<View> contents = new ArrayList<>();
-        contents.addAll(createLayoutMain("Choose a Side, or Get Half and Half", "Choose three Entrees"));
-        return contents;
+        return createLayoutMain("Choose a Side, or Get Half and Half", "Choose three Entrees");
     }
 
-    private ArrayList<View> createLayoutFamilyMeal() {
+    private ViewsAndImageButtonInfos createLayoutFamilyMeal() {
         // 2 Side, 3 Entree
-        ArrayList<View> contents = new ArrayList<>();
-        contents.addAll(createLayoutMain("Choose two Sides", "Choose three Entrees"));
-        return contents;
+        return createLayoutMain("Choose two Sides", "Choose three Entrees");
     }
 
-    private ArrayList<View> createLayoutCubMeals() {
+    private ViewsAndImageButtonInfos createLayoutCubMeals() {
         return createLayoutFromFirebase("cub meals");
     }
 
-    private ArrayList<View> createLayoutALaCarte() {
+    private ViewsAndImageButtonInfos createLayoutALaCarte() {
         // Side + Entree
-        ArrayList<View> contents = new ArrayList<>();
-        contents.addAll(createLayoutFromFirebase("entrees"));
-        contents.addAll(createLayoutFromFirebase("sides"));
-        return contents;
+        ViewsAndImageButtonInfos vAndI = new ViewsAndImageButtonInfos();
+        ViewsAndImageButtonInfos n = createLayoutFromFirebase("entrees");
+        vAndI.views.addAll(n.views);
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
+        n = createLayoutFromFirebase("sides");
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 1;
+        }
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
+        return vAndI;
     }
 
-    private ArrayList<View> createLayoutAppetizers() {
+    private ViewsAndImageButtonInfos createLayoutAppetizers() {
         return createLayoutFromFirebase("appetizers");
     }
 
-    private ArrayList<View> createLayoutDrinks() {
+    private ViewsAndImageButtonInfos createLayoutDrinks() {
         return createLayoutFromFirebase("drinks");
     }
 
     // Bowl, Plate, BiggerPlate
-    private ArrayList<View> createLayoutMain(String firstSub, String secondSub) {
-        ArrayList<View> contents = new ArrayList<>();
-
+    private ViewsAndImageButtonInfos createLayoutMain(String firstSub, String secondSub) { return createLayoutMain(firstSub, secondSub, new ViewsAndImageButtonInfos()); }
+    private ViewsAndImageButtonInfos createLayoutMain(String firstSub, String secondSub, ViewsAndImageButtonInfos vAndI) {
         // Title
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 1", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 1", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Sides
-        contents.addAll(createLayoutFromFirebase("sides"));
+        ViewsAndImageButtonInfos n = createLayoutFromFirebase("sides");
+        vAndI.views.addAll(n.views);
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
+
         // Title
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        contents.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Entrees
-        contents.addAll(createLayoutFromFirebase("entrees"));
+        n = createLayoutFromFirebase("entrees");
+        vAndI.views.addAll(n.views);
+        for(ImageButtonInfo x : n.imageButtonInfos) {
+            x.section = 1;
+        }
+        vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
-        return contents;
+        return vAndI;
     }
 
-    private ArrayList<View> createLayoutFromFirebase(String sectionName) {
-        ArrayList<View> contents = new ArrayList<>();
+    private ViewsAndImageButtonInfos createLayoutFromFirebase(String sectionName) {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
         for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
             if(rest.getNameForFile().equalsIgnoreCase("panda_express")) {
                 for(MenuSection section : rest.getMenuSections()) {
                     if(section.getName().equalsIgnoreCase(sectionName)) {
                         for (MenuItem item : section.getMenu()) {
                             String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                            contents.add(ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true));
+                            View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                            if(x != null) {
+                                contents.views.add(x);
+                                contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                            }
                         }
                     }
                 }
