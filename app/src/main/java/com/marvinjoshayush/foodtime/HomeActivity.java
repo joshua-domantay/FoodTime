@@ -97,7 +97,8 @@ public class HomeActivity extends AppCompatActivity {
                 CURRENT_FRAGMENT = new HomeFragment(this);
                 break;
             case SEARCH:
-                CURRENT_FRAGMENT = new SearchFragment(this);
+                // SearchFragment deleted... why?
+                // CURRENT_FRAGMENT = new SearchFragment(this);
                 break;
             default:        // PROFILE
                 CURRENT_FRAGMENT = new ProfileFragment(this);
