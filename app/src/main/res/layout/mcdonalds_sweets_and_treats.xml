@@ -1,0 +1,217 @@
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!--Mcdonald's Logo-->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/white"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mcdonalds_menu_logo"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!---->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mcdonalds_mcflurry_with_oreo_cookies"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!--Bowl -->
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mcdonalds_mcflurry_with_mms_candies"></ImageButton>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Bigger Plate -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mcdonalds_vanilla_reduced_fat_ice_cream_cone"></ImageButton>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!--Subway Button -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mcdonalds_chocolate_mccafe_shake_fl_oz"></ImageButton>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!--Subway Button -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mcdonalds_vanilla_mccafe_shake_fl_oz"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+        <!--Subway Button -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/mcdonalds_strawberry_mccafe_shake_fl_oz"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Bigger Plate -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mcdonalds_hot_fudge_sundae"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Bigger Plate -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mcdonalds_hot_caramel_sundae"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Bigger Plate -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mcdonalds_baked_hot_apple_pie"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <!--Bigger Plate -->
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/mcdonalds_chocolate_chip_cookie"></ImageButton>
+
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"></Space>
+
+
+        <!-- Cancel (left0) or submit (right) buttons  -->
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Back"
+                android:textSize="9pt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
