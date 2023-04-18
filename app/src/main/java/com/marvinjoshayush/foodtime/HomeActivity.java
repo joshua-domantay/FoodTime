@@ -51,24 +51,6 @@ public class HomeActivity extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         dbReference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
-
-        /*
-        final TextView welcomename = (TextView) findViewById(R.id.welcomeName);
-
-        dbReference.child(userID).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User userProfile = snapshot.getValue(User.class);
-                if (userProfile != null){
-                    String fullname = userProfile.firstname + " " + userProfile.lastname;
-                    welcomename.setText(fullname);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
-        });
-        */
     }
 
     private void setBottomNavBar() {
@@ -78,11 +60,14 @@ public class HomeActivity extends AppCompatActivity {
                 case R.id.homeMenuHome:
                     setFragmentFromNavBar(HomeFragments.HOME);
                     return true;
-                case R.id.homeMenuSearch:
-                    setFragmentFromNavBar(HomeFragments.SEARCH);
+                case R.id.homeMenuCart:
+                    setFragmentFromNavBar(HomeFragments.CART);
                     return true;
-                default:        // R.id.homeMenuProfile
+                case R.id.homeMenuProfile:
                     setFragmentFromNavBar(HomeFragments.PROFILE);
+                    return true;
+                default:
+                    setFragmentFromNavBar(HomeFragments.SEARCH);
                     return true;
             }
         });
@@ -96,12 +81,15 @@ public class HomeActivity extends AppCompatActivity {
             case HOME:
                 CURRENT_FRAGMENT = new HomeFragment(this);
                 break;
-            case SEARCH:
+            case CART:
+                CURRENT_FRAGMENT = new CartFragment(this);
+                break;
+            case PROFILE:
+                CURRENT_FRAGMENT = new ProfileFragment(this);
+                break;
+            default:
                 // SearchFragment deleted... why?
                 // CURRENT_FRAGMENT = new SearchFragment(this);
-                break;
-            default:        // PROFILE
-                CURRENT_FRAGMENT = new ProfileFragment(this);
         }
         setFragment(CURRENT_FRAGMENT);
     }

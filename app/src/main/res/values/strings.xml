@@ -87,5 +87,6 @@
     <string name="just_return">Return</string>
     <string name="cancel">Cancel</string>
     <string name="add_to_cart">Add to cart</string>
+    <string name="checkout">Checkout</string>
 
 </resources>

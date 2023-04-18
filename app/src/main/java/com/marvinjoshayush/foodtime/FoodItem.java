@@ -6,26 +6,24 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 
 public class FoodItem {
+    private Context context;
+    private String itemImgStr;
     private String restaurant;
     private String itemName;
     private ArrayList<String> description;
     private float price;
-    private LinearLayout view;
 
-    public FoodItem(Context temp, String restaurant, String itemName, String itemImgStr, ArrayList<String> description, float price) {
+    public FoodItem(Context context, String restaurant, String itemName, String itemImgStr, ArrayList<String> description, float price) {
         this.restaurant = restaurant;
         this.itemName = itemName;
         this.description = description;
         this.price = price;
 
-        generateView(temp, itemImgStr);
-    }
-
-    private void generateView(Context temp, String itemImgStr) {
-        view = ViewMaker.createFoodItemView(temp, itemImgStr, restaurant, itemName, description, price);
+        this.context = context;
+        this.itemImgStr = itemImgStr;
     }
 
     public LinearLayout getView() {
-        return view;
+        return ViewMaker.createFoodItemView(context, itemImgStr, restaurant, itemName, description, price);
     }
 }
