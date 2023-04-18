@@ -155,18 +155,18 @@ public class RestaurantManager {
         ingredients = new String[]{"white rice", "liquid eggs", "peas", "carrots", "soybean oil", "green onions",
                 "salt", "sesame oil", "maltodextrin", "modified food starch", "sugar", "onion powder", "celery extract",
                 "disodium inosinate", "disodium guanylate", "soybeans", "wheat", "water", "soy sauce", "spices", "eggs", "soy", "sesame"};
-        restaurantToFirebaseH(restRef, "Sides", "Fried Rice", ingredients);
+        restaurantToFirebaseH(restRef, "Sides", "Fried Rice>0-00", ingredients);
 
         ingredients = new String[]{"white rice"};
-        restaurantToFirebaseH(restRef, "Sides", "Steamed Rice", ingredients);
+        restaurantToFirebaseH(restRef, "Sides", "Steamed Rice>0-00", ingredients);
 
         ingredients = new String[]{"brown rice", "soybean oil", "soy"};
-        restaurantToFirebaseH(restRef, "Sides", "Steamed Brown Rice", ingredients);
+        restaurantToFirebaseH(restRef, "Sides", "Steamed Brown Rice>0-00", ingredients);
 
         ingredients = new String[]{"cabbage", "broccoli", "kale", "water", "soybean oil", "garlic", "phosphoric acid", "natural flavor",
                 "cornstarch", "potato starch", "modified food starch", "salt", "maltodextrin", "disodium inosinate",
                 "disodium guanylate", "dehydrated soy sauce powder", "sugar", "onion powder", "celery extract", "soy", "wheat"};
-        restaurantToFirebaseH(restRef, "Sides", "Super Greens", ingredients);
+        restaurantToFirebaseH(restRef, "Sides", "Super Greens>0-00", ingredients);
 
         ingredients = new String[]{"beef", "water", "sugar", "red bell pepper", "onions", "modified food starch", "soybean oil",
                 "distilled vinegar", "invert syrup", "wheat", "soybeans", "salt", "garlic", "phosphoric acid", "potassium sorbate",
@@ -174,70 +174,70 @@ public class RestaurantManager {
                 "beta carotene color", "wheat gluten", "wheat flour", "hydrolyzed soy proteins", "hydrolyzed corn protein", "autolyzed yeast",
                 "corn syrup solids", "palm oil", "maltodextrin", "sodium bicarbonate", "sodium phosphate", "carrageenan", "potassium chloride",
                 "dextrose", "xanthan gum", "beef fat", "whey", "milk", "soy"};
-        restaurantToFirebaseH(restRef, "Entrees", "Beijing Beef", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Beijing Beef>0-00", ingredients);
 
         ingredients = new String[]{"broccoli", "water", "beef", "soybean oil", "garlic", "phosphoric acid", "corn starch", "potato starch",
                 "modified food starch", "soy sauce", "salt", "rice", "caramel color", "sesame oil", "sea salt", "brown sugar", "sodium phosphate",
                 "natural flavor", "yeast extract", "spices", "sugar", "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Broccoli Beef", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Broccoli Beef>0-00", ingredients);
 
         ingredients = new String[]{"angus steak", "baby broccoli", "mushrooms", "onions", "bell pepper", "water", "soybean oil", "tomato paste",
                 "miso paste", "soy sauce powder", "modified corn starch", "black pepper powder", "dehydrated garlic", "chili pepper powder",
                 "yeast extract", "lactic acid", "onion powder", "caramel color", "disodium inosinate", "disodium guanylate", "xanthan gum",
                 "paprika oleoresin", "sodium benzoate", "soy", "wheat"};
-        restaurantToFirebaseH(restRef, "Entrees", "Black Pepper Angus Beef", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Black Pepper Angus Beef>1-25", ingredients);
 
         ingredients = new String[]{"dark meat chicken", "water", "celery", "onions", "soybean oil", "garlic", "phosphoric acid", "corn starch",
                 "guar gum", "potato starch", "modified food starch", "rice", "wheat", "sesame oil", "caramel color", "salt", "spices",
                 "sodium phosphates", "sugar", "soy sauce", "soy", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Black Pepper Chicken", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Black Pepper Chicken>0-00", ingredients);
 
         ingredients = new String[]{"eggplant", "firm tofu", "soybean oil", "red bell peppers", "distilled vinegar", "sugar", "water", "garlic",
                 "phosphoric acid", "guar gum", "rice", "wheat", "caramel color", "salt", "modified food starch", "potato starch", "corn starch",
                 "sesame oil", "soy sauce", "spices", "soy", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Eggplant Tofu (Regional)", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Eggplant Tofu (Regional)>0-00", ingredients);
 
         ingredients = new String[]{"chicken thighs", "sugar", "soy sauce", "ginger puree", "garlic", "water", "soybean oil", "black pepper",
                 "roasted sesame seed oil", "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Grilled Chicken", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Grilled Chicken>0-00", ingredients);
 
         ingredients = new String[]{"chicken breast strips", "green beans", "yellow bell pepper", "water", "distilled vinegar", "modified food starch",
                 "corn starch", "wheat", "caramel color", "ginger", "garlic", "phosphoric acid", "salt", "sodium phosphate", "sesame oil",
                 "sesame seeds", "wheat flour", "spices", "sugar", "organic", "honey"};
-        restaurantToFirebaseH(restRef, "Entrees", "Honey Sesame Chicken Breast", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Honey Sesame Chicken Breast>0-00", ingredients);
 
         ingredients = new String[]{"shrimp", "modified food starch", "soybean oil", "rice flour", "glazed walnuts", "water", "sugar", "potato dextrin",
                 "bleached wheat flour", "evaporated milk", "white corn flour", "salt", "distilled vinegar", "sodium tripolyphosphate",
                 "sodium aluminum phosphate", "sodium bicarbonate", "guar gum", "honey", "salted egg yolks", "wheat gluten", "yeast", "malic acid",
                 "xanthan gum", "potassium sorbate", "sodium benzoate", "natural flavors", "spices", "dried garlic", "paprika", "annatto extract",
                 "oleoresin turmeric", "tree nuts", "shellfish", "eggs", "milk", "soy", "wheat"};
-        restaurantToFirebaseH(restRef, "Entrees", "Honey Walnut Shrimp", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Honey Walnut Shrimp>1-25", ingredients);
 
         ingredients = new String[]{"dark meat chicken", "zucchini", "water", "red bell peppers", "roasted peanuts", "soybean oil", "green onions",
                 "garlic", "corn starch", "phosphoric acid", "guar gum", "potato starch", "modified food starch", "wheat", "salt", "caramel color",
                 "rice", "sesame oil", "sodium phosphate", "sugar", "soy sauce", "spices", "peanuts", "soy", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Kung Pao Chicken", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Kung Pao Chicken>0-00", ingredients);
 
         ingredients = new String[]{"dark meat chicken", "mushrooms", "zucchini", "water", "soybean oil", "dehydrated garlic", "phosphoric acid",
                 "guar gum", "corn starch", "sugar", "soy sauce", "rice", "modified food starch", "sesame oil", "sodium phosphate", "sea salt",
                 "salt", "brown sugar", "caramel flavor", "natural flavor", "yeast extract", "spices", "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Mushroom Chicken", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Mushroom Chicken>0-00", ingredients);
 
         ingredients = new String[]{"dark meat chicken", "water", "sugar", "distilled vinegar", "modified food starch", "corn starch", "potato starch",
                 "wheat", "orange extract", "caramel color", "salt", "garlic", "phosphoric acid", "rice", "sesame oil", "wheat flour", "eggs", "spices",
                 "leavening", "soy sauce", "milk", "soy", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "Original Orange Chicken", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Original Orange Chicken>0-00", ingredients);
 
 
         ingredients = new String[]{"green beans", "chicken breast", "water", "onion", "soybean oil", "dehydrated garlic",
                 "phosphoric acid", "guar gum", "corn starch", "sodium phosphate", "sugar", "soy sauce", "salt", "potato starch", "modified food starch",
                 "rice", "wheat", "caramel color", "sesame oil", "sea salt", "brown sugar", "natural flavor", "yeast extract", "spices", "soy", "sesame"};
-        restaurantToFirebaseH(restRef, "Entrees", "String Bean Chicken Breast", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "String Bean Chicken Breast>0-00", ingredients);
 
         ingredients = new String[]{"chicken breast bites", "pineapple chunks", "water", "sugar", "red bell peppers", "onions", "bleached wheat flour",
                 "corn starch", "soybean oil", "red jalapenos", "modified food starch", "distilled vinegar", "carrot puree", "salt", "wheat flour",
                 "natural flavor", "dehydrated garlic", "sodium phosphate", "dried onion", "spices", "sodium bicarbonate", "wheat"};
-        restaurantToFirebaseH(restRef, "Entrees", "Sweet Fire Chicken Breast (Regional)", ingredients);
+        restaurantToFirebaseH(restRef, "Entrees", "Sweet Fire Chicken Breast (Regional)>0-00", ingredients);
 
         ingredients = new String[]{"bleached enriched flour", "dark meat chicken", "water", "cabbage", "onion", "napa cabbage", "carrot", "green onion",
                 "mung bean vermicelli", "durum flour", "clear vermicelli", "vegetable oil", "soy sauce", "wine", "salt", "natural flavor", "dehydrated chicken",
@@ -245,28 +245,28 @@ public class RestaurantManager {
                 "concentrated juices", "yeast extract", "sesame oil", "garlic", "carrageenan", "locust bean gum", "dextrose", "cottonseed oil", "soybean oil",
                 "guar gum", "egg", "corn starch", "palm oil", "wheat gluten", "sodium stearoyl lactylate", "citric acid", "modified corn starch", "milk",
                 "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Appetizers", "Chicken Eggroll", ingredients);
+        restaurantToFirebaseH(restRef, "Appetizers", "Chicken Eggroll>2-00", ingredients);
 
         ingredients = new String[]{"chicken", "cabbage", "onions", "sugar", "salt", "granulated garlic", "sesame seed oil", "soy sauce", "soybean oil",
                 "modified corn starch", "ginger", "yeast extract", "chives", "enriched bleached flour", "water", "vegetable oil", "corn starch",
                 "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Appetizers", "Chicken Potsticker (Regional)", ingredients);
+        restaurantToFirebaseH(restRef, "Appetizers", "Chicken Potsticker (Regional)>2-00", ingredients);
 
         ingredients = new String[]{"cream cheese", "green onions", "enriched flour", "water", "egg", "salt", "mono", "diglycerides", "enzyme", "annatto",
                 "turmeric", "corn starch", "milk", "wheat"};
-        restaurantToFirebaseH(restRef, "Appetizers", "Cream Cheese Rangoon", ingredients);
+        restaurantToFirebaseH(restRef, "Appetizers", "Cream Cheese Rangoon>2-00", ingredients);
 
         ingredients = new String[]{"water", "firm tofu", "mushrooms", "liquid egg", "distilled vinegar", "modified food starch", "corn starch",
                 "potato starch", "salt", "maltodextrin", "shortening powder", "disodium inosinate", "disodium guanylate",
                 "dehydrated soy sauce powder", "sugar", "onion powder", "soybean oil", "celery extract", "sesame oil", "soy sauce", "spices",
                 "egg", "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Appetizers", "Hot and Sour Soup", ingredients);
+        restaurantToFirebaseH(restRef, "Appetizers", "Hot and Sour Soup>0-00", ingredients);
 
         ingredients = new String[]{"cabbage", "wheat flour", "celery", "carrots", "water", "mung bean vermicelli", "green onions", "modified corn starch",
                 "ginger", "garlic oil", "sesame oil", "salt", "sugar", "dehydrated soy sauce", "onion powder", "natural stir-fry flavor", "spices",
                 "disodium inosinate", "disodium guanylate", "soybean oil", "sodium polyphosphate", "sodium carbonate", "monoglycerides", "diglycerides",
                 "polysorbitan esters of stearates", "lecithin", "citric acid", "soy", "wheat", "sesame"};
-        restaurantToFirebaseH(restRef, "Appetizers", "Vegetable Spring Roll", ingredients);
+        restaurantToFirebaseH(restRef, "Appetizers", "Vegetable Spring Roll>2-00", ingredients);
 
         ingredients = new String[]{
                 "white rice", "cabbage", "broccoli", "kale", "water", "soybean oil", "garlic", "phosphoric acid", "natural flavor", "cornstarch", "potato starch",
@@ -274,7 +274,7 @@ public class RestaurantManager {
                 "celery extract", "soy", "wheat", "dark meat chicken", "distilled vinegar", "corn starch", "orange extract", "caramel color", "rice", "sesame oil",
                 "wheat flour", "eggs", "spices", "leavening", "soy sauce", "milk", "sesame"
         };
-        restaurantToFirebaseH(restRef, "Cub Meals", "Orange Chicken Cub Meal", ingredients);
+        restaurantToFirebaseH(restRef, "Cub Meals", "Orange Chicken Cub Meal>6-90", ingredients);
 
         ingredients = new String[]{
                 "cabbage", "enriched wheat flour", "water", "onion", "soybean oil", "celery", "rice", "wheat", "caramel color", "sesame oil", "wheat gluten",
@@ -284,7 +284,7 @@ public class RestaurantManager {
                 "modified food starch", "maltodextrin", "disodium inosinate", "disodium guanylate", "dehydrated soy sauce powder", "onion powder", "celery extract",
                 "chicken thighs", "ginger puree", "black pepper", "roasted sesame seed oil"
         };
-        restaurantToFirebaseH(restRef, "Cub Meals", "Grilled Teriyaki Cub Meal", ingredients);
+        restaurantToFirebaseH(restRef, "Cub Meals", "Grilled Teriyaki Cub Meal>6-90", ingredients);
 
         ingredients = new String[]{
                 "white rice", "cabbage", "broccoli", "kale", "water", "soybean oil", "garlic", "phosphoric acid", "natural flavor", "cornstarch", "potato starch",
@@ -292,79 +292,79 @@ public class RestaurantManager {
                 "celery extract", "soy", "wheat", "beef", "corn starch", "soy sauce", "rice", "caramel color", "sesame oil", "sea salt", "brown sugar", "sodium phosphate",
                 "yeast extract", "spices", "sesame"
         };
-        restaurantToFirebaseH(restRef, "Cub Meals", "Broccoli Beef Cub Meal", ingredients);
+        restaurantToFirebaseH(restRef, "Cub Meals", "Broccoli Beef Cub Meal>6-90", ingredients);
 
         // DRINKS (Could be used for other restaurants)
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors", "caffeine"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola>2-40", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "caramel color", "aspartame", "phosphoric acid", "potassium benzoate", "natural flavors", "citric acid", "caffeine"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Diet Coke", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Diet Coke>2-40", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "caramel color", "sodium benzoate", "citric acid", "caffeine", "artificial and natural flavors", "acacia"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Barqs Root Beer", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Barqs Root Beer>2-40", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "citric acid", "natural flavors", "sodium benzoate", "modified food starch", "glycerol ester of rosin", "yellow 6", "red 40"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Fanta Orange", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Fanta Orange>2-40", ingredients);
 
         ingredients = new String[]{
                 "pure filtered water", "lemon juice from concentrate", "high fructose corn syrup", "lemon pulp", "natural flavors", "pectin", "sucralose", "acesulfame potassium"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Minute Maid Lemonade", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Minute Maid Lemonade>2-40", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "citric acid", "tartaric acid", "acidity regulator", "sodium citrates", "aspartame", "acesulfame-k", "sucralose", "natural lemon", "lime flavourings"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Sprite", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Sprite>2-40", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors", "caffeine", "sodium"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola Cherry", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola Cherry>2-40", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "natural flavors", "citric acid", "sodium benzoate", "red 40"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Fanta Strawberry", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Fanta Strawberry>2-40", ingredients);
 
         ingredients = new String[]{
                 "purified water", "magnesium sulfate", "potassium chloride", "salt", "sodium", "minerals"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Dasani", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Dasani>2-40", ingredients);
 
         ingredients = new String[]{
                 "water", "high fructose corn syrup", "citric acid", "electrolytes", "salt", "sodium citrate", "magnesium", "calcium chlorides", "mono-potassium phosphate",
                 "vitamins b12", "vitamin c", "cyanocobalamin", "ascorbic acid", "natural flavors", "modified food starch", "calcium disodium edta", "medium chain triglycerides", "sucrose acetate isobutrate", "blue 1"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Powerade Berry Blast", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Powerade Berry Blast>2-80", ingredients);
 
         ingredients = new String[]{
                 "pure filtered water", "concentrated apple juice", "vitamin c", "ascorbic acid"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Minute Maid Apple Juice", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Minute Maid Apple Juice>2-50", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "citric acid", "tartaric acid", "acidity regulator", "sodium citrates", "aspartame", "acesulfame-k", "sucralose", "natural lemon", "lime flavourings"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Sprite Bottle", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Sprite Bottle>2-50", ingredients);
 
         ingredients = new String[]{
                 "spring water", "electrolytes", "calcium chloride", "magnesium chloride", "potassium bicarbonate"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Smart Water", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Smart Water>3-10", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "lychee puree", "citric acid"
         };
-        restaurantToFirebaseH(restRef, "Drinks", "Sanzo Lychee Sparkling Water", ingredients);
+        restaurantToFirebaseH(restRef, "Drinks", "Sanzo Lychee Sparkling Water>2-80", ingredients);
     }
 
     private void putSubway(DatabaseReference restRef) {
@@ -735,6 +735,838 @@ public class RestaurantManager {
                 "chicken stock plus", "chicken stock", "cheese", "parmesan type", "granular cheesse", "lactic acid", "citric acid", "pepper sauce", "distilled vinegar",
                 "red pepper", "wheat"};
         restaurantToFirebaseH(restRef, "Soups", "LOADED BAKED POTATO WITH BACON", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "modified corn starch", "dextrose", "sodium phosphate",
+                "dried tomato", "yeast extract", "caramelized sugar", "onion powder", "garlic powder", "natural beef type flavor", "autolyzed yeast",
+                "disodium inosinate", "disodium guanylate", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "cultured pasteurized milk", "milk", "green bell peppers", "onions",
+                "eggs", "distilled vinegar", "spice", "lemon juice concentrate", "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "1 The Philly>11-59", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "modified corn starch", "dextrose", "sodium phosphate",
+                "dried tomato", "yeast extract", "caramelized sugar", "onion powder", "garlic powder", "natural beef type flavor", "autolyzed yeast",
+                "disodium inosinate", "disodium guanylate", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "milk", "cream", "sodium citrate", "cheese culture", "jalapeno peppers",
+                "jalapeno pepper puree", "sorbic acid", "red bell peppers", "green bell peppers", "onions", "cultured low-fat buttermilk", "chipotle pepper sauce concentrate",
+                "chipotle pepper pure", "chipotle pepper", "distilled vinegar", "egg yolks", "guajillo pepper", "natural flavors", "paprika", "spices",
+                "dehydrated garlic", "xanthan gum", "lime juice concentrate", "lactic acid", "dehydrated onion", "sodium benzoate", "potassium sorbate",
+                "natural smoke flavor", "dehydrated parsley", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "2 The Outlaw>11-59", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "modified corn starch", "dextrose", "sodium phosphate",
+                "dried tomato", "yeast extract", "caramelized sugar", "onion powder", "garlic powder", "natural beef type flavor", "autolyzed yeast",
+                "disodium inosinate", "disodium guanylate", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "pork", "sodium erythorbate", "sodium nitrite", "monterey jack cheese",
+                "cultured pasteurized milk", "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "milk", "green bell peppers",
+                "onions", "cultured low-fat buttermilk", "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice", "lactic acid",
+                "dehydrated garlic", "sodium benzoate", "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion", "calcium disodium",
+                "edta", "egg"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "3 The Monster>12-89", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates",
+                "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "pork", "beef", "spices", "corn syrup", "flavorings", "paprika", "oleoresin",
+                "lactic acid starter culture", "genoa salami", "pork cured with water", "sodium phosphate", "pepper", "cultured pasteurized milk",
+                "milk", "lettuce", "tomatoes", "onions", "banana peppers", "distilled vinegar", "calcium chloride", "sodium benzoate", "sodium metabisulfite",
+                "polysorbate 80", "turmeric", "natural flavors", "sulfites", "extra virgin olive oil", "cabernet sauvignon wine vinegar", "red bell pepper puree",
+                "parmesan cheese", "pasteurized part skim milk", "cheese cultures", "dehydrated garlic", "dehydrated onion", "xanthan gum", "potassium sorbate",
+                "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "4 Supreme Meats>11-79", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates",
+                "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "pasteurized milk", "milk", "pork cured with water", "spices", "paprika",
+                "sodium phosphate", "pepper", "spinach", "tomatoes", "onions", "banana peppers", "distilled vinegar", "calcium chloride", "sodium benzoate",
+                "sodium metabisulfite", "polysorbate 80", "turmeric", "natural flavors", "sulfites", "extra virgin olive oil", "cabernet sauvignon wine vinegar",
+                "red bell pepper puree", "parmesan cheese", "pasteurized part skim milk", "cheese cultures", "dehydrated garlic", "dehydrated onion",
+                "xanthan gum", "potassium sorbate", "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "5 Bella Mozza>11-79", ingredients);
+
+        ingredients = new String[]{"subway artisan italian bread", "enriched flour", "wheat flour", "malted barley flour", "niacin", "iron",
+                "thiamine mononitrate", "riboflavin", "folic acid", "water", "yeast", "sugar", "wheat gluten", "", "wheat sourdough", "cultured wheat flour",
+                "natural flavor", "salt", "palm oil", "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "monterey jack cheese", "cultured pasteurized milk",
+                "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "parmesan-oregano topping", "corn maltodextrin",
+                "enriched wheat flour", "flour", "reduced iron", "toasted bread crumbs", "sea salt", "spices", "dehydrated garlic", "parmesan cheese",
+                "part skim milk", "cheese cultures", "modified corn starch", "sunflower oil", "citric acid", "yeast extract", "lactic acid", "silicon dioxide",
+                "milk", "soy", "wheat", "beef", "bread crumbs", "toasted wheat crumbs", "textured soy protein concentrate", "seasoning", "dehydrated onion",
+                "garlic", "spice", "dehydrated parsley", "soy protein concentrate", "romano cheese", "pasteurized part-skim cows milk", "marinara sauce",
+                "tomato puree", "tomato paste", "diced tomatoes", "tomatoes", "tomato juice", "calcium chloride", "seasoning blend", "onion powder",
+                "herbs", "pork", "dextrose", "corn syrup", "flavorings", "paprika", "oleoresin", "sodium erythorbate", "lactic acid starter culture",
+                "sodium nitrite", "pasteurized milk", "vinegar", "cultured pasteurized part-skim milk", "potassium sorbate"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "6 The Boss>10-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "chicken", "dextrose", "seasoning", "flavoring", "acacia gum",
+                "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "avocado", "milk", "cream", "sodium citrate", "cheese culture",
+                "jalapeno peppers", "jalapeno pepper puree", "sorbic acid", "red bell peppers", "citric acid", "lettuce", "tomatoes", "onions", "cultured low-fat buttermilk",
+                "chipotle pepper sauce concentrate", "chipotle pepper pure", "chipotle pepper", "distilled vinegar", "egg yolks", "guajillo pepper",
+                "natural flavors", "paprika", "spices", "dehydrated garlic", "xanthan gum", "lime juice concentrate", "lactic acid", "dehydrated onion",
+                "sodium benzoate", "potassium sorbate", "natural smoke flavor", "dehydrated parsley", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "7 The Sliced Avo MexiCali>12-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "pork", "sodium erythorbate", "sodium nitrite", "chicken",
+                "dextrose", "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "cultured pasteurized milk",
+                "milk", "lettuce", "tomatoes", "onions", "distilled vinegar", "extra virgin olive oil", "egg yolks", "garlic", "garlic juice", "natural flavors",
+                "dehydrated garlic", "lemon juice concentrate", "sodium benzoate", "potassium sorbate", "garlic juice concentrate", "xanthan gum",
+                "dehydrated parsley", "spice", "citric acid", "propylene glycol alginate", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "8 The Great Garlic>11-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "chicken", "dextrose", "seasoning", "flavoring", "acacia gum",
+                "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "monterey jack cheese", "cultured pasteurized milk", "cheddar cheese",
+                "annatto color", "potato starch", "powdered cellulose", "natamycin", "milk", "green bell peppers", "onions", "cultured low-fat buttermilk",
+                "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice", "lactic acid", "dehydrated garlic", "sodium benzoate",
+                "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "9 The Champ>11-59", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "turkey breast", "turkey broth", "seasoning", "vinegar",
+                "cultured dextrose", "xanthan gum", "dextrose", "sodium phosphates", "ham", "modified food starch", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "pork", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative", "citric acid", "lettuce",
+                "tomatoes", "onions", "eggs", "distilled vinegar", "spice", "lemon juice concentrate", "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "10 All-American Club>11-69", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "turkey breast", "turkey broth", "seasoning", "vinegar",
+                "cultured dextrose", "xanthan gum", "dextrose", "sodium phosphates", "natural flavor", "ham", "modified food starch", "natural smoke flavor",
+                "sodium erythorbate", "sodium nitrite", "roast beef", "corn syrup solids", "natural flavors", "potato maltodextrin", "cooked sugar",
+                "cultured pasteurized milk", "milk", "lettuce", "tomatoes", "onions", "eggs", "distilled vinegar", "spice", "lemon juice concentrate",
+                "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "11 Subway Club>11-69", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "turkey breast", "turkey broth", "seasoning", "vinegar",
+                "cultured dextrose", "xanthan gum", "dextrose", "sodium phosphates", "natural flavor", "pork", "sodium erythorbate", "sodium nitrite",
+                "pasteurized milk", "milk", "avocado", "spinach", "tomatoes", "onions", "eggs", "distilled vinegar", "spice", "lemon juice concentrate",
+                "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "subwaySeries", "12 Sliced Avo Turkey Cali Club>13-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar",
+                "sodium phosphates", "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Black Forest Ham Classic Sandwich>8-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "boneless chicken breast", "skinless chicken breast", "rib meat",
+                "soy protein concentrate", "modified potato starch", "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract", "flavors",
+                "natural flavors", "dextrose", "caramelized sugar", "paprika", "vinegar solids", "paprika extract", "chicken broth", "lettuce", "tomatoes",
+                "cucumber", "distilled vinegar", "cayenne red peppers", "modified corn starch", "canola oil", "xanthan gum", "carrot fiber", "garlic powder",
+                "cultured low-fat buttermilk", "egg yolks", "buttermilk", "spice", "lactic acid", "dehydrated garlic", "sodium benzoate", "potassium sorbate",
+                "dehydrated parsley", "dehydrated onion", "calcium disodium", "edta", "milk", "egg"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Buffalo Chicken Classic Sandwich>10-89", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "pork", "sodium erythorbate", "sodium nitrite", "lettuce",
+                "tomatoes"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "BLT Classic Sandwich>9-69", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "pork", "sodium erythorbate", "sodium nitrite", "chicken",
+                "dextrose", "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "monterey jack cheese",
+                "cultured pasteurized milk", "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "milk", "lettuce",
+                "tomatoes", "onions", "cultured low-fat buttermilk", "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice", "lactic acid",
+                "dehydrated garlic", "sodium benzoate", "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion", "calcium disodium",
+                "edta", "egg"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Chicken & Bacon Ranch Classic Sandwich>11-99", ingredients);
+
+        ingredients = new String[]{"turkey bologna", "mechanically separated turkey", "water", "salt", "corn syrup solids", "potassium lactate",
+                "dextrose", "sodium diacetate", "sodium erythorbate", "sodium nitrite", "", "flavorings cooked turkey salami", "smoke flavor added",
+                "dark turkey", "sugar", "sodium tripolyphosphate", "spice", "flavorings", "smoke flavor", "turkey ham", "cured turkey thigh meat",
+                "brown sugar", "enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin", "folic acid",
+                "yeast", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "palm oil", "soy lecithin", "enzymes", "ascorbic acid",
+                "soybean oil", "wheat", "soy", "lettuce", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Cold Cut Combo Classic Sandwich>8-79", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "boneless chicken breast", "skinless chicken breast",
+                "rib meat", "soy protein concentrate", "modified potato starch", "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract",
+                "flavors", "natural flavors", "dextrose", "caramelized sugar", "paprika", "vinegar solids", "paprika extract", "chicken broth", "lettuce",
+                "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Grilled Chicken Classic Sandwich>10-89", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates",
+                "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "pork", "beef", "spices", "corn syrup", "flavorings", "paprika", "oleoresin",
+                "lactic acid starter culture", "sliced genoa salami", "wine", "sodium nitrate", "garlic", "pepperoni", "oleoresin of paprika", "lettuce",
+                "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Italian BMT Classic Sandwich>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "bread crumbs", "toasted wheat crumbs", "enriched wheat flour",
+                "reduced iron", "textured soy protein concentrate", "seasoning", "dehydrated onion", "garlic", "spice", "dehydrated parsley", "soy protein concentrate",
+                "romano cheese", "pasteurized part-skim cows milk", "cheese cultures", "marinara sauce", "tomato puree", "tomato paste", "diced tomatoes",
+                "tomatoes", "tomato juice", "citric acid", "calcium chloride", "seasoning blend", "modified corn starch", "onion powder", "herbs",
+                "spices", "milk", "parmesan cheese", "cultured pasteurized part-skim milk", "powdered cellulose", "potassium sorbate", "turkey breast",
+                "turkey broth", "vinegar", "cultured dextrose", "xanthan gum", "dextrose", "sodium phosphates", "whole wheat flour", "rye flour", "rye sourdough",
+                "fermented rye flour", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "cracked wheat"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Meatball Marinara Classic Sandwich>8-79", ingredients);
+
+        ingredients = new String[]{"lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Oven Roasted Turkey Classic Sandwich>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "roast beef", "dextrose", "corn syrup solids", "sodium phosphates",
+                "natural flavors", "potato maltodextrin", "cooked sugar", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions",
+                "chicken", "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Roast Beef Classic Sandwich>11-79", ingredients);
+
+        ingredients = new String[]{"lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Rotisserie-Style Chicken Classic Sandwich>10-79", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "pork", "beef", "spices", "dextrose", "corn syrup", "flavorings",
+                "paprika", "oleoresin", "sodium erythorbate", "lactic acid starter culture", "sodium nitrite", "genoa salami", "lettuce", "tomatoes",
+                "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Spicy Italian Classic Sandwich>8-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "modified corn starch", "dextrose", "sodium phosphate",
+                "dried tomato", "yeast extract", "caramelized sugar", "onion powder", "garlic powder", "natural beef type flavor", "autolyzed yeast",
+                "disodium inosinate", "disodium guanylate", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative",
+                "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Steak and Cheese Classic Sandwich>10-79", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "boneless chicken breast", "skinless chicken breast",
+                "rib meat", "soy protein concentrate", "modified potato starch", "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract",
+                "flavors", "natural flavors", "dextrose", "caramelized sugar", "paprika", "vinegar solids", "paprika extract", "chicken broth", "sweet onion teriyaki sauce",
+                "corn vinegar", "corn syrup", "soy sauce", "soybean salt", "sodium benzoate", "food starch-modified", "rice vinegar", "dehydrated onion",
+                "tomato paste", "spices", "mustard seed", "distilled vinegar", "garlic", "sesame oil", "poppyseed", "sesame seed", "potassium sorbate",
+                "dehydrated green onion", "dehydrated red bell pepper", "dehydrated garlic", "autolyzed yeast extract", "citric acid", "sesame", "lettuce",
+                "spinach", "tomatoes", "cucumber", "green bell peppers", "onions", "modified food starch"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Sweet Onion and Teriyaki Classic Sandwich>10-89", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "tuna", "lettuce", "tomatoes", "cucumber", "green bell peppers",
+                "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Tuna Classic Sandwich>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "onions"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Veggie Delite Classic Sandwich>7-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "carrots", "onions", "green beans", "oat bran", "expeller pressed canola oil",
+                "zucchini", "soybeans", "peas", "broccoli", "corn", "soy flour", "spinach", "red bell peppers", "arrowroot powder", "garlic", "corn starch",
+                "corn meal", "methyl cellulose", "parsley", "black pepper", "lettuce", "tomatoes", "cucumber", "green bell peppers"};
+        restaurantToFirebaseH(restRef, "classicSandwiches", "Veggie Patty Classic Sandwich>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "chicken", "dextrose", "seasoning", "flavoring", "acacia gum",
+                "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "monterey jack cheese", "cultured pasteurized milk", "cheddar cheese",
+                "annatto color", "potato starch", "powdered cellulose", "natamycin", "milk", "distilled vinegar", "cayenne red peppers", "modified corn starch",
+                "canola oil", "paprika", "xanthan gum", "carrot fiber", "garlic powder"};
+        restaurantToFirebaseH(restRef, "onlineExclusive", "The No-Look Chicken>10-39", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "beef", "bread crumbs", "toasted wheat crumbs", "enriched wheat flour",
+                "reduced iron", "textured soy protein concentrate", "seasoning", "dehydrated onion", "garlic", "spice", "dehydrated parsley", "soy protein concentrate",
+                "romano cheese", "pasteurized part-skim cows milk", "cheese cultures", "marinara sauce", "tomato puree", "tomato paste", "diced tomatoes",
+                "tomatoes", "tomato juice", "citric acid", "calcium chloride", "seasoning blend", "modified corn starch", "onion powder", "herbs",
+                "spices", "milk", "cultured pasteurized milk", "ripe olives", "ferrous gluconate", "banana peppers", "distilled vinegar", "sodium benzoate",
+                "sodium metabisulfite", "polysorbate 80", "turmeric", "natural flavors", "sulfites"};
+        restaurantToFirebaseH(restRef, "onlineExclusive", "The Meatball Marksman>8-29", ingredients);
+
+        ingredients = new String[]{"avocado", "monterey jack cheese", "cultured pasteurized milk", "salt", "enzymes", "cheddar cheese", "annatto color",
+                "", "potato starch", "powdered cellulose", "natamycin", "milk", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "soybean oil", "water", "cultured low-fat buttermilk", "chipotle pepper sauce concentrate", "chipotle pepper pure", "chipotle pepper",
+                "distilled vinegar", "sugar", "onion powder", "egg yolks", "guajillo pepper", "natural flavors", "paprika", "spices", "dehydrated garlic",
+                "xanthan gum", "lime juice concentrate", "lactic acid", "dehydrated onion", "sodium benzoate", "potassium sorbate", "natural smoke flavor",
+                "dehydrated parsley", "citric acid", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "onlineExclusive", "The Sliced Avocado Spike Bowl>10-29", ingredients);
+
+        ingredients = new String[]{"subway artisan italian bread", "enriched flour", "wheat flour", "malted barley flour", "niacin", "iron",
+                "thiamine mononitrate", "riboflavin", "folic acid", "water", "yeast", "sugar", "wheat gluten", "", "wheat sourdough", "cultured wheat flour",
+                "natural flavor", "salt", "palm oil", "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "monterey jack cheese", "cultured pasteurized milk",
+                "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "parmesan-oregano topping", "corn maltodextrin",
+                "enriched wheat flour", "flour", "reduced iron", "toasted bread crumbs", "sea salt", "spices", "dehydrated garlic", "parmesan cheese",
+                "part skim milk", "cheese cultures", "modified corn starch", "sunflower oil", "citric acid", "yeast extract", "lactic acid", "silicon dioxide",
+                "milk", "soy", "wheat", "roast beef", "dextrose", "corn syrup solids", "sodium phosphates", "natural flavors", "potato maltodextrin",
+                "cooked sugar", "pork", "sodium erythorbate", "sodium nitrite", "cream", "sodium citrate", "cheese culture", "jalapeno peppers", "jalapeno pepper puree",
+                "sorbic acid", "red bell peppers", "lettuce", "tomatoes", "ripe olives", "ferrous gluconate", "onions", "distilled vinegar", "sodium benzoate",
+                "calcium chloride", "sodium metabisulfite", "sulfites", "vinegar", "mustard seed", "turmeric", "paprika", "spice", "garlic powder",
+                "mustard", "cultured low-fat buttermilk", "chipotle pepper sauce concentrate", "chipotle pepper pure", "chipotle pepper", "onion powder",
+                "egg yolks", "guajillo pepper", "xanthan gum", "lime juice concentrate", "dehydrated onion", "potassium sorbate", "natural smoke flavor",
+                "dehydrated parsley", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "onlineExclusive", "The Beef Mode>13-89", ingredients);
+
+        ingredients = new String[]{"subway artisan italian bread", "enriched flour", "wheat flour", "malted barley flour", "niacin", "iron",
+                "thiamine mononitrate", "riboflavin", "folic acid", "water", "yeast", "sugar", "wheat gluten", "", "wheat sourdough", "cultured wheat flour",
+                "natural flavor", "salt", "palm oil", "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "monterey jack cheese", "cultured pasteurized milk",
+                "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "parmesan-oregano topping", "corn maltodextrin",
+                "enriched wheat flour", "flour", "reduced iron", "toasted bread crumbs", "sea salt", "spices", "dehydrated garlic", "parmesan cheese",
+                "part skim milk", "cheese cultures", "modified corn starch", "sunflower oil", "citric acid", "yeast extract", "lactic acid", "silicon dioxide",
+                "milk", "soy", "wheat", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "pork", "beef", "corn syrup", "flavorings", "paprika", "oleoresin", "lactic acid starter culture", "genoa salami",
+                "lettuce", "tomatoes", "green bell peppers", "banana peppers", "distilled vinegar", "calcium chloride", "sodium benzoate", "sodium metabisulfite",
+                "polysorbate 80", "turmeric", "natural flavors", "sulfites", "eggs", "spice", "lemon juice concentrate", "calcium disodium", "edta",
+                "mustard seed", "garlic powder", "mustard"};
+        restaurantToFirebaseH(restRef, "onlineExclusive", "The Dangerwich>13-89", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "boneless chicken breast", "skinless chicken breast", "rib meat",
+                "soy protein concentrate", "modified potato starch", "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract", "flavors",
+                "natural flavors", "dextrose", "caramelized sugar", "paprika", "vinegar solids", "paprika extract", "chicken broth", "milk", "cream",
+                "sodium citrate", "cheese culture", "sorbic acid preservative", "citric acid", "tomatoes", "distilled vinegar", "cayenne red peppers",
+                "modified corn starch", "canola oil", "xanthan gum", "carrot fiber", "garlic powder", "cultured low-fat buttermilk", "egg yolks", "buttermilk",
+                "spice", "lactic acid", "dehydrated garlic", "sodium benzoate", "potassium sorbate", "dehydrated parsley", "dehydrated onion", "calcium disodium",
+                "edta", "egg"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Buffalo Chicken Melt>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "pork", "sodium erythorbate", "sodium nitrite", "chicken",
+                "dextrose", "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "cultured pasteurized milk",
+                "milk", "tomatoes", "onions", "cultured low-fat buttermilk", "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice",
+                "lactic acid", "dehydrated garlic", "sodium benzoate", "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion",
+                "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Chicken & Bacon Ranch Melt>13-39", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates",
+                "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative",
+                "citric acid", "tomatoes", "eggs", "distilled vinegar", "spice", "lemon juice concentrate", "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Ham & Cheese Melt>10-59", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates",
+                "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "sliced genoa salami", "pork", "beef", "corn syrup", "flavorings",
+                "wine", "sodium nitrate", "spices", "garlic", "lactic acid starter culture", "pepperoni", "paprika", "oleoresin of paprika", "oleoresin",
+                "genoa salami", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative", "citric acid", "green bell peppers",
+                "onions"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Italian BMT Melt>11-29", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "bread crumbs", "toasted wheat crumbs", "enriched wheat flour",
+                "reduced iron", "textured soy protein concentrate", "seasoning", "dehydrated onion", "garlic", "spice", "dehydrated parsley", "soy protein concentrate",
+                "romano cheese", "pasteurized part-skim cows milk", "cheese cultures", "marinara sauce", "tomato puree", "tomato paste", "diced tomatoes",
+                "tomatoes", "tomato juice", "citric acid", "calcium chloride", "seasoning blend", "modified corn starch", "onion powder", "herbs",
+                "spices", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Meatball Marinara Melt>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "turkey breast", "turkey broth", "seasoning", "vinegar",
+                "cultured dextrose", "xanthan gum", "dextrose", "sodium phosphates", "natural flavor", "milk", "cream", "sodium citrate", "cheese culture",
+                "sorbic acid preservative", "citric acid", "tomatoes", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Oven Roasted Turkey Melt>11-49", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "pork", "beef", "spices", "dextrose", "corn syrup", "flavorings",
+                "paprika", "oleoresin", "sodium erythorbate", "lactic acid starter culture", "sodium nitrite", "genoa salami", "milk", "cream", "sodium citrate",
+                "cheese culture", "sorbic acid preservative", "citric acid", "tomatoes", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Spicy Italian Melt>10-79", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "beef", "modified corn starch", "dextrose", "sodium phosphate",
+                "dried tomato", "yeast extract", "caramelized sugar", "onion powder", "garlic powder", "natural beef type flavor", "autolyzed yeast",
+                "disodium inosinate", "disodium guanylate", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative",
+                "green bell peppers", "onions", "eggs", "distilled vinegar", "spice", "lemon juice concentrate", "calcium disodium", "edta"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Steak & Cheese Melt>11-89", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "", "yeast", "sugar", "wheat gluten", "wheat sourdough", "cultured wheat flour", "natural flavor", "salt", "palm oil",
+                "soy lecithin", "enzymes", "ascorbic acid", "soybean oil", "wheat", "soy", "tuna", "cultured pasteurized milk", "milk", "onions", "parmesan cheese",
+                "cultured pasteurized part-skim milk", "powdered cellulose", "potassium sorbate"};
+        restaurantToFirebaseH(restRef, "freshMelts", "Tuna Melt>11-49", ingredients);
+
+        ingredients = new String[]{"ham", "water", "dextrose", "modified food starch", "salt", "vinegar", "sodium phosphates", "natural smoke flavor",
+                "sodium erythorbate", "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate",
+                "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Black Forest Ham Bowl>8-59", ingredients);
+
+        ingredients = new String[]{"boneless chicken breast", "skinless chicken breast", "rib meat", "water", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "salt", "maltodextrin", "", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "ripe olives", "ferrous gluconate", "onions", "distilled vinegar", "cayenne red peppers", "modified corn starch", "canola oil", "xanthan gum",
+                "carrot fiber", "garlic powder", "natural flavor", "soybean oil", "cultured low-fat buttermilk", "egg yolks", "sugar", "buttermilk",
+                "spice", "lactic acid", "dehydrated garlic", "sodium benzoate", "potassium sorbate", "dehydrated parsley", "dehydrated onion", "calcium disodium",
+                "edta", "milk", "egg"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Buffalo Chicken Bowl>9-99", ingredients);
+
+        ingredients = new String[]{"pork", "water", "salt", "sugar", "sodium erythorbate", "sodium nitrite", "lettuce", "spinach", "tomatoes",
+                "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "BLT Bowl>9-69", ingredients);
+
+        ingredients = new String[]{"pork", "water", "salt", "sugar", "sodium erythorbate", "sodium nitrite", "chicken", "soybean oil", "dextrose",
+                "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "monterey jack cheese",
+                "cultured pasteurized milk", "enzymes", "cheddar cheese", "annatto color", "", "potato starch", "powdered cellulose", "natamycin",
+                "milk", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions", "cultured low-fat buttermilk",
+                "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice", "lactic acid", "dehydrated garlic", "sodium benzoate",
+                "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Chicken & Bacon ranch Bowl>11-39", ingredients);
+
+        ingredients = new String[]{"turkey bologna", "mechanically separated turkey", "water", "salt", "corn syrup solids", "potassium lactate",
+                "dextrose", "sodium diacetate", "sodium erythorbate", "sodium nitrite", "", "flavorings cooked turkey salami", "smoke flavor added",
+                "dark turkey", "sugar", "sodium tripolyphosphate", "spice", "flavorings", "smoke flavor", "turkey ham", "cured turkey thigh meat",
+                "brown sugar", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Cold Cut Combo Bowl>7-99", ingredients);
+
+        ingredients = new String[]{"boneless chicken breast", "skinless chicken breast", "rib meat", "water", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "salt", "maltodextrin", "", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Grilled Chicken Bowl>0-00", ingredients);
+
+        ingredients = new String[]{"ham", "water", "dextrose", "modified food starch", "salt", "vinegar", "sodium phosphates", "natural smoke flavor",
+                "sodium erythorbate", "sodium nitrite", "pork", "beef", "spices", "corn syrup", "flavorings", "paprika", "oleoresin", "lactic acid starter culture",
+                "genoa salami", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Italian BMT Bowl>9-29", ingredients);
+
+        ingredients = new String[]{"beef", "water", "bread crumbs", "toasted wheat crumbs", "enriched wheat flour", "wheat flour", "niacin",
+                "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid", "sugar", "salt", "", "soybean oil", "yeast", "textured soy protein concentrate",
+                "seasoning", "dehydrated onion", "garlic", "spice", "dehydrated parsley", "soy protein concentrate", "romano cheese", "pasteurized part-skim cows milk",
+                "cheese cultures", "enzymes", "marinara sauce", "tomato puree", "tomato paste", "diced tomatoes", "tomatoes", "tomato juice", "citric acid",
+                "calcium chloride", "seasoning blend", "modified corn starch", "onion powder", "herbs", "spices", "milk", "soy", "wheat", "lettuce",
+                "spinach", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Meatball Marinara Bowl>7-99", ingredients);
+
+        ingredients = new String[]{"turkey breast", "turkey broth", "seasoning", "vinegar", "cultured dextrose", "xanthan gum", "salt", "dextrose",
+                "sodium phosphates", "natural flavor", "soybean oil", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives",
+                "water", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Oven Roasted Turkey Bowl>9-49", ingredients);
+
+        ingredients = new String[]{"turkey breast", "turkey broth", "seasoning", "vinegar", "cultured dextrose", "xanthan gum", "salt", "dextrose",
+                "sodium phosphates", "natural flavor", "soybean oil", "ham", "water", "modified food starch", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Oven Roasted Turkey & Ham Bowl>9-59", ingredients);
+
+        ingredients = new String[]{"roast beef", "water", "salt", "dextrose", "corn syrup solids", "sodium phosphates", "natural flavors",
+                "potato maltodextrin", "cooked sugar", "sugar", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives",
+                "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Roast Beef Bowl>9-99", ingredients);
+
+        ingredients = new String[]{"chicken", "water", "salt", "soybean oil", "dextrose", "seasoning", "flavoring", "acacia gum", "onion powder",
+                "sodium phosphate", "spice extractives", "sunflower oil", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives",
+                "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Rotisserie-Style Chicken Bowl>9-99", ingredients);
+
+        ingredients = new String[]{"pork", "beef", "salt", "water", "spices", "dextrose", "corn syrup", "flavorings", "paprika", "oleoresin",
+                "sodium erythorbate", "lactic acid starter culture", "sodium nitrite", "genoa salami", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Spicy Italian Bowl>8-79", ingredients);
+
+        ingredients = new String[]{"beef", "water", "salt", "modified corn starch", "dextrose", "sodium phosphate", "dried tomato", "yeast extract",
+                "caramelized sugar", "onion powder", "garlic powder", "", "natural beef type flavor", "natural flavor", "autolyzed yeast", "disodium inosinate",
+                "disodium guanylate", "ascorbic acid", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "soybean oil", "monterey jack cheese", "cultured pasteurized milk", "enzymes",
+                "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "milk", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "ripe olives", "ferrous gluconate", "onion"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Steak & Cheese Bowl>9-89", ingredients);
+
+        ingredients = new String[]{"boneless chicken breast", "skinless chicken breast", "rib meat", "water", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "", "salt", "maltodextrin", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "sweet onion teriyaki sauce", "sugar", "corn vinegar", "corn syrup",
+                "soy sauce", "wheat", "soybean salt", "sodium benzoate", "food starch-modified", "rice vinegar", "dehydrated onion", "tomato paste",
+                "spices", "mustard seed", "distilled vinegar", "garlic", "sesame oil", "poppyseed", "sesame seed", "potassium sorbate", "dehydrated green onion",
+                "dehydrated red bell pepper", "dehydrated garlic", "autolyzed yeast extract", "citric acid", "soy", "sesame", "lettuce", "spinach",
+                "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions", "modified food starch"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Sweet Onion Chicken Teriyaki Bowl>9-99", ingredients);
+
+        ingredients = new String[]{"tuna", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "water", "salt",
+                "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Tuna Bowl>9-49", ingredients);
+
+        ingredients = new String[]{"carrots", "onions", "green beans", "oat bran", "expeller pressed canola oil", "zucchini", "soybeans", "peas",
+                "broccoli", "corn", "soy flour", "spinach", "red bell peppers", "", "arrowroot powder", "garlic", "corn starch", "corn meal", "salt",
+                "methyl cellulose", "parsley", "black pepper", "soy", "lettuce", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "water",
+                "ferrous gluconate"};
+        restaurantToFirebaseH(restRef, "noBreadyBowls", "Veggie Patty Bowl>9-69", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Black Forest Ham Wrap>8-59", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "boneless chicken breast", "skinless chicken breast", "rib meat", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "lettuce", "tomatoes", "cucumber", "distilled vinegar", "cayenne red peppers",
+                "modified corn starch", "canola oil", "xanthan gum", "carrot fiber", "garlic powder", "natural flavor", "soybean oil", "cultured low-fat buttermilk",
+                "egg yolks", "buttermilk", "spice", "lactic acid", "dehydrated garlic", "sodium benzoate", "potassium sorbate", "dehydrated parsley",
+                "dehydrated onion", "calcium disodium", "edta", "milk", "egg"};
+        restaurantToFirebaseH(restRef, "wraps", "Buffalo Chicken Wrap>9-99", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "pork", "sodium erythorbate", "sodium nitrite", "lettuce", "tomatoes"};
+        restaurantToFirebaseH(restRef, "wraps", "BLT Wrap>9-69", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "pork", "sodium erythorbate", "sodium nitrite", "chicken", "soybean oil", "dextrose", "seasoning", "flavoring",
+                "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "monterey jack cheese", "cultured pasteurized milk",
+                "cheddar cheese", "annatto color", "potato starch", "powdered cellulose", "natamycin", "milk", "lettuce", "tomatoes", "onions", "cultured low-fat buttermilk",
+                "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice", "lactic acid", "dehydrated garlic", "sodium benzoate",
+                "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "wraps", "Chicken & Bacon Ranch Wrap>11-39", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "turkey bologna", "mechanically separated turkey", "corn syrup solids", "potassium lactate", "dextrose",
+                "sodium diacetate", "sodium erythorbate", "sodium nitrite", "flavorings cooked turkey salami", "smoke flavor added", "dark turkey",
+                "sodium tripolyphosphate", "spice", "flavorings", "smoke flavor", "turkey ham", "cured turkey thigh meat", "brown sugar", "lettuce",
+                "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Cold Cut Combo Wrap>7-99", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "boneless chicken breast", "skinless chicken breast", "rib meat", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Grilled Chicken Wrap>0-00", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "sliced genoa salami", "pork", "beef", "corn syrup", "flavorings", "wine", "sodium nitrate", "spices", "garlic",
+                "lactic acid starter culture", "pepperoni", "paprika", "oleoresin of paprika", "oleoresin", "genoa salami", "lettuce", "tomatoes",
+                "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Italian BMT Wrap>9-29", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "beef", "bread crumbs", "toasted wheat crumbs", "enriched wheat flour", "soybean oil", "yeast", "textured soy protein concentrate",
+                "seasoning", "dehydrated onion", "garlic", "spice", "dehydrated parsley", "soy protein concentrate", "romano cheese", "pasteurized part-skim cows milk",
+                "cheese cultures", "marinara sauce", "tomato puree", "tomato paste", "diced tomatoes", "tomatoes", "tomato juice", "calcium chloride",
+                "seasoning blend", "modified corn starch", "onion powder", "herbs", "spices", "milk", "parmesan cheese", "cultured pasteurized part-skim milk",
+                "powdered cellulose", "potassium sorbate"};
+        restaurantToFirebaseH(restRef, "wraps", "Meatball Marinara Wrap>7-99", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "turkey breast", "turkey broth", "seasoning", "vinegar", "cultured dextrose", "xanthan gum", "dextrose",
+                "sodium phosphates", "natural flavor", "soybean oil", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Oven Roasted Turkey Wrap>9-49", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "turkey breast", "turkey broth", "seasoning", "vinegar", "cultured dextrose", "xanthan gum", "dextrose",
+                "sodium phosphates", "natural flavor", "soybean oil", "ham", "modified food starch", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Oven Roasted Turkey & Ham Wrap>9-59", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "roast beef", "dextrose", "corn syrup solids", "sodium phosphates", "natural flavors", "potato maltodextrin",
+                "cooked sugar", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Roast Beef Wrap>9-99", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "chicken", "soybean oil", "dextrose", "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate",
+                "spice extractives", "sunflower oil", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Rotisserie-Style Chicken Wrap>9-99", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "pork", "beef", "spices", "dextrose", "corn syrup", "flavorings", "paprika", "oleoresin", "sodium erythorbate",
+                "lactic acid starter culture", "sodium nitrite", "genoa salami", "lettuce", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Spicy Italian Wrap>8-79", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "beef", "modified corn starch", "dextrose", "sodium phosphate", "dried tomato", "yeast extract", "caramelized sugar",
+                "onion powder", "garlic powder", "natural beef type flavor", "natural flavor", "autolyzed yeast", "disodium inosinate", "disodium guanylate",
+                "ascorbic acid", "beet juice red", "corn maltodextrin", "hydrolyzed corn protein", "flavoring", "potato maltodextrin", "red cabbage concentrate",
+                "turmeric", "soybean oil", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Steak & Cheese Wrap>9-89", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "boneless chicken breast", "skinless chicken breast", "rib meat", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "maltodextrin", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "sweet onion teriyaki sauce", "corn vinegar", "corn syrup", "soy sauce",
+                "soybean salt", "sodium benzoate", "food starch-modified", "rice vinegar", "dehydrated onion", "tomato paste", "spices", "mustard seed",
+                "distilled vinegar", "garlic", "sesame oil", "poppyseed", "sesame seed", "potassium sorbate", "dehydrated green onion", "dehydrated red bell pepper",
+                "dehydrated garlic", "autolyzed yeast extract", "sesame", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions",
+                "modified food starch"};
+        restaurantToFirebaseH(restRef, "wraps", "Sweet Onion Chicken Teriyaki Wrap>9-99", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "tuna", "lettuce", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Tuna Wrap>9-49", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "wraps", "Veggie Delite Wrap>7-69", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "carrots", "onions", "green beans", "oat bran", "expeller pressed canola oil", "zucchini", "soybeans", "peas",
+                "broccoli", "corn", "soy flour", "spinach", "red bell peppers", "arrowroot powder", "garlic", "corn meal", "methyl cellulose", "parsley",
+                "black pepper", "lettuce", "tomatoes", "cucumber", "green bell peppers"};
+        restaurantToFirebaseH(restRef, "wraps", "Veggie Patty Wrap>9-99", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid",
+                "water", "soybean oil", "yeast", "sugar", "", "salt", "cultured wheat flour", "vinegar", "oat bran", "oat fiber", "enzymes", "wheat",
+                "milk", "pork", "sodium erythorbate", "sodium nitrite", "egg whites", "egg yolks", "unmodified corn starch", "liquid butter alternative",
+                "liquid soybean oil", "hydrogenated soybean oil", "soy lecithin", "natural flavor", "tocopherols", "black pepper", "xanthan gum", "cellulose gum",
+                "citric acid", "egg", "soy", "butter flavored soybean oil", "white pepper", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Bacon, Egg & Cheese>0-00", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "pork", "sodium erythorbate", "sodium nitrite", "egg whites", "egg yolks", "soybean oil", "unmodified corn starch",
+                "liquid butter alternative", "liquid soybean oil", "hydrogenated soybean oil", "natural flavor", "tocopherols", "black pepper", "xanthan gum",
+                "cellulose gum", "egg", "butter flavored soybean oil", "white pepper", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Bacon, Egg, & Cheese Wrap>0-00", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid",
+                "water", "soybean oil", "yeast", "sugar", "", "salt", "cultured wheat flour", "vinegar", "oat bran", "oat fiber", "enzymes", "wheat",
+                "milk", "ham", "dextrose", "modified food starch", "sodium phosphates", "natural smoke flavor", "sodium erythorbate", "sodium nitrite",
+                "egg whites", "egg yolks", "unmodified corn starch", "liquid butter alternative", "liquid soybean oil", "hydrogenated soybean oil",
+                "soy lecithin", "natural flavor", "tocopherols", "black pepper", "xanthan gum", "cellulose gum", "citric acid", "egg", "soy", "butter flavored soybean oil",
+                "white pepper", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Black Forest Ham, Egg & Cheese>0-00", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "ham", "dextrose", "modified food starch", "vinegar", "sodium phosphates", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "egg whites", "egg yolks", "soybean oil", "unmodified corn starch", "liquid butter alternative", "liquid soybean oil",
+                "hydrogenated soybean oil", "natural flavor", "tocopherols", "black pepper", "xanthan gum", "cellulose gum", "egg", "butter flavored soybean oil",
+                "white pepper", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Black Forest Ham, Egg & Cheese Wrap>0-00", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid",
+                "water", "soybean oil", "yeast", "sugar", "", "salt", "cultured wheat flour", "vinegar", "oat bran", "oat fiber", "enzymes", "wheat",
+                "milk", "egg whites", "egg yolks", "unmodified corn starch", "liquid butter alternative", "liquid soybean oil", "hydrogenated soybean oil",
+                "soy lecithin", "natural flavor", "tocopherols", "black pepper", "xanthan gum", "cellulose gum", "citric acid", "egg", "soy", "butter flavored soybean oil",
+                "white pepper", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Egg & Cheese>0-00", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "egg whites", "egg yolks", "soybean oil", "unmodified corn starch", "liquid butter alternative", "liquid soybean oil",
+                "hydrogenated soybean oil", "natural flavor", "tocopherols", "black pepper", "xanthan gum", "cellulose gum", "egg", "butter flavored soybean oil",
+                "white pepper", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Egg & Cheese Wrap>0-00", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid",
+                "water", "soybean oil", "yeast", "sugar", "", "salt", "cultured wheat flour", "vinegar", "oat bran", "oat fiber", "enzymes", "wheat",
+                "milk", "beef", "modified corn starch", "dextrose", "sodium phosphate", "dried tomato", "yeast extract", "caramelized sugar", "onion powder",
+                "garlic powder", "natural beef type flavor", "natural flavor", "autolyzed yeast", "disodium inosinate", "disodium guanylate", "ascorbic acid",
+                "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring", "potato maltodextrin", "red cabbage concentrate",
+                "turmeric", "egg whites", "egg yolks", "unmodified corn starch", "liquid butter alternative", "liquid soybean oil", "hydrogenated soybean oil",
+                "soy lecithin", "tocopherols", "black pepper", "xanthan gum", "cellulose gum", "egg", "soy", "butter flavored soybean oil", "white pepper",
+                "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Steak, Egg & Cheese>0-00", ingredients);
+
+        ingredients = new String[]{"unbleached wheat flour", "wheat flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "non gmo canola oil", "cultured wheat flour", "malted wheat flour", "", "wheat gluten", "salt", "sugar", "sodium acid pyrophosphate",
+                "sodium bicarbonate", "corn starch", "monocalcium phosphate", "guar gum", "inactive dry yeast", "soy lecithin", "citric acid", "enzymes",
+                "wheat", "soy", "barley", "beef", "modified corn starch", "dextrose", "sodium phosphate", "dried tomato", "yeast extract", "caramelized sugar",
+                "onion powder", "garlic powder", "natural beef type flavor", "natural flavor", "autolyzed yeast", "disodium inosinate", "disodium guanylate",
+                "ascorbic acid", "beet juice red", "corn maltodextrin", "hydrolyzed corn protein", "flavoring", "potato maltodextrin", "red cabbage concentrate",
+                "turmeric", "soybean oil", "egg whites", "egg yolks", "unmodified corn starch", "liquid butter alternative", "liquid soybean oil",
+                "hydrogenated soybean oil", "tocopherols", "black pepper", "xanthan gum", "cellulose gum", "egg", "butter flavored soybean oil", "white pepper",
+                "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative"};
+        restaurantToFirebaseH(restRef, "breakfast", "Steak, Egg & Cheese Wrap>0-00", ingredients);
+
+        ingredients = new String[]{"ham", "water", "dextrose", "modified food starch", "salt", "vinegar", "sodium phosphates", "natural smoke flavor",
+                "sodium erythorbate", "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate",
+                "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Black Forest Ham Salad>7-59", ingredients);
+
+        ingredients = new String[]{"boneless chicken breast", "skinless chicken breast", "rib meat", "water", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "salt", "maltodextrin", "", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "ripe olives", "ferrous gluconate", "onions", "distilled vinegar", "cayenne red peppers", "modified corn starch", "canola oil", "xanthan gum",
+                "carrot fiber", "garlic powder", "natural flavor", "soybean oil", "cultured low-fat buttermilk", "egg yolks", "sugar", "buttermilk",
+                "spice", "lactic acid", "dehydrated garlic", "sodium benzoate", "potassium sorbate", "dehydrated parsley", "dehydrated onion", "calcium disodium",
+                "edta", "milk", "egg"};
+        restaurantToFirebaseH(restRef, "salad", "Buffalo Chicken Salad>8-59", ingredients);
+
+        ingredients = new String[]{"pork", "water", "salt", "sugar", "sodium erythorbate", "sodium nitrite", "lettuce", "spinach", "tomatoes",
+                "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "BLT Salad>8-19", ingredients);
+
+        ingredients = new String[]{"pork", "water", "salt", "sugar", "sodium erythorbate", "sodium nitrite", "chicken", "soybean oil", "dextrose",
+                "seasoning", "flavoring", "acacia gum", "onion powder", "sodium phosphate", "spice extractives", "sunflower oil", "monterey jack cheese",
+                "cultured pasteurized milk", "enzymes", "cheddar cheese", "annatto color", "", "potato starch", "powdered cellulose", "natamycin",
+                "milk", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions", "cultured low-fat buttermilk",
+                "distilled vinegar", "egg yolks", "buttermilk", "natural flavors", "spice", "lactic acid", "dehydrated garlic", "sodium benzoate",
+                "potassium sorbate", "xanthan gum", "dehydrated parsley", "dehydrated onion", "calcium disodium", "edta", "egg"};
+        restaurantToFirebaseH(restRef, "salad", "Chicken & Bacon Ranch Salad>9-29", ingredients);
+
+        ingredients = new String[]{"turkey bologna", "mechanically separated turkey", "water", "salt", "corn syrup solids", "potassium lactate",
+                "dextrose", "sodium diacetate", "sodium erythorbate", "sodium nitrite", "", "flavorings cooked turkey salami", "smoke flavor added",
+                "dark turkey", "sugar", "sodium tripolyphosphate", "spice", "flavorings", "smoke flavor", "turkey ham", "cured turkey thigh meat",
+                "brown sugar", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Cold Cut Combo Salad>7-49", ingredients);
+
+        ingredients = new String[]{"sliced genoa salami", "pork", "beef", "salt", "corn syrup", "dextrose", "sugar", "flavorings", "wine",
+                "sodium erythorbate", "sodium nitrate", "spices", "garlic", "lactic acid starter culture", "", "sodium nitrite", "pepperoni", "water",
+                "paprika", "oleoresin of paprika", "ham", "modified food starch", "vinegar", "sodium phosphates", "natural smoke flavor", "oleoresin",
+                "genoa salami", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Italian BMT Salad>7-99", ingredients);
+
+        ingredients = new String[]{"beef", "water", "bread crumbs", "toasted wheat crumbs", "enriched wheat flour", "wheat flour", "niacin",
+                "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid", "sugar", "salt", "", "soybean oil", "yeast", "textured soy protein concentrate",
+                "seasoning", "dehydrated onion", "garlic", "spice", "dehydrated parsley", "soy protein concentrate", "romano cheese", "pasteurized part-skim cows milk",
+                "cheese cultures", "enzymes", "marinara sauce", "tomato puree", "tomato paste", "diced tomatoes", "tomatoes", "tomato juice", "citric acid",
+                "calcium chloride", "seasoning blend", "modified corn starch", "onion powder", "herbs", "spices", "milk", "soy", "wheat", "lettuce",
+                "spinach", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions", "parmesan cheese", "cultured pasteurized part-skim milk",
+                "powdered cellulose", "potassium sorbate"};
+        restaurantToFirebaseH(restRef, "salad", "Meatball Marinara Salad>7-49", ingredients);
+
+        ingredients = new String[]{"turkey breast", "turkey broth", "seasoning", "vinegar", "cultured dextrose", "xanthan gum", "salt", "dextrose",
+                "sodium phosphates", "natural flavor", "soybean oil", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives",
+                "water", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Oven Roasted Turkey Salad>7-99", ingredients);
+
+        ingredients = new String[]{"turkey breast", "turkey broth", "seasoning", "vinegar", "cultured dextrose", "xanthan gum", "salt", "dextrose",
+                "sodium phosphates", "natural flavor", "soybean oil", "ham", "water", "modified food starch", "natural smoke flavor", "sodium erythorbate",
+                "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Oven Roasted Turkey & Ham Salad>8-29", ingredients);
+
+        ingredients = new String[]{"roast beef", "water", "salt", "dextrose", "corn syrup solids", "sodium phosphates", "natural flavors",
+                "potato maltodextrin", "cooked sugar", "sugar", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives",
+                "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Roast Beef Salad>8-59", ingredients);
+
+        ingredients = new String[]{"chicken", "water", "salt", "soybean oil", "dextrose", "seasoning", "flavoring", "acacia gum", "onion powder",
+                "sodium phosphate", "spice extractives", "sunflower oil", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives",
+                "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Rotisserie-Style Chicken Salad>8-59", ingredients);
+
+        ingredients = new String[]{"pork", "beef", "salt", "water", "spices", "dextrose", "corn syrup", "flavorings", "paprika", "oleoresin",
+                "sodium erythorbate", "lactic acid starter culture", "sodium nitrite", "genoa salami", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Spicy Italian Salad>7-69", ingredients);
+
+        ingredients = new String[]{"beef", "water", "salt", "modified corn starch", "dextrose", "sodium phosphate", "dried tomato", "yeast extract",
+                "caramelized sugar", "onion powder", "garlic powder", "", "natural beef type flavor", "natural flavor", "autolyzed yeast", "disodium inosinate",
+                "disodium guanylate", "ascorbic acid", "beet juice red", "corn maltodextrin", "citric acid", "hydrolyzed corn protein", "flavoring",
+                "potato maltodextrin", "red cabbage concentrate", "turmeric", "soybean oil", "milk", "cream", "sodium citrate", "cheese culture", "sorbic acid preservative",
+                "enzymes", "soy lecithin", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate",
+                "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Steak & Cheese Salad>8-59", ingredients);
+
+        ingredients = new String[]{"boneless chicken breast", "skinless chicken breast", "rib meat", "water", "soy protein concentrate", "modified potato starch",
+                "sodium phosphate", "potassium chloride", "", "salt", "maltodextrin", "yeast extract", "flavors", "natural flavors", "dextrose", "caramelized sugar",
+                "paprika", "vinegar solids", "paprika extract", "chicken broth", "sweet onion teriyaki sauce", "sugar", "corn vinegar", "corn syrup",
+                "soy sauce", "wheat", "soybean salt", "sodium benzoate", "food starch-modified", "rice vinegar", "dehydrated onion", "tomato paste",
+                "spices", "mustard seed", "distilled vinegar", "garlic", "sesame oil", "poppyseed", "sesame seed", "potassium sorbate", "dehydrated green onion",
+                "dehydrated red bell pepper", "dehydrated garlic", "autolyzed yeast extract", "citric acid", "soy", "sesame", "lettuce", "spinach",
+                "tomatoes", "cucumber", "green bell peppers", "ripe olives", "ferrous gluconate", "onions", "modified food starch"};
+        restaurantToFirebaseH(restRef, "salad", "Sweet Onion Chicken Teriyaki Salad>8-59", ingredients);
+
+        ingredients = new String[]{"flaked tuna", "brine", "tuna", "water", "salt", "mayonnaise", "soybean oil", "eggs", "distilled vinegar",
+                "sugar", "spice", "lemon juice concentrate", "", "calcium disodium", "edta", "fish", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "ripe olives", "ferrous gluconate", "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Tuna Salad>7-99", ingredients);
+
+        ingredients = new String[]{"lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "water", "salt", "ferrous gluconate",
+                "onions"};
+        restaurantToFirebaseH(restRef, "salad", "Veggie Delite Salad>7-29", ingredients);
+
+        ingredients = new String[]{"carrots", "onions", "green beans", "oat bran", "expeller pressed canola oil", "zucchini", "soybeans", "peas",
+                "broccoli", "corn", "soy flour", "spinach", "red bell peppers", "", "arrowroot powder", "garlic", "corn starch", "corn meal", "salt",
+                "methyl cellulose", "parsley", "black pepper", "soy", "lettuce", "tomatoes", "cucumber", "green bell peppers", "ripe olives", "water",
+                "ferrous gluconate"};
+        restaurantToFirebaseH(restRef, "salad", "Veggie Patty Salad>8-49", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "ham", "dextrose", "modified food starch", "vinegar",
+                "sodium phosphates", "natural smoke flavor", "sodium erythorbate", "sodium nitrite", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "freshFitForKids", "Black Forest Ham For Kids>5-29", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "turkey breast", "turkey broth", "seasoning", "vinegar",
+                "cultured dextrose", "xanthan gum", "dextrose", "sodium phosphates", "natural flavor", "lettuce", "spinach", "tomatoes", "cucumber",
+                "green bell peppers", "onions"};
+        restaurantToFirebaseH(restRef, "freshFitForKids", "Oven Roasted Turkey For Kids>5-29", ingredients);
+
+        ingredients = new String[]{"enriched flour", "wheat flour", "malted barley flour", "niacin", "iron", "thiamine mononitrate", "riboflavin",
+                "folic acid", "water", "whole wheat flour", "yeast", "wheat gluten", "", "sugar", "rye flour", "rye sourdough", "fermented rye flour",
+                "salt", "soybean oil", "brown sugar", "whole oat groats", "sunflower seeds", "millet seed", "flax seed", "dried molasses", "wheat starch",
+                "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
+                "onions"};
+        restaurantToFirebaseH(restRef, "freshFitForKids", "Veggie Delite For Kids>5-29", ingredients);
     }
 
     private void putMcdonalds(DatabaseReference restRef) {

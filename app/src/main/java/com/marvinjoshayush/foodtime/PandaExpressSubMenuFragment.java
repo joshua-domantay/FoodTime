@@ -25,7 +25,8 @@ public class PandaExpressSubMenuFragment extends Fragment {
     private LinearLayout parentLayout;
     private float price;
 
-    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos) {
+    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd,
+                                       ArrayList<ImageButtonInfo> imageButtonInfos, float price) {
         this.home = home;
         this.viewsToAdd = viewsToAdd;
         this.imageButtonInfoSections = new ArrayList<>();
@@ -33,10 +34,12 @@ public class PandaExpressSubMenuFragment extends Fragment {
         for(ImageButtonInfo ibf : imageButtonInfos) {
             imageButtonInfoSections.get(0).add(ibf);
         }
+        this.price = price;
     }
 
-    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos,
-                                       int[] maxSelectionForSections, String itemName, String imageStr, float price) {
+    public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd,
+                                       ArrayList<ImageButtonInfo> imageButtonInfos, float price,
+                                       int[] maxSelectionForSections, String itemName, String imageStr) {
         this.home = home;
         this.viewsToAdd = viewsToAdd;
         this.itemName = itemName;
@@ -93,8 +96,8 @@ public class PandaExpressSubMenuFragment extends Fragment {
             for(ArrayList<ImageButtonInfo> section : imageButtonInfoSections) {
                 for (ImageButtonInfo button : section) {
                     button.getButton().setOnClickListener(item -> {
-                        LinearLayout foodItem = ViewMaker.createFoodItemView(getContext(), ("panda_express_" + button.getNameForFile()),
-                                "Panda Express", button.getName(), new ArrayList<>(), price);
+                        FoodItem foodItem = new FoodItem(getContext(), "Panda Express", button.getName(),
+                                ("panda_express_" + button.getNameForFile()), new ArrayList<>(), (price + button.getPrice()));
                         home.setFragment(new AddToCartFragment(home, foodItem, new PandaExpressFragment(home)));
                     });
                 }
@@ -109,10 +112,11 @@ public class PandaExpressSubMenuFragment extends Fragment {
                     for (ImageButtonInfo button : section) {
                         if(button.selected) {
                             description.add(button.getName());
+                            price += button.getPrice();
                         }
                     }
                 }
-                LinearLayout foodItem = ViewMaker.createFoodItemView(getContext(), imageStr, "Panda Express", itemName, description, price);
+                FoodItem foodItem = new FoodItem(getContext(), "Panda Express", itemName, imageStr, description, price);
                 home.setFragment(new AddToCartFragment(home, foodItem, new PandaExpressFragment(home)));
             }
         });

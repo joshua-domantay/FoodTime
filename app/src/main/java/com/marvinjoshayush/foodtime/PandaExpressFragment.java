@@ -47,13 +47,13 @@ public class PandaExpressFragment extends Fragment {
 
     private void setOnClickListeners() {
         HashMap<Integer, Float> map = new HashMap<>();
-        map.put(R.id.pandaExpress_plateBundle, 0f);
-        map.put(R.id.pandaExpress_bowl, 0f);
-        map.put(R.id.pandaExpress_plate, 0f);
-        map.put(R.id.pandaExpress_biggerPlate, 0f);
-        map.put(R.id.pandaExpress_familyMeal, 0f);
+        map.put(R.id.pandaExpress_plateBundle, 13.30f);
+        map.put(R.id.pandaExpress_bowl, 8.40f);
+        map.put(R.id.pandaExpress_plate, 9.90f);
+        map.put(R.id.pandaExpress_biggerPlate, 11.40f);
+        map.put(R.id.pandaExpress_familyMeal, 35.00f);
         map.put(R.id.pandaExpress_cubMeal, 0f);
-        map.put(R.id.pandaExpress_aLaCarte, 0f);
+        map.put(R.id.pandaExpress_aLaCarte, 5.20f);
         map.put(R.id.pandaExpress_appetizers, 0f);
         map.put(R.id.pandaExpress_drinks, 0f);
 
@@ -65,9 +65,9 @@ public class PandaExpressFragment extends Fragment {
                 if(maxSelections != null) {
                     String itemName = getItemName(entry.getKey());
                     String imageStr = getImageStr(entry.getKey());
-                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, maxSelections, itemName, imageStr, entry.getValue());
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, entry.getValue(), maxSelections, itemName, imageStr);
                 } else {
-                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos);
+                    frag = new PandaExpressSubMenuFragment(home, layout.views, layout.imageButtonInfos, entry.getValue());
                 }
                 home.setFragment(frag);
             });
@@ -171,6 +171,7 @@ public class PandaExpressFragment extends Fragment {
         vAndI.views.addAll(n.views);
         for(ImageButtonInfo x : n.imageButtonInfos) {
             x.section = 2;
+            x.setPrice(0);
         }
         vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
@@ -186,6 +187,7 @@ public class PandaExpressFragment extends Fragment {
         vAndI.views.addAll(n.views);
         for(ImageButtonInfo x : n.imageButtonInfos) {
             x.section = 3;
+            x.setPrice(0);
         }
         vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
         return vAndI;

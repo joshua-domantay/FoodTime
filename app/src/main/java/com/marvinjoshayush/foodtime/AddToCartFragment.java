@@ -15,11 +15,11 @@ import java.util.ArrayList;
 public class AddToCartFragment extends Fragment {
     private HomeActivity home;
     private ScrollView parent;
-    private LinearLayout foodItem;
+    private FoodItem foodItem;
     private View view;
     private Fragment back;
 
-    public AddToCartFragment(HomeActivity home, LinearLayout foodItem, Fragment back) {
+    public AddToCartFragment(HomeActivity home, FoodItem foodItem, Fragment back) {
         this.home = home;
         this.foodItem = foodItem;
         this.back = back;
@@ -29,7 +29,7 @@ public class AddToCartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_add_to_cart, container, false);
         parent = view.findViewById(R.id.addToCart_scrollView);
-        parent.addView(foodItem);
+        parent.addView(foodItem.getView());
         view.findViewById(R.id.addToCart_cancel).setOnClickListener(item -> {
             home.setFragment(back);
         });

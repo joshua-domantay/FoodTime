@@ -60,8 +60,8 @@ public class SubMenuFragment extends Fragment {
 
         for(ImageButtonInfo ibf : imageButtonInfos) {
             ibf.getButton().setOnClickListener(item -> {
-                LinearLayout foodItem = ViewMaker.createFoodItemView(getContext(), ("mcdonalds_" + ibf.getNameForFile()),
-                        "McDonalds", ibf.getName(), new ArrayList<>(), ibf.getPrice());
+                FoodItem foodItem = new FoodItem(getContext(), "McDonalds", ibf.getName(),
+                        ("mcdonalds_" + ibf.getNameForFile()), new ArrayList<>(), ibf.getPrice());
                 home.setFragment(new AddToCartFragment(home, foodItem, new McDonaldsFragment(home)));
             });
         }

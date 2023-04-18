@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private RestaurantManager restaurantManager;
     private String userID;
     private BottomNavigationView bottomNavBar;
-    public ArrayList<LinearLayout> cartItems;
+    public ArrayList<FoodItem> cartItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

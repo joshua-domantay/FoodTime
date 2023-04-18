@@ -39,4 +39,6 @@ public class ImageButtonInfo {
     public String getNameForFile() { return nameForFile; }
     public float getPrice() { return price; }
     public ImageButtonType getType() { return type; }
+
+    public void setPrice(float x) { price = x; }
 }

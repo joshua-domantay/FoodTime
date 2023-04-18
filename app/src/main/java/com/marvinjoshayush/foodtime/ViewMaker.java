@@ -174,6 +174,10 @@ public class ViewMaker {
             secondLL.addView(x);
         }
 
+        TextView priceV = createBasicTextView(context, MATCH_WRAP, ("Total: " + String.format("%.2f", price)), R.color.black, 20);
+        priceV.setTypeface(null, Typeface.BOLD);
+        secondLL.addView(priceV);
+
         parent.addView(secondLL);
 
         return parent;

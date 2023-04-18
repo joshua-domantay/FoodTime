@@ -11,10 +11,15 @@ class MenuItem {
     private float price;
 
     public MenuItem(String name) {
-        this.name = name;
-        setNameForFile(name);
+        String[] x = name.split(">");
+        this.name = x[0];
+        setNameForFile(this.name);
         ingredients = new ArrayList<>();
-        price = 1;      // TODO: Split name by '>' where name = '{name} > {price}'
+        price = 0;
+        if(x.length > 1) {
+            String[] y = x[1].split("-");
+            price = Float.parseFloat(y[0] + "." + y[1]);
+        }
     }
 
     public void addIngredients(ArrayList<String> ingredients) {
