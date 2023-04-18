@@ -1,54 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-    tools:ignore="ExtraText">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChangeNameActivity">
 
-    <!-- Include the Toolbar as the app bar -->
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:navigationIcon="?attr/homeAsUpIndicator"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!-- The EditText for the new name -->
-
-    <!-- The button to change the name -->
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <EditText
         android:id="@+id/new_name_field"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter new name"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+        android:hint="Enter new name" />
 
     <Button
-        tools:ignore="HardcodedText"
         android:id="@+id/change_name_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change name" />
 
     <Button
-        android:id="@+id/back"
-        android:layout_width="243dp"
-        android:layout_height="match_parent"
-        android:layout_weight="250"
-        android:insetLeft="0dp"
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Back" />
 
 </LinearLayout>
+

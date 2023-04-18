@@ -1,25 +1,28 @@
 package com.marvinjoshayush.foodtime;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
-
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.view.MenuItem;
-
-
 
 public class ChangeNameActivity extends AppCompatActivity {
 
     private EditText newNameField;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_name);
+        backButton = findViewById(R.id.back_button);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+       // enable back button
 
         newNameField = findViewById(R.id.new_name_field);
 
@@ -36,14 +39,30 @@ public class ChangeNameActivity extends AppCompatActivity {
                 Toast.makeText(ChangeNameActivity.this, "Name changed to " + newName, Toast.LENGTH_SHORT).show();
             }
         });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
-            return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

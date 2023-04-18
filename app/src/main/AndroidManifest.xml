@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodTime">
         <activity
+            android:name=".ChangeAddressActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChangeNameActivity"
             android:exported="false" />
         <activity

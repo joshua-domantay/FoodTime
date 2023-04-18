@@ -23,32 +23,44 @@
             android:id="@+id/Dairy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textOff="Dairy"
+            android:textOn="Dairy"
             android:text="Dairy" />
 
         <ToggleButton
             android:id="@+id/Fish"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textOff="Fish"
+            android:textOn="Fish"
             android:text="Fish" />
         <ToggleButton
             android:id="@+id/Eggs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textOff="Eggs"
+            android:textOn="Eggs"
             android:text="Eggs" />
         <ToggleButton
             android:id="@+id/Wheat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textOff="Wheat"
+            android:textOn="Wheat"
             android:text="Wheat" />
         <ToggleButton
             android:id="@+id/Soy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textOff="Soy"
+            android:textOn="Soy"
             android:text="Soy" />
         <ToggleButton
             android:id="@+id/Gluten"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textOff="Gluten"
+            android:textOn="Gluten"
             android:text="Gluten" />
 
         <Button

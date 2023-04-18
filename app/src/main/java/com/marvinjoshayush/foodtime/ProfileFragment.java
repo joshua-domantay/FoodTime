@@ -70,7 +70,7 @@ public class ProfileFragment extends Fragment {
         myButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ThirdActivity.class);
+                Intent intent = new Intent(getActivity(), ChangeAddressActivity.class);
                 startActivity(intent);
                 getActivity().finish();
             }

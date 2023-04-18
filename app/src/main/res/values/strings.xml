@@ -67,4 +67,11 @@
     <string name="email_hint" />
     <string name="reset_password" />
     <string name="reset" />
+    <string name="change_address_title">Change Address</string>
+    <string name="address_hint">Enter your address here</string>
+    <string name="city_hint">City</string>
+    <string name="state_hint">Enter State</string>
+    <string name="zip_hint">Zip Code</string>
+    <string name="save_button">Save</string>
+
 </resources>
