@@ -16,13 +16,17 @@ public class SubMenuFragment extends Fragment {
     private HomeActivity home;
     private Fragment returnFragment;
     private View view;
+    private String restName;
+    private String restNameForFile;
     private ImageView logo;
     private ArrayList<View> viewsToAdd;
     private ArrayList<ImageButtonInfo> imageButtonInfos;
     private LinearLayout parentLayout;
 
-    public SubMenuFragment(HomeActivity home, ImageView logo, Fragment returnFragment, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos) {
+    public SubMenuFragment(HomeActivity home, String restName, String restNameForFile, ImageView logo, Fragment returnFragment, ArrayList<View> viewsToAdd, ArrayList<ImageButtonInfo> imageButtonInfos) {
         this.home = home;
+        this.restName = restName;
+        this.restNameForFile = restNameForFile;
         this.logo = logo;
         this.returnFragment = returnFragment;
         this.viewsToAdd = viewsToAdd;
@@ -60,9 +64,9 @@ public class SubMenuFragment extends Fragment {
 
         for(ImageButtonInfo ibf : imageButtonInfos) {
             ibf.getButton().setOnClickListener(item -> {
-                FoodItem foodItem = new FoodItem(getContext(), "McDonalds", ibf.getName(),
-                        ("mcdonalds_" + ibf.getNameForFile()), new ArrayList<>(), ibf.getPrice());
-                home.setFragment(new AddToCartFragment(home, foodItem, new McDonaldsFragment(home)));
+                FoodItem foodItem = new FoodItem(getContext(), restName, ibf.getName(),
+                        (restNameForFile + "_" + ibf.getNameForFile()), new ArrayList<>(), ibf.getPrice());
+                home.setFragment(new AddToCartFragment(home, foodItem, returnFragment));
             });
         }
     }

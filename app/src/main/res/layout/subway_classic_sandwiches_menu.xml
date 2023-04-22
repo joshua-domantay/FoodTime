@@ -29,7 +29,7 @@
             android:backgroundTint="@color/white"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_font_icon"></ImageButton>
+            app:srcCompat="@drawable/subway_menu_logo"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/black_forest_ham_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_black_forest_ham_classic_sandwich"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,7 +73,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/buffalo_chicken_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_buffalo_chicken_classic_sandwich"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,7 +86,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/blt_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_blt_classic_sandwich"></ImageButton>
 
 
 
@@ -105,7 +105,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/chicken_and_bacon_ranch"></ImageButton>
+            app:srcCompat="@drawable/subway_chicken_bacon_ranch_classic_sandwich"></ImageButton>
 
 
         <LinearLayout
@@ -119,7 +119,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/cold_cut_combo"></ImageButton>
+            app:srcCompat="@drawable/subway_cold_cut_combo_classic_sandwich"></ImageButton>
 
 
         <LinearLayout
@@ -133,7 +133,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/grilled_chicken_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_grilled_chicken_classic_sandwich"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -146,7 +146,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/italian_bmt_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_italian_bmt_classic_sandwich"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -159,7 +159,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/meatball_marinara_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_meatball_marinara_classic_sandwich"></ImageButton>
 
 
         <LinearLayout
@@ -173,7 +173,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/oven_roasted_turkey_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_classic_sandwich"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -186,7 +186,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/oven_roasted_turkey_and_ham_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_ham"></ImageButton>
 
 
 
@@ -215,7 +215,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/rotisserie_style_chicken_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_rotisserie_style_chicken_classic_sandwich"></ImageButton>
 
 
         <LinearLayout
@@ -230,7 +230,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/spicy_italian_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_spicy_italian_classic_sandwich"></ImageButton>
 
 
         <LinearLayout
@@ -245,7 +245,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/steak_and_cheese_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_steak_cheese_classic_sandwich"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -259,7 +259,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/sweet_onion_chicken_teriyaki_subway"></ImageButton>
+            app:srcCompat="@drawable/subway_sweet_onion_chicken_teriyaki_classic_sandwich"></ImageButton>
 
 
         <LinearLayout
@@ -274,7 +274,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/subway_tuna"></ImageButton
+            app:srcCompat="@drawable/subway_tuna_classic_sandwich"></ImageButton
            >
 
         <LinearLayout
@@ -289,7 +289,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/veggie_delite_subway"></ImageButton
+            app:srcCompat="@drawable/subway_veggie_delite_classic_sandwich"></ImageButton
             >
 
         <LinearLayout
@@ -304,7 +304,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/subway_veggie_patty"></ImageButton
+            app:srcCompat="@drawable/subway_veggie_patty_classic_sandwich"></ImageButton
             >
 
 

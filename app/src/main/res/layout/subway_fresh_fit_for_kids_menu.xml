@@ -29,7 +29,7 @@
             android:backgroundTint="@color/white"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_font_icon"></ImageButton>
+            app:srcCompat="@drawable/subway_menu_logo"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,7 +46,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_black_forest_ham_for_kids_fffk"></ImageButton>
+            app:srcCompat="@drawable/subway_black_forest_ham_for_kids"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_oven_roasted_turkey_for_kids_fffk"></ImageButton>
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_for_kids"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_veggie_delite_for_kids_fffk"></ImageButton>
+            app:srcCompat="@drawable/subway_veggie_delite_for_kids"></ImageButton>
 
 
         <Space

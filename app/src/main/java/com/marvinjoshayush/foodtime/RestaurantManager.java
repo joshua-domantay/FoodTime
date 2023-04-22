@@ -1,7 +1,11 @@
 package com.marvinjoshayush.foodtime;
 
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -126,22 +130,54 @@ public class RestaurantManager {
         putPandaExpress(restRef.child("Panda Express"));
         putSubway(restRef.child("Subway"));
         putMcdonalds(restRef.child("McDonalds"));
+    }
 
-        /*
-        FirebaseDatabase.getInstance().getReference("Users")
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
-                    // Toast.makeText(SignUpActivity.this,"User has been registered Sucessfully!",Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(SignUpActivity.this, WelcomeActivity1.class));
-                } else {
-                    Toast.makeText(SignUpActivity.this,"Cannot process registration. Try again.",Toast.LENGTH_LONG).show();
+    public static ViewsAndImageButtonInfos createLayoutFromFirebase(HomeActivity home, Context context, String restName, String sectionName) {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
+        ArrayList<String> added = new ArrayList<>();
+        for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
+            if(rest.getNameForFile().equalsIgnoreCase(restName)) {
+                for(MenuSection section : rest.getMenuSections()) {
+                    if(section.getName().equalsIgnoreCase(sectionName)) {
+                        for (MenuItem item : section.getMenu()) {
+                            if(!added.contains(item.getNameForFile())) {
+                                String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
+                                View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                                if(x != null) {
+                                    contents.views.add(x);
+                                    contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                                }
+                                added.add(item.getNameForFile());
+                            }
+                        }
+                    }
+                }
+                break;
+            }
+        }
+        return contents;
+    }
+
+    public static ViewsAndImageButtonInfos getSpecifiedMenu(HomeActivity home, Context context, String restName, ArrayList<String> toAdd) {
+        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
+        for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
+            if (rest.getNameForFile().equalsIgnoreCase(restName)) {
+                for(MenuSection section : rest.getMenuSections()) {
+                    for (MenuItem item : section.getMenu()) {
+                        if(toAdd.contains(item.getNameForFile().toLowerCase()) || toAdd.contains(item.getName().toLowerCase())) {
+                            String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
+                            View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                            if(x != null) {
+                                contents.views.add(x);
+                                contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                            }
+                            toAdd.remove(item.getNameForFile().toLowerCase());
+                        }
+                    }
                 }
             }
-        });
-        */
+        }
+        return contents;
     }
 
     private void putPandaExpress(DatabaseReference restRef) {

@@ -29,7 +29,7 @@
             android:backgroundTint="@color/white"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_font_icon"></ImageButton>
+            app:srcCompat="@drawable/subway_menu_logo"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_black_forest_ham"></ImageButton>
+            app:srcCompat="@drawable/subway_black_forest_ham_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_buffalo_chicken"></ImageButton>
+            app:srcCompat="@drawable/subway_buffalo_chicken_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_blt"></ImageButton>
+            app:srcCompat="@drawable/subway_blt_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,7 +114,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_chicken_and_bacon_ranch"></ImageButton>
+            app:srcCompat="@drawable/subway_chicken_bacon_ranch_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,7 +131,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_cold_cut_combo"></ImageButton>
+            app:srcCompat="@drawable/subway_cold_cut_combo_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -148,7 +148,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_grilled_chicken"></ImageButton>
+            app:srcCompat="@drawable/subway_grilled_chicken_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,7 +165,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_italian_bmt"></ImageButton>
+            app:srcCompat="@drawable/subway_italian_bmt_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -182,7 +182,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_meatball_marinara"></ImageButton>
+            app:srcCompat="@drawable/subway_meatball_marinara_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -199,7 +199,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_oven_roasted_turkey"></ImageButton>
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -216,7 +216,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_oven_roasted_turkey_and_ham"></ImageButton>
+            app:srcCompat="@drawable/subway_oven_roasted_turkey_ham_bowl"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -233,42 +233,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_roast_beef"></ImageButton>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-
-
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            android:contextClickable="false"
-            android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_rotisserie_style_chicken"></ImageButton>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-
-
-
-        <ImageButton
-
-            android:layout_width="match_parent"
-            android:layout_height="373dp"
-            android:layout_gravity="center"
-            android:backgroundTint="#FFFFFF"
-            android:contextClickable="false"
-            android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_spicy_italian"></ImageButton>
+            app:srcCompat="@drawable/subway_roast_beef_bowl"></ImageButton>
 
 
         <LinearLayout
@@ -286,7 +251,24 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_steak_and_cheese"></ImageButton>
+            app:srcCompat="@drawable/subway_rotisserie_style_chicken_bowl"></ImageButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_spicy_italian_bowl"></ImageButton>
 
 
         <LinearLayout
@@ -304,7 +286,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_sweet_onion_chicken_teriyaki"></ImageButton>
+            app:srcCompat="@drawable/subway_steak_cheese_bowl"></ImageButton>
 
 
         <LinearLayout
@@ -322,7 +304,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_tuna_nobready_bowl"></ImageButton>
+            app:srcCompat="@drawable/subway_sweet_onion_chicken_teriyaki_bowl"></ImageButton>
 
 
         <LinearLayout
@@ -340,7 +322,25 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_veggie_patty_nobready_bowl"></ImageButton>
+            app:srcCompat="@drawable/subway_tuna_bowl"></ImageButton>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+
+
+        <ImageButton
+
+            android:layout_width="match_parent"
+            android:layout_height="373dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#FFFFFF"
+            android:contextClickable="false"
+            android:cropToPadding="false"
+            app:srcCompat="@drawable/subway_veggie_patty_bowl"></ImageButton>
 
         <Space
             android:layout_width="match_parent"

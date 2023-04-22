@@ -22,16 +22,6 @@ public class PandaExpressFragment extends Fragment {
     private HomeActivity home;
     private View view;
 
-    // Width and height layout parameters
-    private LinearLayout.LayoutParams matchWrap = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-    );
-    private LinearLayout.LayoutParams wrapWrap = new LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-    );
-
     public PandaExpressFragment(HomeActivity home) {
         this.home = home;
     }
@@ -214,16 +204,16 @@ public class PandaExpressFragment extends Fragment {
     }
 
     private ViewsAndImageButtonInfos createLayoutCubMeals() {
-        return createLayoutFromFirebase("cub meals");
+        return RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "cub meals");
     }
 
     private ViewsAndImageButtonInfos createLayoutALaCarte() {
         // Side + Entree
         ViewsAndImageButtonInfos vAndI = new ViewsAndImageButtonInfos();
-        ViewsAndImageButtonInfos n = createLayoutFromFirebase("entrees");
+        ViewsAndImageButtonInfos n = RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "entrees");
         vAndI.views.addAll(n.views);
         vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
-        n = createLayoutFromFirebase("sides");
+        n = RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "sides");
         vAndI.views.addAll(n.views);
         for(ImageButtonInfo x : n.imageButtonInfos) {
             x.section = 1;
@@ -233,11 +223,11 @@ public class PandaExpressFragment extends Fragment {
     }
 
     private ViewsAndImageButtonInfos createLayoutAppetizers() {
-        return createLayoutFromFirebase("appetizers");
+        return RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "appetizers");
     }
 
     private ViewsAndImageButtonInfos createLayoutDrinks() {
-        return createLayoutFromFirebase("drinks");
+        return RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "drinks");
     }
 
     // Bowl, Plate, BiggerPlate
@@ -250,7 +240,7 @@ public class PandaExpressFragment extends Fragment {
         vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Sides
-        ViewsAndImageButtonInfos n = createLayoutFromFirebase("sides");
+        ViewsAndImageButtonInfos n = RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "sides");
         vAndI.views.addAll(n.views);
         vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
@@ -261,7 +251,7 @@ public class PandaExpressFragment extends Fragment {
         vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Entrees
-        n = createLayoutFromFirebase("entrees");
+        n = RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "entrees");
         vAndI.views.addAll(n.views);
         for(ImageButtonInfo x : n.imageButtonInfos) {
             x.section = 1;
@@ -269,27 +259,5 @@ public class PandaExpressFragment extends Fragment {
         vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         return vAndI;
-    }
-
-    private ViewsAndImageButtonInfos createLayoutFromFirebase(String sectionName) {
-        ViewsAndImageButtonInfos contents = new ViewsAndImageButtonInfos();
-        for(Restaurant rest : home.getRestaurantManager().getRestaurants()) {
-            if(rest.getNameForFile().equalsIgnoreCase("panda_express")) {
-                for(MenuSection section : rest.getMenuSections()) {
-                    if(section.getName().equalsIgnoreCase(sectionName)) {
-                        for (MenuItem item : section.getMenu()) {
-                            String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                            View x = ViewMaker.createBasicImageButton(getContext(), ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
-                            if(x != null) {
-                                contents.views.add(x);
-                                contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
-                            }
-                        }
-                    }
-                }
-                break;
-            }
-        }
-        return contents;
     }
 }

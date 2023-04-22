@@ -19,7 +19,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/subway_font_icon"/>
+                android:layout_gravity="center"
+                android:src="@drawable/subway_menu_logo"/>
 
             <!-- Plate Bundle -->
             <ImageButton

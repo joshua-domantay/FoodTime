@@ -29,7 +29,7 @@
             android:backgroundTint="@color/white"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_font_icon"></ImageButton>
+            app:srcCompat="@drawable/subway_menu_logo"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_chicken_and_bacon_ranch_melt"></ImageButton>
+            app:srcCompat="@drawable/subway_chicken_bacon_ranch_melt"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_ham_and_cheese_melt"></ImageButton>
+            app:srcCompat="@drawable/subway_ham_cheese_melt"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,7 +165,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_steak_and_cheese_melt"></ImageButton>
+            app:srcCompat="@drawable/subway_steak_cheese_melt"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
