@@ -60,7 +60,7 @@
             android:layout_height="373dp"
             android:layout_gravity="center"
             android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/mcdonalds_mcflurry_with_mms_candies"></ImageButton>
+            app:srcCompat="@drawable/mcdonalds_mcflurry_with_m_m_s_candies"></ImageButton>
 
 
         <LinearLayout

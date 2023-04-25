@@ -35,7 +35,7 @@ public class RestaurantManager {
 
     private void initializeRestaurants() {
         // restaurants.add(getPandaExpress());
-        // restaurantToFirebase();
+        restaurantToFirebase();
 
         DatabaseReference restaurantsFirebase = FirebaseDatabase.getInstance().getReference("Restaurants");
         getRestaurantsFromFirebase(restaurantsFirebase);
@@ -1615,7 +1615,7 @@ public class RestaurantManager {
                 "wheat", "soy", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika", "spice extractive", "cucumbers",
                 "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "onions"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Hamburger", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Hamburger>1-99", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -1627,7 +1627,7 @@ public class RestaurantManager {
                 "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika", "spice extractive", "cucumbers", "calcium chloride",
                 "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "onions"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Cheeseburger", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Cheeseburger>2-19", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -1639,7 +1639,7 @@ public class RestaurantManager {
                 "artificial color", "lactic acid", "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed",
                 "turmeric", "paprika", "spice extractive", "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "onions"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Double Cheeseburger", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Double Cheeseburger>2-99", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -1651,7 +1651,7 @@ public class RestaurantManager {
                 "lactic acid", "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "cucumbers", "calcium chloride", "alum",
                 "potassium sorbate", "natural plant flavor", "polysorbate 80", "turmeric", "onions", "mustard seed", "paprika", "spice extractive"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "McDouble", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "McDouble>2-89", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -1663,7 +1663,7 @@ public class RestaurantManager {
                 "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika", "spice extractive",
                 "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese>5-79", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -1675,7 +1675,7 @@ public class RestaurantManager {
                 "acetic acid", "tomato", "distilled vinegar", "corn syrup", "natural vegetable flavor", "mustard seed", "turmeric", "paprika", "spice extractive",
                 "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Double Quarter Pounder with Cheese", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Double Quarter Pounder with Cheese>7-19", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "milk", "water", "milkfat", "cheese culture", "sodium citrate", "citric acid", "sorbic acid",
@@ -1689,7 +1689,7 @@ public class RestaurantManager {
                 "propylene glycol alginate", "sodium benzoate", "mustard bran", "garlic powder", "vegetable protein", "hydrolyzed corn", "caramel color", "paprika",
                 "calcium disodium edta", "egg"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Big Mac", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Big Mac>5-79", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -1785,7 +1785,7 @@ public class RestaurantManager {
                 "distilled vinegar", "spice", "parsley", "egg", "milkfat", "cheese culture", "sodium citrate", "sorbic acid", "sodium phosphate", "artificial color",
                 "lactic acid", "acetic acid"
         };
-        restaurantToFirebaseH(restRef, "Chicken & Fish Sandwiches", "Filet-O-Fish", ingredients);
+        restaurantToFirebaseH(restRef, "Chicken & Fish Sandwiches", "Filet-O-Fish>5-29", ingredients);
 
         ingredients = new String[]{
                 "chicken", "water", "salt", "sodium phosphates", "bleached wheat flour", "wheat flour", "food starch-modified", "spices", "wheat gluten", "paprika",
@@ -1798,7 +1798,7 @@ public class RestaurantManager {
                 "distilled vinegar", "maltodextrin", "enzyme modified egg yolk", "xanthan gum", "mustard flour", "potassium sorbate", "lemon juice concentrate",
                 "polysorbate 80", "natural animal flavor", "calcium disodium edta", "beta carotene", "egg"
         };
-        restaurantToFirebaseH(restRef, "Chicken & Fish Sandwiches", "McChicken", ingredients);
+        restaurantToFirebaseH(restRef, "Chicken & Fish Sandwiches", "McChicken>5-29", ingredients);
 
         ingredients = new String[]{
                 "water", "high fructose corn syrup", "tomato paste", "distilled vinegar", "molasses", "natural plant flavor", "food starch-modified", "salt", "sugar",
@@ -1836,7 +1836,7 @@ public class RestaurantManager {
                 "calcium sulfate", "dough conditioners", "datem", "ascorbic acid", "azodicarbonamide", "sodium stearoyl lactylate", "monoglycerides", "diglycerides",
                 "enzymes", "calcium peroxide", "ammonium sulfate", "calcium propionate", "vitamin d3", "rolled wheat"
         };
-        restaurantToFirebaseH(restRef, "Chicken & Fish Sandwiches", "Premium Crispy Chicken Classic Sandwich", ingredients);
+        restaurantToFirebaseH(restRef, "Chicken & Fish Sandwiches", "Premium Crispy Chicken Classic Sandwich>0-00", ingredients);
 
         ingredients = new String[]{
                 "water", "soybean oil", "distilled vinegar", "maltodextrin", "food starch-modified", "enzyme modified egg yolk", "salt", "sugar", "xanthan gum",
@@ -2115,7 +2115,7 @@ public class RestaurantManager {
                 "potatoes", "vegetable oil", "canola oil", "hydrogenated soybean oil", "natural beef flavor", "wheat", "milk", "citric acid", "dextrose", "sodium acid",
                 "pyrophosphate", "salt", "corn oil", "soybean oil", "tbhq", "dimethylpolysiloxane", "hydrolyzed wheat", "hydrolyzed milk"
         };
-        restaurantToFirebaseH(restRef, "Fries & Sides", "French Fries", ingredients);
+        restaurantToFirebaseH(restRef, "Fries & Sides", "French Fries>3-19", ingredients);
 
         ingredients = new String[]{
                 "tomatoes", "distilled vinegar", "high fructose corn syrup", "corn syrup", "water", "salt", "natural vegetable flavor"
@@ -2132,7 +2132,7 @@ public class RestaurantManager {
                 "monocalcium phosphate", "calcium lactate", "spices", "corn starch", "wheat", "vegetable oil", "canola oil", "corn oil", "soybean oil",
                 "hydrogenated soybean oil", "tbhq", "dimethylpolysiloxane"
         };
-        restaurantToFirebaseH(restRef, "McNuggets and Meals", "Chicken McNuggets", ingredients);
+        restaurantToFirebaseH(restRef, "McNuggets and Meals", "Chicken McNuggets>2-39", ingredients);
 
         ingredients = new String[]{
                 "white boneless chicken", "water", "food starch-modified", "salt", "seasoning", "autolyzed yeast extract", "wheat starch", "natural botanical flavor",
@@ -2141,7 +2141,7 @@ public class RestaurantManager {
                 "monocalcium phosphate", "calcium lactate", "spices", "corn starch", "wheat", "vegetable oil", "canola oil", "corn oil", "soybean oil",
                 "hydrogenated soybean oil", "tbhq", "dimethylpolysiloxane"
         };
-        restaurantToFirebaseH(restRef, "McNuggets and Meals", "Chicken McNuggets 10pc", ingredients);
+        restaurantToFirebaseH(restRef, "McNuggets and Meals", "Chicken McNuggets 10pc>5-79", ingredients);
 
         ingredients = new String[]{
                 "high fructose corn syrup", "water", "tomato paste", "grape vinegar", "distilled vinegar", "salt", "soy sauce", "wheat", "soybeans", "food starch-modified",
@@ -2364,7 +2364,7 @@ public class RestaurantManager {
                 "milkfat", "cheese culture", "sodium citrate", "sorbic acid", "sodium phosphate", "artificial color", "lactic acid", "acetic acid", "pork", "sodium lactate",
                 "natural vegetable flavor", "sodium diacetate", "sodium nitrite"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Egg McMuffin", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Egg McMuffin>4-48", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "water",
@@ -2376,7 +2376,7 @@ public class RestaurantManager {
                 "corn syrup solids", "spices", "dextrose", "spice extractives", "caramel color", "bha", "propyl gallate", "bht", "milk", "milkfat", "cheese culture",
                 "sodium citrate", "sorbic acid", "sodium phosphate", "artificial color", "lactic acid", "acetic acid"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage McMuffin", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage McMuffin>2-09", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "water",
@@ -2388,7 +2388,7 @@ public class RestaurantManager {
                 "corn syrup solids", "spices", "dextrose", "spice extractives", "caramel color", "bha", "propyl gallate", "bht", "milk", "eggs", "hydrogenated soybean oil",
                 "milkfat", "cheese culture", "sodium citrate", "sorbic acid", "sodium phosphate", "artificial color", "lactic acid", "acetic acid"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage McMuffin with Egg", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage McMuffin with Egg>3-76", ingredients);
 
         ingredients = new String[]{
                 "pork bellies", "water", "salt", "sugar", "natural plant flavor", "sodium phosphate", "sodium erythorbate", "sodium nitrite", "enriched flour",
@@ -2400,7 +2400,7 @@ public class RestaurantManager {
                 "maltodextrin", "spices", "herb", "turmeric", "monosodium phosphate", "milkfat", "cheese culture", "sodium citrate", "sorbic acid", "artificial color",
                 "lactic acid", "acetic acid", "enzymes"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Bacon, Egg & Cheese Biscuit (Regular Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Bacon, Egg & Cheese Biscuit (Regular Size Biscuit)>6-99", ingredients);
 
         ingredients = new String[]{
                 "pork bellies", "water", "salt", "sugar", "natural plant flavor", "sodium phosphate", "sodium erythorbate", "sodium nitrite", "enriched flour",
@@ -2423,7 +2423,7 @@ public class RestaurantManager {
                 "spice extractives", "caramel color", "bha", "propyl gallate", "bht", "pasteurized whole eggs", "food starch-modified", "soybean oil",
                 "sodium acid pyrophosphate", "carrageenan", "flavor enhancer", "maltodextrin", "natural plant flavor", "herb", "turmeric", "monosodium phosphate"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit with Egg (Regular Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit with Egg (Regular Size Biscuit)>4-22", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "cultured nonfat buttermilk",
@@ -2434,7 +2434,7 @@ public class RestaurantManager {
                 "spice extractives", "caramel color", "bha", "propyl gallate", "bht", "pasteurized whole eggs", "food starch-modified", "soybean oil",
                 "sodium acid pyrophosphate", "carrageenan", "flavor enhancer", "maltodextrin", "natural plant flavor", "herb", "turmeric", "monosodium phosphate"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit with Egg (Large Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit with Egg (Large Size Biscuit)>0-00", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "cultured nonfat buttermilk",
@@ -2444,7 +2444,7 @@ public class RestaurantManager {
                 "artificial flavor", "citric acid", "palmitate", "beta carotene", "pork", "whey protein concentrate", "corn syrup solids", "spices", "dextrose",
                 "spice extractives", "caramel color", "bha", "propyl gallate", "bht"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit (Regular Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit (Regular Size Biscuit)>2-01", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "cultured nonfat buttermilk",
@@ -2454,7 +2454,7 @@ public class RestaurantManager {
                 "artificial flavor", "citric acid", "palmitate", "beta carotene", "pork", "whey protein concentrate", "corn syrup solids", "spices", "dextrose",
                 "spice extractives", "caramel color", "bha", "propyl gallate", "bht"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit (Large Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Biscuit (Large Size Biscuit)>0-00", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "cultured nonfat buttermilk",
@@ -2507,7 +2507,7 @@ public class RestaurantManager {
                 "cheese culture", "sodium citrate", "sorbic acid", "sodium phosphate", "artificial color", "lactic acid", "acetic acid", "enzymes", "pork bellies",
                 "sodium erythorbate", "sodium nitrite"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Bacon, Egg & Cheese McGriddles", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Bacon, Egg & Cheese McGriddles>8-65", ingredients);
 
         ingredients = new String[]{
                 "water", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin",
@@ -2520,7 +2520,7 @@ public class RestaurantManager {
                 "partially hydrogenated soybean oil", "monoglycerides", "diglycerides", "sodium benzoate", "potassium sorbate", "artificial flavor", "palmitate",
                 "beta carotene", "milkfat", "cheese culture", "sodium citrate", "sorbic acid", "sodium phosphate", "artificial color", "lactic acid", "acetic acid", "enzymes"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage, Egg & Cheese McGriddles", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage, Egg & Cheese McGriddles>5-04", ingredients);
 
         ingredients = new String[]{
                 "water", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron", "thiamine mononitrate", "riboflavin", "folic acid",
@@ -2529,7 +2529,7 @@ public class RestaurantManager {
                 "modified tapioca starch", "buttermilk", "caramel color", "soy lecithin", "carnauba wax", "corn oil", "propylene glycol", "tbhq", "citric acid",
                 "wheat", "milk", "soy", "pork", "whey protein concentrate", "corn syrup solids", "spices", "spice extractives", "bha", "propyl gallate", "bht"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage McGriddles", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage McGriddles>3-21", ingredients);
 
         ingredients = new String[]{
                 "pasteurized whole eggs", "sodium phosphate", "citric acid", "monosodium phosphate", "nisin preparation", "liquid soybean oil", "hydrogenated cottonseed",
@@ -2541,7 +2541,7 @@ public class RestaurantManager {
                 "wheat protein isolate", "natural botanical flavor", "wheat", "potatoes", "canola oil", "natural beef flavor", "corn flour", "dehydrated potato",
                 "sodium acid pyrophosphate", "black pepper", "corn oil", "soybean oil", "tbhq", "dimethylpolysiloxane", "hydrolyzed wheat", "hydrolyzed milk"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Big Breakfast (Regular Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Big Breakfast (Regular Size Biscuit)>5-32", ingredients);
 
         ingredients = new String[]{
                 "pasteurized whole eggs", "sodium phosphate", "citric acid", "monosodium phosphate", "nisin preparation", "liquid soybean oil", "hydrogenated cottonseed",
@@ -2553,7 +2553,7 @@ public class RestaurantManager {
                 "wheat protein isolate", "natural botanical flavor", "wheat", "potatoes", "canola oil", "natural beef flavor", "corn flour", "dehydrated potato",
                 "sodium acid pyrophosphate", "black pepper", "corn oil", "soybean oil", "tbhq", "dimethylpolysiloxane", "hydrolyzed wheat", "hydrolyzed milk"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Big Breakfast (Large Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Big Breakfast (Large Size Biscuit)>0-00", ingredients);
 
         ingredients = new String[]{
                 "pasteurized whole eggs", "sodium phosphate", "citric acid", "monosodium phosphate", "nisin preparation", "liquid soybean oil", "hydrogenated cottonseed",
@@ -2567,7 +2567,7 @@ public class RestaurantManager {
                 "wheat protein isolate", "natural botanical flavor", "potatoes", "canola oil", "natural beef flavor", "corn flour", "dehydrated potato",
                 "sodium acid pyrophosphate", "black pepper", "corn oil", "dimethylpolysiloxane", "hydrolyzed wheat", "hydrolyzed milk"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Big Breakfast with Hotcakes (Regular Size Biscuit)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Big Breakfast with Hotcakes (Regular Size Biscuit)>6-69", ingredients);
 
         ingredients = new String[]{
                 "pasteurized whole eggs", "sodium phosphate", "citric acid", "monosodium phosphate", "nisin preparation", "liquid soybean oil", "hydrogenated cottonseed",
@@ -2593,7 +2593,7 @@ public class RestaurantManager {
                 "bha", "propyl gallate", "vegetable blend", "tomatoes", "green chilies", "onions", "calcium chloride", "egg", "milk", "milkfat", "cheese culture",
                 "sodium citrate", "sorbic acid", "artificial color", "lactic acid", "acetic acid", "enzymes", "soy lecithin"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Burrito", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Sausage Burrito>2-16", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "water",
@@ -2619,7 +2619,7 @@ public class RestaurantManager {
                 "sodium stearoyl lactylate", "soy lecithin", "salt", "artificial flavor", "xanthan gum", "beta carotene", "tbhq", "wheat", "milk", "egg", "pork",
                 "whey protein concentrate", "corn syrup solids", "spices", "spice extractives", "caramel color", "bha", "propyl gallate", "bht", "citric acid"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Hotcakes and Sausage", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Hotcakes and Sausage>4-88", ingredients);
 
         ingredients = new String[]{
                 "corn syrup", "sugar", "water", "artificial maple flavor", "potassium sorbate", "caramel color"
@@ -2659,14 +2659,14 @@ public class RestaurantManager {
                 "calcium ascorbate", "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "cranberries", "sugar",
                 "california raisins", "golden raisins", "sunflower oil", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Fruit & Maple Oatmeal", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Fruit & Maple Oatmeal>3-66", ingredients);
 
         ingredients = new String[]{
                 "whole grain rolled oats", "food starch-modified", "salt", "natural plant flavor", "barley malt extract", "caramel color", "apples", "calcium ascorbate",
                 "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "cranberries", "sugar", "california raisins",
                 "golden raisins", "sunflower oil", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Fruit & Maple Oatmeal without Brown Sugar", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Fruit & Maple Oatmeal without Brown Sugar>0-00", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "cultured nonfat buttermilk",
@@ -2692,7 +2692,7 @@ public class RestaurantManager {
                 "dextrose", "egg whites", "glycerol-oleate", "emulsifier blend", "distilled monoglycerides", "distilled propylene glycol monoester",
                 "sodium stearoyl lactylate", "soy lecithin", "salt", "artificial flavor", "xanthan gum", "beta carotene", "tbhq", "wheat", "milk", "egg"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Hotcakes (3)", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Hotcakes (3)>5-56", ingredients);
 
         ingredients = new String[]{"milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan"};
         restaurantToFirebaseH(restRef, "Breakfast", "Light Cream", ingredients);
@@ -2750,7 +2750,7 @@ public class RestaurantManager {
                 "caramel color", "corn syrup", "wheat", "milk", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum",
                 "dextrose", "sodium citrate", "artificial vanilla flavor", "sodium phosphate", "carrageenan", "disodium phosphate", "cellulose gum", "palmitate"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla Reduced Fat Ice Cream Cone", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla Reduced Fat Ice Cream Cone>2-19", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "tapioca starch", "sugar", "shortening",
@@ -2758,7 +2758,7 @@ public class RestaurantManager {
                 "caramel color", "corn syrup", "wheat", "milk", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum",
                 "dextrose", "sodium citrate", "artificial vanilla flavor", "sodium phosphate", "carrageenan", "disodium phosphate", "cellulose gum", "palmitate"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Kiddie Cone", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Kiddie Cone>2-19", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2776,7 +2776,7 @@ public class RestaurantManager {
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
                 "artificial vanilla flavor", "sodium phosphate", "carrageenan", "disodium phosphate", "cellulose gum", "palmitate"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Hot Caramel Sundae", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Hot Caramel Sundae>2-84", ingredients);
 
         ingredients = new String[]{
                 "corn syrup", "sweetened condensed milk", "milk", "sugar", "high fructose corn syrup", "butter", "cream", "salt", "water", "disodium phosphate",
@@ -2788,7 +2788,7 @@ public class RestaurantManager {
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
                 "artificial vanilla flavor", "sodium phosphate", "carrageenan", "disodium phosphate", "cellulose gum", "palmitate"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Hot Fudge Sundae", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Hot Fudge Sundae>2-19", ingredients);
 
         ingredients = new String[]{
                 "sugar", "water", "sweetened condensed skim milk", "milk", "partially hydrogenated palm kernel oil", "nonfat dry milk", "cocoa", "alkali", "corn syrup",
@@ -2802,7 +2802,7 @@ public class RestaurantManager {
                 "skim milk", "cocoa butter", "lactose", "milkfat", "soy lecithin", "salt", "artificial flavors", "corn starch", "corn syrup", "yellow 5 lake",
                 "red 40 lake", "blue 1 lake", "yellow 6 lake", "blue 2 lake", "yellow 5", "red 40", "blue 1", "yellow 6", "blue 2", "dextrin", "peanuts"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "McFlurry with M&M'S Candies", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "McFlurry with M&M'S Candies>3-49", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2810,7 +2810,7 @@ public class RestaurantManager {
                 "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "palm", "high oleic canola", "soybean oil", "cocoa", "alkali",
                 "high fructose corn syrup", "baking soda", "corn starch", "salt", "soy lecithin", "emulsifier", "vanillin", "artificial flavor", "chocolate", "wheat"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "McFlurry with OREO Cookies", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "McFlurry with OREO Cookies>3-49", ingredients);
 
         ingredients = new String[]{
                 "apples", "citric acid", "ascorbic acid", "salt", "enriched flour", "bleached wheat flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin",
@@ -2818,7 +2818,7 @@ public class RestaurantManager {
                 "sorbitol", "palm kernel oil", "dextrose", "brown sugar", "apple powder", "dehydrated apples", "sodium alginate", "dicalcium phosphate", "sodium citrate",
                 "spices", "yeast", "lcysteine", "natural plant flavors", "artificial flavors", "annatto", "turmeric", "caramel color", "wheat"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Baked Hot Apple Pie", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Baked Hot Apple Pie>1-09", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron", "thiamin mononitrate", "riboflavin", "folic acid", "water",
@@ -2844,7 +2844,7 @@ public class RestaurantManager {
                 "palmitate", "brown sugar", "eggs", "vanillin", "ethyl vanillin", "caramel color", "leavening", "baking soda", "sodium acid pyrophosphate", "corn starch",
                 "monocalcium phosphate", "wheat", "milk", "egg"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Chocolate Chip Cookie", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Chocolate Chip Cookie>0-79", ingredients);
 
         ingredients = new String[]{
                 "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "iron", "thiamin mononitrate", "riboflavin", "folic acid", "sugar", "margarine",
@@ -2878,7 +2878,7 @@ public class RestaurantManager {
                 "mixed tocopherols", "whipping propellant", "nitrous oxide", "cherries", "malic acid", "citric acid", "natural plant flavors", "sodium benzoate",
                 "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Chocolate McCafe Shake (12 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Chocolate McCafe Shake (12 fl oz cup)>2-99", ingredients);
 
         ingredients = new String[]{
                 "high fructose corn syrup", "corn syrup", "water", "cocoa", "alkali", "natural botanical flavors", "artificial flavors", "caramel color", "salt",
@@ -2888,7 +2888,7 @@ public class RestaurantManager {
                 "mixed tocopherols", "whipping propellant", "nitrous oxide", "cherries", "malic acid", "citric acid", "natural plant flavors", "sodium benzoate",
                 "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Chocolate McCafe Shake (16 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Chocolate McCafe Shake (16 fl oz cup)>3-59", ingredients);
 
         ingredients = new String[]{
                 "high fructose corn syrup", "corn syrup", "water", "cocoa", "alkali", "natural botanical flavors", "artificial flavors", "caramel color", "salt",
@@ -2914,7 +2914,7 @@ public class RestaurantManager {
                 "xanthan gum", "potassium sorbate", "caramel color",
                 "calcium chloride", "red 40", "egg", "cherries", "malic acid", "sodium benzoate", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Strawberry McCafe Shake (12 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Strawberry McCafe Shake (12 fl oz cup)>2-99", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2924,7 +2924,7 @@ public class RestaurantManager {
                 "xanthan gum", "potassium sorbate", "caramel color",
                 "calcium chloride", "red 40", "egg", "cherries", "malic acid", "sodium benzoate", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Strawberry McCafe Shake (16 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Strawberry McCafe Shake (16 fl oz cup)>3-59", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2934,7 +2934,7 @@ public class RestaurantManager {
                 "xanthan gum", "potassium sorbate", "caramel color",
                 "calcium chloride", "red 40", "egg", "cherries", "malic acid", "sodium benzoate", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Strawberry McCafe Shake (22 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Strawberry McCafe Shake (22 fl oz cup)>3-99", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2955,7 +2955,7 @@ public class RestaurantManager {
                 "polysorbate 80", "beta carotene", "natural dairy flavor", "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols",
                 "whipping propellant", "nitrous oxide", "cherries", "malic acid", "natural plant flavors", "artificial flavors", "potassium sorbate", "red 40", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla McCafe Shake (12 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla McCafe Shake (12 fl oz cup)>2-29", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2964,7 +2964,7 @@ public class RestaurantManager {
                 "polysorbate 80", "beta carotene", "natural dairy flavor", "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols",
                 "whipping propellant", "nitrous oxide", "cherries", "malic acid", "natural plant flavors", "artificial flavors", "potassium sorbate", "red 40", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla McCafe Shake (16 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla McCafe Shake (16 fl oz cup)>3-59", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2973,7 +2973,7 @@ public class RestaurantManager {
                 "polysorbate 80", "beta carotene", "natural dairy flavor", "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols",
                 "whipping propellant", "nitrous oxide", "cherries", "malic acid", "natural plant flavors", "artificial flavors", "potassium sorbate", "red 40", "sulfur dioxide"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla McCafe Shake (22 fl oz cup)", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Vanilla McCafe Shake (22 fl oz cup)>3-99", ingredients);
 
         ingredients = new String[]{
                 "milk", "sugar", "cream", "nonfat milk solids", "corn syrup solids", "monoglycerides", "diglycerides", "guar gum", "dextrose", "sodium citrate",
@@ -2998,7 +2998,7 @@ public class RestaurantManager {
                 "soybean oil", "palm oil", "soy lecithin", "emulsifier", "leavening", "baking soda", "ammonium bicarbonate", "salt", "natural plant flavor", "annatto",
                 "caramel color", "corn syrup", "wheat"
         };
-        restaurantToFirebaseH(restRef, "Sweets & Treats", "Ice Cream Cone", ingredients);
+        restaurantToFirebaseH(restRef, "Sweets & Treats", "Ice Cream Cone>2-19", ingredients);
 
         ingredients = new String[]{
                 "cherries", "water", "corn syrup", "high fructose corn syrup", "sugar", "malic acid", "citric acid", "natural plant flavors", "artificial flavors",
@@ -3030,162 +3030,162 @@ public class RestaurantManager {
         restaurantToFirebaseH(restRef, "Beverages", "1% Low Fat Chocolate Milk Jug", ingredients);
 
         ingredients = new String[]{"filtered water", "concentrated apple juice", "calcium citrate", "ascorbic acid"};
-        restaurantToFirebaseH(restRef, "Beverages", "Minute Maid Apple Juice Box", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Minute Maid Apple Juice Box>2-49", ingredients);
 
         ingredients = new String[]{"purified water", "magnesium sulfate", "potassium chloride", "salt", "sodium"};
-        restaurantToFirebaseH(restRef, "Beverages", "Dasani Water", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Dasani Water>1-79", ingredients);
 
         ingredients = new String[]{"orange juice", "filtered water", "concentrated orange juice"};
-        restaurantToFirebaseH(restRef, "Beverages", "Orange Juice", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Orange Juice>1-59", ingredients);
 
         ingredients = new String[]{"carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural vegetable flavors", "caffeine"};
-        restaurantToFirebaseH(restRef, "Beverages", "Coca Cola Classic", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Coca Cola Classic>1-59", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "caramel color", "phosphoric acid", "sodium saccharin", "natural vegetable flavors", "citric acid", "potassium citrate",
                 "potassium benzoate", "taste", "caffeine", "aspartame", "dimethylpolysiloxane", "antifoaming agent", "phenylketonurics", "phenylalanine"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Diet Coke", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Diet Coke>1-59", ingredients);
 
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "citric acid", "natural vegetable flavors", "sodium citrate", "sodium benzoate", "dimethylpolysiloxane",
                 "antifoaming agent"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Sprite", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Sprite>1-59", ingredients);
 
         ingredients = new String[]{
                 "water", "high fructose corn syrup", "citric acid", "ascorbic acid", "potassium benzoate", "modified food starch", "natural vegetable flavors",
                 "glycerol ester of wood rosin", "yellow 6", "brominated vegetable oil", "red 40"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Hi-C Orange Lavaburst", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hi-C Orange Lavaburst>1-59", ingredients);
 
         ingredients = new String[]{
                 "water", "high fructose corn syrup", "citric acid", "natural vegetable flavors", "salt", "potassium citrate", "potassium benzoate", "potassium sorbate",
                 "modified food starch", "coconut oil", "potassium phosphate", "sucrose acetate isobutyrate", "niacinamide", "blue 1", "pyridoxine hydrochloride",
                 "cyanocobalamin"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "POWERade Mountain Blast", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "POWERade Mountain Blast>1-59", ingredients);
 
         ingredients = new String[]{"orange pekoe", "pekoe cut black tea"};
         restaurantToFirebaseH(restRef, "Beverages", "Iced Tea", ingredients);
 
         ingredients = new String[]{"brewed coffee"};
-        restaurantToFirebaseH(restRef, "Coffees", "Coffee (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Coffee (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Coffee (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Coffee (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "premium roast coffee", "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "sugar", "water",
                 "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites", "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Caramel", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Caramel>2-99", ingredients);
 
         ingredients = new String[]{
                 "premium roast coffee", "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "sugar", "water",
                 "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid", "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Hazelnut", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Hazelnut>0-00", ingredients);
 
         ingredients = new String[]{
                 "premium roast coffee", "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "liquid sugar"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Regular (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Regular (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Regular (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Regular (Small)>1-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Regular (Medium)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Regular (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "premium roast coffee", "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "sugar", "water",
                 "fructose", "natural plant flavor", "artificial flavor", "caramel color", "sulfites", "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Vanilla", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee: Vanilla>2-99", ingredients);
 
         ingredients = new String[]{
                 "premium roast coffee", "milk", "cream", "sodium phosphate", "datem", "sodium stearoyl lactylate", "sodium citrate", "carrageenan", "water",
                 "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose", "salt", "malic acid", "potassium sorbate",
                 "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Coffee with Sugar Free Vanilla Syrup (Large)>2-99", ingredients);
 
         ingredients = new String[]{"water", "sugar", "orange pekoe", "pekoe cut black tea"};
         restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Child)", ingredients);
 
         ingredients = new String[]{"water", "sugar", "orange pekoe", "pekoe cut black tea"};
-        restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Small)>1-29", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Medium)>1-59", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Sweet Tea (Large)>1-89", ingredients);
 
         ingredients = new String[]{
                 "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid", "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Syrup", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Syrup>0-00", ingredients);
 
         ingredients = new String[]{"sugar", "water", "potassium sorbate", "citric acid", "premium roast coffee"};
-        restaurantToFirebaseH(restRef, "Coffees", "Liquid Sugar", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Liquid Sugar>0-00", ingredients);
 
         ingredients = new String[]{"nonfat milk", "espresso"};
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{"nonfat milk", "espresso"};
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte (Small)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte (Medium)>3-59", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites",
                 "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Cappuccino (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Cappuccino (Small)>0-00", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Cappuccino (Medium)>0-00", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites",
                 "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Latte (Small)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Latte (Medium)>3-59", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Latte (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid",
                 "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Cappuccino (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Cappuccino (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid",
                 "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Latte (Small)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Latte (Medium)>3-59", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Hazelnut Latte (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "caramel color", "sulfites", "potassium sorbate",
                 "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Vanilla Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Vanilla Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Vanilla Cappuccino (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Vanilla Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Vanilla Cappuccino (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Vanilla Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose", "salt", "malic acid",
                 "potassium sorbate", "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino with Sugar Free Vanilla Syrup (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino with Sugar Free Vanilla Syrup (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino with Sugar Free Vanilla Syrup (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino with Sugar Free Vanilla Syrup (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Cappuccino with Sugar Free Vanilla Syrup (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose", "salt", "malic acid",
                 "potassium sorbate", "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte with Sugar Free Vanilla Syrup (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte with Sugar Free Vanilla Syrup (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte with Sugar Free Vanilla Syrup (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte with Sugar Free Vanilla Syrup (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Latte with Sugar Free Vanilla Syrup (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color", "sulfites",
@@ -3194,9 +3194,9 @@ public class RestaurantManager {
                 "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk", "dextrose", "glycerin", "hydrogenated coconut oil",
                 "cocoa", "alkali", "food starch", "natural plant flavor", "disodium phosphate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha with Nonfat Milk (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha with Nonfat Milk (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha with Nonfat Milk (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha with Nonfat Milk (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha with Nonfat Milk (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha with Nonfat Milk (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color", "sulfites",
@@ -3205,46 +3205,46 @@ public class RestaurantManager {
                 "vegetable source", "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk", "dextrose", "glycerin",
                 "hydrogenated coconut oil", "cocoa", "alkali", "food starch", "natural plant flavor", "disodium phosphate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate with Nonfat Milk (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate with Nonfat Milk (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate with Nonfat Milk (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate with Nonfat Milk (Small)>3-59", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate with Nonfat Milk (Medium)>3-79", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate with Nonfat Milk (Large)>3-99", ingredients);
 
         ingredients = new String[]{"nonfat milk", "espresso"};
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites",
                 "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid",
                 "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Hazelnut Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Hazelnut Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Hazelnut Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Hazelnut Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Hazelnut Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Hazelnut Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "caramel color", "sulfites", "potassium sorbate",
                 "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Vanilla Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Vanilla Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Vanilla Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Vanilla Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Vanilla Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Vanilla Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose", "salt",
                 "malic acid", "potassium sorbate", "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte with Sugar Free Vanilla Syrup (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte with Sugar Free Vanilla Syrup (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte with Sugar Free Vanilla Syrup (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte with Sugar Free Vanilla Syrup (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Latte with Sugar Free Vanilla Syrup (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color", "sulfites",
@@ -3253,9 +3253,9 @@ public class RestaurantManager {
                 "vegetable source", "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk", "dextrose", "glycerin",
                 "hydrogenated coconut oil", "cocoa", "alkali", "food starch", "natural plant flavor", "disodium phosphate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha with Nonfat Milk (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha with Nonfat Milk (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha with Nonfat Milk (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha with Nonfat Milk (Small)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha with Nonfat Milk (Medium)>3-59", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha with Nonfat Milk (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "chocolate sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites",
@@ -3263,9 +3263,9 @@ public class RestaurantManager {
                 "carrageenan", "polysorbate 80", "beta carotene", "natural dairy flavor", "natural vegetable flavor", "vegetable source", "mixed tocopherols",
                 "whipping propellant", "nitrous oxide", "milk", "sweetened condensed milk", "butter", "pectin", "disodium phosphate", "vanillin", "ethyl vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Mocha (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Mocha (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Mocha (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Nonfat Caramel Mocha (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "nonfat milk", "espresso", "chocolate sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color",
@@ -3274,83 +3274,83 @@ public class RestaurantManager {
                 "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk", "sweetened condensed milk", "butter", "pectin", "disodium phosphate",
                 "vanillin", "ethyl vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Mocha (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Mocha (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Mocha (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Nonfat Caramel Mocha (Large)>0-00", ingredients);
 
         ingredients = new String[]{"whole milk", "espresso"};
-        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{"whole milk", "espresso"};
-        restaurantToFirebaseH(restRef, "Coffees", "Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites",
                 "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Cappuccino (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Caramel Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Cappuccino (Medium)>2-68", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Caramel Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites",
                 "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Latte (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Caramel Latte (Small)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Latte (Medium)>2-62", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Caramel Latte (Large)", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid",
                 "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Cappuccino (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Cappuccino (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate",
                 "citric acid", "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Hazelnut Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "caramel color", "sulfites",
                 "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Cappuccino (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Cappuccino (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Cappuccino (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Cappuccino (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Cappuccino (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Cappuccino (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor",
                 "caramel color", "sulfites", "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose",
                 "salt", "malic acid", "potassium sorbate", "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino with Sugar Free Vanilla Syrup (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino with Sugar Free Vanilla Syrup (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino with Sugar Free Vanilla Syrup (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino with Sugar Free Vanilla Syrup (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Cappuccino with Sugar Free Vanilla Syrup (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose",
                 "salt", "malic acid", "potassium sorbate", "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Latte with Sugar Free Vanilla Syrup (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Latte with Sugar Free Vanilla Syrup (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Latte with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Latte with Sugar Free Vanilla Syrup (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Latte with Sugar Free Vanilla Syrup (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Latte with Sugar Free Vanilla Syrup (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color",
@@ -3359,9 +3359,9 @@ public class RestaurantManager {
                 "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk",
                 "dextrose", "glycerin", "hydrogenated coconut oil", "cocoa", "alkali", "food starch", "natural plant flavor", "disodium phosphate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color",
@@ -3371,33 +3371,33 @@ public class RestaurantManager {
                 "nitrous oxide", "milk", "dextrose", "glycerin", "hydrogenated coconut oil", "cocoa", "alkali", "food starch", "natural plant flavor",
                 "disodium phosphate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate (Small)>3-59", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate (Medium)>3-79", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Hot Chocolate (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavors", "potassium sorbate", "citric acid",
                 "caramel color", "sulfites", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Hazelnut Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Hazelnut Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Hazelnut Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Hazelnut Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Hazelnut Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Hazelnut Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "caramel color", "sulfites", "potassium sorbate",
                 "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Vanilla Latte (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Vanilla Latte (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Vanilla Latte (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Vanilla Latte (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Vanilla Latte (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Vanilla Latte (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose", "salt",
                 "malic acid", "potassium sorbate", "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Latte with Sugar Free Vanilla Syrup (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Latte with Sugar Free Vanilla Syrup (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Latte with Sugar Free Vanilla Syrup (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Latte with Sugar Free Vanilla Syrup (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Latte with Sugar Free Vanilla Syrup (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Latte with Sugar Free Vanilla Syrup (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color",
@@ -3406,9 +3406,9 @@ public class RestaurantManager {
                 "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk",
                 "dextrose", "glycerin", "hydrogenated coconut oil", "cocoa", "alkali", "food starch", "natural plant flavor", "disodium phosphate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha (Small)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha (Medium)>3-59", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Iced Mocha (Large)>3-99", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavors", "artificial flavors", "chocolate liquor", "caramel color",
@@ -3417,9 +3417,9 @@ public class RestaurantManager {
                 "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk",
                 "sweetened condensed milk", "butter", "pectin", "disodium phosphate", "vanillin", "ethyl vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Mocha (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Mocha (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Mocha (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Mocha (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "whole milk", "espresso", "sugar", "water", "fructose", "natural plant flavors", "artificial flavors", "chocolate liquor", "caramel color",
@@ -3428,15 +3428,15 @@ public class RestaurantManager {
                 "natural vegetable flavor", "vegetable source", "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk",
                 "sweetened condensed milk", "butter", "pectin", "disodium phosphate", "vanillin", "ethyl vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Caramel Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Caramel Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Iced Caramel Mocha (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Caramel Mocha (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Caramel Mocha (Medium)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Iced Caramel Mocha (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "corn syrup", "sweetened condensed milk", "milk", "sugar", "high fructose corn syrup", "water", "butter", "salt", "pectin", "disodium phosphate",
                 "artificial flavor", "vanillin", "ethyl vanillin", "caramel color", "sulfites", "potassium sorbate"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Drizzle", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Drizzle>0-00", ingredients);
 
         ingredients = new String[]{
                 "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "salt", "caramel color", "sulfites", "potassium sorbate",
@@ -3448,24 +3448,24 @@ public class RestaurantManager {
                 "corn syrup", "dextrose", "water", "sugar", "glycerin", "hydrogenated coconut oil", "cocoa", "alkali", "food starch", "nonfat milk",
                 "natural plant flavor", "artificial flavor", "salt", "gellan gum", "disodium phosphate", "potassium sorbate", "soy lecithin", "vanillin", "milk"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Chocolate Drizzle", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Chocolate Drizzle>0-00", ingredients);
 
         ingredients = new String[]{
                 "sugar", "water", "natural botanical flavors", "artificial flavors", "chocolate liquor", "caramel color", "sulfites", "vanilla extract", "salt",
                 "gellan gum", "citric acid", "potassium sorbate", "red 40"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Chocolate Syrup", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Chocolate Syrup>0-00", ingredients);
 
         ingredients = new String[]{
                 "water", "erythritol", "natural plant flavor", "artificial flavors", "cellulose gum", "sucralose", "salt", "malic acid", "potassium sorbate",
                 "acesulfame potassium", "caramel color", "sulfites"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Sugar Free Vanilla Syrup", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Sugar Free Vanilla Syrup>0-00", ingredients);
 
         ingredients = new String[]{
                 "sugar", "water", "fructose", "natural plant flavor", "artificial flavor", "caramel color", "sulfites", "potassium sorbate", "citric acid", "malic acid"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Syrup", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Vanilla Syrup>0-00", ingredients);
 
         ingredients = new String[]{
                 "water", "cream", "sugar", "milk", "high fructose corn syrup", "coffee extract", "natural botanical flavors", "artificial flavors",
@@ -3474,9 +3474,9 @@ public class RestaurantManager {
                 "mixed tocopherols", "whipping propellant", "nitrous oxide", "sweetened condensed milk", "butter", "salt", "pectin", "vanillin", "ethyl vanillin",
                 "caramel color", "sulfites", "potassium sorbate"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Frappe Caramel (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Frappe Caramel (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Frappe Caramel (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Frappe Caramel (Small)", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Frappe Caramel (Medium)>2-65", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Frappe Caramel (Large)", ingredients);
 
         ingredients = new String[]{
                 "water", "cream", "sugar", "milk", "high fructose corn syrup", "coffee extract", "natural botanical flavors", "artificial flavors", "cocoa",
@@ -3485,35 +3485,35 @@ public class RestaurantManager {
                 "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "dextrose", "glycerin", "hydrogenated coconut oil", "food starch",
                 "natural plant flavor", "salt", "gellan gum", "potassium sorbate", "soy lecithin", "vanillin"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Frappe Mocha (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Frappe Mocha (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Coffees", "Frappe Mocha (Large)", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Frappe Mocha (Small)>0-00", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Frappe Mocha (Medium)>2-65", ingredients);
+        // restaurantToFirebaseH(restRef, "Coffees", "Frappe Mocha (Large)>0-00", ingredients);
 
         ingredients = new String[]{
                 "water", "cream", "sugar", "milk", "high fructose corn syrup", "coffee extract", "natural botanical flavors", "artificial flavors",
                 "monoglycerides", "diglycerides", "guar gum", "potassium phosphate", "disodium phosphate", "carrageenan", "carob bean gum"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Caramel Coffee Frappe Base", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Caramel Coffee Frappe Base>0-00", ingredients);
 
         ingredients = new String[]{
                 "water", "cream", "sugar", "milk", "high fructose corn syrup", "coffee extract", "natural botanical flavors", "artificial flavors", "cocoa",
                 "alkali", "monoglycerides", "diglycerides", "guar gum", "potassium phosphate", "disodium phosphate", "carrageenan", "carob bean gum"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Mocha Coffee Frappe Base", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Mocha Coffee Frappe Base>0-00", ingredients);
 
         ingredients = new String[]{
                 "cream", "nonfat milk", "water", "corn syrup", "sugar", "high fructose corn syrup", "monoglycerides", "diglycerides", "carrageenan",
                 "polysorbate 80", "beta carotene", "natural dairy flavor", "natural vegetable flavor", "vegetable source", "artificial flavor",
                 "mixed tocopherols", "whipping propellant", "nitrous oxide", "milk"
         };
-        restaurantToFirebaseH(restRef, "Coffees", "Whipped Cream", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Whipped Cream>0-00", ingredients);
 
         ingredients = new String[]{
                 "strawberry banana fruit blend", "fat milk", "sugar", "whey protein concentrate", "fructose", "corn starch", "gelatin", "yogurt cultures", "milk", "ice"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Strawberry Banana Smoothie (Small)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Strawberry Banana Smoothie (Medium)", ingredients);
-        restaurantToFirebaseH(restRef, "Beverages", "Strawberry Banana Smoothie (Large)", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Strawberry Banana Smoothie (Small)>2-99", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Strawberry Banana Smoothie (Medium)>3-99", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Strawberry Banana Smoothie (Large)>4-49", ingredients);
 
         ingredients = new String[]{
                 "strawberry puree", "water", "sugar", "blackberry puree", "blueberry puree", "concentrated pineapple juice", "concentrated apple juice",
@@ -3525,7 +3525,7 @@ public class RestaurantManager {
         restaurantToFirebaseH(restRef, "Beverages", "Wild Berry Smoothie (Large)", ingredients);
 
         ingredients = new String[]{"fat milk", "sugar", "whey protein concentrate", "fructose", "corn starch", "gelatin", "yogurt cultures", "milk"};
-        restaurantToFirebaseH(restRef, "Coffees", "Low Fat Yogurt", ingredients);
+        restaurantToFirebaseH(restRef, "Coffees", "Low Fat Yogurt>0-00", ingredients);
 
         ingredients = new String[]{
                 "strawberry puree", "banana puree", "water", "sugar", "concentrated apple juice", "cellulose powder", "natural botanical flavors",
@@ -3543,7 +3543,7 @@ public class RestaurantManager {
                 "potatoes", "vegetable oil", "canola oil", "hydrogenated soybean oil", "natural beef flavor", "wheat", "milk", "citric acid", "salt",
                 "corn flour", "dehydrated potato", "dextrose", "sodium acid pyrophosphate", "black pepper", "corn oil", "soybean oil", "tbhq", "dimethylpolysiloxane"
         };
-        restaurantToFirebaseH(restRef, "Breakfast", "Hash Brown", ingredients);
+        restaurantToFirebaseH(restRef, "Breakfast", "Hash Brown>1-60", ingredients);
 
         ingredients = new String[] { "apple" };
         restaurantToFirebaseH(restRef, "Fries & Sides", "Apple Slices", ingredients);
@@ -3572,7 +3572,7 @@ public class RestaurantManager {
         ingredients = new String[] {
                 "filtered water", "organic apple juice", "natural flavor", "vitamin c", "organic natural flavor", "citric acid"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Honest Kids Appley Ever After Organic Juice Drink", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Honest Kids Appley Ever After Organic Juice Drink>1-49", ingredients);
 
         ingredients = new String[] {
                 "water", "cane sugar", "lemon juice from concentrate", "lemon pulp", "natural flavor"
@@ -3582,7 +3582,7 @@ public class RestaurantManager {
         ingredients = new String[]{
                 "carbonated water", "high fructose corn syrup", "citric acid", "natural flavors", "sodium benzoate", "modified food starch", "glycerol ester of rosin", "yellow 6", "red 40"
         };
-        restaurantToFirebaseH(restRef, "Beverages", "Fanta Orange", ingredients);
+        restaurantToFirebaseH(restRef, "Beverages", "Fanta Orange>1-59", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin",
@@ -3595,7 +3595,7 @@ public class RestaurantManager {
                 "spice extractive", "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions",
                 "pork bellies", "natural smoke flavor", "sodium erythorbate", "sodium nitrite"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Bacon", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Bacon>6-79", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "red onions", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -3608,7 +3608,7 @@ public class RestaurantManager {
                 "cucumbers", "calcium chloride", "alum", "potassium sorbate", "natural plant flavor", "polysorbate 80", "slivered onions", "tomato",
                 "water", "egg yolks", "distilled vinegar", "mustard flour", "lemon juice concentrate", "calcium disodium edta", "lettuce"
         };
-        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Deluxe", ingredients);
+        restaurantToFirebaseH(restRef, "Burgers", "Quarter Pounder with Cheese Deluxe>6-29", ingredients);
 
         ingredients = new String[]{
                 "beef", "grill seasoning", "salt", "black pepper", "enriched flour", "bleached wheat flour", "malted barley flour", "niacin", "reduced iron",
@@ -3622,7 +3622,7 @@ public class RestaurantManager {
                 "corn oil", "tbhq", "dimethylpolysiloxane", "hydrolyzed wheat", "hydrolyzed milk", "artificial flavor", "mixed tocopherols", "whipping propellant",
                 "nitrous oxide", "low fat milk", "palmitate", "apple"
         };
-        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: Hamburger", ingredients);
+        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: Hamburger>4-89", ingredients);
 
         ingredients = new String[]{
                 "white boneless chicken", "water", "food starch-modified", "salt", "seasoning", "autolyzed yeast extract", "wheat starch", "natural botanical flavor",
@@ -3632,7 +3632,7 @@ public class RestaurantManager {
                 "hydrogenated soybean oil", "tbhq", "dimethylpolysiloxane", "potatoes", "natural beef flavor", "milk", "hydrolyzed wheat", "hydrolyzed milk",
                 "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "low fat milk", "palmitate", "apple"
         };
-        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: 4pc Chicken McNuggets", ingredients);
+        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: 4pc Chicken McNuggets>5-69", ingredients);
 
         ingredients = new String[]{
                 "white boneless chicken", "water", "food starch-modified", "salt", "seasoning", "autolyzed yeast extract", "wheat starch", "natural botanical flavor",
@@ -3642,7 +3642,7 @@ public class RestaurantManager {
                 "hydrogenated soybean oil", "tbhq", "dimethylpolysiloxane", "potatoes", "natural beef flavor", "milk", "hydrolyzed wheat", "hydrolyzed milk",
                 "artificial flavor", "mixed tocopherols", "whipping propellant", "nitrous oxide", "low fat milk", "palmitate", "apple"
         };
-        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: 6pc Chicken McNuggets", ingredients);
+        restaurantToFirebaseH(restRef, "Happy Meal", "Happy Meal: 6pc Chicken McNuggets>5-79", ingredients);
     }
 
     public ArrayList<Restaurant> getRestaurants() { return restaurants; }

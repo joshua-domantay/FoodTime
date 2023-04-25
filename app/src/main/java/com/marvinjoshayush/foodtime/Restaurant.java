@@ -1,7 +1,5 @@
 package com.marvinjoshayush.foodtime;
 
-import android.view.Menu;
-
 import java.util.ArrayList;
 
 class MenuItem {
