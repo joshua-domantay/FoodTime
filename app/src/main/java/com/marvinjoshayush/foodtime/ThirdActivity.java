@@ -21,12 +21,12 @@ public class ThirdActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
 
-    private boolean ismile_radiusSelected;
-    private boolean isFast_foodSelected;
-    private boolean isRestaurantsSelected;
-    private boolean isDeliverySelected;
-    private boolean isShow_timesSelected;
-    private boolean isCondimentsSelected;
+    private boolean isOvo_VegetarianSelected;
+    private boolean isLacto_VegetarianSelected;
+    private boolean isveganSelected;
+    private boolean isPescatarianSelected;
+    private boolean isFlexitarianSelected;
+    private boolean isOthersSelected;
     private View backButton;
 
     @Override
@@ -44,74 +44,74 @@ public class ThirdActivity extends AppCompatActivity {
             intent.putExtra("startedFromProfileFragment", true);
         }
 
-        ToggleButton button1 = findViewById(R.id.mile_radius);
+        ToggleButton button1 = findViewById(R.id.Ovo_Vegetarian);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ismile_radiusSelected = button1.isChecked();
+                isOvo_VegetarianSelected = button1.isChecked();
             }
         });
 
-        ToggleButton button2 = findViewById(R.id.Fast_food);
+        ToggleButton button2 = findViewById(R.id.Lacto_Vegetarian);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isFast_foodSelected = button2.isChecked();
+                isLacto_VegetarianSelected = button2.isChecked();
             }
         });
 
-        ToggleButton button3 = findViewById(R.id.Restaurants);
+        ToggleButton button3 = findViewById(R.id.vegan);
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isRestaurantsSelected = button3.isChecked();
+                isveganSelected = button3.isChecked();
             }
         });
 
-        ToggleButton button4 = findViewById(R.id.Delivery);
+        ToggleButton button4 = findViewById(R.id.Pescatarian);
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isDeliverySelected = button4.isChecked();
+                isPescatarianSelected = button4.isChecked();
             }
         });
 
-        ToggleButton button5 = findViewById(R.id.Show_times);
+        ToggleButton button5 = findViewById(R.id.Flexitarian);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isShow_timesSelected = button5.isChecked();
+                isFlexitarianSelected = button5.isChecked();
             }
         });
 
-        ToggleButton button6 = findViewById(R.id.Condiments);
+        ToggleButton button6 = findViewById(R.id.Others);
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isCondimentsSelected = button6.isChecked();
+                isOthersSelected = button6.isChecked();
             }
         });
 
 
-        ismile_radiusSelected = sharedPreferences.getBoolean("mile_radius", false);
-        isFast_foodSelected = sharedPreferences.getBoolean("Fast_food", false);
-        isRestaurantsSelected = sharedPreferences.getBoolean("Restaurants", false);
-        isDeliverySelected = sharedPreferences.getBoolean("Delivery", false);
-        isShow_timesSelected = sharedPreferences.getBoolean("Show_times", false);
-        isCondimentsSelected = sharedPreferences.getBoolean("Condiments", false);
+        isOvo_VegetarianSelected = sharedPreferences.getBoolean("Ovo_Vegetarian", false);
+        isLacto_VegetarianSelected = sharedPreferences.getBoolean("Lacto_Vegetarian", false);
+        isveganSelected = sharedPreferences.getBoolean("vegan", false);
+        isPescatarianSelected = sharedPreferences.getBoolean("Pescatarian", false);
+        isFlexitarianSelected = sharedPreferences.getBoolean("Flexitarian", false);
+        isOthersSelected= sharedPreferences.getBoolean("Others", false);
 
 // Set the states of the toggle buttons
-        button1.setChecked(ismile_radiusSelected);
+        button1.setChecked(isOvo_VegetarianSelected);
 
-        button2.setChecked(isFast_foodSelected);
+        button2.setChecked(isLacto_VegetarianSelected);
 
-        button3.setChecked(isRestaurantsSelected);
+        button3.setChecked(isveganSelected);
 
-        button4.setChecked(isDeliverySelected);
+        button4.setChecked(isPescatarianSelected);
 
-        button5.setChecked(isShow_timesSelected);
+        button5.setChecked(isFlexitarianSelected);
 
-        button6.setChecked(isCondimentsSelected);
+        button6.setChecked(isOthersSelected);
 
 
         Button saveButton = findViewById(R.id.Save2);
@@ -119,12 +119,12 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean("mile_radius", ismile_radiusSelected);
-                editor.putBoolean("Fast_food", isFast_foodSelected);
-                editor.putBoolean("Restaurants", isRestaurantsSelected);
-                editor.putBoolean("Delivery", isDeliverySelected);
-                editor.putBoolean("Show_times", isShow_timesSelected);
-                editor.putBoolean("Condiments", isCondimentsSelected);
+                editor.putBoolean("Ovo_Vegetarian", isOvo_VegetarianSelected);
+                editor.putBoolean("Lacto_Vegetarian", isLacto_VegetarianSelected);
+                editor.putBoolean("vegan", isveganSelected);
+                editor.putBoolean("Pescatarian", isPescatarianSelected);
+                editor.putBoolean("Flexitarian", isFlexitarianSelected);
+                editor.putBoolean("Others", isOthersSelected);
                 editor.apply();
             }
         });

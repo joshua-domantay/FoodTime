@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,49 +13,54 @@
         android:checkedButton="@+id/radioButton1">
 
         <ToggleButton
-            android:id="@+id/mile_radius"
+            android:id="@+id/Ovo_Vegetarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOff="Show Mile Radius"
-            android:textOn="SHow Mile Radius"
-            android:text="Mile Radius" />
+            android:textOff="Ovo Vegetarian"
+            android:textOn="Ovo Vegetarian"
+            android:text="Ovo Vegetarian"
+            tools:ignore="HardcodedText" />
 
         <ToggleButton
-            android:id="@+id/Fast_food"
+            android:id="@+id/Lacto_Vegetarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOff="Show Fast Foods"
-            android:textOn="Show Fast Foods"
-            android:text="Fast Food" />
+            android:textOff="Lacto Vegetarian"
+            android:textOn="Lacto Vegetarian"
+            android:text="Lacto Vegetarian"
+            tools:ignore="HardcodedText" />
 
         <ToggleButton
-            android:id="@+id/Restaurants"
+            android:id="@+id/vegan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOff="Show Restaurants"
-            android:textOn="Show Restaurants"
-            android:text="Restaurants" />
+            android:textOff="Vegan"
+            android:textOn="Vegan"
+            android:text="Vegan"
+            tools:ignore="HardcodedText" />
         <ToggleButton
-            android:id="@+id/Delivery"
+            android:id="@+id/Pescatarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOff="Have Delivery Option"
-            android:textOn="Have Delivery Option"
-            android:text="Delivery Option" />
+            android:textOff="Pescatarian"
+            android:textOn="Pescatarian"
+            android:text="Pescatarian"
+            tools:ignore="HardcodedText" />
         <ToggleButton
-            android:id="@+id/Show_times"
+            android:id="@+id/Flexitarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOff="Show Reservation Times"
-            android:textOn="Show Reservation Times"
-            android:text="Show Reservation Times" />
+            android:textOff="Flexitarian"
+            android:textOn="Flexitarian"
+            android:text="Flexitarian"
+            tools:ignore="HardcodedText" />
         <ToggleButton
-            android:id="@+id/Condiments"
+            android:id="@+id/Others"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOff="Show Condiments"
-            android:textOn="Show Condiments"
-            android:text="Condiments on the side" />
+            android:textOff="Others"
+            android:textOn="Others"
+            android:text="Others" />
 
         <Button
             android:id="@+id/backButton"
