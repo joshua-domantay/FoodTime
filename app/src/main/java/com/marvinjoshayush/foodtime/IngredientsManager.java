@@ -17,10 +17,12 @@ import java.util.Map;
 public class IngredientsManager {
     private HomeActivity home;
     private HashMap<String, String> ingredientCategory;
+    private HashMap<String, String> allergens;
 
     public IngredientsManager(HomeActivity home) {
         this.home = home;
         ingredientCategory = new HashMap<>();
+        allergens = new HashMap<>();
         // ingredientsToFirebase();
         getIngredientsFromFirebase();
     }
@@ -31,9 +33,19 @@ public class IngredientsManager {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot mRestaurant : snapshot.getChildren()) {
-                    getIngredientsFromFirebaseH(ingredientsRef, mRestaurant.getKey());
+                    getIngredientsFromFirebaseH1(ingredientsRef.child("preferences"), mRestaurant.getKey());
                 }
-                home.setRestaurants();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+        ingredientsRef.child("allergies").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot mRestaurant : snapshot.getChildren()) {
+                    getIngredientsFromFirebaseH2(ingredientsRef.child("allergies"), mRestaurant.getKey());
+                }
             }
 
             @Override
@@ -41,14 +53,27 @@ public class IngredientsManager {
         });
     }
 
-    private void getIngredientsFromFirebaseH(DatabaseReference ingredientsRef, String section) {
+    private void getIngredientsFromFirebaseH1(DatabaseReference ingredientsRef, String section) {
         ingredientsRef.child(section).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ingr : snapshot.getChildren()) {
                     ingredientCategory.put(ingr.getValue().toString(), section.toLowerCase());
                 }
-                home.setRestaurants();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+    }
+
+    private void getIngredientsFromFirebaseH2(DatabaseReference ingredientsRef, String section) {
+        ingredientsRef.child(section).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot ingr : snapshot.getChildren()) {
+                    allergens.put(ingr.getValue().toString(), section.toLowerCase());
+                }
             }
 
             @Override
@@ -242,11 +267,6 @@ public class IngredientsManager {
     }
 
     public String getIngredientCategory(String ingredient) {
-        for (Map.Entry<String, String> entry : ingredientCategory.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            Log.d("MYTEST", (key + " = " + value));
-        }
         return ingredient.toLowerCase();
     }
 }
