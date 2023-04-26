@@ -16,13 +16,16 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.widget.ToggleButton;
 
-
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SecondActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
+    private DatabaseReference databaseRef;
 
     private boolean isNutsSelected;
     private boolean isDairySelected;
@@ -45,6 +48,9 @@ public class SecondActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("ButtonPreferences", Context.MODE_PRIVATE);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        databaseRef = database.getReference("users");
 
         // Set extra for profile fragment
         Intent intent = getIntent();

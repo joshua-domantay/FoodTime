@@ -13,6 +13,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.widget.ToggleButton;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+
+
 
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -20,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class ThirdActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
+    private DatabaseReference databaseRef;
 
     private boolean isOvo_VegetarianSelected;
     private boolean isLacto_VegetarianSelected;
@@ -35,6 +45,9 @@ public class ThirdActivity extends AppCompatActivity {
         setContentView(R.layout.activity_third);
         backButton = findViewById(R.id.backButton);
         Toolbar toolbar = findViewById(R.id.toolbar);
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        databaseRef = database.getReference("users");
 
         sharedPreferences = getSharedPreferences("ButtonPreferences", Context.MODE_PRIVATE);
 
