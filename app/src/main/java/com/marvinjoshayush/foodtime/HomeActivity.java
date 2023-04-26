@@ -106,4 +106,5 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public RestaurantManager getRestaurantManager() { return restaurantManager; }
+    public IngredientsManager getIngredientsManager() { return ingredientsManager; }
 }

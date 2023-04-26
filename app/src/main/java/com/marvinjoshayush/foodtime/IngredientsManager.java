@@ -1,10 +1,18 @@
 package com.marvinjoshayush.foodtime;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class IngredientsManager {
     private HomeActivity home;
@@ -19,6 +27,33 @@ public class IngredientsManager {
 
     private void getIngredientsFromFirebase() {
         DatabaseReference ingredientsRef = FirebaseDatabase.getInstance().getReference("Ingredients");
+        ingredientsRef.child("preferences").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot mRestaurant : snapshot.getChildren()) {
+                    getIngredientsFromFirebaseH(ingredientsRef, mRestaurant.getKey());
+                }
+                home.setRestaurants();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+    }
+
+    private void getIngredientsFromFirebaseH(DatabaseReference ingredientsRef, String section) {
+        ingredientsRef.child(section).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot ingr : snapshot.getChildren()) {
+                    ingredientCategory.put(ingr.getValue().toString(), section.toLowerCase());
+                }
+                home.setRestaurants();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
     }
 
     private void ingredientsToFirebase() {
@@ -207,6 +242,11 @@ public class IngredientsManager {
     }
 
     public String getIngredientCategory(String ingredient) {
+        for (Map.Entry<String, String> entry : ingredientCategory.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+            Log.d("MYTEST", (key + " = " + value));
+        }
         return ingredient.toLowerCase();
     }
 }
