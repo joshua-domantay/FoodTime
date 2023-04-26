@@ -35,7 +35,7 @@ public class RestaurantManager {
 
     private void initializeRestaurants() {
         // restaurants.add(getPandaExpress());
-        restaurantToFirebase();
+        // restaurantToFirebase();
 
         DatabaseReference restaurantsFirebase = FirebaseDatabase.getInstance().getReference("Restaurants");
         getRestaurantsFromFirebase(restaurantsFirebase);
@@ -142,7 +142,7 @@ public class RestaurantManager {
                         for (MenuItem item : section.getMenu()) {
                             if(!added.contains(item.getNameForFile())) {
                                 String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                                View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                                View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP(), itemStr, Gravity.CENTER, true);
                                 if(x != null) {
                                     contents.views.add(x);
                                     contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
@@ -166,7 +166,7 @@ public class RestaurantManager {
                     for (MenuItem item : section.getMenu()) {
                         if(toAdd.contains(item.getNameForFile().toLowerCase()) || toAdd.contains(item.getName().toLowerCase())) {
                             String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
-                            View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP, itemStr, Gravity.CENTER, true);
+                            View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP(), itemStr, Gravity.CENTER, true);
                             if(x != null) {
                                 contents.views.add(x);
                                 contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));

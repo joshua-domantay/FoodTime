@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -18,6 +19,7 @@ import androidx.core.content.ContextCompat;
 import java.util.ArrayList;
 
 public class ViewMaker {
+        /*
     public final static LayoutParams MATCH_MATCH = new LayoutParams(
             LayoutParams.MATCH_PARENT,
             LayoutParams.MATCH_PARENT
@@ -32,6 +34,7 @@ public class ViewMaker {
             LayoutParams.WRAP_CONTENT,
             LayoutParams.WRAP_CONTENT
     );
+     */
 
     /** ImageView **/
     public static ImageView createBasicImageView(Context context, LayoutParams params, String imgStr, int gravity) {
@@ -135,11 +138,28 @@ public class ViewMaker {
         return createBasicTextView(context, params, text, color, size, TextView.TEXT_ALIGNMENT_VIEW_START, Typeface.NORMAL);
     }
 
+    /** BUTTON **/
+    public static Button createBasicButton(Context context, LayoutParams params, String text, int gravity) {
+        Button val = new Button(context);
+        params.gravity = gravity;
+        val.setLayoutParams(params);
+        val.setText(text);
+        return val;
+    }
+
+    // With specified margins
+    public static Button createBasicButton(Context context, LayoutParams params, String text, int gravity,
+                                               int mLeft, int mTop, int mRight, int mBottom) {
+        params.setMargins(dpToPix(context.getResources(), mLeft), dpToPix(context.getResources(), mTop),
+                dpToPix(context.getResources(), mRight), dpToPix(context.getResources(), mBottom));
+        return createBasicButton(context, params, text, gravity);
+    }
+
     /** FOOD ITEM **/
     public static LinearLayout createFoodItemView(Context context, String imageStr, String restaurant,
                                                   String menuItem, ArrayList<String> description, float price) {
         LinearLayout parent = new LinearLayout(context);
-        parent.setLayoutParams(MATCH_WRAP);
+        parent.setLayoutParams(MATCH_WRAP());
         parent.setWeightSum(3f);
 
         LayoutParams imgParams = new LayoutParams(
@@ -161,20 +181,20 @@ public class ViewMaker {
         secondLL.setLayoutParams(secondLLParams);
         secondLL.setOrientation(LinearLayout.VERTICAL);
 
-        TextView rest = createBasicTextView(context, MATCH_WRAP, restaurant, R.color.black, 22);
+        TextView rest = createBasicTextView(context, MATCH_WRAP(), restaurant, R.color.black, 22);
         rest.setTypeface(null, Typeface.BOLD);
         secondLL.addView(rest);
 
-        TextView menu = createBasicTextView(context, MATCH_WRAP, menuItem, R.color.black, 18);
+        TextView menu = createBasicTextView(context, MATCH_WRAP(), menuItem, R.color.black, 18);
         menu.setTypeface(null, Typeface.BOLD);
         secondLL.addView(menu);
 
         for(String desc : description) {
-            TextView x = createBasicTextView(context, MATCH_WRAP, desc, R.color.black, 18);
+            TextView x = createBasicTextView(context, MATCH_WRAP(), desc, R.color.black, 18);
             secondLL.addView(x);
         }
 
-        TextView priceV = createBasicTextView(context, MATCH_WRAP, ("Total: " + String.format("%.2f", price)), R.color.black, 20);
+        TextView priceV = createBasicTextView(context, MATCH_WRAP(), ("Total: " + String.format("%.2f", price)), R.color.black, 20);
         priceV.setTypeface(null, Typeface.BOLD);
         secondLL.addView(priceV);
 
@@ -190,5 +210,26 @@ public class ViewMaker {
                 resource.getDisplayMetrics()
         );
         return pix;
+    }
+
+    public static LayoutParams MATCH_MATCH() {
+        return new LayoutParams(
+                LayoutParams.MATCH_PARENT,
+                LayoutParams.MATCH_PARENT
+        );
+    }
+
+    public static LayoutParams MATCH_WRAP() {
+        return new LayoutParams(
+                LayoutParams.MATCH_PARENT,
+                LayoutParams.WRAP_CONTENT
+        );
+    }
+
+    public static LayoutParams WRAP_WRAP() {
+        return new LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT
+        );
     }
 }

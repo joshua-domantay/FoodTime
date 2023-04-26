@@ -41,7 +41,7 @@ public class SubwayFragment extends Fragment {
         for(int btn : btns) {
             view.findViewById(btn).setOnClickListener(item -> {
                 ViewsAndImageButtonInfos layout = createLayoutForSubMenuFragment(btn);
-                ImageView logo = ViewMaker.createBasicImageView(getContext(), ViewMaker.MATCH_WRAP, "subway_menu_logo", Gravity.CENTER);
+                ImageView logo = ViewMaker.createBasicImageView(getContext(), ViewMaker.MATCH_WRAP(), "subway_menu_logo", Gravity.CENTER);
                 Fragment frag = new SubMenuFragment(home, "Subway", "subway", logo, new SubwayFragment(home), layout.views, layout.imageButtonInfos);
                 home.setFragment(frag);
             });

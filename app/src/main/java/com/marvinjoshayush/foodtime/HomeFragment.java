@@ -114,7 +114,7 @@ public class HomeFragment extends Fragment {
     private void setRestaurantsLayout(int restBanner, String restName, float restDist, String restService) {
         // LinearLayout parent
         LinearLayout linearParent = new LinearLayout(getContext());
-        linearParent.setLayoutParams(ViewMaker.MATCH_WRAP);
+        linearParent.setLayoutParams(ViewMaker.MATCH_WRAP());
         linearParent.setPadding(0, 0, 0, ViewMaker.dpToPix(getResources(), 30));
         linearParent.setOrientation(LinearLayout.VERTICAL);
 
@@ -129,11 +129,11 @@ public class HomeFragment extends Fragment {
         // img.setAdjustViewBounds(true);
 
         // TextView (name)
-        TextView tvName = ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, restName, R.color.black, 24);
+        TextView tvName = ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), restName, R.color.black, 24);
 
         // LinearLayout (distance and services)
         LinearLayout linearChild = new LinearLayout(getContext());
-        linearChild.setLayoutParams(ViewMaker.MATCH_WRAP);
+        linearChild.setLayoutParams(ViewMaker.MATCH_WRAP());
         linearChild.setOrientation(LinearLayout.HORIZONTAL);
         linearChild.setWeightSum(7f);
 

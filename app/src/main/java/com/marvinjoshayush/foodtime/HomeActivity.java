@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity {
     private static HomeFragments CURRENT_HOME_FRAGMENT;
     private static Fragment CURRENT_FRAGMENT;
+    public static int FOODITEM_ID;
     private FirebaseUser user;
     private DatabaseReference dbReference;
     private RestaurantManager restaurantManager;

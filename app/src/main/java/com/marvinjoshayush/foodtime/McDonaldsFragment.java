@@ -45,7 +45,7 @@ public class McDonaldsFragment extends Fragment {
         for(int btn : btns) {
             view.findViewById(btn).setOnClickListener(item -> {
                 ViewsAndImageButtonInfos layout = createLayoutForSubMenuFragment(btn);
-                ImageView logo = ViewMaker.createBasicImageView(getContext(), ViewMaker.WRAP_WRAP, "mcdonalds_menu_logo", Gravity.CENTER,
+                ImageView logo = ViewMaker.createBasicImageView(getContext(), ViewMaker.WRAP_WRAP(), "mcdonalds_menu_logo", Gravity.CENTER,
                         0, 10, 0, 10);
                 Fragment frag = new SubMenuFragment(home, "McDonalds", "mcdonalds", logo, new McDonaldsFragment(home), layout.views, layout.imageButtonInfos);
                 home.setFragment(frag);

@@ -152,10 +152,10 @@ public class PandaExpressFragment extends Fragment {
 
         // Appetizers
         // Title
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 3", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), "Step 3", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Choose an Appetizer",
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), "Choose an Appetizer",
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         n = createLayoutAppetizers();
         vAndI.views.addAll(n.views);
@@ -167,10 +167,10 @@ public class PandaExpressFragment extends Fragment {
 
         // Drinks
         // Title
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 4", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), "Step 4", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(),
                 "Select flavor for included Medium Drink, or get a bottled drink",
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         n = createLayoutDrinks();
@@ -234,10 +234,10 @@ public class PandaExpressFragment extends Fragment {
     private ViewsAndImageButtonInfos createLayoutMain(String firstSub, String secondSub) { return createLayoutMain(firstSub, secondSub, new ViewsAndImageButtonInfos()); }
     private ViewsAndImageButtonInfos createLayoutMain(String firstSub, String secondSub, ViewsAndImageButtonInfos vAndI) {
         // Title
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 1", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), "Step 1", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, firstSub,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), firstSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Sides
         ViewsAndImageButtonInfos n = RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "sides");
@@ -245,10 +245,10 @@ public class PandaExpressFragment extends Fragment {
         vAndI.imageButtonInfos.addAll(n.imageButtonInfos);
 
         // Title
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, "Step 2", R.color.black,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), "Step 2", R.color.black,
                 30, TextView.TEXT_ALIGNMENT_CENTER, Typeface.BOLD, 0, 0, 0, 10));
         // Subtitle
-        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP, secondSub,
+        vAndI.views.add(ViewMaker.createBasicTextView(getContext(), ViewMaker.MATCH_WRAP(), secondSub,
                 R.color.black, 24, TextView.TEXT_ALIGNMENT_CENTER));
         // Entrees
         n = RestaurantManager.createLayoutFromFirebase(home, getContext(), "panda_express", "entrees");
