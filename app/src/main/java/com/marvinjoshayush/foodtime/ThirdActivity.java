@@ -1,10 +1,12 @@
 package com.marvinjoshayush.foodtime;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.content.Context;
@@ -25,11 +27,14 @@ public class ThirdActivity extends AppCompatActivity {
     private boolean isDeliverySelected;
     private boolean isShow_timesSelected;
     private boolean isCondimentsSelected;
+    private View backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
+        backButton = findViewById(R.id.backButton);
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
         sharedPreferences = getSharedPreferences("ButtonPreferences", Context.MODE_PRIVATE);
 
@@ -59,7 +64,7 @@ public class ThirdActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isRestaurantsSelected= button3.isChecked();
+                isRestaurantsSelected = button3.isChecked();
             }
         });
 
@@ -88,24 +93,12 @@ public class ThirdActivity extends AppCompatActivity {
         });
 
 
-        Button myButton7 = findViewById(R.id.backButton);
-        myButton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                mAuth.signOut();
-                Intent intent = new Intent(ThirdActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
         ismile_radiusSelected = sharedPreferences.getBoolean("mile_radius", false);
         isFast_foodSelected = sharedPreferences.getBoolean("Fast_food", false);
         isRestaurantsSelected = sharedPreferences.getBoolean("Restaurants", false);
-        isDeliverySelected= sharedPreferences.getBoolean("Delivery", false);
-        isShow_timesSelected= sharedPreferences.getBoolean("Show_times", false);
-        isCondimentsSelected= sharedPreferences.getBoolean("Condiments", false);
+        isDeliverySelected = sharedPreferences.getBoolean("Delivery", false);
+        isShow_timesSelected = sharedPreferences.getBoolean("Show_times", false);
+        isCondimentsSelected = sharedPreferences.getBoolean("Condiments", false);
 
 // Set the states of the toggle buttons
         button1.setChecked(ismile_radiusSelected);
@@ -135,5 +128,30 @@ public class ThirdActivity extends AppCompatActivity {
                 editor.apply();
             }
         });
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

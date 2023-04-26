@@ -26,24 +26,18 @@
             android:layout_marginHorizontal="15dp"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/profileName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/placeholder1"
-                android:textSize="20sp"
-                android:textAlignment="viewStart" />
 
             <TextView
-                android:id="@+id/profileEmail"
+                android:id="@+id/profileNameChange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/placeholder2"
-                android:textSize="18sp"
-                android:textAlignment="viewStart" />
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:text="@string/profile_name"/>
         </LinearLayout>
     </LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"

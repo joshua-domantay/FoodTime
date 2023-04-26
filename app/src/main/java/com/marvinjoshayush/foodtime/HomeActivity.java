@@ -91,9 +91,6 @@ public class HomeActivity extends AppCompatActivity {
             case HOME:
                 CURRENT_FRAGMENT = new HomeFragment(this);
                 break;
-            case SEARCH:
-                CURRENT_FRAGMENT = new SearchFragment(this);
-                break;
             default:        // PROFILE
                 CURRENT_FRAGMENT = new ProfileFragment(this);
         }

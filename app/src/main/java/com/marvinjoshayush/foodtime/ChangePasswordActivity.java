@@ -106,9 +106,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent homeIntent = new Intent(ChangePasswordActivity.this, HomeActivity.class);
-        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // clear any previous instances of HomeActivity
-        startActivity(homeIntent);
+        Intent intent = new Intent(ChangePasswordActivity.this, HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // clear any previous instances of HomeActivity
+        startActivity(intent);
         finish();
     }
 }

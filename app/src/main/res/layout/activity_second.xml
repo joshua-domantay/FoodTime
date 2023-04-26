@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/allergiesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Allergies: "
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
     <RadioGroup
         android:id="@+id/myRadioGroup"
         android:layout_width="match_parent"

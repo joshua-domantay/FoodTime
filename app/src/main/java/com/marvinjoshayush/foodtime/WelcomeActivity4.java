@@ -59,7 +59,12 @@ public class WelcomeActivity4 extends AppCompatActivity {
         u = mAuth.getCurrentUser();
         userID = u.getUid();
         myRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
-        myRef.child("Allergies").setValue(myAll);
+        for (ToggleButton btn : allergyButtons) {
+            if (btn.isChecked()) {
+                String allergyName = btn.getText().toString().toLowerCase(Locale.getDefault());
+                myRef.child("Allergies").child(allergyName).setValue(true);
+            }
+        }
 
         Button btn = findViewById(R.id.welcomeFinish);
         btn.setText(R.string.finish);

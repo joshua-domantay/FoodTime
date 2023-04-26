@@ -1,10 +1,15 @@
 package com.marvinjoshayush.foodtime;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.content.Context;
@@ -26,13 +31,20 @@ public class SecondActivity extends AppCompatActivity {
     private boolean isWheatSelected;
     private boolean isSoySelected;
     private boolean isGlutenSelected;
+    private View backButton;
+
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        backButton = findViewById(R.id.backButton);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
         sharedPreferences = getSharedPreferences("ButtonPreferences", Context.MODE_PRIVATE);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // Set extra for profile fragment
         Intent intent = getIntent();
@@ -96,24 +108,18 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        Button myButton8 = findViewById(R.id.backButton);
-        myButton8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                mAuth.signOut();
-                Intent intent = new Intent(SecondActivity.this, HomeActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
         isNutsSelected = sharedPreferences.getBoolean("Nuts", false);
+
         isDairySelected = sharedPreferences.getBoolean("Dairy", false);
+
         isFishSelected = sharedPreferences.getBoolean("Fish", false);
+
         isEggsSelected = sharedPreferences.getBoolean("Eggs", false);
+
         isWheatSelected = sharedPreferences.getBoolean("Wheat", false);
+
         isSoySelected = sharedPreferences.getBoolean("Soy", false);
+
         isGlutenSelected = sharedPreferences.getBoolean("Gluten", false);
 
 // Set the states of the toggle buttons
@@ -146,6 +152,31 @@ public class SecondActivity extends AppCompatActivity {
                 editor.apply();
             }
         });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
 

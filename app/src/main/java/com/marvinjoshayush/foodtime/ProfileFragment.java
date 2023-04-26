@@ -1,8 +1,12 @@
 package com.marvinjoshayush.foodtime;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import android.widget.TextView;
+import com.google.firebase.auth.FirebaseUser;
+import android.content.SharedPreferences;
 
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
@@ -21,6 +25,8 @@ public class ProfileFragment extends Fragment {
     private Button[] buttons;
     private Button myButton;
     private FirebaseAuth mAuth;
+    private TextView mProfileNameTextView;
+
 
     public ProfileFragment(HomeActivity home) {
         this.home = home;
@@ -35,6 +41,10 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_profile, container, false);
+        SharedPreferences mSharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        mProfileNameTextView = view.findViewById(R.id.profileNameChange);
+        String savedName = mSharedPreferences.getString("name", "");
+        mProfileNameTextView.setText(savedName);
 
         myButton = view.findViewById(R.id.profileViewAllergies);
         myButton.setOnClickListener(new View.OnClickListener() {
@@ -107,8 +117,21 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        TextView profileNameTextView = view.findViewById(R.id.profileName);
+        String displayName = mAuth.getCurrentUser().getDisplayName();
+        if (displayName != null && !displayName.isEmpty()) {
+            profileNameTextView.setText(displayName);
+        }
+
+
+
         return view;
     }
+
+    public void setProfileName(String name) {
+        mProfileNameTextView.setText(name);
+    }
+
 
     private void setButtons() {
         buttons = new Button[]{view.findViewById(R.id.profileChangeName), view.findViewById(R.id.profileChangeAddress),
