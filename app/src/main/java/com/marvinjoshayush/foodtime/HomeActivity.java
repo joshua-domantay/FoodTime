@@ -28,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference dbReference;
     private RestaurantManager restaurantManager;
+    private IngredientsManager ingredientsManager;
     private String userID;
     private BottomNavigationView bottomNavBar;
     public ArrayList<FoodItem> cartItems;
@@ -37,9 +38,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        if(restaurantManager == null) {
-            restaurantManager = new RestaurantManager(this);
-        }
+        restaurantManager = new RestaurantManager(this);
+        ingredientsManager = new IngredientsManager(this);
         getCurrentUserInfo();
         setBottomNavBar();
         cartItems = new ArrayList<>();
