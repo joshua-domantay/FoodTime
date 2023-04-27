@@ -20,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class HomeActivity extends AppCompatActivity {
     private static HomeFragments CURRENT_HOME_FRAGMENT;
@@ -29,9 +31,12 @@ public class HomeActivity extends AppCompatActivity {
     private DatabaseReference dbReference;
     private RestaurantManager restaurantManager;
     private IngredientsManager ingredientsManager;
+    private boolean setAvoidPrefDone;
+    private boolean setAvoidAllergyDone;
     private String userID;
     private BottomNavigationView bottomNavBar;
     public ArrayList<FoodItem> cartItems;
+    public HashMap<String, Integer> userAvoid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,8 @@ public class HomeActivity extends AppCompatActivity {
 
         restaurantManager = new RestaurantManager(this);
         ingredientsManager = new IngredientsManager(this);
+        setAvoidPrefDone = false;
+        setAvoidAllergyDone = false;
         getCurrentUserInfo();
         setBottomNavBar();
         cartItems = new ArrayList<>();
@@ -52,6 +59,105 @@ public class HomeActivity extends AppCompatActivity {
         user = FirebaseAuth.getInstance().getCurrentUser();
         dbReference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
+
+        dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                Log.d("MYTEST", snapshot.child("Choices").getValue().toString());       // TODO
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+    }
+
+    public void setUserAvoidPref() {
+        if(userAvoid == null) {
+            userAvoid = new HashMap<>();
+        }
+
+        String[] x = new String[]{"beef", "pork", "poultry", "seafood", "eggs", "dairy", "meatingredients", "grains"};
+        for (String i : x) {
+            ingredientsManager.getIngredientCategory(i);
+        }
+
+        dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String[] vals = new String[]{};
+                switch(snapshot.child("Choices").getValue().toString()) {
+                    case "ovo-vegetarian":
+                        vals = new String[]{"beef", "pork", "poultry", "seafood", "dairy", "meatingredients"};
+                        break;
+                    case "lacto-vegetarian":
+                        vals = new String[]{"beef", "pork", "poultry", "seafood", "eggs", "meatingredients"};
+                        break;
+                    case "vegan":
+                        vals = new String[]{"beef", "pork", "poultry", "seafood", "eggs", "dairy", "meatingredients"};
+                        break;
+                    case "pascatarian":
+                        vals = new String[]{"beef", "pork", "poultry", "meatingredients"};
+                        break;
+                    case "flexitarian":
+                        vals = new String[]{"beef", "pork", "poultry", "seafood", "meatingredients"};
+                        break;
+                    default:
+                        break;
+                }
+                for(String i : vals) {
+                    ArrayList<String> ingredients = ingredientsManager.getIngredientCategory(i);
+                    for(String ingr : ingredients) {
+                        userAvoid.put(ingr, 1);
+                    }
+                }
+
+
+                for (Map.Entry<String, Integer> entry : userAvoid.entrySet()) {
+                    String key = entry.getKey();
+                    Log.d("LASTO", (key));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+    }
+
+    public void setUserAvoidAllergy() {
+        if(userAvoid == null) {
+            userAvoid = new HashMap<>();
+        }
+
+        String[] y = new String[]{"fish", "garlic", "milk", "onion", "peanuts", "sesame", "shellfish", "soy", "treenuts", "wheat"};
+        for (String i : y) {
+            ingredientsManager.getAllergen(i);
+        }
+
+        dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String[] vals = snapshot.child("Allergies").getValue().toString().split("&");
+                for(String i : vals) {
+                    String newI = i;
+                    if(i.equalsIgnoreCase("tree nuts")) {
+                        newI = "treenuts";
+                    }
+                    ArrayList<String> allergies = ingredientsManager.getAllergen(newI);
+                    for(String a : allergies) {
+                        userAvoid.put(a, 1);
+                    }
+                }
+
+
+                for (Map.Entry<String, Integer> entry : userAvoid.entrySet()) {
+                    String key = entry.getKey();
+                    Log.d("LASTO", (key));
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
     }
 
     private void setBottomNavBar() {

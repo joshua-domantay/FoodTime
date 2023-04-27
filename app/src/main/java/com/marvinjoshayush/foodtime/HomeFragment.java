@@ -188,7 +188,6 @@ public class HomeFragment extends Fragment {
                     home.setFragment(new PandaExpressFragment(home));
                     break;
                 case "Subway":
-                    home.getIngredientsManager().getIngredientCategory("hi");
                     home.setFragment(new SubwayFragment(home));
                     break;
                 default:

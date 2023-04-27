@@ -16,8 +16,8 @@ import java.util.Map;
 
 public class IngredientsManager {
     private HomeActivity home;
-    private HashMap<String, String> ingredientCategory;
-    private HashMap<String, String> allergens;
+    private HashMap<String, ArrayList<String>> ingredientCategory;
+    private HashMap<String, ArrayList<String>> allergens;
 
     public IngredientsManager(HomeActivity home) {
         this.home = home;
@@ -32,8 +32,13 @@ public class IngredientsManager {
         ingredientsRef.child("preferences").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot mRestaurant : snapshot.getChildren()) {
-                    getIngredientsFromFirebaseH1(ingredientsRef.child("preferences"), mRestaurant.getKey());
+                int count = 1;
+                for(DataSnapshot section : snapshot.getChildren()) {
+                    getIngredientsFromFirebaseH1(
+                            ingredientsRef.child("preferences"),
+                            section.getKey(),
+                            (count == snapshot.getChildrenCount()));
+                    count++;
                 }
             }
 
@@ -43,8 +48,13 @@ public class IngredientsManager {
         ingredientsRef.child("allergies").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot mRestaurant : snapshot.getChildren()) {
-                    getIngredientsFromFirebaseH2(ingredientsRef.child("allergies"), mRestaurant.getKey());
+                int count = 1;
+                for(DataSnapshot section : snapshot.getChildren()) {
+                    getIngredientsFromFirebaseH2(
+                            ingredientsRef.child("allergies"),
+                            section.getKey(),
+                            (count == snapshot.getChildrenCount()));
+                    count++;
                 }
             }
 
@@ -53,12 +63,18 @@ public class IngredientsManager {
         });
     }
 
-    private void getIngredientsFromFirebaseH1(DatabaseReference ingredientsRef, String section) {
+    private void getIngredientsFromFirebaseH1(DatabaseReference ingredientsRef, String section, boolean setup) {
         ingredientsRef.child(section).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ingr : snapshot.getChildren()) {
-                    ingredientCategory.put(ingr.getValue().toString(), section.toLowerCase());
+                    if(!ingredientCategory.containsKey(section.toLowerCase())) {
+                        ingredientCategory.put(section.toLowerCase(), new ArrayList<String>());
+                    }
+                    ingredientCategory.get(section.toLowerCase()).add(ingr.getValue().toString());
+                }
+                if(setup) {
+                    home.setUserAvoidPref();
                 }
             }
 
@@ -67,12 +83,18 @@ public class IngredientsManager {
         });
     }
 
-    private void getIngredientsFromFirebaseH2(DatabaseReference ingredientsRef, String section) {
+    private void getIngredientsFromFirebaseH2(DatabaseReference ingredientsRef, String section, boolean setup) {
         ingredientsRef.child(section).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot ingr : snapshot.getChildren()) {
-                    allergens.put(ingr.getValue().toString(), section.toLowerCase());
+                    if(!allergens.containsKey(section.toLowerCase())) {
+                        allergens.put(section.toLowerCase(), new ArrayList<String>());
+                    }
+                    allergens.get(section.toLowerCase()).add(ingr.getValue().toString());
+                }
+                if(setup) {
+                    home.setUserAvoidAllergy();
                 }
             }
 
@@ -266,7 +288,11 @@ public class IngredientsManager {
         ingredientsToFirebaseH(ingredientsRef, ingredients, "sesame");
     }
 
-    public String getIngredientCategory(String ingredient) {
-        return ingredient.toLowerCase();
+    public ArrayList<String> getIngredientCategory(String ingredient) {
+        return ingredientCategory.get(ingredient);
+    }
+
+    public ArrayList<String> getAllergen(String allergy) {
+        return allergens.get(allergy);
     }
 }

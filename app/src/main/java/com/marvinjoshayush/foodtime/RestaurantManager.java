@@ -144,8 +144,17 @@ public class RestaurantManager {
                                 String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
                                 View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP(), itemStr, Gravity.CENTER, true);
                                 if(x != null) {
-                                    contents.views.add(x);
-                                    contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                                    boolean clear = true;
+                                    for(String ingr : item.getIngredients()) {
+                                        if(home.userAvoid.containsKey(ingr)) {
+                                            clear = false;
+                                            break;
+                                        }
+                                    }
+                                    if(clear) {
+                                        contents.views.add(x);
+                                        contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                                    }
                                 }
                                 added.add(item.getNameForFile());
                             }
@@ -168,8 +177,17 @@ public class RestaurantManager {
                             String itemStr = rest.getNameForFile() + "_" + item.getNameForFile();
                             View x = ViewMaker.createBasicImageButton(context, ViewMaker.WRAP_WRAP(), itemStr, Gravity.CENTER, true);
                             if(x != null) {
-                                contents.views.add(x);
-                                contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                                boolean clear = true;
+                                for(String ingr : item.getIngredients()) {
+                                    if(home.userAvoid.containsKey(ingr)) {
+                                        clear = false;
+                                        break;
+                                    }
+                                }
+                                if(clear) {
+                                    contents.views.add(x);
+                                    contents.imageButtonInfos.add(new ImageButtonInfo((ImageButton) x, item.getName(), item.getNameForFile(), 0, item.getPrice()));
+                                }
                             }
                             toAdd.remove(item.getNameForFile().toLowerCase());
                         }
