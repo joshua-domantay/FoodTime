@@ -31,6 +31,7 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
     private String preferencesStr;
     private Button nextButton;
     private ToggleButton[] prefButtons;
+    private ToggleButton[] otherPrefButtons;
     private LinearLayout othersLayout;
 
     DatabaseReference myRef;
@@ -55,6 +56,14 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
             x.setOnClickListener(this);
         }
 
+        otherPrefButtons = new ToggleButton[] {findViewById(R.id.otherPref1), findViewById(R.id.otherPref2),
+                findViewById(R.id.otherPref3), findViewById(R.id.otherPref4), findViewById(R.id.otherPref5),
+                findViewById(R.id.otherPref6), findViewById(R.id.otherPref7)
+        };
+        for(ToggleButton x : otherPrefButtons) {
+            x.setOnClickListener(this);
+        }
+
         setNextButton();
     }
 
@@ -64,6 +73,16 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                 preferencesStr = prefButtons[index].getText().toString().toLowerCase();
             } else {
                 preferencesStr = "";
+                for(int i = 0; i < otherPrefButtons.length; i++) {
+                    if(otherPrefButtons[i].isChecked()) {
+                        preferencesStr += otherPrefButtons[i].getText().toString().toLowerCase() + "&";
+                    }
+                }
+                if(preferencesStr.length() > 0) {
+                    if(preferencesStr.charAt(preferencesStr.length() - 1) == '&') {
+                        preferencesStr = preferencesStr.substring(0, preferencesStr.length() - 1);
+                    }
+                }
             }
             othersLayout.setVisibility(v.GONE);
             prefButtons[index].setChecked(true);
@@ -72,6 +91,8 @@ public class WelcomeActivity3 extends AppCompatActivity implements View.OnClickL
                     prefButtons[i].setChecked(false);
                 }
             }
+        } else {
+            preferencesStr = "";
         }
 
         int count = 0;

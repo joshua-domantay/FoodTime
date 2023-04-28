@@ -24,6 +24,7 @@ public class PandaExpressSubMenuFragment extends Fragment {
     private String imageStr;
     private LinearLayout parentLayout;
     private float price;
+    private boolean removeAdd;
 
     public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd,
                                        ArrayList<ImageButtonInfo> imageButtonInfos, float price) {
@@ -35,6 +36,7 @@ public class PandaExpressSubMenuFragment extends Fragment {
             imageButtonInfoSections.get(0).add(ibf);
         }
         this.price = price;
+        removeAdd = true;
     }
 
     public PandaExpressSubMenuFragment(HomeActivity home, ArrayList<View> viewsToAdd,
@@ -68,6 +70,9 @@ public class PandaExpressSubMenuFragment extends Fragment {
     private void addViewsToAdd() {
         for(View v : viewsToAdd) {
             parentLayout.addView(v);
+        }
+        if(removeAdd) {
+            ((ViewGroup) view.findViewById(R.id.pandaExpress_addToCart).getParent()).removeView(view.findViewById(R.id.pandaExpress_addToCart));
         }
     }
 
@@ -105,20 +110,22 @@ public class PandaExpressSubMenuFragment extends Fragment {
         }
 
         // Add to cart button
-        view.findViewById(R.id.pandaExpress_addToCart).setOnClickListener(item -> {
-            if(maxSelectionForSections != null) {
-                ArrayList<String> description = new ArrayList<>();
-                for(ArrayList<ImageButtonInfo> section : imageButtonInfoSections) {
-                    for (ImageButtonInfo button : section) {
-                        if(button.selected) {
-                            description.add(button.getName());
-                            price += button.getPrice();
+        if(!removeAdd) {
+            view.findViewById(R.id.pandaExpress_addToCart).setOnClickListener(item -> {
+                if (maxSelectionForSections != null) {
+                    ArrayList<String> description = new ArrayList<>();
+                    for (ArrayList<ImageButtonInfo> section : imageButtonInfoSections) {
+                        for (ImageButtonInfo button : section) {
+                            if (button.selected) {
+                                description.add(button.getName());
+                                price += button.getPrice();
+                            }
                         }
                     }
+                    FoodItem foodItem = new FoodItem(getContext(), "Panda Express", itemName, imageStr, description, price);
+                    home.setFragment(new AddToCartFragment(home, foodItem, new PandaExpressFragment(home)));
                 }
-                FoodItem foodItem = new FoodItem(getContext(), "Panda Express", itemName, imageStr, description, price);
-                home.setFragment(new AddToCartFragment(home, foodItem, new PandaExpressFragment(home)));
-            }
-        });
+            });
+        }
     }
 }

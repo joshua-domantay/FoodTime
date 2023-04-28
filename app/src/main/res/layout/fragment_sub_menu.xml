@@ -40,6 +40,7 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
+            <!--
             <Button
                 android:id="@+id/subMenu_addToCart"
                 android:layout_width="match_parent"
@@ -49,6 +50,7 @@
                 android:layout_marginBottom="30dp"
                 android:text="@string/add_to_cart"
                 android:textSize="20sp" />
+            -->
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

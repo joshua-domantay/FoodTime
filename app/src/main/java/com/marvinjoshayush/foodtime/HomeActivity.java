@@ -85,7 +85,8 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String[] vals = new String[]{};
-                switch(snapshot.child("Choices").getValue().toString()) {
+                String choice = snapshot.child("Choices").getValue().toString();
+                switch(choice) {
                     case "ovo-vegetarian":
                         vals = new String[]{"beef", "pork", "poultry", "seafood", "dairy", "meatingredients"};
                         break;
@@ -101,20 +102,45 @@ public class HomeActivity extends AppCompatActivity {
                     case "flexitarian":
                         vals = new String[]{"beef", "pork", "poultry", "seafood", "meatingredients"};
                         break;
+                    case "":
+                        break;
                     default:
+                        vals = choice.split("&");
+                        ArrayList<String> valSplit = new ArrayList<>();
+                        valSplit.add("beef");
+                        valSplit.add("dairy");
+                        valSplit.add("eggs");
+                        valSplit.add("grains");
+                        valSplit.add("meatingredients");
+                        valSplit.add("pork");
+                        valSplit.add("poultry");
+                        valSplit.add("seafood");
+                        for(String i : vals) {
+                            switch(i) {
+                                case "meat":
+                                    valSplit.remove("beef");
+                                    valSplit.remove("pork");
+                                    break;
+                                case "meat ingredients":
+                                    valSplit.remove("meatingredients");
+                                    break;
+                                case "dairy products":
+                                    valSplit.remove("dairy");
+                                default:
+                                    valSplit.remove(i);
+                                    break;
+                            }
+                        }
+                        vals = valSplit.toArray(new String[0]);
                         break;
                 }
                 for(String i : vals) {
                     ArrayList<String> ingredients = ingredientsManager.getIngredientCategory(i);
-                    for(String ingr : ingredients) {
-                        userAvoid.put(ingr, 1);
+                    if(ingredients != null) {
+                        for(String ingr : ingredients) {
+                            userAvoid.put(ingr, 1);
+                        }
                     }
-                }
-
-
-                for (Map.Entry<String, Integer> entry : userAvoid.entrySet()) {
-                    String key = entry.getKey();
-                    Log.d("LASTO", (key));
                 }
             }
 
@@ -143,15 +169,11 @@ public class HomeActivity extends AppCompatActivity {
                         newI = "treenuts";
                     }
                     ArrayList<String> allergies = ingredientsManager.getAllergen(newI);
-                    for(String a : allergies) {
-                        userAvoid.put(a, 1);
+                    if(allergies != null) {
+                        for (String a : allergies) {
+                            userAvoid.put(a, 1);
+                        }
                     }
-                }
-
-
-                for (Map.Entry<String, Integer> entry : userAvoid.entrySet()) {
-                    String key = entry.getKey();
-                    Log.d("LASTO", (key));
                 }
             }
 
