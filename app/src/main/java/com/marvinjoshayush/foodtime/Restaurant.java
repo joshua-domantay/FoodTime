@@ -80,6 +80,9 @@ public class Restaurant {
     private String nameForFile;
     private int banner;
     private ArrayList<MenuSection> menuSections;
+    private double distance;
+    private long rating;
+    private long reviews;
 
     public Restaurant(String name, int banner) {
         this.name = name;
@@ -128,4 +131,11 @@ public class Restaurant {
     public String getNameForFile() { return nameForFile; }
     public int getBanner() { return banner; }
     public ArrayList<MenuSection> getMenuSections() { return menuSections; }
+    public double getDistance() { return distance; }
+    public long getRating() { return rating; }
+    public long getReviews() { return reviews; }
+
+    public void setDistance(double val) { distance = val; }
+    public void setRating(long val) { rating = val; }
+    public void setReviews(long val) { reviews = val; }
 }

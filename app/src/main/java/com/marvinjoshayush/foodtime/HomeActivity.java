@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         dbReference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Log.d("MYTEST", snapshot.child("Choices").getValue().toString());       // TODO
+                Log.d("MYTEST", snapshot.child("Choices").getValue().toString());
             }
 
             @Override

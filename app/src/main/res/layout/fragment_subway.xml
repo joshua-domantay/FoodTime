@@ -95,6 +95,7 @@
                 android:background="@null"
                 app:srcCompat="@drawable/fresh_fit_for_kids_subway"/>
 
+            <!--
             <ImageButton
                 android:id="@+id/subway_personalPizza"
                 android:layout_width="match_parent"
@@ -118,6 +119,7 @@
                 android:layout_gravity="center"
                 android:background="@null"
                 app:srcCompat="@drawable/deserts_subway"/>
+            -->
 
             <ImageButton
                 android:id="@+id/subway_drinks"

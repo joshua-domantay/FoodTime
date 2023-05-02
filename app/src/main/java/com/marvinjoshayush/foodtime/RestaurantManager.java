@@ -36,6 +36,8 @@ public class RestaurantManager {
     private void initializeRestaurants() {
         // restaurants.add(getPandaExpress());
         // restaurantToFirebase();
+        // DatabaseReference restRef = FirebaseDatabase.getInstance().getReference("Restaurants");
+        // putSubwayDrinks(restRef.child("Subway"));
 
         DatabaseReference restaurantsFirebase = FirebaseDatabase.getInstance().getReference("Restaurants");
         getRestaurantsFromFirebase(restaurantsFirebase);
@@ -45,12 +47,14 @@ public class RestaurantManager {
         pAllRestaurantsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int count = 1;
                 for(DataSnapshot mRestaurant : snapshot.getChildren()) {
                     Restaurant newRestaurant = new Restaurant(mRestaurant.getKey(), getRestaurantBanner(mRestaurant.getKey()));
-                    getMenuSectionsFromFirebase(newRestaurant, pAllRestaurantsRef.child(mRestaurant.getKey()));
+                    getMenuSectionsFromFirebase(newRestaurant, pAllRestaurantsRef.child(mRestaurant.getKey()), count);
                     restaurants.add(newRestaurant);
+                    count++;
                 }
-                home.setRestaurants();
+                // home.setRestaurants();
             }
 
             @Override
@@ -71,15 +75,47 @@ public class RestaurantManager {
         }
     }
 
-    private void getMenuSectionsFromFirebase(Restaurant restaurantObj, DatabaseReference pRestaurantRef) {
+    private void getMenuSectionsFromFirebase(Restaurant restaurantObj, DatabaseReference pRestaurantRef, int count) {
         pRestaurantRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int sectionNum = 0;
                 for(DataSnapshot mMenuSection : snapshot.getChildren()) {
-                    restaurantObj.addMenuSection(mMenuSection.getKey());
-                    getMenusFromFirebase(restaurantObj, pRestaurantRef.child(mMenuSection.getKey()), sectionNum);
-                    sectionNum++;
+                    if(mMenuSection.getKey().equalsIgnoreCase("-info")) {
+                        getRestaurantInfoFromFirebase(restaurantObj, pRestaurantRef.child("-info"), count);
+                    } else {
+                        restaurantObj.addMenuSection(mMenuSection.getKey());
+                        getMenusFromFirebase(restaurantObj, pRestaurantRef.child(mMenuSection.getKey()), sectionNum);
+                        sectionNum++;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+    }
+
+    private void getRestaurantInfoFromFirebase(Restaurant restaurantObj, DatabaseReference infoRef, int count) {
+        infoRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot info : snapshot.getChildren()) {
+                    switch(info.getKey().toLowerCase()) {
+                        case "distance":
+                            restaurantObj.setDistance(Double.parseDouble("" + info.getValue()));
+                            break;
+                        case "rating":
+                            restaurantObj.setRating((long) info.getValue());
+                            break;
+                        default:    // "reviews"
+                            restaurantObj.setReviews((long) info.getValue());
+                            break;
+                    }
+                }
+
+                if(count == 3) {
+                    home.setRestaurants();
                 }
             }
 
@@ -1621,6 +1657,101 @@ public class RestaurantManager {
                 "soy lecithin", "cracked wheat", "ascorbic acid", "enzymes", "wheat", "soy", "lettuce", "spinach", "tomatoes", "cucumber", "green bell peppers",
                 "onions"};
         restaurantToFirebaseH(restRef, "freshFitForKids", "Veggie Delite For Kids>5-29", ingredients);
+    }
+
+    private void putSubwayDrinks(DatabaseReference restRef) {
+        String[] ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural flavors", "caffeine"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Coca Cola>2-79", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "caramel color", "aspartame", "phosphoric acid", "potassium benzoate", "natural flavors", "citric acid", "caffeine"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Diet Coke>2-79", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "citric acid", "tartaric acid", "acidity regulator", "sodium citrates", "aspartame", "acesulfame-k", "sucralose", "natural lemon", "lime flavourings"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Sprite>2-79", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "citric acid", "tartaric acid", "acidity regulator", "sodium citrates", "aspartame", "acesulfame-k", "sucralose", "natural lemon", "lime flavourings"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Sprite Bottle>2-49", ingredients);
+
+        ingredients = new String[]{
+                "purified water", "magnesium sulfate", "potassium chloride", "salt", "sodium", "minerals"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Dasani>2-49", ingredients);
+
+        ingredients = new String[]{"carbonated water", "high fructose corn syrup", "caramel color", "phosphoric acid", "natural vegetable flavors", "caffeine"};
+        restaurantToFirebaseH(restRef, "Beverages", "Coca Cola Bottle>2-49", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "high fructose corn syrup", "citric acid", "natural flavors", "sodium benzoate", "modified food starch", "glycerol ester of rosin", "yellow 6", "red 40"
+        };
+        restaurantToFirebaseH(restRef, "Beverages", "Fanta Orange>2-49", ingredients);
+
+        ingredients = new String[]{
+                "carbonated water", "caramel color", "aspartame", "phosphoric acid", "potassium benzoate", "natural flavors", "citric acid", "caffeine"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Diet Coke Bottle>2-79", ingredients);
+
+        ingredients = new String[]{
+                "water", "sugar cane", "lemon juice concentrate", "citric acid", "natural flavor", "rebiana"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Huberts Lemonade>2-79", ingredients);
+
+        ingredients = new String[]{
+                "lowfat milk", "sugar", "nonfat milk", "cocoa", "corn starch", "salt", "carrageenan",
+                "natural vanilla flavor", "palmitate", "d3"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Chocolate Milk>2-49", ingredients);
+
+
+        ingredients = new String[]{
+                "water", "sugar", "dextrose", "citric acid", "natural flavor", "artificial flavor", "salt",
+                "sodium citrate", "monopotassium phosphate", "modified food starch", "glycerol estor of rosin", "blue 1"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Gatorade Cool Blue>2-39", ingredients);
+
+        ingredients = new String[]{
+                "sugar", "dextrose", "citric acid", "salt", "sodium citrate", "monopolassium phosphate",
+                "natural flavor", "artificial flavor", "calcium silicate", "modified food starch", "red 40"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Gatorade Fruit Punch>2-49", ingredients);
+
+        ingredients = new String[]{
+                "water", "organic apple juice concentrate", "organic white grape juice concentrate",
+                "organic strawberry juice concentrate", "organic cranberry juice concentrate",
+                "organic natural flavors", "ascorbic acid", "natural flavor", "citric acid"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Honest Kids Super Fruit Punch>1-29", ingredients);
+
+        ingredients = new String[]{
+                "water", "lemon juice", "sugar cane", "natural flavors"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Simply Lemonade>2-49", ingredients);
+
+        ingredients = new String[]{
+                "apple"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Simply Apple>2-40", ingredients);
+
+        ingredients = new String[]{
+                "reverse osmosis water", "crystalline fructose", "vitamin A", "vitamin C", "vitamin B3",
+                "vitamin B5", "vitamin B6", "vitamin B12", "beta-carotene", "ascorbic acid",
+                "niacinamide", "calcium pantothenate", "pyridoxine hydrochloride", "cyanocobalamin",
+                "sodium selenate", "manganese citrate", "magnesium", "calcium lactates",
+                "potassium phosphate", "cane sugar", "citric acid", "gum acacia", "natural flavors", "fruit", "vegetable juice"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "Vitamin Water XXX>2-49", ingredients);
+
+        ingredients = new String[]{
+                "lowfat milk", "nonfat milk", "palmitate", "vitamin d3"
+        };
+        restaurantToFirebaseH(restRef, "Drinks", "1 Low Fat Milk>1-79", ingredients);
     }
 
     private void putMcdonalds(DatabaseReference restRef) {

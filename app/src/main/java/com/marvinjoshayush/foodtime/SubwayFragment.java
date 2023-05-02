@@ -34,8 +34,8 @@ public class SubwayFragment extends Fragment {
                 R.id.subway_subwaySeries,       R.id.subway_classicSandwiches,  R.id.subway_freshMelts,
                 R.id.subway_noBready,           R.id.subway_onlineExclusive ,   R.id.subway_wraps,
                 R.id.subway_breakfast,          R.id.subway_salads,             R.id.subway_freshFit,
-                R.id.subway_personalPizza,      R.id.subway_sides,              R.id.subway_deserts,
                 R.id.subway_drinks
+                // R.id.subway_personalPizza,      R.id.subway_sides,              R.id.subway_deserts,
         };
 
         for(int btn : btns) {
@@ -68,12 +68,14 @@ public class SubwayFragment extends Fragment {
                 return createLayoutSalads();
             case R.id.subway_freshFit:
                 return createLayoutFreshFit();
+            /*
             case R.id.subway_personalPizza:
                 return createLayoutPersonalPizza();
             case R.id.subway_sides:
                 return createLayoutSides();
             case R.id.subway_deserts:
                 return createLayoutDeserts();
+             */
             default:    // R.id.subway_drinks
                 return createLayoutDrinks();
         }

@@ -46,7 +46,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_diet_coke_fountain_drink_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_diet_coke"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_sprite2_fountain_drinks_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_sprite"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_coca_cola_classic_fountain_drink_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_coca_cola"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,7 +97,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_huberts_lemonade_fountain_drink_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_huberts_lemonade"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,7 +114,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_chocolate_milk_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_chocolate_milk"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -131,7 +131,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_coca_cola_classics_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_coca_cola_bottle"></ImageButton>
 
 
         <LinearLayout
@@ -149,7 +149,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_dasani_water_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_dasani"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -166,7 +166,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_diet_coke_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_diet_coke_bottle"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -183,7 +183,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_gatorade_cool_blue_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_gatorade_cool_blue"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -200,7 +200,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_gatorade_fruit_punch_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_gatorade_fruit_punch"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -217,7 +217,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_honest_kids_super_fruit_punch_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_honest_kids_super_fruit_punch"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -234,7 +234,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_simply_lemonade_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_simply_lemonade"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -251,7 +251,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_sprite_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_sprite_bottle"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -268,7 +268,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_vitamin_water_xxx_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_vitamin_water_xxx"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -285,7 +285,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_1_percent_low_fat_milk_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_1_low_fat_milk"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -302,7 +302,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_fanta_orange_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_fanta_orange"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -319,7 +319,7 @@
             android:backgroundTint="#FFFFFF"
             android:contextClickable="false"
             android:cropToPadding="false"
-            app:srcCompat="@drawable/subway_simply_apple_drinks"></ImageButton>
+            app:srcCompat="@drawable/subway_simply_apple"></ImageButton>
 
         <LinearLayout
             android:layout_width="match_parent"

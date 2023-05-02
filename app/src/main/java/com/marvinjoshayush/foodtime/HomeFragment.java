@@ -104,14 +104,20 @@ public class HomeFragment extends Fragment {
         if(home.getRestaurantManager().getRestaurants().size() > 0) {
             for (int i = 0; i < home.getRestaurantManager().getRestaurants().size(); i++) {
                 Restaurant rest = home.getRestaurantManager().getRestaurants().get(i);
-                setRestaurantsLayout(rest.getBanner(), rest.getName(), 0f, "Demo only");
+                setRestaurantsLayout(rest);
             }
         }
     }
 
     // Future: Just one Restaurant class parameter
     // Add in ScrollView -> LinearLayout
-    private void setRestaurantsLayout(int restBanner, String restName, float restDist, String restService) {
+    private void setRestaurantsLayout(Restaurant rest) {
+        int restBanner = rest.getBanner();
+        String restName = rest.getName();
+        double restDist = rest.getDistance();
+        long restRating = rest.getRating();
+        long restReviews = rest.getReviews();
+
         // LinearLayout parent
         LinearLayout linearParent = new LinearLayout(getContext());
         linearParent.setLayoutParams(ViewMaker.MATCH_WRAP());
@@ -135,25 +141,32 @@ public class HomeFragment extends Fragment {
         LinearLayout linearChild = new LinearLayout(getContext());
         linearChild.setLayoutParams(ViewMaker.MATCH_WRAP());
         linearChild.setOrientation(LinearLayout.HORIZONTAL);
-        linearChild.setWeightSum(7f);
+        linearChild.setWeightSum(2f);
 
         // TextView (distance)
         LinearLayout.LayoutParams tvDistParams = new LinearLayout.LayoutParams(
                 ViewMaker.dpToPix(getResources(), 0),
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                2f
+                1f
         );
-        TextView tvDist = ViewMaker.createBasicTextView(getContext(), tvDistParams, (Float.toString(restDist) + " mi"),  R.color.black, 20);
+        String distStr = "";
+        if(restDist <= 0.1) {
+            distStr = "On Campus";
+        } else {
+            distStr = Double.toString(restDist) + " mi";
+        }
+        TextView tvDist = ViewMaker.createBasicTextView(getContext(), tvDistParams, distStr,  R.color.black, 20);
         linearChild.addView(tvDist);        // Add to linearChild
 
         // TextView (services)
-        LinearLayout.LayoutParams tvServiceParams = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams tvRatingReviewsParams = new LinearLayout.LayoutParams(
                 ViewMaker.dpToPix(getResources(), 0),
                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                5f
+                1f
         );
-        TextView tvService = ViewMaker.createBasicTextView(getContext(), tvServiceParams, restService, R.color.black, 20, TextView.TEXT_ALIGNMENT_TEXT_END);
-        linearChild.addView(tvService);     // Add to linearChild
+        String tvRatingReviewsText = "Rating: " + restRating + "/10\n" + restReviews + " reviews";
+        TextView tvRatingReviews = ViewMaker.createBasicTextView(getContext(), tvRatingReviewsParams, tvRatingReviewsText, R.color.black, 20, TextView.TEXT_ALIGNMENT_TEXT_END);
+        linearChild.addView(tvRatingReviews);       // Add to linearChild
 
         /*
         // TextView (name)
