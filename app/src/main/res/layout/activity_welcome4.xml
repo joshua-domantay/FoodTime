@@ -24,6 +24,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -32,32 +33,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/onion"
                 android:textOn="@string/onion"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle" />
 
             <ToggleButton
                 android:id="@+id/option2Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/garlic"
                 android:textOn="@string/garlic"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/option3Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
                 android:textOff="@string/peanuts"
                 android:textOn="@string/peanuts"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -66,23 +75,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
                 android:textOff="@string/tree_nuts"
                 android:textOn="@string/tree_nuts"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/option5Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/fish"
                 android:textOn="@string/fish"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -91,27 +106,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/milk"
                 android:textOn="@string/milk"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/option7Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/white"
                 android:textOff="@string/shellfish"
                 android:textOn="@string/shellfish"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/option8Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/wheat"
                 android:textOn="@string/wheat"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
 
         <LinearLayout
@@ -125,18 +147,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/soy"
                 android:textOn="@string/soy"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/option10Allergy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/sesame"
                 android:textOn="@string/sesame"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
     </LinearLayout>
 

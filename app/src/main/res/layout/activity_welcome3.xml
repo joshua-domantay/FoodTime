@@ -35,54 +35,72 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
             android:textOff="@string/ovo_vegetarian"
             android:textOn="@string/ovo_vegetarian"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+            android:background="@drawable/my_toggle"/>
 
         <ToggleButton
             android:id="@+id/lactoVegetarian"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
             android:textOff="@string/lacto_vegetarian"
             android:textOn="@string/lacto_vegetarian"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+            android:background="@drawable/my_toggle"/>
 
         <ToggleButton
             android:id="@+id/vegan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
             android:textOff="@string/vegan"
             android:textOn="@string/vegan"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+            android:background="@drawable/my_toggle"/>
 
         <ToggleButton
             android:id="@+id/pascatarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
+            android:textColor="@color/white"
             android:textOff="@string/pascatarian"
             android:textOn="@string/pascatarian"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+            android:background="@drawable/my_toggle"/>
 
         <ToggleButton
             android:id="@+id/flexitarian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
+            android:textColor="@color/white"
             android:textOff="@string/flexitarian"
             android:textOn="@string/flexitarian"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+            android:background="@drawable/my_toggle"/>
 
         <ToggleButton
             android:id="@+id/others"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
+            android:textColor="@color/white"
             android:textOff="@string/others"
             android:textOn="@string/others"
-            android:textSize="27sp" />
+            android:textSize="27sp"
+            android:background="@drawable/my_toggle"/>
     </LinearLayout>
 
     <LinearLayout
@@ -100,6 +118,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal"
             android:weightSum="2" >
@@ -110,9 +129,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:textColor="@color/white"
                 android:textOff="@string/eggs"
                 android:textOn="@string/eggs"
-                android:textSize="14sp" />
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/otherPref2"
@@ -122,12 +143,15 @@
                 android:layout_marginHorizontal="5dp"
                 android:textOff="@string/grains"
                 android:textOn="@string/grains"
-                android:textSize="14sp" />
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
             android:layout_gravity="center_horizontal"
             android:orientation="horizontal" >
 
@@ -138,25 +162,33 @@
                 android:layout_marginHorizontal="5dp"
                 android:textOff="@string/meat"
                 android:textOn="@string/meat"
-                android:textSize="14sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/otherPref4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="10dp"
                 android:textOff="@string/poultry"
                 android:textOn="@string/poultry"
-                android:textSize="14sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/otherPref5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="5dp"
                 android:textOff="@string/seafood"
                 android:textOn="@string/seafood"
-                android:textSize="14sp" />
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
 
         <LinearLayout
@@ -172,9 +204,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingVertical="5dp"
                 android:textOff="@string/meat_ingredients"
                 android:textOn="@string/meat_ingredients"
-                android:textSize="12sp" />
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:background="@drawable/my_toggle"/>
 
             <ToggleButton
                 android:id="@+id/otherPref7"
@@ -182,9 +217,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:paddingVertical="5dp"
+                android:textColor="@color/white"
+                android:textSize="15dp"
                 android:textOff="@string/dairy_products"
                 android:textOn="@string/dairy_products"
-                android:textSize="12sp" />
+                android:background="@drawable/my_toggle"/>
         </LinearLayout>
     </LinearLayout>
 
